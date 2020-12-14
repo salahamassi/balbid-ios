@@ -1,0 +1,16 @@
+PODS:
+  - VICMAImageView (1.0)
+
+DEPENDENCIES:
+  - VICMAImageView (~> 1.0)
+
+SPEC REPOS:
+  trunk:
+    - VICMAImageView
+
+SPEC CHECKSUMS:
+  VICMAImageView: 9f1811d4482ebe37b7eb09f640018554a81a21b2
+
+PODFILE CHECKSUM: 0c81a2001b6f1a7fa73597d01efa5cead15e7ea1
+
+COCOAPODS: 1.9.3

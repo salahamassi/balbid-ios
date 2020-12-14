@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  balbid
+
+  Created by Salah Amassi on 13/12/2020.
+  
+*/
+
+// Image picker alert actions
+"alert.message.cameraAccess" = "\Balbid does not have access to your camera. \nTo enable access, tap Settings and turn on Camera.";
+"alert.message.photoAccess" = "\Balbid does not have access to your photos. \nTo enable access, tap Settings and turn on Photos.";
+"alert.action.title.camera" = "Camera";
+"alert.action.title.gallery" = "Gallery";
+"alert.action.title.deletePhoto" = "Delete Photo";
+"alert.action.title.documnets" = "Documents";
+"alert.action.title.goToSetting" = "Go To Settings";
+"alert.action.title.cancel" = "Cancel";

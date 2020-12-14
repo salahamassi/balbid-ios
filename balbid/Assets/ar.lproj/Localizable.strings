@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  balbid
+
+  Created by Salah Amassi on 13/12/2020.
+  
+*/
+
+// Image picker alert actions
+"alert.message.cameraAccess" = "\جووي ليس مسموحاً له بالوصول إلى كاميرتك. \nلتمكين الوصول, أدخل على الإعدادات ثم قم بتشغيل الكاميرا.";
+"alert.message.photoAccess" = "\جووي ليس مسموحاً له بالوصول إلى ألبومك. \nلتمكين الوصول, أدخل الإعدادات ثم قم بتفعيل الألبومات.";
+"alert.action.title.camera" = "الكاميرا";
+"alert.action.title.gallery" = "الألبومات";
+"alert.action.title.deletePhoto" = "حذف الصورة";
+"alert.action.title.documnets" = "الملفات";
+"alert.action.title.goToSetting" = "إذهب إلى الإعدادات";
+"alert.action.title.cancel" = "إلغاء";

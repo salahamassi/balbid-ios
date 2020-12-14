@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="ErrorAlert" customModule="balbid" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="9mk-45-dIe" userLabel="content stack view">
+                    <rect key="frame" x="8" y="8" width="398" height="100"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="round_warning_black_36pt" translatesAutoresizingMaskIntoConstraints="NO" id="qYP-aE-xqd">
+                            <rect key="frame" x="181" y="0.0" width="36" height="36"/>
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="EmJ-kY-wWZ"/>
+                                <constraint firstAttribute="width" constant="36" id="THF-Lb-AVs"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ef-Uo-8Ox">
+                            <rect key="frame" x="199" y="48" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iB-2P-RqX">
+                            <rect key="frame" x="154" y="60" width="90" height="40"/>
+                            <color key="backgroundColor" name="primaryColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="UdT-Mb-B7n"/>
+                                <constraint firstAttribute="width" constant="90" id="m9L-lV-3ZD"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="15"/>
+                            <state key="normal" title="OK">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="performButtonAction:" destination="iN0-l3-epB" eventType="primaryActionTriggered" id="lQr-fD-9WV"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="9mk-45-dIe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="4tr-zR-zgU"/>
+                <constraint firstItem="9mk-45-dIe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="PA7-Vy-UxN"/>
+                <constraint firstAttribute="trailing" secondItem="9mk-45-dIe" secondAttribute="trailing" constant="8" id="QQE-gR-0hK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="actionButton" destination="8iB-2P-RqX" id="Nxh-nv-ylN"/>
+                <outlet property="messageLabel" destination="8ef-Uo-8Ox" id="byM-b6-cTW"/>
+            </connections>
+            <point key="canvasLocation" x="73.913043478260875" y="-109.82142857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="round_warning_black_36pt" width="36" height="36"/>
+        <namedColor name="primaryColor">
+            <color red="0.11764705882352941" green="0.13725490196078433" blue="0.32156862745098036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
