@@ -14,6 +14,8 @@ enum AssetsColor : String {
     case labelColor
 }
 
+
+
 extension String{
 
     // view controller nib's name
@@ -26,6 +28,21 @@ extension String{
     //  cell's header's, Annotation's id's
     static let photoPreviewCellId = "photoPreviewCellId"
     static let thumbnailCellId = "thumbnailCellId"
+    
+    
+    //storyboard names
+//    static let mainStoryboard = "Main"
+    static let authStoryboard = "Auth"
+    static let splashStoryboard = "Splash"
+    
+    
+    //view  controller id's
+    static let splashViewControllerId = "SplashViewController"
+    static let loginOptionViewControllerId = "LoginOptionViewController"
+    static let accountOptionViewControllerId = "AccountOptionViewController"
+
+    static let loginViewControllerId = "LoginViewController"
+
 
 }
 

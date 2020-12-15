@@ -32,6 +32,11 @@
 	<string>BALBID need to access your Photo library to select a photo for your profile or your order rating</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>BALBID need to access your Photo library to select a photo for your profile or your order rating</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Tajawal-Medium 500.ttf</string>
+		<string>Tajawal-Regular.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -56,7 +61,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<string>Splash</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

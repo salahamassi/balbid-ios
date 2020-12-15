@@ -28,7 +28,7 @@ class AppRouter{
     var currentViewController: UIViewController?
 
     
-    init(window: UIWindow, rootViewController: UIViewController? = nil) {
+    init(window: UIWindow = (UIApplication.shared.delegate as! AppDelegate).appWindow!, rootViewController: UIViewController? = nil) {
         self.window = window
         if let rootViewController = rootViewController{
             window.rootViewController = rootViewController
@@ -37,7 +37,7 @@ class AppRouter{
         }
     }
     
-    func navigate(to route: Route, with params: [String: Any]?, completion: (() -> Void)?){
+    func navigate(to route: Route, with params: [String: Any]? = [:], completion: (() -> Void)?=nil){
         let view = route.create(self, params)
         if let currentViewController = currentViewController {
             if type(of: view) == type(of: currentViewController) {
@@ -86,11 +86,11 @@ class AppRouter{
         }
         currentViewController = view
     }
-    
-    func navigate(to viewController: UIViewController){
-        
-    }
-    
+//    
+//    func navigate(to viewController: UIViewController){
+//        
+//    }
+//    
     func popViewController(){
         guard let rootViewController = window.rootViewController else { return }
         if rootViewController is UINavigationController{

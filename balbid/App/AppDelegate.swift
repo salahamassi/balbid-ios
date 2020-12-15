@@ -60,17 +60,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func startApp(using window: UIWindow){
         self.window = window
         appRouter = AppRouter(window: window, rootViewController: nil)
-        if UserDefaultsManager.token == nil{
-           // router?.navigate(to: .welcome)
-        }else{
-//            router?.navigate(to: .mainTabBar, completion: { [weak self] in
-//                guard let self = self else { return }
-//                if let userInfo = self.remoteNotificationUserInfo{
-//                    RemoteNotficiationsClient.shared.remoteNotificationPressed(with: userInfo)
-//                }
-//            })
-        }
-        LocationManager.shared.startTracking(router: appRouter!)
+        appRouter?.navigate(to:.splashViewController)
+
+//        LocationManager.shared.startTracking(router: appRouter!)
     }
     
     

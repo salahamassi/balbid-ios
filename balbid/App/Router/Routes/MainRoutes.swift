@@ -10,6 +10,10 @@ import Foundation
 enum MainRoutes {
     
     case photosPicker(params: [String: Any])
+    case splashViewController
+    case loginOptionViewController
+    case accountOptionViewController
+
 }
 
 extension AppRouter{
@@ -21,6 +25,15 @@ extension AppRouter{
         case .photosPicker(params: let params):
             mRoute = PhotosPickerRoute()
             mParams = params
+        case .splashViewController:
+            mRoute = SplashRoute()
+            mParams = nil
+        case .loginOptionViewController:
+            mRoute = LoginOptionRoute()
+            mParams = nil
+        case .accountOptionViewController:
+            mRoute = AccountOptionRoute()
+            mParams = nil
         }
         navigate(to: mRoute, with: mParams, completion: completion)
     }

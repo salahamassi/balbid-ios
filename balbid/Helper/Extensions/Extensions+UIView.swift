@@ -11,6 +11,35 @@ import UIKit
 extension UIView{
     
     typealias CompletionHandler = () -> Void
+    @IBInspectable
+    var cornerRadius : CGFloat {
+        get{
+            return layer.cornerRadius
+        }set(newValue) {
+            withCornerRadius(newValue)
+        }
+    }
+    
+    @IBInspectable
+    var borderWidth : CGFloat {
+        get{
+            return layer.borderWidth
+        }set(newValue) {
+            layer.borderWidth = newValue
+        }
+    }
+    
+    @IBInspectable
+    var borderColor : UIColor? {
+        get{
+            guard let val = layer.borderColor else  {
+                return nil
+            }
+            return  UIColor(cgColor: val)
+        }set(newValue) {
+            layer.borderColor = newValue?.cgColor
+        }
+    }
     
     convenience init(backgroundColor: UIColor = .clear) {
         self.init(frame: .zero)
