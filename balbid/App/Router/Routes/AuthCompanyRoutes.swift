@@ -5,7 +5,7 @@
 //  Created by Qamar Nahed on 21/12/2020.
 //
 
-import Foundation
+import AppRouter
 enum AuthCompanyRoutes {
     case authCompanyMainRoute
     case companyHolderInformationRoute

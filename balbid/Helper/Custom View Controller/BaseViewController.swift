@@ -8,7 +8,4 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-
-    weak var router: AppRouter?
-
 }

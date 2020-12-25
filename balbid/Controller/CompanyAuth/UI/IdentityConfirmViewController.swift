@@ -42,18 +42,16 @@ class IdentityConfirmViewController: BaseViewController {
     
     @IBAction func pickImage(_ sender: UIButton) {
         imagePickerHelper?.displayImagePickerAlertActionSheet(with: sender,mustAddChooseFromDocumentAction: true, mustCropImage: true)
-//        imagePickerHelper?.completion = .some({[weak self] (urls) in
-//            let icon = urls[0].lastPathComponent.getFileIconFromName()
-//            if(icon == nil){
-////                self?.pickedImages[sender.tag].sd_setImage(with: urls[0], completed: nil)
-//            }else{
-//                self?.pickedImages[sender.tag].image = UIImage(named: "icon")
-//            }
-//        })
-        
-        imagePickerHelper?.imageCompletion = .some({[weak self] (image) in
-            self?.pickedImages[sender.tag].image = image
+        imagePickerHelper?.completion = .some({[weak self] (urls) in
+            let icon = urls[0].lastPathComponent.getFileIconFromName()
+            if(icon == nil){
+                self?.pickedImages[sender.tag].sd_setImage(with: urls[0], completed: nil)
+            }else{
+                self?.pickedImages[sender.tag].image = UIImage(named: "icon")
+            }
         })
+        
+  
     }
     
     

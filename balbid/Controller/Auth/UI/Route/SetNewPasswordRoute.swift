@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AppRouter
 
 class SetNewPasswordRoute: Route {
 
@@ -23,7 +24,6 @@ class SetNewPasswordRoute: Route {
 
     func create(_ router: AppRouter, _ params: [String: Any]?) -> UIViewController {
         let viewController = UIStoryboard.authStoryboard.getViewController(with: .setNewPasswordCodeViewControllerId) as!  BaseViewController
-        viewController.router = router
         return viewController
     }
 }

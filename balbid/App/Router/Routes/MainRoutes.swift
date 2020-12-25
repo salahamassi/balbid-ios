@@ -5,7 +5,7 @@
 //  Created by Salah Amassi on 13/12/2020.
 //
 
-import Foundation
+import AppRouter
 
 enum MainRoutes {
 

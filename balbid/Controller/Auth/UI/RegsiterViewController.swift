@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AppRouter
 
 class RegsiterViewController: BaseViewController {
 

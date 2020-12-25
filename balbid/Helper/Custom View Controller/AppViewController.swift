@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AppRouter
 
 class AppViewController<View: UIView>: UIViewController {
 
@@ -15,15 +16,13 @@ class AppViewController<View: UIView>: UIViewController {
         return view as! View
     }
 
-    weak var router: AppRouter?
 
     @available(iOS 12.0, *)
     var isDarkMode: Bool {
         UserDefaultsManager.isDarkMode || traitCollection.userInterfaceStyle == .dark
     }
 
-    public init(router: AppRouter? = nil) {
-        self.router = router
+    public init() {
         super.init(nibName: nil, bundle: nil)
     }
 

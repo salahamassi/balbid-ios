@@ -7,11 +7,11 @@
 //
 
 import UIKit
+import AppRouter
 
 class NibViewController: UIViewController {
 
     private (set) var nibFileName: String?
-    weak var router: AppRouter?
 
     private (set) var viewControlleTitle: String?
 
@@ -20,8 +20,7 @@ class NibViewController: UIViewController {
         UserDefaultsManager.isDarkMode || traitCollection.userInterfaceStyle == .dark
     }
 
-    init(router: AppRouter? = nil) {
-        self.router = router
+    init() {
         super.init(nibName: nibFileName, bundle: .main)
     }
 

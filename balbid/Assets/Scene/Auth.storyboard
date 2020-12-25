@@ -292,7 +292,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Mox-mw-Rqe" userLabel="emil stack view">
-                                        <rect key="frame" x="0.0" y="214" width="288" height="115"/>
+                                        <rect key="frame" x="0.0" y="212.5" width="288" height="115"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kpk-GI-kmo" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
@@ -341,7 +341,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="chB-HO-Rlh">
-                                        <rect key="frame" x="94" y="433.5" width="100" height="30.5"/>
+                                        <rect key="frame" x="98" y="431" width="92" height="33"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Back to">
@@ -502,10 +502,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Tk-IG-siq">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="542.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="535"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VxN-3J-prg">
-                                                <rect key="frame" x="16" y="60" width="288" height="462.5"/>
+                                                <rect key="frame" x="16" y="60" width="288" height="455"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sul-gf-SsI" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
@@ -673,7 +673,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylY-ar-kyq">
-                                                        <rect key="frame" x="0.0" y="330" width="288" height="33"/>
+                                                        <rect key="frame" x="0.0" y="330" width="288" height="28"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="When creating an account, you agree to the">
                                                                 <attributes>
@@ -696,23 +696,23 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5HG-0N-udD">
-                                                        <rect key="frame" x="0.0" y="373" width="288" height="20"/>
+                                                        <rect key="frame" x="0.0" y="368" width="288" height="20"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fo1-Jx-Ylg">
-                                                                <rect key="frame" x="0.0" y="9.5" width="126" height="1"/>
+                                                                <rect key="frame" x="0.0" y="9.5" width="128.5" height="1"/>
                                                                 <color key="backgroundColor" name="light gray"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="1" id="bdo-Wn-535"/>
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="  OR  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SF3-wF-dp5">
-                                                                <rect key="frame" x="126" y="2" width="36" height="16.5"/>
+                                                                <rect key="frame" x="128.5" y="3" width="31" height="14"/>
                                                                 <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
                                                                 <color key="textColor" name="textGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i13-6B-flv">
-                                                                <rect key="frame" x="162" y="9.5" width="126" height="1"/>
+                                                                <rect key="frame" x="159.5" y="9.5" width="128.5" height="1"/>
                                                                 <color key="backgroundColor" name="light gray"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="1" id="bVS-vh-bP7"/>
@@ -725,14 +725,14 @@
                                                         </constraints>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Act-zY-cQt" userLabel="space view">
-                                                        <rect key="frame" x="0.0" y="383" width="288" height="30"/>
+                                                        <rect key="frame" x="0.0" y="378" width="288" height="30"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="RU6-CW-duB"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zkV-Sg-88p">
-                                                        <rect key="frame" x="0.0" y="433" width="288" height="29.5"/>
+                                                        <rect key="frame" x="0.0" y="428" width="288" height="27"/>
                                                         <state key="normal">
                                                             <attributedString key="attributedTitle">
                                                                 <fragment content="You have an accou">
@@ -861,7 +861,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Q3n-nj-Ur5">
-                                <rect key="frame" x="16" y="70" width="288" height="406.5"/>
+                                <rect key="frame" x="16" y="70" width="288" height="404"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_logo" translatesAutoresizingMaskIntoConstraints="NO" id="KVm-oa-asi">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="109"/>
@@ -956,7 +956,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yWx-de-RNC">
-                                        <rect key="frame" x="0.0" y="377" width="288" height="29.5"/>
+                                        <rect key="frame" x="0.0" y="377" width="288" height="27"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="You don't have an accou">
@@ -1039,23 +1039,23 @@
                                         </connections>
                                     </button>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3HO-10-NSW">
-                                        <rect key="frame" x="0.0" y="406.5" width="288" height="20"/>
+                                        <rect key="frame" x="0.0" y="404" width="288" height="20"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zk-dK-A0V">
-                                                <rect key="frame" x="0.0" y="9.5" width="126" height="1"/>
+                                                <rect key="frame" x="0.0" y="9.5" width="128.5" height="1"/>
                                                 <color key="backgroundColor" name="light gray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="mQD-8k-uve"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="  OR  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isO-PM-Tl2">
-                                                <rect key="frame" x="126" y="2" width="36" height="16.5"/>
+                                                <rect key="frame" x="128.5" y="3" width="31" height="14"/>
                                                 <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
                                                 <color key="textColor" name="textGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qnV-05-kXL">
-                                                <rect key="frame" x="162" y="9.5" width="126" height="1"/>
+                                                <rect key="frame" x="159.5" y="9.5" width="128.5" height="1"/>
                                                 <color key="backgroundColor" name="light gray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="NT3-2P-4e8"/>
@@ -1102,19 +1102,19 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="LbY-Kt-l8a">
-                                        <rect key="frame" x="0.0" y="179" width="288" height="184.5"/>
+                                        <rect key="frame" x="0.0" y="179" width="288" height="182"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LH0-jr-3u1">
-                                                <rect key="frame" x="0.0" y="0.0" width="288" height="19"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="16"/>
                                                 <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="3WA-gE-vTx" userLabel="pin  stack view">
-                                                <rect key="frame" x="0.0" y="54" width="288" height="55.5"/>
+                                                <rect key="frame" x="0.0" y="51" width="288" height="56"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="___" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="55Y-uW-6oG" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
-                                                        <rect key="frame" x="8" y="0.0" width="48" height="47.5"/>
+                                                        <rect key="frame" x="8" y="0.0" width="48" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="55Y-uW-6oG" secondAttribute="height" id="GtA-qE-v2I"/>
                                                         </constraints>
@@ -1139,7 +1139,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="___" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gtR-0a-Y0m" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
-                                                        <rect key="frame" x="83" y="0.0" width="47.5" height="47.5"/>
+                                                        <rect key="frame" x="83" y="0.0" width="47.5" height="48"/>
                                                         <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad"/>
                                                         <userDefinedRuntimeAttributes>
@@ -1161,7 +1161,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="___" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LZo-wX-jyO" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
-                                                        <rect key="frame" x="157.5" y="0.0" width="48" height="47.5"/>
+                                                        <rect key="frame" x="157.5" y="0.0" width="48" height="48"/>
                                                         <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad"/>
                                                         <userDefinedRuntimeAttributes>
@@ -1183,7 +1183,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="___" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GyX-HJ-ldy" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
-                                                        <rect key="frame" x="232.5" y="0.0" width="47.5" height="47.5"/>
+                                                        <rect key="frame" x="232.5" y="0.0" width="47.5" height="48"/>
                                                         <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad"/>
                                                         <userDefinedRuntimeAttributes>
@@ -1208,7 +1208,7 @@
                                                 <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="8" right="8"/>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SO2-qf-qkR">
-                                                <rect key="frame" x="0.0" y="144.5" width="288" height="40"/>
+                                                <rect key="frame" x="0.0" y="142" width="288" height="40"/>
                                                 <color key="backgroundColor" name="primaryColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="bQP-t3-cRZ"/>
@@ -1229,7 +1229,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f9k-ZV-5Xs">
-                                        <rect key="frame" x="94" y="433.5" width="100" height="30.5"/>
+                                        <rect key="frame" x="98" y="431" width="92" height="33"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Back to">
@@ -1298,7 +1298,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="s5J-k9-XI6" userLabel="new password stack view">
-                                        <rect key="frame" x="0.0" y="176.5" width="288" height="190"/>
+                                        <rect key="frame" x="0.0" y="175" width="288" height="190"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PtB-Nh-sOv" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
@@ -1374,7 +1374,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1PG-os-VTd">
-                                        <rect key="frame" x="94" y="433.5" width="100" height="30.5"/>
+                                        <rect key="frame" x="98" y="431" width="92" height="33"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Back to">
@@ -1428,43 +1428,43 @@
     </scenes>
     <designables>
         <designable name="55Y-uW-6oG">
-            <size key="intrinsicContentSize" width="81" height="18"/>
+            <size key="intrinsicContentSize" width="77" height="15.5"/>
         </designable>
         <designable name="5wM-C8-vLi">
             <size key="intrinsicContentSize" width="94" height="18.5"/>
         </designable>
         <designable name="6ZZ-N3-dIq">
-            <size key="intrinsicContentSize" width="122" height="17"/>
+            <size key="intrinsicContentSize" width="115" height="14"/>
         </designable>
         <designable name="GyX-HJ-ldy">
-            <size key="intrinsicContentSize" width="81" height="18"/>
+            <size key="intrinsicContentSize" width="77" height="15.5"/>
         </designable>
         <designable name="Klp-NL-mqu">
-            <size key="intrinsicContentSize" width="94.5" height="18"/>
+            <size key="intrinsicContentSize" width="92.5" height="15.5"/>
         </designable>
         <designable name="Kpk-GI-kmo">
-            <size key="intrinsicContentSize" width="94.5" height="18"/>
+            <size key="intrinsicContentSize" width="92.5" height="15.5"/>
         </designable>
         <designable name="LZo-wX-jyO">
-            <size key="intrinsicContentSize" width="81" height="18"/>
+            <size key="intrinsicContentSize" width="77" height="15.5"/>
         </designable>
         <designable name="PtB-Nh-sOv">
-            <size key="intrinsicContentSize" width="144.5" height="17"/>
+            <size key="intrinsicContentSize" width="134" height="14"/>
         </designable>
         <designable name="Sul-gf-SsI">
-            <size key="intrinsicContentSize" width="97.5" height="18"/>
+            <size key="intrinsicContentSize" width="94.5" height="15.5"/>
         </designable>
         <designable name="gtR-0a-Y0m">
-            <size key="intrinsicContentSize" width="81" height="18"/>
+            <size key="intrinsicContentSize" width="77" height="15.5"/>
         </designable>
         <designable name="hec-FO-PGT">
-            <size key="intrinsicContentSize" width="229" height="17"/>
+            <size key="intrinsicContentSize" width="215" height="14"/>
         </designable>
         <designable name="nZj-hr-C8q">
-            <size key="intrinsicContentSize" width="94.5" height="18"/>
+            <size key="intrinsicContentSize" width="92.5" height="15.5"/>
         </designable>
         <designable name="t4m-N5-KUS">
-            <size key="intrinsicContentSize" width="112" height="17"/>
+            <size key="intrinsicContentSize" width="105" height="14"/>
         </designable>
     </designables>
     <resources>

@@ -6,6 +6,7 @@
 //
 
 import CoreLocation
+import AppRouter
 
 class LocationManager: NSObject, CLLocationManagerDelegate {
 

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AppRouter
 
 struct SplashRoute: Route {
 
@@ -23,7 +24,6 @@ struct SplashRoute: Route {
 
     func create(_ router: AppRouter, _ params: [String: Any]?) -> UIViewController {
         let viewController =  UIStoryboard.splashStoryboard.getViewController(with: .splashViewControllerId)  as!  BaseViewController
-        viewController.router = router
         return viewController
     }
 

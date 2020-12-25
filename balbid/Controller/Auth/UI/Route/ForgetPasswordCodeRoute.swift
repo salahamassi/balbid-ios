@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AppRouter
+
 class ForgetPasswordCodeRoute: Route {
 
     var modalPresentationStyle: UIModalPresentationStyle {
@@ -23,7 +25,6 @@ class ForgetPasswordCodeRoute: Route {
 
     func create(_ router: AppRouter, _ params: [String: Any]?) -> UIViewController {
         let viewController = UIStoryboard.authStoryboard.getViewController(with: .forgetPasswordCodeViewControllerId) as!  BaseViewController
-        viewController.router = router
         return viewController
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import Photos
 import CropViewController
+import AppRouter
 
 class ImagePickerHelper: NSObject {
 

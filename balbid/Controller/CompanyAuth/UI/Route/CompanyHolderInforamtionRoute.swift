@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AppRouter
 
 class CompanyHolderInforamtionRoute: Route {
     var modalPresentationStyle: UIModalPresentationStyle {
@@ -23,7 +24,6 @@ class CompanyHolderInforamtionRoute: Route {
 
     func create(_ router: AppRouter, _ params: [String: Any]?) -> UIViewController {
         let viewController = UIStoryboard.authComapnyStoryboard.getViewController(with: .companyHolderInformationViewControllerId) as! BaseViewController
-        viewController.router = router
         return viewController
     }
 }

@@ -12,7 +12,6 @@ class AppNavigationController: UINavigationController {
 
     private var shadowColor: UIColor?, backgroundEffect: UIBlurEffect?, backgroundColor: UIColor?
 
-    public weak var router: AppRouter?
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +62,7 @@ extension AppNavigationController: UINavigationControllerDelegate {
         } else {
             unclear()
         }
-        router?.currentViewController = viewController
+       // router?.currentViewController = viewController
         if viewController.mustHideNavigationBar {
             setNavigationBarHidden(true, animated: true)
         } else {

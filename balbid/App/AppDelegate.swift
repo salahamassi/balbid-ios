@@ -8,6 +8,7 @@
 import IQKeyboardManagerSwift
 import MOLH
 import UIKit
+import AppRouter
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -73,4 +74,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // refresh some data after app become active
     }
 
+}
+
+
+extension UIViewController {
+    
+    weak var router: AppRouter? {
+        get{
+            return (UIApplication.shared.delegate as! AppDelegate).appRouter
+        }
+    }
+    
 }
