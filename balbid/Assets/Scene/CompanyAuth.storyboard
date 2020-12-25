@@ -1252,10 +1252,10 @@
             </objects>
             <point key="canvasLocation" x="3226" y="-86"/>
         </scene>
-        <!--View Controller-->
+        <!--Auth Company Created Successfully View Controller-->
         <scene sceneID="9Zn-JT-Pxq">
             <objects>
-                <viewController storyboardIdentifier="AuthCompanyCreatedSuccessfullyViewController" id="xAO-fS-YSr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthCompanyCreatedSuccessfullyViewController" id="xAO-fS-YSr" customClass="AuthCompanyCreatedSuccessfullyViewController" customModule="balbid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dnh-XX-xiv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1312,6 +1312,9 @@
                                                 <color key="value" name="primaryColor"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="goToHome:" destination="xAO-fS-YSr" eventType="touchUpInside" id="ahS-Q4-IOS"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

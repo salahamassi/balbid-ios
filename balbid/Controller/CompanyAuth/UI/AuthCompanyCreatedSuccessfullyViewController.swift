@@ -15,4 +15,7 @@ class AuthCompanyCreatedSuccessfullyViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func goToHome(_ sender : Any){
+        router?.navigate(to: .mainTabBarRoute)
+    }
 }

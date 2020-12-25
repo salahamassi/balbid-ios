@@ -11,6 +11,7 @@ enum MainRoutes {
 
     case photosPicker(params: [String: Any])
     case splashRoute
+    case mainTabBarRoute
 
 }
 
@@ -25,6 +26,9 @@ extension AppRouter {
             mParams = params
         case .splashRoute:
             mRoute = SplashRoute()
+            mParams = nil
+        case .mainTabBarRoute:
+            mRoute = MainTabBarRoute()
             mParams = nil
         }
         navigate(to: mRoute, with: mParams, completion: completion)
