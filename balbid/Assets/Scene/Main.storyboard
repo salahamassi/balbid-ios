@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="4Hd-TU-Uw0">
+            <objects>
+                <viewController id="wbV-fz-N94" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K5l-YP-6RL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XDI-V7-PdN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="unselected_account" selectedImage="selected_account" id="x84-Fs-wfA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IfW-YW-xwW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-439" y="756"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PvE-qf-29l">
+            <objects>
+                <viewController id="Icr-pS-0jA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1pn-Ra-7zp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="oPO-Or-yoh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="unselected_category" selectedImage="selected_category" id="fan-hT-Fsr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQk-6R-oG5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="452" y="406"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aC3-av-zZY">
+            <objects>
+                <viewController id="Wi3-mT-DFC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Me8-oY-iRl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="JtI-CJ-oLE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="selected_offers" selectedImage="selected_offers" id="teh-yD-Gcc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kbl-lf-ccD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="419"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1iO-4N-kaF">
+            <objects>
+                <viewController id="6Uc-jZ-ORd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V41-j0-mcI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Iwh-BV-uPU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="unselected_cart" selectedImage="selected_cart" id="AIj-zL-BwH"/>
+                    <navigationItem key="navigationItem" id="Lec-de-Pzv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pjs-Ee-8qf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175" y="-224"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aoq-M4-YBg">
+            <objects>
+                <viewController id="BWt-w9-JEX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FPn-h9-a7D">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="GaX-Fo-eKt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="unselected_home" selectedImage="selected_home" id="ztm-qb-s0n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v0B-Vu-RU7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="452" y="-201"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ub3-NV-cF5">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarViewController" id="PGB-uT-89w" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fPp-4M-fuC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BWt-w9-JEX" kind="relationship" relationship="viewControllers" id="F8h-Hd-Lz4"/>
+                        <segue destination="Icr-pS-0jA" kind="relationship" relationship="viewControllers" id="fjp-Vg-3gs"/>
+                        <segue destination="Wi3-mT-DFC" kind="relationship" relationship="viewControllers" id="qbC-jw-CYx"/>
+                        <segue destination="6Uc-jZ-ORd" kind="relationship" relationship="viewControllers" id="PjS-md-Gog"/>
+                        <segue destination="wbV-fz-N94" kind="relationship" relationship="viewControllers" id="rOP-rP-LuU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GqJ-oM-7zl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-438" y="102"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="selected_account" width="23.5" height="23.5"/>
+        <image name="selected_cart" width="23" height="23"/>
+        <image name="selected_category" width="23.5" height="23.5"/>
+        <image name="selected_home" width="27.5" height="23.5"/>
+        <image name="selected_offers" width="16.5" height="23.5"/>
+        <image name="unselected_account" width="24.5" height="24.5"/>
+        <image name="unselected_cart" width="12" height="12"/>
+        <image name="unselected_category" width="24.5" height="24.5"/>
+        <image name="unselected_home" width="30" height="24.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

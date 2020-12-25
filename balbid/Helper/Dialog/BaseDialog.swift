@@ -9,20 +9,20 @@
 import UIKit
 
 class BaseDialog: UIView {
-    
+
     class func initFromNib() -> BaseDialog {
         preconditionFailure("This method must be overridden")
     }
-    
+
     var centerYConstraint: NSLayoutConstraint?
     var heightConstraint: NSLayoutConstraint?
     var widthConstraint: NSLayoutConstraint?
     let viewController = UIViewController()
     let transitioner = CAVTransitioner()
-    
+
     var mustUseTransitioner: Bool = false
     var mustHideWhenTapOutSide: Bool = false
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         if #available(iOS 13.0, *) {
@@ -31,24 +31,24 @@ class BaseDialog: UIView {
         }
         setupDialog()
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupDialog()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
-    func setupDialog(){
+
+    func setupDialog() {
         viewController.view.backgroundColor = UIColor.black.withAlphaComponent(0)
         viewController.view.frame = UIScreen.main.bounds
         viewController.view.addSubview(self)
-        if mustUseTransitioner{
+        if mustUseTransitioner {
             viewController.modalPresentationStyle = .custom
             viewController.transitioningDelegate = transitioner
-        }else{
+        } else {
             viewController.modalTransitionStyle = .crossDissolve
             viewController.modalPresentationStyle = .overCurrentContext
         }
@@ -64,26 +64,26 @@ class BaseDialog: UIView {
         tapGestureRecognizer.cancelsTouchesInView = false
         viewController.view.addGestureRecognizer(tapGestureRecognizer)
     }
-    
-    func showDebug(with height: CGFloat, and width: CGFloat? = nil, centerYPadding: CGFloat = 0){
+
+    func showDebug(with height: CGFloat, and width: CGFloat? = nil, centerYPadding: CGFloat = 0) {
         self.centerYConstraint?.constant = centerYPadding
         self.heightConstraint?.constant = height
-        if let width = width{
+        if let width = width {
             self.widthConstraint?.constant = width
         }
         viewController.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         viewController.view.layoutIfNeeded()
     }
-    
-    func show(with height: CGFloat, and width: CGFloat? = nil, centerYPadding: CGFloat = 0, animated: Bool = true){
+
+    func show(with height: CGFloat, and width: CGFloat? = nil, centerYPadding: CGFloat = 0, animated: Bool = true) {
         guard var rootViewController = (UIApplication.shared.delegate as? AppDelegate)?.appWindow?.rootViewController else { return }
-        if !animated{
+        if !animated {
             self.centerYConstraint?.constant = centerYPadding
             self.heightConstraint?.constant = height
-            if let width = width{
+            if let width = width {
                 self.widthConstraint?.constant = width
-            }else{
-                
+            } else {
+
             }
             viewController.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
             viewController.view.layoutIfNeeded()
@@ -93,10 +93,10 @@ class BaseDialog: UIView {
         rootViewController.present(viewController, animated: true) {
             self.centerYConstraint?.constant = centerYPadding
             self.heightConstraint?.constant = height
-            if let width = width{
+            if let width = width {
                 self.widthConstraint?.constant = width
             }
-            if animated{
+            if animated {
                 UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseOut, animations: {
                     self.viewController.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
                     self.viewController.view.layoutIfNeeded()
@@ -105,30 +105,30 @@ class BaseDialog: UIView {
             }
         }
     }
-    
-    func hide(animated: Bool = true, completion: (()->Void)? = nil){
+
+    func hide(animated: Bool = true, completion: (() -> Void)? = nil) {
         centerYConstraint?.constant = viewController.view.frame.height
         heightConstraint?.constant = 0
-        if animated{
+        if animated {
             UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseOut, animations: {
                 self.viewController.view.backgroundColor = UIColor.black.withAlphaComponent(0)
                 self.layoutIfNeeded()
                 self.viewController.view.layoutIfNeeded()
-            }, completion: { (bool) in
+            }, completion: { (_) in
                 self.viewController.dismiss(animated: false, completion: completion)
             })
-        }else{
+        } else {
             layoutIfNeeded()
             viewController.view.layoutIfNeeded()
             viewController.view.backgroundColor = UIColor.black.withAlphaComponent(0)
             viewController.dismiss(animated: false, completion: completion)
         }
     }
-    
+
     @objc
-    private func didTapBlackMaskView(_ sender: UITapGestureRecognizer){
+    private func didTapBlackMaskView(_ sender: UITapGestureRecognizer) {
         if frame.contains(sender.location(in: viewController.view)) { return }
-        if mustHideWhenTapOutSide{
+        if mustHideWhenTapOutSide {
             hide()
         }
     }

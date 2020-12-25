@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension UINavigationBar{
-    
-    func clear(){
+extension UINavigationBar {
+
+    func clear() {
         setBackgroundImage(UIImage(), for: .default)
         shadowImage = UIImage()
         if #available(iOS 13.0, *) {
@@ -19,8 +19,8 @@ extension UINavigationBar{
             standardAppearance.shadowColor = .clear
         }
     }
-    
-    func unclear(shadowColor: UIColor?, backgroundEffect:  UIBlurEffect?, backgroundColor: UIColor?){
+
+    func unclear(shadowColor: UIColor?, backgroundEffect: UIBlurEffect?, backgroundColor: UIColor?) {
         setBackgroundImage(nil, for: .default)
         shadowImage = nil
         if #available(iOS 13.0, *) {

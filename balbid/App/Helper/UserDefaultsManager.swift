@@ -8,50 +8,50 @@
 import Foundation
 import MOLH
 
-class UserDefaultsManager{
-    
+class UserDefaultsManager {
+
     private static let appLanguageKey = "appLanguage"
     private static let tokenKey = "token"
     private static let fcmTokenKey = "fcmToken"
     private static let isDarkModeKey = "isDarkMode"
 
     static var appLanguage: String? {
-        get{
+        get {
             return UserDefaults.standard.string(forKey: appLanguageKey)
         }
-        set{
+        set {
             UserDefaults.standard.set(newValue, forKey: appLanguageKey)
         }
     }
-    
+
     static var token: String? {
-        get{
+        get {
             return UserDefaults.standard.string(forKey: tokenKey)
         }
-        set{
+        set {
             UserDefaults.standard.set(newValue, forKey: tokenKey)
         }
     }
-    
+
     static var fcmToken: String? {
-        get{
+        get {
             return UserDefaults.standard.string(forKey: fcmTokenKey)
         }
-        set{
+        set {
             UserDefaults.standard.set(newValue, forKey: fcmTokenKey)
         }
     }
-    
+
     static var isDarkMode: Bool {
-        get{
+        get {
             return UserDefaults.standard.bool(forKey: isDarkModeKey)
         }
-        set{
+        set {
             UserDefaults.standard.set(newValue, forKey: isDarkModeKey)
         }
     }
-    
-    static func removeAll(){
+
+    static func removeAll() {
         token = nil
         fcmToken  = nil
         let tempIsDarkMode = isDarkMode

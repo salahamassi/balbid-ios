@@ -8,36 +8,35 @@
 import UIKit
 
 protocol Route {
-    
+
     var modalPresentationStyle: UIModalPresentationStyle { get }
     var animatedTransitioningDelegate: UIViewControllerTransitioningDelegate? { get }
     var navigateType: NavigateType { get }
-    
+
     func create(_ router: AppRouter, _ params: [String: Any]?) -> UIViewController
-    
+
 }
 
-enum NavigateType{
+enum NavigateType {
     case present, push, pushFromBottom, windowRoot
 }
 
-class AppRouter{
-    
+class AppRouter {
+
     let window: UIWindow
 
     var currentViewController: UIViewController?
 
-    
     init(window: UIWindow = (UIApplication.shared.delegate as! AppDelegate).appWindow!, rootViewController: UIViewController? = nil) {
         self.window = window
-        if let rootViewController = rootViewController{
+        if let rootViewController = rootViewController {
             window.rootViewController = rootViewController
             window.makeKeyAndVisible()
             currentViewController = rootViewController
         }
     }
-    
-    func navigate(to route: Route, with params: [String: Any]? = [:], completion: (() -> Void)?=nil){
+
+    func navigate(to route: Route, with params: [String: Any]? = [:], completion: (() -> Void)?=nil) {
         let view = route.create(self, params)
         if let currentViewController = currentViewController {
             if type(of: view) == type(of: currentViewController) {
@@ -46,29 +45,29 @@ class AppRouter{
                 return
             }
         }
-        if route.navigateType == .push{
+        if route.navigateType == .push {
             guard let rootViewController = window.rootViewController else { return }
-            if rootViewController is UINavigationController{
+            if rootViewController is UINavigationController {
                 (rootViewController as! UINavigationController).pushViewController(view, animated: true)
-            }else{
+            } else {
                 if !(window.rootViewController?.children.last is UINavigationController) { return }
                 precondition(window.rootViewController?.children.last is UINavigationController)
                 (rootViewController.children.last as! UINavigationController).pushViewController(view, animated: true)
             }
             completion?()
-        }else if route.navigateType == .pushFromBottom{
+        } else if route.navigateType == .pushFromBottom {
             pushViewControllerFromBottom(view)
             completion?()
-        } else if route.navigateType == .present{
+        } else if route.navigateType == .present {
             guard let rootViewController = window.rootViewController else { return }
             view.modalPresentationStyle = route.modalPresentationStyle
             view.transitioningDelegate = route.animatedTransitioningDelegate
-            if let rootViewController = rootViewController.presentedViewController{
+            if let rootViewController = rootViewController.presentedViewController {
                 rootViewController.present(view, animated: true, completion: completion)
-            }else{
+            } else {
                 rootViewController.present(view, animated: true, completion: completion)
             }
-        }else{
+        } else {
             window.rootViewController = view
             window.makeKeyAndVisible()
             let options: UIView.AnimationOptions = .transitionCrossDissolve
@@ -78,8 +77,7 @@ class AppRouter{
 
             // Creates a transition animation.
             // Though `animations` is optional, the documentation tells us that it must not be nil. ¯\_(ツ)_/¯
-            UIView.transition(with: window, duration: duration, options: options, animations: {}, completion:
-            { completed in
+            UIView.transition(with: window, duration: duration, options: options, animations: {}, completion: { _ in
                 completion?()
             })
 
@@ -91,23 +89,23 @@ class AppRouter{
 //        
 //    }
 //    
-    func popViewController(){
+    func popViewController() {
         guard let rootViewController = window.rootViewController else { return }
-        if rootViewController is UINavigationController{
+        if rootViewController is UINavigationController {
             (rootViewController as! UINavigationController).popViewController(animated: true)
 
-        }else{
+        } else {
             precondition(window.rootViewController?.children.last is UINavigationController)
             (rootViewController.children.last as! UINavigationController).popViewController(animated: true)
         }
         currentViewController = nil
     }
-    
-    func popToRootViewController(){
+
+    func popToRootViewController() {
         guard let rootViewController = window.rootViewController else { return }
-        if rootViewController is UINavigationController{
+        if rootViewController is UINavigationController {
             (rootViewController as! UINavigationController).popToRootViewController(animated: true)
-        }else{
+        } else {
             if !(window.rootViewController?.children.first is UINavigationController) { return }
             precondition(window.rootViewController?.children.first is UINavigationController)
             (rootViewController.children.first as! UINavigationController).popToRootViewController(animated: true)
@@ -115,12 +113,12 @@ class AppRouter{
         currentViewController = nil
     }
 
-    func pop(numberOfScreens: Int){
+    func pop(numberOfScreens: Int) {
         guard let rootViewController = window.rootViewController else { return }
         let navigationController: UINavigationController
-        if rootViewController is UINavigationController{
+        if rootViewController is UINavigationController {
             navigationController = (window.rootViewController as! UINavigationController)
-         }else{
+         } else {
             if !(window.rootViewController?.children.first is UINavigationController) { return }
             precondition(window.rootViewController?.children.first is UINavigationController)
             navigationController = window.rootViewController?.children.first as! UINavigationController
@@ -129,13 +127,13 @@ class AppRouter{
         navigationController.popToViewController(navigationController.viewControllers[navigationController.viewControllers.count - (numberOfScreens + 1)], animated: true)
         currentViewController = nil
     }
-    
-    func remove(numberOfScreens: Int){
+
+    func remove(numberOfScreens: Int) {
         guard let rootViewController = window.rootViewController else { return }
         let navigationController: UINavigationController
-        if rootViewController is UINavigationController{
+        if rootViewController is UINavigationController {
             navigationController = (window.rootViewController as! UINavigationController)
-         }else{
+         } else {
             if !(window.rootViewController?.children.first is UINavigationController) { return }
             precondition(window.rootViewController?.children.first is UINavigationController)
             navigationController = window.rootViewController?.children.first as! UINavigationController
@@ -144,18 +142,18 @@ class AppRouter{
         navigationController.viewControllers.removeSubrange(1...numberOfScreens)
         currentViewController = nil
     }
-    
-    func dismiss(animated: Bool = true, completion: (() -> Void)? = nil){
+
+    func dismiss(animated: Bool = true, completion: (() -> Void)? = nil) {
         window.rootViewController?.presentedViewController?.dismiss(animated: animated, completion: completion)
         currentViewController = window.rootViewController
     }
-    
+
    private func pushViewControllerFromBottom(_ viewController: UIViewController) {
         guard let rootViewController = window.rootViewController else { return }
         let navigationController: UINavigationController
-        if rootViewController is UINavigationController{
+        if rootViewController is UINavigationController {
             navigationController = (window.rootViewController as! UINavigationController)
-         }else{
+         } else {
             if !(window.rootViewController?.children.first is UINavigationController) { return }
             precondition(window.rootViewController?.children.first is UINavigationController)
             navigationController = window.rootViewController?.children.first as! UINavigationController
@@ -169,13 +167,13 @@ class AppRouter{
         navigationController.pushViewController(viewController, animated: false)
         currentViewController = viewController
     }
-    
+
    func popViewControllerFromTop() {
         guard let rootViewController = window.rootViewController else { return }
         let navigationController: UINavigationController
-        if rootViewController is UINavigationController{
+        if rootViewController is UINavigationController {
             navigationController = (window.rootViewController as! UINavigationController)
-         }else{
+         } else {
             if !(window.rootViewController?.children.first is UINavigationController) { return }
             precondition(window.rootViewController?.children.first is UINavigationController)
             navigationController = window.rootViewController?.children.first as! UINavigationController
@@ -189,13 +187,13 @@ class AppRouter{
         navigationController.popViewController(animated: false)
         currentViewController = nil
     }
-    
-    func removeAllAndKeep(types: [AnyClass]){
+
+    func removeAllAndKeep(types: [AnyClass]) {
         guard let rootViewController = window.rootViewController else { return }
         let navigationController: UINavigationController
-        if rootViewController is UINavigationController{
+        if rootViewController is UINavigationController {
             navigationController = (window.rootViewController as! UINavigationController)
-         }else{
+         } else {
             if !(window.rootViewController?.children.first is UINavigationController) { return }
             precondition(window.rootViewController?.children.first is UINavigationController)
             navigationController = window.rootViewController?.children.first as! UINavigationController
@@ -210,13 +208,13 @@ class AppRouter{
         navigationController.setViewControllers(viewControllers, animated: true)
         currentViewController = nil
     }
-    
-    func remove(types: [AnyClass]){
+
+    func remove(types: [AnyClass]) {
         guard let rootViewController = window.rootViewController else { return }
         let navigationController: UINavigationController
-        if rootViewController is UINavigationController{
+        if rootViewController is UINavigationController {
             navigationController = (window.rootViewController as! UINavigationController)
-         }else{
+         } else {
             if !(window.rootViewController?.children.first is UINavigationController) { return }
             precondition(window.rootViewController?.children.first is UINavigationController)
             navigationController = window.rootViewController?.children.first as! UINavigationController

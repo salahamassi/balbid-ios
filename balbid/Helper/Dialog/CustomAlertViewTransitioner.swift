@@ -9,7 +9,7 @@
 import UIKit
 import QuartzCore
 
-class CAVTransitioner : NSObject, UIViewControllerTransitioningDelegate {
+class CAVTransitioner: NSObject, UIViewControllerTransitioningDelegate {
     func presentationController(
         forPresented presented: UIViewController,
         presenting: UIViewController?,
@@ -20,34 +20,34 @@ class CAVTransitioner : NSObject, UIViewControllerTransitioningDelegate {
     }
 }
 
-class MyPresentationController : UIPresentationController {
-    
-    func decorateView(_ v:UIView) {
+class MyPresentationController: UIPresentationController {
+
+    func decorateView(_ v: UIView) {
         // iOS 8 doesn't have this
 //        v.layer.borderColor = UIColor.blue.cgColor
 //        v.layer.borderWidth = 2
         v.layer.cornerRadius = 8
-        
+
         let m1 = UIInterpolatingMotionEffect(
-            keyPath:"center.x", type:.tiltAlongHorizontalAxis)
+            keyPath: "center.x", type: .tiltAlongHorizontalAxis)
         m1.maximumRelativeValue = 10.0
         m1.minimumRelativeValue = -10.0
         let m2 = UIInterpolatingMotionEffect(
-            keyPath:"center.y", type:.tiltAlongVerticalAxis)
+            keyPath: "center.y", type: .tiltAlongVerticalAxis)
         m2.maximumRelativeValue = 10.0
         m2.minimumRelativeValue = -10.0
         let g = UIMotionEffectGroup()
-        g.motionEffects = [m1,m2]
+        g.motionEffects = [m1, m2]
      //   v.addMotionEffect(g)
     }
-    
+
     override func presentationTransitionWillBegin() {
         self.decorateView(self.presentedView!)
         let vc = self.presentingViewController
         let v = vc.view!
         let con = self.containerView!
         let shadow = UIView(frame: con.frame)
-        shadow.backgroundColor = UIColor(white:0, alpha:0.4)
+        shadow.backgroundColor = UIColor(white: 0, alpha: 0.4)
         shadow.alpha = 0
         con.insertSubview(shadow, at: 0)
         shadow.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -58,7 +58,7 @@ class MyPresentationController : UIPresentationController {
             v.tintAdjustmentMode = .dimmed
         }
     }
-    
+
     override func dismissalTransitionWillBegin() {
         let vc = self.presentingViewController
         let v = vc.view!
@@ -71,8 +71,8 @@ class MyPresentationController : UIPresentationController {
             v.tintAdjustmentMode = .automatic
         }
     }
-    
-    override var frameOfPresentedViewInContainerView : CGRect {
+
+    override var frameOfPresentedViewInContainerView: CGRect {
         // we want to center the presented view at its "native" size
         // I can think of a lot of ways to do this,
         // but here we just assume that it *is* its native size
@@ -81,7 +81,7 @@ class MyPresentationController : UIPresentationController {
         v.center = CGPoint(x: con.bounds.midX, y: con.bounds.midY)
         return v.frame.integral
     }
-    
+
     override func containerViewWillLayoutSubviews() {
         // deal with future rotation
         // again, I can think of more than one approach
@@ -92,18 +92,18 @@ class MyPresentationController : UIPresentationController {
         ]
         v.translatesAutoresizingMaskIntoConstraints = true
     }
-    
+
 }
 
 extension CAVTransitioner { // UIViewControllerTransitioningDelegate
     func animationController(
-        forPresented presented:UIViewController,
+        forPresented presented: UIViewController,
         presenting: UIViewController,
         source: UIViewController)
         -> UIViewControllerAnimatedTransitioning? {
             return self
     }
-    
+
     func animationController(
         forDismissed dismissed: UIViewController)
         -> UIViewControllerAnimatedTransitioning? {
@@ -111,25 +111,25 @@ extension CAVTransitioner { // UIViewControllerTransitioningDelegate
     }
 }
 
-extension CAVTransitioner : UIViewControllerAnimatedTransitioning {
+extension CAVTransitioner: UIViewControllerAnimatedTransitioning {
     func transitionDuration(
         using transitionContext: UIViewControllerContextTransitioning?)
         -> TimeInterval {
             return 0.25
     }
-    
+
     func animateTransition(
         using transitionContext: UIViewControllerContextTransitioning) {
-        
+
         let con = transitionContext.containerView
-        
+
         let v1 = transitionContext.view(forKey: .from)
         let v2 = transitionContext.view(forKey: .to)
-        
+
         // we are using the same object (self) as animation controller
         // for both presentation and dismissal
         // so we have to distinguish the two cases
-        
+
         if let v2 = v2 { // presenting
             con.addSubview(v2)
             let scale = CGAffineTransform(scaleX: 1.2, y: 1.2)
@@ -148,7 +148,7 @@ extension CAVTransitioner : UIViewControllerAnimatedTransitioning {
                 transitionContext.completeTransition(true)
             }
         }
-        
+
     }
-    
+
 }

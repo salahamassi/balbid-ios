@@ -6,44 +6,42 @@
 //  Copyright © 2020 MSA. All rights reserved.
 //
 
-
 import UIKit
 import Photos
 
+class PhotosCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
-class PhotosCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout{
-    
     private var allPhotos = [PhotoWrapper]()
     private var assets = [PHAsset]()
-    
+
     private var selectedUrls = [URL]()
     private var selectedImages = [UIImage]()
     private let emptyView = EmptyView.initFromNib()
-    
+
     private var data = [AlbumModel]()
-    
-    var selectedPhotos = [PhotoWrapper](){
-        didSet{
-            if selectedPhotos.isEmpty{
+
+    var selectedPhotos = [PhotoWrapper]() {
+        didSet {
+            if selectedPhotos.isEmpty {
                 titleLabel.text = "\(album?.name ?? "keyword.recents".localized)"
-            }else{
+            } else {
                 titleLabel.text = "\(album?.name ?? "keyword.recents".localized)"
             }
         }
     }
-    
+
     var inDownloadingProgressPhotos = [PhotoWrapper]()
 
     private lazy var doneBarButtonItem: UIBarButtonItem = {
         let barButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(performDoneBarButtonAction))
         return barButtonItem
     }()
-    
+
     private lazy var cancelBarButtonItem: UIBarButtonItem = {
         let barButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(performCancelBarButtonAction))
         return barButtonItem
     }()
-    
+
     private lazy var albumButton: UIButton = {
         let button = UIButton()
         button.setTitle("button.normalTitle.albums".localized, for: .normal)
@@ -52,7 +50,7 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
         button.addTarget(self, action: #selector(performAlbumButtonAction), for: .primaryActionTriggered)
         return button
     }()
-    
+
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.appColor(.labelColor)
@@ -61,37 +59,35 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
         label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(performAlbumButtonAction)))
         return label
     }()
-    
-    
-    
+
     private var page = 10
     private var beginIndex = 0
     private var endIndex = 9
     private var loading = false
     private var hasNextPage = false
     private var cameraOffset: Int = 0
-    
+
     private let activityIndicator = UIActivityIndicatorView()
-    private var allPhotosAssetResults : PHFetchResult<PHAsset>?
-    
+    private var allPhotosAssetResults: PHFetchResult<PHAsset>?
+
     weak var delegate: PhotosCollectionViewControllerDelegate?
     var album: AlbumModel?
-    
+
     private let photoCellId = "photoCellId"
     weak var router: AppRouter?
     var maxSelection: Int?
-    
+
     private var imagePickerHelper: ImagePickerHelper?
     var cameraMode = false
     private var imageRequestsIDs = [PHImageRequestID]()
-    
+
     @available(iOS 12.0, *)
-    var isDarkMode: Bool{
+    var isDarkMode: Bool {
         UserDefaultsManager.isDarkMode || traitCollection.userInterfaceStyle == .dark
     }
-    
+
     deinit {
-        for imageRequestID in imageRequestsIDs{
+        for imageRequestID in imageRequestsIDs {
             PHImageManager.default().cancelImageRequest(imageRequestID)
         }
     }
@@ -101,21 +97,21 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
         self.delegate = delegate
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("Fuck storyboard!")
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewController()
-        
+
         DispatchQueue.global(qos: .background).async { [weak self] in
             self?.setupPhotoAsset()
             self?.setupAlbums()
         }
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         DispatchQueue.main.async {
@@ -126,7 +122,7 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
             self.checkThePreviousSelectedPhotos()
         }
     }
-    
+
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         DispatchQueue.main.async {
@@ -134,8 +130,8 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
         }
 
     }
-    
-    //MARK: Setup functions
+
+    // MARK: Setup functions
     fileprivate func setupViewController() {
         titleLabel.text = "label.text.photosPickerTitle".localized
         if #available(iOS 13.0, *) {
@@ -148,28 +144,26 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
         collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: photoCellId)
         collectionView.backgroundColor = .clear
         view.backgroundColor = UIColor.appColor(.viewBackgroundColor)
-        
+
         view.addSubview(activityIndicator)
         view.addSubview(albumButton)
-        
+
         let titleStackView = UIStackView(arrangedSubviews: [titleLabel, albumButton])
         titleStackView.axis = .vertical
         titleStackView.spacing = 1
         titleStackView.alignment = .center
         titleStackView.distribution = .equalCentering
-        
+
         navigationItem.titleView = titleStackView
-        
-        
+
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-        
+
         activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
+
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
-        
-        
+
         imagePickerHelper = ImagePickerHelper(viewController: self, router: router)
         imagePickerHelper?.imageCompletion = .some({ [weak self] (image) in
             guard let self = self else { return }
@@ -177,7 +171,7 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
             self.assets.insert(.init(), at: 1)
             self.cameraOffset = self.cameraOffset + 1
             let indexPath = IndexPath(item: 1, section: 0)
-            if let maxSelection = self.maxSelection{
+            if let maxSelection = self.maxSelection {
                 if self.selectedPhotos.count + self.inDownloadingProgressPhotos.count >= maxSelection {
                     self.deselectPhoto(with: .init(item: self.selectedPhotos.count  - 1, section: 0))
                 }
@@ -194,27 +188,27 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
             self.cameraMode = true
         })
     }
-    
-    private func checkThePreviousSelectedPhotos(){
+
+    private func checkThePreviousSelectedPhotos() {
         selectedPhotos.removeAll()
         selectedUrls.removeAll()
         selectedImages.removeAll()
-        
-        for (index, image) in allPhotos.enumerated(){
-            if selectedPhotos.contains(where: { return $0.image == image.image}){
+
+        for (index, image) in allPhotos.enumerated() {
+            if selectedPhotos.contains(where: { return $0.image == image.image}) {
                 allPhotos[index].isSelected = true
-            }else{
+            } else {
                 allPhotos[index].isSelected = false
             }
         }
         collectionView.reloadData()
     }
-    
-    //MARK: photokit functions
+
+    // MARK: photokit functions
     fileprivate func setupPhotoAsset() {
         let fetchOptions = PHFetchOptions()
         fetchOptions.includeHiddenAssets = true
-        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate",ascending: false)]
+        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         fetchOptions.predicate = NSPredicate(format: "mediaType = %d", PHAssetMediaType.image.rawValue)
         allPhotosAssetResults = PHAsset.fetchAssets(with: fetchOptions)
         if let image = UIImage(named: "ic_camera_button") {
@@ -224,7 +218,7 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
         cameraOffset = 1
         getPhotos()
     }
-    
+
     fileprivate func setupAlbumAsset() {
         guard let album = album else { return }
         let fetchOptions = PHFetchOptions()
@@ -242,9 +236,9 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
         endIndex = 9
         hasNextPage = false
         loading = false
-        if album.count == 0{
+        if album.count == 0 {
             emptyView.addToParent(view, with: "keyword.noResults".localized)
-        }else{
+        } else {
             emptyView.removeFromParent()
             activityIndicator.startAnimating()
             cameraOffset = 0
@@ -252,8 +246,8 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
         }
         titleLabel.text = album.name
     }
-    
-    private func getPhotos(){
+
+    private func getPhotos() {
         guard let allPhotosAssetResults = allPhotosAssetResults else { return }
         endIndex = beginIndex + (page - 1)
         if endIndex >= allPhotosAssetResults.count {
@@ -261,12 +255,12 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
         }
         if endIndex < beginIndex { return }
         let arr = Array(beginIndex...endIndex)
-        
+
         let indexSet = IndexSet(arr)
         fetchPhotos(indexSet: indexSet)
     }
-    
-    fileprivate func fetchPhotos(indexSet: IndexSet){
+
+    fileprivate func fetchPhotos(indexSet: IndexSet) {
         guard let allPhotosAssetResults = allPhotosAssetResults else { return }
         if allPhotosAssetResults.count == allPhotos.count - cameraOffset {
             self.hasNextPage = false
@@ -277,11 +271,11 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
             guard let storngSelf = self else {
                 return
             }
-            allPhotosAssetResults.enumerateObjects(at: indexSet, options: NSEnumerationOptions.concurrent, using: { (asset, count, stop) in
+            allPhotosAssetResults.enumerateObjects(at: indexSet, options: NSEnumerationOptions.concurrent, using: { (asset, count, _) in
                 let imageManager = PHImageManager.default()
                 let options = PHImageRequestOptions()
                 options.isSynchronous = true
-                imageManager.requestImage(for: asset, targetSize: CGSize(width:  300, height: 300), contentMode: .aspectFit, options: options, resultHandler: { (image, info) in
+                imageManager.requestImage(for: asset, targetSize: CGSize(width: 300, height: 300), contentMode: .aspectFit, options: options, resultHandler: { (image, _) in
                     if let image = image {
                         storngSelf.allPhotos.append(PhotoWrapper(image: image, isDownloading: false, progress: 0, isSelected: false))
                         storngSelf.assets.append(asset)
@@ -300,12 +294,12 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
             })
         }
     }
-    
-    fileprivate func selectPhoto(with indexPath: IndexPath){
-        if let maxSelection = maxSelection{
+
+    fileprivate func selectPhoto(with indexPath: IndexPath) {
+        if let maxSelection = maxSelection {
             if selectedImages.count + inDownloadingProgressPhotos.count == maxSelection { return }
         }
-        if !allPhotos[indexPath.item].mustDownloadImage{
+        if !allPhotos[indexPath.item].mustDownloadImage {
             guard let fileURL = allPhotos[indexPath.item].image.jpeg(.medium)?.saveImage() else { return }
             allPhotos[indexPath.item].progress = 0
             allPhotos[indexPath.item].isDownloading = false
@@ -342,30 +336,30 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
             }
         }
     }
-    
-    fileprivate func deselectPhoto(with indexPath: IndexPath){
+
+    fileprivate func deselectPhoto(with indexPath: IndexPath) {
         allPhotos[indexPath.item].isSelected = false
         allPhotos[indexPath.item].progress = 0
         allPhotos[indexPath.item].isDownloading = false
         collectionView.reloadItems(at: [indexPath])
         var indexToDelete: Int?
-        for (index, selectedImage) in selectedPhotos.enumerated(){
-            if selectedImage.image == allPhotos[indexPath.item].image{
+        for (index, selectedImage) in selectedPhotos.enumerated() {
+            if selectedImage.image == allPhotos[indexPath.item].image {
                 indexToDelete = index
             }
         }
-        if let index = indexToDelete{
+        if let index = indexToDelete {
             selectedPhotos.remove(at: index)
             selectedUrls.remove(at: index)
             selectedImages.remove(at: index)
         }
     }
-    
+
     // MARK: UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return allPhotos.count
     }
-    
+
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photoCellId, for: indexPath) as! PhotoCell
         cell.item = allPhotos[indexPath.item]
@@ -374,65 +368,65 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
         }
         return cell
     }
-    
+
     // MARK: UICollectionViewDelegate
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.item == 0 && cameraOffset > 0{
+        if indexPath.item == 0 && cameraOffset > 0 {
             imagePickerHelper?.checkCameraAuthorizationStatus()
-        }else{
-            if allPhotos[indexPath.item].isSelected{
+        } else {
+            if allPhotos[indexPath.item].isSelected {
                 deselectPhoto(with: indexPath)
-            }else{
+            } else {
                 selectPhoto(with: indexPath)
             }
         }
     }
-    
+
     override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        if allPhotos[indexPath.item].isSelected{
+        if allPhotos[indexPath.item].isSelected {
             deselectPhoto(with: indexPath)
         }
     }
-    
+
     // MARK: UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 1
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 1
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 1, left: 0, bottom: 0, right: 0)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (view.frame.width - 3) / 3
         return CGSize(width: width, height: width)
     }
-    
+
     // MARK: Album functions
-    
+
     private func setupAlbums() {
         let options = PHFetchOptions()
         let userAlbums = PHAssetCollection.fetchAssetCollections(with: PHAssetCollectionType.album, subtype: PHAssetCollectionSubtype.any, options: options)
-        userAlbums.enumerateObjects{ (object: AnyObject!, count: Int, stop: UnsafeMutablePointer) in
+        userAlbums.enumerateObjects { (object: AnyObject!, count: Int, _: UnsafeMutablePointer) in
             if object is PHAssetCollection {
-                let obj:PHAssetCollection = object as! PHAssetCollection
+                let obj: PHAssetCollection = object as! PHAssetCollection
                 let fetchOptions = PHFetchOptions()
                 fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
                 fetchOptions.predicate = NSPredicate(format: "mediaType = %d", PHAssetMediaType.image.rawValue)
-                let newAlbum = AlbumModel(name: obj.localizedTitle!, count: obj.estimatedAssetCount, collection:obj)
+                let newAlbum = AlbumModel(name: obj.localizedTitle!, count: obj.estimatedAssetCount, collection: obj)
                 self.data.append(newAlbum)
             }
-            for (index ,_) in self.data.enumerated(){
+            for (index, _) in self.data.enumerated() {
                 self.loadImageFor(indexPath: IndexPath(item: index, section: 0))
             }
         }
     }
-    
-    private func loadImageFor(indexPath: IndexPath){
+
+    private func loadImageFor(indexPath: IndexPath) {
         let assets = PHAsset.fetchKeyAssets(in: data[indexPath.item].collection, options: PHFetchOptions())
         if let keyAsset = assets?.firstObject {
           let id = fetchAsset(asset: keyAsset, targetSize: .init(width: 120, height: 120)) { (image) in
@@ -447,20 +441,20 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
             self.imageRequestsIDs.append(id)
         }
     }
-    
-    private func fetchAsset(asset: PHAsset, targetSize: CGSize, completion: ((UIImage?) -> ())?) -> PHImageRequestID {
+
+    private func fetchAsset(asset: PHAsset, targetSize: CGSize, completion: ((UIImage?) -> Void)?) -> PHImageRequestID {
         let options = PHImageRequestOptions()
         options.deliveryMode = PHImageRequestOptionsDeliveryMode.highQualityFormat
         options.isSynchronous = false
         options.isNetworkAccessAllowed = true
         // We could use PHCachingImageManager for better performance here
-        return PHImageManager.default().requestImage(for: asset, targetSize: targetSize, contentMode: .default, options: options, resultHandler: { [weak self] (image, info) in
+        return PHImageManager.default().requestImage(for: asset, targetSize: targetSize, contentMode: .default, options: options, resultHandler: { [weak self] (image, _) in
             guard let _ = self else { return }
             completion?(image)
         })
     }
-    
-    private func fetchFirstImageThumbnail(collection: PHAssetCollection, targetSize: CGSize, completion: @escaping (UIImage?) -> ()) {
+
+    private func fetchFirstImageThumbnail(collection: PHAssetCollection, targetSize: CGSize, completion: @escaping (UIImage?) -> Void) {
         // We could sort by creation date here if we want
         let assets = PHAsset.fetchAssets(in: collection, options: PHFetchOptions())
         if let asset = assets.firstObject {
@@ -470,20 +464,20 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
             completion(nil)
         }
     }
-    
-    //MARK: Selector functions
+
+    // MARK: Selector functions
     @objc
     fileprivate func performDoneBarButtonAction() {
-        delegate?.photosCollectionViewController(self, didFinishPicking: selectedUrls,images: selectedImages)
+        delegate?.photosCollectionViewController(self, didFinishPicking: selectedUrls, images: selectedImages)
     }
-    
+
     @objc
     fileprivate func performCancelBarButtonAction() {
         dismiss(animated: true, completion: nil)
     }
-    
+
     @objc
-    fileprivate func performAlbumButtonAction(){
+    fileprivate func performAlbumButtonAction() {
         let viewController = AlbumViewController()
         viewController.updatePopOverViewController(albumButton, with: self)
         viewController.delegate = self
@@ -492,16 +486,16 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
     }
 }
 
-extension PhotosCollectionViewController: UIPopoverPresentationControllerDelegate{
+extension PhotosCollectionViewController: UIPopoverPresentationControllerDelegate {
     public func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
     }
 }
 
-extension PhotosCollectionViewController: AlbumViewControllerDelegate{
+extension PhotosCollectionViewController: AlbumViewControllerDelegate {
     func albumViewController(albumViewController: AlbumViewController, didSelect album: AlbumModel) {
         self.album = album
-        
+
         setupAlbumAsset()
         albumViewController.dismiss(animated: true, completion: nil)
     }

@@ -9,13 +9,12 @@ import UIKit
 
 class SplashViewController: BaseViewController {
 
-    @IBOutlet weak var splashLogoImageView : UIImageView!
-  
-    
+    @IBOutlet weak var splashLogoImageView: UIImageView!
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-            AppRouter().navigate(to: .loginOptionViewController)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
+            self.router?.navigate(to: .loginOptionRoute)
         }
     }
 }

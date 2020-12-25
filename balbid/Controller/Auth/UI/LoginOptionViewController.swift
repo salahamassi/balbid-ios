@@ -8,18 +8,21 @@
 import UIKit
 
 class LoginOptionViewController: BaseViewController {
-    @IBOutlet weak var splashLogoImageView : UIImageView!
-    
-    @IBAction func login(sender  : UIButton){
-        
+
+    override var mustClearNavigationBar: Bool {
+        true
     }
 
-    @IBAction func createAccount(sender  : UIButton){
-        AppRouter().navigate(to: .accountOptionViewController)
-        
+    @IBOutlet weak var splashLogoImageView: UIImageView!
+
+    @IBAction func login(sender: UIButton) {
+        router?.navigate(to: .loginRoute)
+
     }
-    
-    @IBAction func continueAsGuest(sender  : UIButton){
-        
+
+    @IBAction func createAccount(sender: UIButton) {
+        router?.navigate(to: .accountOptionRoute)
     }
+
+    @IBAction func continueAsGuest(sender: UIButton) {}
 }

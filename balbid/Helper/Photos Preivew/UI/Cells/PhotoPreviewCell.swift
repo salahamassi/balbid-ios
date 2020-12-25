@@ -9,9 +9,9 @@
 import UIKit
 
 class PhotoPreviewCell: BaseCollectionViewCell<MediaWrapper> {
-    
+
     let photoImageView = UIImageView(contentMode: .scaleAspectFit)
-    
+
     override func addViews() {
         super.addViews()
         contentView.addView(scroll(photoImageView)
@@ -22,15 +22,15 @@ class PhotoPreviewCell: BaseCollectionViewCell<MediaWrapper> {
                             anchors: .fillSuperView(.zero))
         photoImageView.constrainHeight(frame.height)
     }
-    
+
     override func renderItem(item: MediaWrapper?) {
         guard let item = item else { return }
         photoImageView.sd_setImage(with: item.url, completed: nil)
     }
 }
 
-extension PhotoPreviewCell: UIScrollViewDelegate{
-    
+extension PhotoPreviewCell: UIScrollViewDelegate {
+
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return photoImageView
     }

@@ -9,68 +9,66 @@
 import UIKit
 
 class AppNavigationController: UINavigationController {
-    
-    private var shadowColor: UIColor?, backgroundEffect:  UIBlurEffect?, backgroundColor: UIColor?
-    
+
+    private var shadowColor: UIColor?, backgroundEffect: UIBlurEffect?, backgroundColor: UIColor?
+
     public weak var router: AppRouter?
-    
-    
+
     public override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
         saveDefaultsNavigationBarAppearanceValues()
         setupInteractivePopGestureRecognizer()
     }
-    
-    private func saveDefaultsNavigationBarAppearanceValues(){
+
+    private func saveDefaultsNavigationBarAppearanceValues() {
         if #available(iOS 13.0, *) {
             let backImage = #imageLiteral(resourceName: "round_arrow_back_ios_black_24pt")
             navigationBar.standardAppearance.setBackIndicatorImage(backImage, transitionMaskImage: backImage)
             navigationBar.tintColor = #colorLiteral(red: 0.1647058824, green: 0.1647058824, blue: 0.1647058824, alpha: 1)
             navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.1647058824, green: 0.1647058824, blue: 0.1647058824, alpha: 1),
-                                                 NSAttributedString.Key.font: UIFont.bold.withSize(18)]
+                                                 NSAttributedString.Key.font: UIFont.regular.withSize(16)]
             backgroundColor =  navigationBar.standardAppearance.backgroundColor
             backgroundEffect = navigationBar.standardAppearance.backgroundEffect
             shadowColor = navigationBar.standardAppearance.shadowColor
-        }else{
+        } else {
             navigationBar.barStyle = .default
             navigationBar.tintColor = .black
         }
     }
-    
-    func clear(){
+
+    func clear() {
         navigationBar.clear()
         navigationItem.hidesBackButton = false
     }
-    
-    func unclear(){
+
+    func unclear() {
         navigationBar.unclear(shadowColor: shadowColor, backgroundEffect: backgroundEffect, backgroundColor: backgroundColor)
     }
-    
-    private func setupInteractivePopGestureRecognizer(){
+
+    private func setupInteractivePopGestureRecognizer() {
         interactivePopGestureRecognizer?.isEnabled = true
         interactivePopGestureRecognizer?.delegate = nil
     }
-    
-    
+
 }
 
-extension AppNavigationController: UINavigationControllerDelegate{
-    
+extension AppNavigationController: UINavigationControllerDelegate {
+
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         let item = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
         viewController.navigationItem.backBarButtonItem = item
-        if viewController.mustClearNavigationBar{
+        if viewController.mustClearNavigationBar {
             clear()
-        }else{
+        } else {
             unclear()
         }
         router?.currentViewController = viewController
-        if viewController.mustHideNavigationBar{
+        if viewController.mustHideNavigationBar {
             setNavigationBarHidden(true, animated: true)
-        }else{
+        } else {
             setNavigationBarHidden(false, animated: true)
         }
     }
-    
+
 }

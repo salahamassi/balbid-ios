@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension Data {
-    
+
     // saves an image, if save is successful, returns its URL on local storage, otherwise returns nil
     func saveImage(name: String = UUID().uuidString+".jpg") -> URL? {
         do {

@@ -10,22 +10,22 @@ import UIKit
 import Photos
 
 class AlbumViewController: UITableViewController {
-    
+
     var data = [AlbumModel]()
-    
+
     weak var delegate: AlbumViewControllerDelegate?
     private let albumCellId = "albumCellId"
-    
+
     @available(iOS 12.0, *)
-    var isDarkMode: Bool{
+    var isDarkMode: Bool {
         UserDefaultsManager.isDarkMode || traitCollection.userInterfaceStyle == .dark
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewController()
     }
-    
+
     fileprivate func setupViewController() {
         if #available(iOS 13.0, *) {
             overrideUserInterfaceStyle = isDarkMode ? .dark : .light
@@ -38,26 +38,26 @@ class AlbumViewController: UITableViewController {
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 1))
         tableView.separatorColor = UIColor.appColor(.labelColor)
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: albumCellId, for: indexPath) as! AlbumCell
         cell.item = data[indexPath.row]
         return cell
     }
-    
+
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
     }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.albumViewController(albumViewController: self, didSelect: data[indexPath.row])
     }
-    
-    //Setup the ViewController for popover presentation
+
+    // Setup the ViewController for popover presentation
     func updatePopOverViewController(_ button: UIButton?, with delegate: PhotosCollectionViewController?) {
         guard let button = button else { return }
         modalPresentationStyle = .popover

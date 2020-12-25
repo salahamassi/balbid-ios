@@ -7,11 +7,11 @@
 
 import UIKit
 
-class LoginAnimationPresenter: NSObject,UIViewControllerAnimatedTransitioning {
+class LoginAnimationPresenter: NSObject, UIViewControllerAnimatedTransitioning {
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         0.5
     }
-    
+
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard
             let fromViewController = transitionContext.viewController(forKey: .from),
@@ -19,12 +19,10 @@ class LoginAnimationPresenter: NSObject,UIViewControllerAnimatedTransitioning {
         else {
             return
         }
-        
+
         let splashViewController = fromViewController as! SplashViewController
 //        splashViewController.splashLogoImageView
-        
-        
+
     }
-    
-    
+
 }

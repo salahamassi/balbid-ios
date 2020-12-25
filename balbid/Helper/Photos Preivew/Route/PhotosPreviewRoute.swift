@@ -8,24 +8,24 @@
 
 import UIKit
 
-struct PhotosPreviewRoute: Route{
-    
+struct PhotosPreviewRoute: Route {
+
     private let animator = PhotosPreviewViewControllerPresentDismissAnimator()
-    
+
     var modalPresentationStyle: UIModalPresentationStyle {
         return .custom
     }
     var animatedTransitioningDelegate: UIViewControllerTransitioningDelegate? {
         return animator
     }
-    
+
     var navigateType: NavigateType {
         return .present
     }
-    
-    init(){}
-    
-    func create(_ router: AppRouter, _ params: [String: Any]?) -> UIViewController{
+
+    init() {}
+
+    func create(_ router: AppRouter, _ params: [String: Any]?) -> UIViewController {
         guard let medias = params?["medias"] as? [MediaWrapper] else { fatalError("cann't start photosPreviewViewController without medias")}
         guard let currentIndex = params?["currentIndex"] as? Int else { fatalError("cann't start photosPreviewViewController without currentIndex")}
         guard let mustHideDeleteButton = params?["mustHideDeleteButton"] as? Bool else { fatalError("cann't start photosPreviewViewController without mustHideDeleteButton")}

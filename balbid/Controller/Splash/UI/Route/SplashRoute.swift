@@ -9,21 +9,22 @@ import UIKit
 
 struct SplashRoute: Route {
 
-    var modalPresentationStyle: UIModalPresentationStyle{
+    var modalPresentationStyle: UIModalPresentationStyle {
         .fullScreen
     }
-    
-    var animatedTransitioningDelegate: UIViewControllerTransitioningDelegate?{
+
+    var animatedTransitioningDelegate: UIViewControllerTransitioningDelegate? {
         nil
     }
-    
-    var navigateType: NavigateType{
+
+    var navigateType: NavigateType {
         .windowRoot
     }
-    
-    func create(_ router: AppRouter, _ params: [String : Any]?) -> UIViewController {
-        let viewController =  UIStoryboard.splashStoryboard.getViewController(with: .splashViewControllerId)
+
+    func create(_ router: AppRouter, _ params: [String: Any]?) -> UIViewController {
+        let viewController =  UIStoryboard.splashStoryboard.getViewController(with: .splashViewControllerId)  as!  BaseViewController
+        viewController.router = router
         return viewController
     }
-    
+
 }

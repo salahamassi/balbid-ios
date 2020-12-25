@@ -13,5 +13,5 @@ struct AlbumModel {
     let name: String
     let count: Int
     let collection: PHAssetCollection
-    var image: UIImage? = nil
+    var image: UIImage?
 }

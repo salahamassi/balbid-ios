@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "AppRouter",
+        "repositoryURL": "https://github.com/salahamassi/AppRouter-UIKit.git",
+        "state": {
+          "branch": null,
+          "revision": "82d7db15d76e3196ac2a4043806d9d4e648c872e",
+          "version": "1.0.1"
+        }
+      },
+      {
         "package": "IQKeyboardManagerSwift",
         "repositoryURL": "https://github.com/hackiftekhar/IQKeyboardManager.git",
         "state": {

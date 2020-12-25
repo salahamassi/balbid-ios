@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension UICollectionViewFlowLayout{
-    
-    convenience init(scrollDirection: UICollectionView.ScrollDirection = UICollectionView.ScrollDirection.vertical){
+extension UICollectionViewFlowLayout {
+
+    convenience init(scrollDirection: UICollectionView.ScrollDirection = UICollectionView.ScrollDirection.vertical) {
         self.init()
         self.scrollDirection = scrollDirection
     }

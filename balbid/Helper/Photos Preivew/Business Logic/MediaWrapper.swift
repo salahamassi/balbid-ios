@@ -8,11 +8,11 @@
 
 import UIKit
 
-public struct MediaWrapper{
+public struct MediaWrapper {
    public let url: URL
    public let indexPath: IndexPath
-    
-    public init(url: URL, indexPath: IndexPath){
+
+    public init(url: URL, indexPath: IndexPath) {
         self.url = url
         self.indexPath = indexPath
     }

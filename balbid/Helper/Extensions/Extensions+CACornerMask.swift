@@ -8,6 +8,6 @@
 
 import UIKit
 
-extension CACornerMask{
+extension CACornerMask {
     static let topLeft = CACornerMask.layerMinXMinYCorner, topRight = CACornerMask.layerMaxXMinYCorner, bottomLeft = CACornerMask.layerMinXMaxYCorner, bottomRight = CACornerMask.layerMaxXMaxYCorner
 }

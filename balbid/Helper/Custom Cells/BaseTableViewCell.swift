@@ -8,16 +8,16 @@
 
 import UIKit
 
-class BaseTableViewCell<E>: UITableViewCell{
-    
-     var item: E?{
-        didSet{
+class BaseTableViewCell<E>: UITableViewCell {
+
+     var item: E? {
+        didSet {
             renderItem(item: item)
         }
     }
-    
-    open func renderItem(item: E?){
+
+    open func renderItem(item: E?) {
         preconditionFailure("This method must be overridden")
     }
-    
+
 }

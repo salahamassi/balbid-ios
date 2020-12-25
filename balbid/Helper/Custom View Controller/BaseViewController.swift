@@ -7,8 +7,8 @@
 
 import UIKit
 
-class BaseViewController: UIViewController{
-    
+class BaseViewController: UIViewController {
+
     weak var router: AppRouter?
 
 }

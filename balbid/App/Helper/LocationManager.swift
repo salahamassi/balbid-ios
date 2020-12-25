@@ -7,34 +7,33 @@
 
 import CoreLocation
 
+class LocationManager: NSObject, CLLocationManagerDelegate {
 
-class LocationManager: NSObject, CLLocationManagerDelegate{
-    
     private lazy var locationManager = CLLocationManager()
-    
+
     var currentLocation: CLLocation?
-    
-    class var shared: LocationManager{
-        struct Static{
+
+    class var shared: LocationManager {
+        struct Static {
             static let instance = LocationManager()
         }
         return Static.instance
     }
-    
-    func startTracking(router: AppRouter?){
+
+    func startTracking(router: AppRouter?) {
         locationManager.delegate = self
         locationManager.distanceFilter = 200
     }
-    
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         if location.coordinate.latitude == 0 || location.coordinate.longitude == 0 { return }
         self.currentLocation = location
         NotificationCenter.default.post(name: .BALBIDLocationUpdated, object: nil, userInfo: ["currentLocation": location])
     }
-    
+
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch status{
+        switch status {
         case .notDetermined:
             manager.requestWhenInUseAuthorization()
         case .restricted, .denied:
@@ -47,9 +46,9 @@ class LocationManager: NSObject, CLLocationManagerDelegate{
             fatalError("unkown authorization status")
         }
     }
-    
+
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("ProviderTracker locationManager fail with error \(error)")
     }
-    
+
 }
