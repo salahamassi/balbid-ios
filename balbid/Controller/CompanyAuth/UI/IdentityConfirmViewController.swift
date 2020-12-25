@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+
 class IdentityConfirmViewController: BaseViewController {
 
     var imagePickerHelper: ImagePickerHelper?
@@ -21,7 +22,7 @@ class IdentityConfirmViewController: BaseViewController {
     }
 
     private func setupImagePicker() {
-        imagePickerHelper = ImagePickerHelper.init(viewController: self, router: (parent as? BaseViewController)?.router)
+        imagePickerHelper = ImagePickerHelper.init(viewController: self, router: router)
     }
 
     private func sortPickedImage() {
