@@ -7,17 +7,17 @@
 
 import Foundation
 extension String {
-    func getFileIconFromName() -> String?{
-        if  components(separatedBy: ".").count  < 1  {
+    func getFileIconFromName() -> String? {
+        if  components(separatedBy: ".").count  < 1 {
             return "unknown"
         }
         let type = components(separatedBy: ".")[components(separatedBy: ".").count - 1]
         switch type {
-        case "doc","docx" :
+        case "doc", "docx" :
             return "word"
         case "pdf" :
             return "pdf"
-        case "png","jpg","jpeg" :
+        case "png", "jpg", "jpeg" :
             return nil
         default  :
             return "unknown"

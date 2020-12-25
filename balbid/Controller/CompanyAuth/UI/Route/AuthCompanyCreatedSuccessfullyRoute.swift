@@ -8,7 +8,6 @@
 import UIKit
 import AppRouter
 
-
 class AuthCompanyCreatedSuccessfullyRoute: Route {
     var modalPresentationStyle: UIModalPresentationStyle {
         return .fullScreen

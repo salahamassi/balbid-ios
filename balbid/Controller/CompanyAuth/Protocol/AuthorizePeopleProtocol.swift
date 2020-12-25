@@ -8,5 +8,5 @@
 import UIKit
 
 protocol SizeChangableDelegate: class {
-    func didUpdateContentSize(newHeight :CGFloat)
+    func didUpdateContentSize(newHeight: CGFloat)
 }

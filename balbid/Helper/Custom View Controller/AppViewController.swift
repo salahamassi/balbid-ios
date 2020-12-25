@@ -16,7 +16,6 @@ class AppViewController<View: UIView>: UIViewController {
         return view as! View
     }
 
-
     @available(iOS 12.0, *)
     var isDarkMode: Bool {
         UserDefaultsManager.isDarkMode || traitCollection.userInterfaceStyle == .dark

@@ -64,17 +64,15 @@ extension String {
     static let bankInformationViewControllerId = "BankInformationViewController"
     static let identityConfirmViewControllerId = "IdentityConfirmViewController"
     static let authCompanyCreatedSuccessfullyViewControllerId = "AuthCompanyCreatedSuccessfullyViewController"
-    
+
     static let mainTabBarViewControllerId = "MainTabBarViewController"
 
-    
     // image name
     static let lockedPasswordImage = "locked_password"
     static let unlockedPasswordImage = "unlocked_password"
     static let checkImage = "right"
     static let backImage = "back"
 
-    
 }
 
 extension Notification.Name {

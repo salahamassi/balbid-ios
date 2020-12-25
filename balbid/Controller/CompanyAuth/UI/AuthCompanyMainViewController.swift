@@ -20,7 +20,7 @@ class AuthCompanyMainViewController: BaseViewController {
     var progressView: ProgressView!
 
     @IBOutlet weak var containerView: UIView!
-    
+
     var currentViewController: UIViewController!
 
     lazy var companyHolderInforamtionViewController: CompanyHolderInformationViewController = {
@@ -39,13 +39,13 @@ class AuthCompanyMainViewController: BaseViewController {
         viewController.delegate =  self
         return viewController
     }()
-    
+
     lazy var bankInformationViewController: BankInformationViewController = {
         let viewController =  UIStoryboard.authComapnyStoryboard.getViewController(with: .bankInformationViewControllerId)  as! BankInformationViewController
         viewController.delegate =  self
         return viewController
     }()
-    
+
     lazy var identityConfirmViewController: IdentityConfirmViewController = {
         let viewController =  UIStoryboard.authComapnyStoryboard.getViewController(with: .identityConfirmViewControllerId)  as! IdentityConfirmViewController
         return viewController
@@ -74,8 +74,7 @@ class AuthCompanyMainViewController: BaseViewController {
     func addNavleftView() {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: .backImage), style: .plain, target: self, action: #selector(self.goBack))
     }
-    
-    
+
     func setContainerView() {
         currentViewController?.remove()
         switch step {
@@ -97,14 +96,14 @@ class AuthCompanyMainViewController: BaseViewController {
         print(currentViewController.view.subviews.first?.frame.height ?? .zero)
         add(currentViewController, to: containerView, frame: containerView.frame)
     }
-    
-    @objc func goBack(){
+
+    @objc func goBack() {
         if  step > 1 {
             step -= 1
             setContainerView()
             setNavTitle()
             progressView.move(fromStep: step+1, to: step)
-        }else{
+        } else {
             router?.pop(numberOfScreens: 1)
         }
     }
@@ -133,7 +132,7 @@ class AuthCompanyMainViewController: BaseViewController {
             setContainerView()
             setNavTitle()
             progressView.move(fromStep: step-1, to: step)
-        }else if step == 5 {
+        } else if step == 5 {
             router?.navigate(to: .authCompanyCreatedSuccessfullyRoute)
         }
     }
@@ -147,6 +146,5 @@ extension  AuthCompanyMainViewController: SizeChangableDelegate {
             self.view.layoutIfNeeded()
         }
     }
-    
-  
+
 }

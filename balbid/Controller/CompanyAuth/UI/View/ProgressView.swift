@@ -33,10 +33,10 @@ class ProgressView: UIView {
         self.stepView.layer.addSublayer(shapeLayer)
     }
 
-    func move(fromStep : Int, to step: Int) {
+    func move(fromStep: Int, to step: Int) {
         let basicAnimation  = CABasicAnimation(keyPath: "strokeEnd")
-        print("from value",CGFloat(fromStep)/5)
-        print("to value",CGFloat(step)/5)
+        print("from value", CGFloat(fromStep)/5)
+        print("to value", CGFloat(step)/5)
         basicAnimation.fromValue = CGFloat(fromStep)/5 == 0 ? CGFloat(fromStep)/5 :
             (CGFloat(fromStep)/5) - 0.1
         basicAnimation.toValue = (CGFloat(step)/5 ) - 0.1

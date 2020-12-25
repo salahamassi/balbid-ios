@@ -76,13 +76,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
-
 extension UIViewController {
-    
+
     weak var router: AppRouter? {
-        get{
+        get {
             return (UIApplication.shared.delegate as! AppDelegate).appRouter
         }
     }
-    
+
 }

@@ -7,8 +7,8 @@
 
 import UIKit
 
-class BankInfromationTableViewDataSource:NSObject, UITableViewDataSource {
-    
+class BankInfromationTableViewDataSource: NSObject, UITableViewDataSource {
+
     var rows = 1
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: .bankInformationCellId, for: indexPath)
@@ -23,5 +23,4 @@ class BankInfromationTableViewDataSource:NSObject, UITableViewDataSource {
         rows += 1
     }
 
-   
 }

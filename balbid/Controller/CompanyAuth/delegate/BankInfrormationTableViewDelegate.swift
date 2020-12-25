@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BankInfrormationTableViewDelegate: NSObject , UITableViewDelegate {
+class BankInfrormationTableViewDelegate: NSObject, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         243
     }

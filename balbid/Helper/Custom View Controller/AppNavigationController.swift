@@ -12,7 +12,6 @@ class AppNavigationController: UINavigationController {
 
     private var shadowColor: UIColor?, backgroundEffect: UIBlurEffect?, backgroundColor: UIColor?
 
-
     public override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
