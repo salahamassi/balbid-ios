@@ -545,19 +545,11 @@
 			isa = PBXGroup;
 			children = (
 				3DB1DB01258686FD00EF1E8F /* Helper */,
-				3DB1DAEA2586788200EF1E8F /* Router */,
+				3DB1DAEB2586788B00EF1E8F /* Routes */,
 				3DB1DAD22586737D00EF1E8F /* AppDelegate.swift */,
 				3DB1DAD42586737D00EF1E8F /* SceneDelegate.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		3DB1DAEA2586788200EF1E8F /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				3DB1DAEB2586788B00EF1E8F /* Routes */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		3DB1DAEB2586788B00EF1E8F /* Routes */ = {

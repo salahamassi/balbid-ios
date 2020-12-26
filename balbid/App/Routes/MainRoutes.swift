@@ -8,10 +8,8 @@
 import AppRouter
 
 enum MainRoutes {
-
     case photosPicker(params: [String: Any])
     case splashRoute
-
 }
 
 extension AppRouter {

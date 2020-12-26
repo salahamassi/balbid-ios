@@ -7,8 +7,8 @@
 
 import IQKeyboardManagerSwift
 import MOLH
-import UIKit
 import AppRouter
+import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -76,12 +76,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
-extension UIViewController {
+extension UIViewController: Routable {
 
-    weak var router: AppRouter? {
-        get {
-            return (UIApplication.shared.delegate as! AppDelegate).appRouter
+    weak public var router: AppRouter?{
+        get{
+            return (UIApplication.shared.delegate as? AppDelegate)?.appRouter
         }
     }
-
 }

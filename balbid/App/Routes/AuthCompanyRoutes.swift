@@ -6,12 +6,15 @@
 //
 
 import AppRouter
+
 enum AuthCompanyRoutes {
     case authCompanyMainRoute
     case companyHolderInformationRoute
     case authCompanyCreatedSuccessfullyRoute
 }
+
 extension AppRouter {
+    
     func navigate(to route: AuthCompanyRoutes, completion: (() -> Void)? = nil) {
         let mRoute: Route
         let mParams: [String: Any]?
