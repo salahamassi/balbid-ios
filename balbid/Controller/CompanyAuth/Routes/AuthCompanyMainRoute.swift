@@ -9,17 +9,9 @@ import UIKit
 import AppRouter
 
 class AuthCompanyMainRoute: Route {
-    var modalPresentationStyle: UIModalPresentationStyle {
-        return .fullScreen
-    }
-
-    var animatedTransitioningDelegate: UIViewControllerTransitioningDelegate? {
-        return nil
-    }
 
     var navigateType: NavigateType {
-        return .push
-
+        .push
     }
 
     func create(_ router: AppRouter, _ params: [String: Any]?) -> UIViewController {

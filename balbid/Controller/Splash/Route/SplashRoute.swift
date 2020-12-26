@@ -10,14 +10,6 @@ import AppRouter
 
 struct SplashRoute: Route {
 
-    var modalPresentationStyle: UIModalPresentationStyle {
-        .fullScreen
-    }
-
-    var animatedTransitioningDelegate: UIViewControllerTransitioningDelegate? {
-        nil
-    }
-
     var navigateType: NavigateType {
         .windowRoot
     }
@@ -26,5 +18,4 @@ struct SplashRoute: Route {
         let viewController =  UIStoryboard.splashStoryboard.getViewController(with: .splashViewControllerId)  as!  BaseViewController
         return viewController
     }
-
 }

@@ -10,16 +10,8 @@ import AppRouter
 
 class SetNewPasswordRoute: Route {
 
-    var modalPresentationStyle: UIModalPresentationStyle {
-        .fullScreen
-    }
-
-    var animatedTransitioningDelegate: UIViewControllerTransitioningDelegate? {
-         nil
-    }
-
     var navigateType: NavigateType {
-         .push
+        .push
     }
 
     func create(_ router: AppRouter, _ params: [String: Any]?) -> UIViewController {

@@ -7,27 +7,18 @@
 //
 
 import UIKit
+import AppRouter
 
 struct PhotosPickerRoute: Route {
 
-    var modalPresentationStyle: UIModalPresentationStyle {
-        return .fullScreen
-    }
-
-    var animatedTransitioningDelegate: UIViewControllerTransitioningDelegate? {
-        return nil
-    }
-
     var navigateType: NavigateType {
-        return .present
+        .present
     }
-
-    init() {}
 
     func create(_ router: AppRouter, _ params: [String: Any]?) -> UIViewController {
         let delegate = params?["delegate"] as? PhotosCollectionViewControllerDelegate
         let maxSelection = params?["maxSelection"] as? Int
-        let rootViewController = PhotosCollectionViewController(router: router, delegate: delegate)
+        let rootViewController = PhotosCollectionViewController(delegate: delegate)
         rootViewController.maxSelection = maxSelection
         let photosCollectionViewController = UINavigationController(rootViewController: rootViewController)
         return photosCollectionViewController
