@@ -59,6 +59,9 @@
 		08F2B8D0258BD77900CAEC9A /* SetNewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F2B8CF258BD77900CAEC9A /* SetNewPasswordViewController.swift */; };
 		08F2B8D3258BD79100CAEC9A /* SetNewPasswordRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F2B8D2258BD79100CAEC9A /* SetNewPasswordRoute.swift */; };
 		08F2B8D6258BE8E000CAEC9A /* Tajawal-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08F2B8D5258BE8E000CAEC9A /* Tajawal-Bold.ttf */; };
+		3D60C38925975E7F0092D594 /* IBPCollectionViewCompositionalLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 3D60C38825975E7F0092D594 /* IBPCollectionViewCompositionalLayout */; };
+		3D60C38E25975EC70092D594 /* UIKitInteroperability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D60C38D25975EC70092D594 /* UIKitInteroperability.swift */; };
+		3D60C39225975EDF0092D594 /* DiffableDataSourceInteroperability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D60C39125975EDF0092D594 /* DiffableDataSourceInteroperability.swift */; };
 		3DAC7BD02586986C00D57BB1 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC7BCF2586986B00D57BB1 /* BottomSheetView.swift */; };
 		3DAC7BD42586FDCD00D57BB1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC7BD32586FDCD00D57BB1 /* ImagePicker.swift */; };
 		3DAC7BD92586FF1B00D57BB1 /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 3DAC7BD82586FF1B00D57BB1 /* CropViewController */; };
@@ -176,6 +179,8 @@
 		08F2B8D2258BD79100CAEC9A /* SetNewPasswordRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNewPasswordRoute.swift; sourceTree = "<group>"; };
 		08F2B8D5258BE8E000CAEC9A /* Tajawal-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Bold.ttf"; sourceTree = "<group>"; };
 		1B4FD3431161EEF02A72BB46 /* Pods-balbid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-balbid.debug.xcconfig"; path = "Target Support Files/Pods-balbid/Pods-balbid.debug.xcconfig"; sourceTree = "<group>"; };
+		3D60C38D25975EC70092D594 /* UIKitInteroperability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitInteroperability.swift; sourceTree = "<group>"; };
+		3D60C39125975EDF0092D594 /* DiffableDataSourceInteroperability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDataSourceInteroperability.swift; sourceTree = "<group>"; };
 		3DAC7BCF2586986B00D57BB1 /* BottomSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		3DAC7BD32586FDCD00D57BB1 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3DB1DACF2586737D00EF1E8F /* balbid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = balbid.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +255,7 @@
 				3DB1DAF12586796F00EF1E8F /* IQKeyboardManagerSwift in Frameworks */,
 				3DB1DAF7258683D400EF1E8F /* Alamofire in Frameworks */,
 				E514B8CCA1DF6959E2A08E2A /* Pods_balbid.framework in Frameworks */,
+				3D60C38925975E7F0092D594 /* IBPCollectionViewCompositionalLayout in Frameworks */,
 				08C567882596597400C80A75 /* AppRouter in Frameworks */,
 				3DAC7BD92586FF1B00D57BB1 /* CropViewController in Frameworks */,
 			);
@@ -475,6 +481,15 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		3D60C38C25975EB60092D594 /* UIKit Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3D60C38D25975EC70092D594 /* UIKitInteroperability.swift */,
+				3D60C39125975EDF0092D594 /* DiffableDataSourceInteroperability.swift */,
+			);
+			path = "UIKit Helper";
+			sourceTree = "<group>";
+		};
 		3DAC7BD22586FDB000D57BB1 /* Image Picker */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,6 +583,7 @@
 		3DB1DB16258689D200EF1E8F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				3D60C38C25975EB60092D594 /* UIKit Helper */,
 				3DC76B4E25975C2100EE2428 /* Photos Picker */,
 				083548752587BFED00665DE0 /* Animation */,
 				3DAC7BD22586FDB000D57BB1 /* Image Picker */,
@@ -818,6 +834,7 @@
 				3DB1DAFE258685BD00EF1E8F /* MOLH */,
 				3DAC7BD82586FF1B00D57BB1 /* CropViewController */,
 				08C567872596597400C80A75 /* AppRouter */,
+				3D60C38825975E7F0092D594 /* IBPCollectionViewCompositionalLayout */,
 			);
 			productName = balbid;
 			productReference = 3DB1DACF2586737D00EF1E8F /* balbid.app */;
@@ -854,6 +871,7 @@
 				3DB1DAFD258685BD00EF1E8F /* XCRemoteSwiftPackageReference "MOLH" */,
 				3DAC7BD72586FF1B00D57BB1 /* XCRemoteSwiftPackageReference "TOCropViewController" */,
 				08C567862596597400C80A75 /* XCRemoteSwiftPackageReference "AppRouter-UIKit" */,
+				3D60C38725975E7F0092D594 /* XCRemoteSwiftPackageReference "IBPCollectionViewCompositionalLayout" */,
 			);
 			productRefGroup = 3DB1DAD02586737D00EF1E8F /* Products */;
 			projectDirPath = "";
@@ -923,7 +941,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then \n    swiftlint autocorrect && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "#if which swiftlint >/dev/null; then \n #   swiftlint autocorrect && swiftlint\n#else\n # echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n#fi\n";
 		};
 		3E82E4AE5409394AFA93FB3E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -957,6 +975,7 @@
 				3DB1DB4E25868E6C00EF1E8F /* Animator.swift in Sources */,
 				08C567752593F58A00C80A75 /* AuthCompanyCreatedSuccessfullyRoute.swift in Sources */,
 				08809ED7259377A900AD41EE /* AuthorizePeopleViewController.swift in Sources */,
+				3D60C38E25975EC70092D594 /* UIKitInteroperability.swift in Sources */,
 				3DAC7BD42586FDCD00D57BB1 /* ImagePicker.swift in Sources */,
 				3DB1DB3125868A1000EF1E8F /* Extensions+UIView.swift in Sources */,
 				081ADF7F2591020200B5AE47 /* AuthCompanyMainViewController.swift in Sources */,
@@ -1040,6 +1059,7 @@
 				08809ED42593719400AD41EE /* ISIntrinsicTableView.swift in Sources */,
 				08C567782594A59700C80A75 /* Extension+String+FileType.swift in Sources */,
 				081ADF8B259118C200B5AE47 /* CompanyHolderInforamtionRoute.swift in Sources */,
+				3D60C39225975EDF0092D594 /* DiffableDataSourceInteroperability.swift in Sources */,
 				3DC76B5F25975C2100EE2428 /* PhotosCollectionViewController.swift in Sources */,
 				081ADF88259118B000B5AE47 /* CompanyHolderInformationViewController.swift in Sources */,
 				0827C2AD2591351400034657 /* CompanyInformationViewController.swift in Sources */,
@@ -1265,6 +1285,14 @@
 				minimumVersion = 1.0.1;
 			};
 		};
+		3D60C38725975E7F0092D594 /* XCRemoteSwiftPackageReference "IBPCollectionViewCompositionalLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/IBPCollectionViewCompositionalLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.7;
+			};
+		};
 		3DAC7BD72586FF1B00D57BB1 /* XCRemoteSwiftPackageReference "TOCropViewController" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/TimOliver/TOCropViewController";
@@ -1312,6 +1340,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08C567862596597400C80A75 /* XCRemoteSwiftPackageReference "AppRouter-UIKit" */;
 			productName = AppRouter;
+		};
+		3D60C38825975E7F0092D594 /* IBPCollectionViewCompositionalLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D60C38725975E7F0092D594 /* XCRemoteSwiftPackageReference "IBPCollectionViewCompositionalLayout" */;
+			productName = IBPCollectionViewCompositionalLayout;
 		};
 		3DAC7BD82586FF1B00D57BB1 /* CropViewController */ = {
 			isa = XCSwiftPackageProductDependency;
