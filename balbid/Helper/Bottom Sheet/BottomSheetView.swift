@@ -328,7 +328,6 @@ class BottomSheetView: UIView {
     }
 
     /// show full sheet
-    // todo 
     private func show() {
         guard let rootViewController = (UIApplication.shared.delegate as? AppDelegate)?.appWindow?.rootViewController else { return }
         willShowSheet()
@@ -347,7 +346,6 @@ class BottomSheetView: UIView {
                 self.sheetStatus = .showed
             })
         }
-
     }
 
     /// hide bottom sheet full hide or hide  to  top mode

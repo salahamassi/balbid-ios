@@ -14,7 +14,7 @@ class AuthorizePeopleViewController: BaseViewController {
 
     weak var delegate: SizeChangableDelegate?
     let authorizePeopleTableViewDataSource = AuthorizePeopleTableViewDataSource()
-    weak var authorizePeopleTableViewDelegate = AuthorizePeopleTableViewDelegate()
+    let authorizePeopleTableViewDelegate = AuthorizePeopleTableViewDelegate()
 
     override func viewDidLoad() {
         super.viewDidLoad()

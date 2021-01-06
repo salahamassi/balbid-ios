@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Tajawal-Medium 500.ttf">
+            <string>Tajawal-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="category_content_header" id="1u4-r5-etz" customClass="CategoryContentHeaderCollectionViewCell" customModule="balbid" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8au-JN-SLp">
+                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ybq-2c-JIX">
+                        <rect key="frame" x="10" y="16" width="108" height="22"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="WPn-PO-por">
+                                <rect key="frame" x="0.0" y="0.0" width="108" height="11"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Rice and pasta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X52-ze-BcR">
+                                        <rect key="frame" x="0.0" y="0.0" width="74.5" height="11"/>
+                                        <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="arrow_bottom" translatesAutoresizingMaskIntoConstraints="NO" id="9bk-WS-xs3">
+                                        <rect key="frame" x="93.5" y="0.0" width="14.5" height="11"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Py4-Md-YPW">
+                                <rect key="frame" x="0.0" y="21" width="108" height="1"/>
+                                <color key="backgroundColor" name="borderGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Nbz-dT-8hl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="11W-pK-3XS"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ybq-2c-JIX" firstAttribute="leading" secondItem="8au-JN-SLp" secondAttribute="leading" constant="10" id="4kk-TI-kYM"/>
+                    <constraint firstAttribute="trailing" secondItem="ybq-2c-JIX" secondAttribute="trailing" constant="10" id="6BL-QS-yjj"/>
+                    <constraint firstItem="ybq-2c-JIX" firstAttribute="top" secondItem="8au-JN-SLp" secondAttribute="top" constant="16" id="Ivr-o9-Z9o"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="arrowImageView" destination="9bk-WS-xs3" id="6qx-Iv-Ggx"/>
+            </connections>
+            <point key="canvasLocation" x="118.84057971014494" y="35.491071428571423"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="arrow_bottom" width="14.5" height="8"/>
+        <namedColor name="borderGrayColor">
+            <color red="0.88999998569488525" green="0.88999998569488525" blue="0.88999998569488525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -43,6 +43,13 @@ class AppNavigationController: UINavigationController {
     func unclear() {
         navigationBar.unclear(shadowColor: shadowColor, backgroundEffect: backgroundEffect, backgroundColor: backgroundColor)
     }
+    
+    func restyleBackButton(){
+        let backButton = UIBarButtonItem()
+        backButton.title = " "
+        self.navigationItem.backBarButtonItem = backButton
+        self.navigationItem.backBarButtonItem?.tintColor = .black
+    }
 
     private func setupInteractivePopGestureRecognizer() {
         interactivePopGestureRecognizer?.isEnabled = true

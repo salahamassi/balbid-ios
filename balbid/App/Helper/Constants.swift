@@ -17,9 +17,18 @@ enum AssetsColor: String {
     case textGrayColor
     case whiteColor
     case lightGrayColor
+    case lightGrayColor2
     case redColor
     case brownColor
-
+    case borderGrayColor
+    case blueColor
+    case textBlacKColor2
+    case textLightGrayColor
+    case orangeColor
+    case borderGrayColor2
+    case borderGrayColor3
+    case redColor2
+    case yellowColor2
 }
 
 extension String {
@@ -31,18 +40,50 @@ extension String {
     static let errorAlertView = "ErrorAlertView"
     static let confirmAlertView = "ConfirmAlertView"
     static let progressView = "ProgressView"
+    static let productHeader = "ProductHeaderCell"
+    static let wholeSaleOfferHeader = "WholeSaleOfferHeaderCell"
+    static let strongestOfferHeader = "StrongestOfferHeaderCell"
+    static let categoryContentHeader = "CategoryContentHeaderCell"
+    static let productCell = "ProductCell"
+    static let addToCartView = "AddToCartView"
 
+    
+    
     //  cell's header's, Annotation's id's
     static let photoPreviewCellId = "photoPreviewCellId"
     static let thumbnailCellId = "thumbnailCellId"
     static let authorizePeopleCellId = "auth_people_cell"
     static let bankInformationCellId = "bank_info_cell"
+    
+    //home cell's id
+    static let sliderCellId = "slider_cell"
+    static let sliderIndicatorCellId = "slider_indicator_cell"
+    static let categoryCellId = "category_cell"
+    static let offerCellId = "offer_cell"
+    static let pickedFeatureCellId = "picked_feature_cell"
+    static let productHeaderCellId = "product_header"
+    static let productCellId = "product_cell"
+    static let addCellId = "ad_cell"
+    static let wholesaleOffersHeaderCellId = "wholesale_offers_header"
+    static let strongestOfferProductHeaderCellId = "strongest_offer_product_header"
+    static let strongestOfferCellId = "strongest_offer_cell"
+    static let offerAdCellId = "offer_ad_cell"
+    static let productCategoryCellId = "product_category_cell"
+    static let categoryContentHeaderCellId = "category_content_header"
+    static let categoryContentCellId = "category_content_cell"
+    static let cartCellId = "cart_cell"
+    static let colorCellId = "color_cell"    
+    
+    
+    
 
     // storyboard names
-//    static let mainStoryboard = "Main"
+    static let mainStoryboard = "Main"
     static let authStoryboard = "Auth"
     static let authComapnyStoryboard = "CompanyAuth"
     static let splashStoryboard = "Splash"
+    static let categoriesStoryboard = "Categories"
+    static let productStoryboard = "Product"
 
     // view  controller id's
     static let splashViewControllerId = "SplashViewController"
@@ -66,12 +107,31 @@ extension String {
     static let authCompanyCreatedSuccessfullyViewControllerId = "AuthCompanyCreatedSuccessfullyViewController"
 
     static let mainTabBarViewControllerId = "MainTabBarViewController"
+    static let adCategoriesViewController = "AdCategoriesViewController"
+    static let categoriesFilterViewController = "CategoriesFilterViewController"
+    static let productDetailViewController = "ProductDetailViewController"
+
+    
 
     // image name
     static let lockedPasswordImage = "locked_password"
     static let unlockedPasswordImage = "unlocked_password"
     static let checkImage = "right"
     static let backImage = "back"
+    static let barCodeImage = "bar_code"
+    static let arrowDownImage = "arrow_bottom"
+    static let arrowUpImage = "arrow_top"
+    static let searchImage = "search"
+    static let logoImage = "nav_logo"
+    static let trashImage = "trash"
+    static let starImage = "star"
+    static let closeImage = "close"
+
+    
+    
+    //collection view header kind
+    static let leadingKind = "leadingKind"
+    static let topKind = "topKind"
 
 }
 

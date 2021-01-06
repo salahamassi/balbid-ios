@@ -74,7 +74,6 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
     var album: AlbumModel?
 
     private let photoCellId = "photoCellId"
-    weak var router: AppRouter?
     var maxSelection: Int?
 
     private var imagePickerHelper: ImagePickerHelper?
@@ -92,8 +91,7 @@ class PhotosCollectionViewController: UICollectionViewController, UICollectionVi
         }
     }
 
-    init(router: AppRouter, delegate: PhotosCollectionViewControllerDelegate? = nil) {
-        self.router = router
+    init(delegate: PhotosCollectionViewControllerDelegate? = nil) {
         self.delegate = delegate
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
     }

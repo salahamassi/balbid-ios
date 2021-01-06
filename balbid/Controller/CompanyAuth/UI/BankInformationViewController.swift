@@ -13,7 +13,7 @@ class BankInformationViewController: BaseViewController {
     @IBOutlet weak var addBankButton: UIButton!
 
     let bankInformationTableViewDataSource = BankInfromationTableViewDataSource()
-    weak var bankInfrormationTableViewDelegate = BankInfrormationTableViewDelegate()
+    let bankInfrormationTableViewDelegate = BankInfrormationTableViewDelegate()
 
     weak var delegate: SizeChangableDelegate?
 
