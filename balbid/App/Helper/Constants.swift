@@ -73,6 +73,9 @@ extension String {
     static let categoryContentCellId = "category_content_cell"
     static let cartCellId = "cart_cell"
     static let colorCellId = "color_cell"    
+    static let rateCellId = "rate_cell"
+    static let footerRateCellId = "footer_cell"
+
     
     
     
@@ -110,9 +113,10 @@ extension String {
     static let adCategoriesViewController = "AdCategoriesViewController"
     static let categoriesFilterViewController = "CategoriesFilterViewController"
     static let productDetailViewController = "ProductDetailViewController"
+    static let productDetailQuickViewViewController = "ProductDetailQuickViewViewController"
+    static let productDetailRateViewController = "ProductDetailRateViewController"
 
     
-
     // image name
     static let lockedPasswordImage = "locked_password"
     static let unlockedPasswordImage = "unlocked_password"

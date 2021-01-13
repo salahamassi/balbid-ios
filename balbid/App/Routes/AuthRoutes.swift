@@ -15,8 +15,8 @@ enum AuthRoutes {
     case forgetPasswordRoute
     case forgetPasswordVerifyCodeRoute
     case setNewPasswordRoute
-
 }
+
 extension AppRouter {
 
     func navigate(to route: AuthRoutes, completion: (() -> Void)? = nil) {

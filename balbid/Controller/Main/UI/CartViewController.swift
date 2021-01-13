@@ -34,7 +34,7 @@ class CartViewController: BaseViewController {
     private func setupCollectionView(){
         collectionView.dataSource = cartCollectionViewDataSource
         collectionView.delegate = cartCollectionViewDelegate
-        cartCollectionViewDelegate.delegate = self
+        cartCollectionViewDataSource.delegate = self
     }
     
 }

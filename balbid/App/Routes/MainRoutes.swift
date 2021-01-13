@@ -8,7 +8,6 @@
 import AppRouter
 
 enum MainRoutes {
-
     case photosPicker(params: [String: Any])
     case splashRoute
     case mainTabBarRoute

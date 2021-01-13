@@ -58,6 +58,8 @@
 		08438E6925A2694000796373 /* ProductRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08438E6825A2694000796373 /* ProductRoutes.swift */; };
 		08438E6D25A2696F00796373 /* ProductDetailRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08438E6C25A2696F00796373 /* ProductDetailRoute.swift */; };
 		0866BA0925A1DC0F00F15B79 /* CartCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A507BF259FBFBB00507D8C /* CartCollectionViewDelegate.swift */; };
+		087A90E325A5E46800B8AA96 /* ProductDetailContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087A90E225A5E46800B8AA96 /* ProductDetailContentViewController.swift */; };
+		087A90E725A5E57B00B8AA96 /* ScrollViewContainingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087A90E625A5E57B00B8AA96 /* ScrollViewContainingDelegate.swift */; };
 		087CA9D52599055000113CEC /* HomeCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087CA9D42599055000113CEC /* HomeCollectionViewDataSource.swift */; };
 		087CA9D72599072B00113CEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DB1DADB2586737E00EF1E8F /* Assets.xcassets */; };
 		087CA9DC2599083100113CEC /* SliderIndicatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087CA9DB2599083100113CEC /* SliderIndicatorCollectionViewCell.swift */; };
@@ -79,6 +81,11 @@
 		0894855525A22381001934A9 /* ProductCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0894855425A22381001934A9 /* ProductCellDelegate.swift */; };
 		08A507BB259FB68C00507D8C /* CartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A507BA259FB68C00507D8C /* CartCollectionViewCell.swift */; };
 		08A507C3259FCA5900507D8C /* SwipeActionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A507C2259FCA5900507D8C /* SwipeActionDelegate.swift */; };
+		08A9B8BA25A6441A00AE5238 /* ProductDetailQuickViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9B8B925A6441A00AE5238 /* ProductDetailQuickViewViewController.swift */; };
+		08A9B8BE25A64B7200AE5238 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 08A9B8BD25A64B7200AE5238 /* Cosmos */; };
+		08A9B8C125A64EE600AE5238 /* ProductDetailRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9B8C025A64EE600AE5238 /* ProductDetailRateViewController.swift */; };
+		08A9B8C725A657D100AE5238 /* RateTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9B8C625A657D100AE5238 /* RateTableViewDataSource.swift */; };
+		08A9B8CB25A6582900AE5238 /* RateTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9B8CA25A6582900AE5238 /* RateTableViewDelegate.swift */; };
 		08B1A73825878B8F003D49EF /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08B1A73725878B8F003D49EF /* Auth.storyboard */; };
 		08B1A73D25879024003D49EF /* Tajawal-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08B1A73B25879023003D49EF /* Tajawal-Regular.ttf */; };
 		08B1A73E25879024003D49EF /* Tajawal-Medium 500.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08B1A73C25879023003D49EF /* Tajawal-Medium 500.ttf */; };
@@ -222,6 +229,8 @@
 		08438E6525A2692D00796373 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		08438E6825A2694000796373 /* ProductRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRoutes.swift; sourceTree = "<group>"; };
 		08438E6C25A2696F00796373 /* ProductDetailRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRoute.swift; sourceTree = "<group>"; };
+		087A90E225A5E46800B8AA96 /* ProductDetailContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailContentViewController.swift; sourceTree = "<group>"; };
+		087A90E625A5E57B00B8AA96 /* ScrollViewContainingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewContainingDelegate.swift; sourceTree = "<group>"; };
 		087CA9D42599055000113CEC /* HomeCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		087CA9DB2599083100113CEC /* SliderIndicatorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderIndicatorCollectionViewCell.swift; sourceTree = "<group>"; };
 		087D90AE258BF86C002BAE95 /* CompanyAuth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompanyAuth.storyboard; sourceTree = "<group>"; };
@@ -243,6 +252,10 @@
 		08A507BA259FB68C00507D8C /* CartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCollectionViewCell.swift; sourceTree = "<group>"; };
 		08A507BF259FBFBB00507D8C /* CartCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		08A507C2259FCA5900507D8C /* SwipeActionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeActionDelegate.swift; sourceTree = "<group>"; };
+		08A9B8B925A6441A00AE5238 /* ProductDetailQuickViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailQuickViewViewController.swift; sourceTree = "<group>"; };
+		08A9B8C025A64EE600AE5238 /* ProductDetailRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRateViewController.swift; sourceTree = "<group>"; };
+		08A9B8C625A657D100AE5238 /* RateTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTableViewDataSource.swift; sourceTree = "<group>"; };
+		08A9B8CA25A6582900AE5238 /* RateTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTableViewDelegate.swift; sourceTree = "<group>"; };
 		08B1A73725878B8F003D49EF /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		08B1A73B25879023003D49EF /* Tajawal-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Regular.ttf"; sourceTree = "<group>"; };
 		08B1A73C25879023003D49EF /* Tajawal-Medium 500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Medium 500.ttf"; sourceTree = "<group>"; };
@@ -343,6 +356,7 @@
 				3DB1DAFF258685BD00EF1E8F /* MOLH in Frameworks */,
 				3DB1DAFB2586844500EF1E8F /* SDWebImage in Frameworks */,
 				3DB1DAF12586796F00EF1E8F /* IQKeyboardManagerSwift in Frameworks */,
+				08A9B8BE25A64B7200AE5238 /* Cosmos in Frameworks */,
 				3DB1DAF7258683D400EF1E8F /* Alamofire in Frameworks */,
 				E514B8CCA1DF6959E2A08E2A /* Pods_balbid.framework in Frameworks */,
 				3D60C38925975E7F0092D594 /* IBPCollectionViewCompositionalLayout in Frameworks */,
@@ -508,6 +522,9 @@
 		08438E5C25A264E000796373 /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				08A9B8C925A6581900AE5238 /* delegate */,
+				08A9B8C425A657B100AE5238 /* datasource */,
+				087A90E525A5E56B00B8AA96 /* Protocol */,
 				08438E6B25A2695D00796373 /* Route */,
 				08438E6025A265BA00796373 /* UI */,
 				08438E5E25A2650A00796373 /* Cell */,
@@ -544,6 +561,9 @@
 			isa = PBXGroup;
 			children = (
 				08438E6525A2692D00796373 /* ProductDetailViewController.swift */,
+				087A90E225A5E46800B8AA96 /* ProductDetailContentViewController.swift */,
+				08A9B8B925A6441A00AE5238 /* ProductDetailQuickViewViewController.swift */,
+				08A9B8C025A64EE600AE5238 /* ProductDetailRateViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -554,6 +574,14 @@
 				08438E6C25A2696F00796373 /* ProductDetailRoute.swift */,
 			);
 			path = Route;
+			sourceTree = "<group>";
+		};
+		087A90E525A5E56B00B8AA96 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				087A90E625A5E57B00B8AA96 /* ScrollViewContainingDelegate.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		087CA9D92599080800113CEC /* cell */ = {
@@ -687,6 +715,22 @@
 			children = (
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		08A9B8C425A657B100AE5238 /* datasource */ = {
+			isa = PBXGroup;
+			children = (
+				08A9B8C625A657D100AE5238 /* RateTableViewDataSource.swift */,
+			);
+			path = datasource;
+			sourceTree = "<group>";
+		};
+		08A9B8C925A6581900AE5238 /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				08A9B8CA25A6582900AE5238 /* RateTableViewDelegate.swift */,
+			);
+			path = delegate;
 			sourceTree = "<group>";
 		};
 		08B1A73625878B7C003D49EF /* Scene */ = {
@@ -861,19 +905,11 @@
 			isa = PBXGroup;
 			children = (
 				3DB1DB01258686FD00EF1E8F /* Helper */,
-				3DB1DAEA2586788200EF1E8F /* Router */,
+				3DB1DAEB2586788B00EF1E8F /* Routes */,
 				3DB1DAD22586737D00EF1E8F /* AppDelegate.swift */,
 				3DB1DAD42586737D00EF1E8F /* SceneDelegate.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		3DB1DAEA2586788200EF1E8F /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				3DB1DAEB2586788B00EF1E8F /* Routes */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		3DB1DAEB2586788B00EF1E8F /* Routes */ = {
@@ -1154,6 +1190,7 @@
 				3DAC7BD82586FF1B00D57BB1 /* CropViewController */,
 				08C567872596597400C80A75 /* AppRouter */,
 				3D60C38825975E7F0092D594 /* IBPCollectionViewCompositionalLayout */,
+				08A9B8BD25A64B7200AE5238 /* Cosmos */,
 			);
 			productName = balbid;
 			productReference = 3DB1DACF2586737D00EF1E8F /* balbid.app */;
@@ -1191,6 +1228,7 @@
 				3DAC7BD72586FF1B00D57BB1 /* XCRemoteSwiftPackageReference "TOCropViewController" */,
 				08C567862596597400C80A75 /* XCRemoteSwiftPackageReference "AppRouter-UIKit" */,
 				3D60C38725975E7F0092D594 /* XCRemoteSwiftPackageReference "IBPCollectionViewCompositionalLayout" */,
+				08A9B8BC25A64B7200AE5238 /* XCRemoteSwiftPackageReference "Cosmos" */,
 			);
 			productRefGroup = 3DB1DAD02586737D00EF1E8F /* Products */;
 			projectDirPath = "";
@@ -1300,6 +1338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08A9B8CB25A6582900AE5238 /* RateTableViewDelegate.swift in Sources */,
 				3DB1DB4E25868E6C00EF1E8F /* Animator.swift in Sources */,
 				08C567752593F58A00C80A75 /* AuthCompanyCreatedSuccessfullyRoute.swift in Sources */,
 				08809ED7259377A900AD41EE /* AuthorizePeopleViewController.swift in Sources */,
@@ -1333,6 +1372,7 @@
 				3DC76B6425975C2100EE2428 /* Extensions+PHAsset.swift in Sources */,
 				3DB1DB4F25868E6C00EF1E8F /* AnimationFactory.swift in Sources */,
 				3DAC7BD02586986C00D57BB1 /* BottomSheetView.swift in Sources */,
+				08A9B8C125A64EE600AE5238 /* ProductDetailRateViewController.swift in Sources */,
 				3DC76B6325975C2100EE2428 /* PhotoWrapper.swift in Sources */,
 				0827BF752589285700DE8CD5 /* AccountOptionView.swift in Sources */,
 				08809EE92593B69400AD41EE /* BankInformationViewController.swift in Sources */,
@@ -1357,6 +1397,7 @@
 				3DB1DB07258687C300EF1E8F /* LocationManager.swift in Sources */,
 				0894854925A1FC1B001934A9 /* AddToCartBottomSheet.swift in Sources */,
 				3DB1DB4225868DE000EF1E8F /* BaseCollectionViewCell.swift in Sources */,
+				08A9B8C725A657D100AE5238 /* RateTableViewDataSource.swift in Sources */,
 				3DB1DB2C25868A1000EF1E8F /* Extensions+UILabel.swift in Sources */,
 				08438E6D25A2696F00796373 /* ProductDetailRoute.swift in Sources */,
 				08F3B50B2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift in Sources */,
@@ -1407,9 +1448,11 @@
 				08438E6925A2694000796373 /* ProductRoutes.swift in Sources */,
 				3DC76B6125975C2100EE2428 /* PhotosPickerRoute.swift in Sources */,
 				081C3CF32589123B00C8740C /* LoginOptionRoute.swift in Sources */,
+				08A9B8BA25A6441A00AE5238 /* ProductDetailQuickViewViewController.swift in Sources */,
 				3DB1DB3C25868A1000EF1E8F /* Extensions+Data+UIImage.swift in Sources */,
 				083E75AA259DE4EC00EDF708 /* CategoriesTableViewDataSource.swift in Sources */,
 				08F0CC36258BC19500FA2261 /* LoginViewControllerViewController.swift in Sources */,
+				087A90E325A5E46800B8AA96 /* ProductDetailContentViewController.swift in Sources */,
 				3DB1DB3325868A1000EF1E8F /* Extensions+UIViewController.swift in Sources */,
 				3DC76B6025975C2100EE2428 /* AlbumViewController.swift in Sources */,
 				3DB1DAD52586737D00EF1E8F /* SceneDelegate.swift in Sources */,
@@ -1427,6 +1470,7 @@
 				081AF821259F9CC5000E3B04 /* CartViewController.swift in Sources */,
 				0894855525A22381001934A9 /* ProductCellDelegate.swift in Sources */,
 				08C5678C25965D6500C80A75 /* AuthCompanyCreatedSuccessfullyViewController.swift in Sources */,
+				087A90E725A5E57B00B8AA96 /* ScrollViewContainingDelegate.swift in Sources */,
 				08A507C3259FCA5900507D8C /* SwipeActionDelegate.swift in Sources */,
 				083E75BA259DEF1F00EDF708 /* CategriesContentCollectionViewFlowLayout.swift in Sources */,
 				3DB1DB2D25868A1000EF1E8F /* Extensions+UIColor.swift in Sources */,
@@ -1641,6 +1685,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		08A9B8BC25A64B7200AE5238 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 23.0.0;
+			};
+		};
 		08C567862596597400C80A75 /* XCRemoteSwiftPackageReference "AppRouter-UIKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/salahamassi/AppRouter-UIKit.git";
@@ -1700,6 +1752,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		08A9B8BD25A64B7200AE5238 /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08A9B8BC25A64B7200AE5238 /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
+		};
 		08C567872596597400C80A75 /* AppRouter */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 08C567862596597400C80A75 /* XCRemoteSwiftPackageReference "AppRouter-UIKit" */;

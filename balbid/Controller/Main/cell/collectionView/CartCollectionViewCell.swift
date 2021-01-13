@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class CartCollectionViewCell: UICollectionViewCell {
+class CartCollectionViewCell: SwipeCollectionViewCell {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var quantityLabel: UILabel!
