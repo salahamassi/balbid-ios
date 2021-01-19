@@ -177,30 +177,13 @@ class BottomSheetView: UIView {
         blackMaskView.backgroundColor = UIColor.black.withAlphaComponent(0)
         topIndicatorView.centerXAnchor.constraint(equalTo: viewController.view.centerXAnchor).isActive = true
         blackMaskView.fillSuperview()
-        wrapperView.anchor(.leading(viewController.view.trailingAnchor, constant: .zero),
-                           .trailing(viewController.view.leadingAnchor, constant: .zero))
-
-        wrapperView.anchor(.leading(viewController.view.leadingAnchor, constant: .zero),
-                           .trailing(viewController.view.trailingAnchor, constant: .zero),
-                           .bottom(wrapperView.topAnchor, constant: 6))
-
+        wrapperView.anchor(leading: viewController.view.leadingAnchor, trailing: viewController.view.trailingAnchor)
+        topIndicatorView.anchor(bottom: wrapperView.topAnchor, padding: .init(top: 0, left: 0, bottom: 6, right: 0))
         wrapperView.heightAnchor.constraint(equalToConstant: totalViewHeight).isActive = true
         wrapperViewBottomConstraint = wrapperView.bottomAnchor.constraint(equalTo: viewController.view.bottomAnchor, constant: totalViewHeight)
         wrapperViewBottomConstraint?.isActive = true
         wrapperView.addSubview(self)
-
-        anchor(.top(wrapperView.topAnchor, constant: .zero),
-               .trailing(wrapperView.trailingAnchor, constant: .zero),
-               .leading(wrapperView.leadingAnchor, constant: .zero))
-
-        let viewBottomConstraintConstant: CGFloat
-        if let viewHeight = viewHeight {
-            viewBottomConstraintConstant = -(totalViewHeight - viewHeight)
-        } else {
-            viewBottomConstraintConstant = -fixedBottomSpaceUnderEdgeValue
-        }
-        viewBottomConstraint = bottomAnchor.constraint(equalTo: wrapperView.bottomAnchor, constant: viewBottomConstraintConstant)
-        viewBottomConstraint?.isActive = true
+        fillSuperview(padding: .init(top: 0, left: 0, bottom: fixedBottomSpaceUnderEdgeValue, right: 0))
         blackMaskView.addGestureRecognizer(blackMaskTapGestureRecognizer)
         blackMaskView.addGestureRecognizer(blackMaskViewPanGestureRecognizer)
         addGestureRecognizer(viewPanGestureRecognizer)
