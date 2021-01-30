@@ -1,13 +1,16 @@
 PODS:
+  - RangeSeekSlider (1.8.0)
   - SwipeCellKit (2.7.1)
   - VICMAImageView (1.0)
 
 DEPENDENCIES:
+  - RangeSeekSlider
   - SwipeCellKit (from `https://github.com/SwipeCellKit/SwipeCellKit.git`, branch `develop`)
   - VICMAImageView (~> 1.0)
 
 SPEC REPOS:
   trunk:
+    - RangeSeekSlider
     - VICMAImageView
 
 EXTERNAL SOURCES:
@@ -21,9 +24,10 @@ CHECKOUT OPTIONS:
     :git: https://github.com/SwipeCellKit/SwipeCellKit.git
 
 SPEC CHECKSUMS:
+  RangeSeekSlider: 650b11fa1edcb92e1e0ede797669d98622570fb5
   SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
   VICMAImageView: 9f1811d4482ebe37b7eb09f640018554a81a21b2
 
-PODFILE CHECKSUM: 1ef01cc29d7499d204224bf3a170f59ad2379cc5
+PODFILE CHECKSUM: 1093b6097b5d689ca5e9741dced372272a5aa6a6
 
-COCOAPODS: 1.10.0.rc.1
+COCOAPODS: 1.9.3

@@ -46,7 +46,7 @@ extension String {
     static let categoryContentHeader = "CategoryContentHeaderCell"
     static let productCell = "ProductCell"
     static let addToCartView = "AddToCartView"
-
+    static let productDetailHeaderView = "ProductDetailHeaderView"
     
     
     //  cell's header's, Annotation's id's
@@ -75,11 +75,14 @@ extension String {
     static let colorCellId = "color_cell"    
     static let rateCellId = "rate_cell"
     static let footerRateCellId = "footer_cell"
-
+    static let pointCellId = "point_cell"
+    static let orderFilterCellId = "order_filter_cell"
+    static let orderHeaderCellId = "order_header_cell"
+    static let orderCellId = "order_cell"
+    static let favoriteCellId = "favorite_cell"
+    static let productDetailHeaderCellId = "product_detail_header_cell"
+    static let productDetailCellId = "product_detail_cell"
     
-    
-    
-
     // storyboard names
     static let mainStoryboard = "Main"
     static let authStoryboard = "Auth"
@@ -87,6 +90,8 @@ extension String {
     static let splashStoryboard = "Splash"
     static let categoriesStoryboard = "Categories"
     static let productStoryboard = "Product"
+    static let profileStoryboard = "Profile"
+    static let orderStoryboard = "Order"
 
     // view  controller id's
     static let splashViewControllerId = "SplashViewController"
@@ -112,9 +117,17 @@ extension String {
     static let mainTabBarViewControllerId = "MainTabBarViewController"
     static let adCategoriesViewController = "AdCategoriesViewController"
     static let categoriesFilterViewController = "CategoriesFilterViewController"
-    static let productDetailViewController = "ProductDetailViewController"
+    static let productDetailViewController = "ProductDetailNewViewController"
     static let productDetailQuickViewViewController = "ProductDetailQuickViewViewController"
     static let productDetailRateViewController = "ProductDetailRateViewController"
+
+    
+    static let editProfileViewController = "EditProfileViewController"
+    static let pointViewController = "PointViewController"
+    static let favoriteViewController = "FavoriteViewController"
+
+    
+    static let userOrderViewController = "UserOrderViewController"
 
     
     // image name

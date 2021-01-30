@@ -8,14 +8,17 @@
 import UIKit
 
 extension UIStoryboard {
+
     static let mainStoryboard = UIStoryboard(name : .mainStoryboard, bundle: nil)
     static let authStoryboard = UIStoryboard(name: .authStoryboard, bundle: nil)
     static let splashStoryboard = UIStoryboard(name: .splashStoryboard, bundle: nil)
     static let authComapnyStoryboard = UIStoryboard(name: .authComapnyStoryboard, bundle: nil)
     static let categoriesStoryboard = UIStoryboard(name: .categoriesStoryboard, bundle: nil)
     static let productStoryboard = UIStoryboard(name: .productStoryboard, bundle: nil)
+    static let profileStoryboard = UIStoryboard(name: .profileStoryboard, bundle: nil)
+    static let orderStoryboard = UIStoryboard(name:
+        .orderStoryboard, bundle: nil)
 
-    
     func getViewController(with identifier: String) -> UIViewController {
         return instantiateViewController(withIdentifier: identifier)
     }

@@ -83,7 +83,6 @@ extension ProductDetailViewController: ScrollViewContainingDelegate {
         }else{
             headerView.animateIsHidden(value: false)
             smallHeaderView.animateIsHidden(value: true)
-          
         }
     }
     
