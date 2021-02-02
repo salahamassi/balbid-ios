@@ -18,7 +18,5 @@ class FavoriteRoute: Route {
         let viewController = UIStoryboard.profileStoryboard.getViewController(with: .favoriteViewController)
         return viewController
     }
-    
 
-    
 }

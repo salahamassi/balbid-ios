@@ -298,6 +298,7 @@
                                                         </constraints>
                                                         <connections>
                                                             <outletCollection property="gestureRecognizers" destination="r0f-Gu-lCV" appends="YES" id="nVL-iQ-0BD"/>
+                                                            <outletCollection property="gestureRecognizers" destination="2K1-d8-BiZ" appends="YES" id="3LI-VL-1Cn"/>
                                                         </connections>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="STf-wu-Cbe" userLabel="pointsStackView">
@@ -693,6 +694,11 @@
                 <tapGestureRecognizer id="pio-57-z0p">
                     <connections>
                         <action selector="gotoFavoriteController:" destination="wbV-fz-N94" id="Qc6-Y5-boF"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="2K1-d8-BiZ">
+                    <connections>
+                        <action selector="gotoShippingAddressesController:" destination="wbV-fz-N94" id="Uwj-bE-b0l"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

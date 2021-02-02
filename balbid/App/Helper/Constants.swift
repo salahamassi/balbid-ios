@@ -47,6 +47,8 @@ extension String {
     static let productCell = "ProductCell"
     static let addToCartView = "AddToCartView"
     static let productDetailHeaderView = "ProductDetailHeaderView"
+    static let productImageCell = "ProductImageCell"
+
     
     
     //  cell's header's, Annotation's id's
@@ -82,6 +84,10 @@ extension String {
     static let favoriteCellId = "favorite_cell"
     static let productDetailHeaderCellId = "product_detail_header_cell"
     static let productDetailCellId = "product_detail_cell"
+    static let productImageCellId = "product_image_cell"
+    static let shippingAddressCellId = "shipping_address_cell"
+    static let orderProductCellId = "order_product_cell"
+
     
     // storyboard names
     static let mainStoryboard = "Main"
@@ -92,6 +98,7 @@ extension String {
     static let productStoryboard = "Product"
     static let profileStoryboard = "Profile"
     static let orderStoryboard = "Order"
+    static let shippingStoryboard = "Shipping"
 
     // view  controller id's
     static let splashViewControllerId = "SplashViewController"
@@ -120,15 +127,24 @@ extension String {
     static let productDetailViewController = "ProductDetailNewViewController"
     static let productDetailQuickViewViewController = "ProductDetailQuickViewViewController"
     static let productDetailRateViewController = "ProductDetailRateViewController"
+    static let productRatingViewController = "ProductRatingViewController"
+    static let productTraceViewController = "ProductTraceViewController"
 
+    
     
     static let editProfileViewController = "EditProfileViewController"
     static let pointViewController = "PointViewController"
     static let favoriteViewController = "FavoriteViewController"
+    
+    
+    static let shippingAdressViewController = "ShippingAdressViewController"
+    static let addNewShippingViewController = "AddNewShippingViewController"
+    static let shippingMapViewController = "ShippingMapViewController"
 
     
     static let userOrderViewController = "UserOrderViewController"
-
+    static let orderDetailViewController = "OrderDetailViewController"
+    
     
     // image name
     static let lockedPasswordImage = "locked_password"

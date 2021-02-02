@@ -4,7 +4,6 @@
 //
 //  Created by Salah Amassi on 13/12/2020.
 //
-
 import IQKeyboardManagerSwift
 import MOLH
 import AppRouter
@@ -31,10 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupApp(with: launchOptions)
-        UIFont.familyNames.forEach({ familyName in
-               let fontNames = UIFont.fontNames(forFamilyName: familyName)
-               print(familyName, fontNames)
-           })
+//        UIFont.familyNames.forEach({ familyName in
+//               let fontNames = UIFont.fontNames(forFamilyName: familyName)
+//               print(familyName, fontNames)
+//           })
         return true
     }
 
@@ -54,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         MOLH.shared.activate(true)
         MOLHLanguage.setDefaultLanguage(Locale.current.languageCode ?? "en")
         if #available(iOS 13.0, *) {
-            print("Scene delegate will start app!")
+//            print("Scene delegate will start app!")
         } else {
             window = UIWindow()
             startApp(using: window!)
@@ -66,7 +65,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
         appRouter = AppRouter(window: window, rootViewController: nil)
         appRouter?.navigate(to: .splashRoute)
-
 //        LocationManager.shared.startTracking(router: appRouter!)
     }
 

@@ -18,7 +18,9 @@ extension UIStoryboard {
     static let profileStoryboard = UIStoryboard(name: .profileStoryboard, bundle: nil)
     static let orderStoryboard = UIStoryboard(name:
         .orderStoryboard, bundle: nil)
-
+    static let shippingStoryboard = UIStoryboard(name:
+        .shippingStoryboard, bundle: nil)
+    
     func getViewController(with identifier: String) -> UIViewController {
         return instantiateViewController(withIdentifier: identifier)
     }

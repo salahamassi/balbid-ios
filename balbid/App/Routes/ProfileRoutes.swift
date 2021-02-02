@@ -28,6 +28,7 @@ extension AppRouter {
         case .favoriteRoute:
               mRoute = FavoriteRoute()
               mParams = nil
+     
         }
         navigate(to: mRoute, with: mParams, completion: completion)
     }

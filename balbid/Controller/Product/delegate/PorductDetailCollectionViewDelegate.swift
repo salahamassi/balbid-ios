@@ -9,8 +9,7 @@ import UIKit
 
 class ProductDetailCollectionViewDelegate: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-   var headerView: ProductDetailHeaderCollectionReusableView!
-    
+   var headerView: ProductDetailHeaderView!    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
@@ -23,12 +22,11 @@ class ProductDetailCollectionViewDelegate: NSObject, UICollectionViewDelegate, U
     
      func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let contentOffsetY = scrollView.contentOffset.y
-        print(contentOffsetY)
+//        print(contentOffsetY)
         if contentOffsetY < -40 {
             headerView?.animator?.fractionComplete = abs(contentOffsetY) / 200
         } else {
             headerView?.animator?.fractionComplete = 0.0
         }
     }
-
 }

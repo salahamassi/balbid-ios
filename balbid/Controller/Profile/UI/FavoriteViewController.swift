@@ -11,7 +11,7 @@ class FavoriteViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let  favoriteTableViewDataSource = FavoriteTableViewDataSource()
+    let favoriteTableViewDataSource = FavoriteTableViewDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()

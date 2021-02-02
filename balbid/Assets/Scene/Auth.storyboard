@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -292,7 +292,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Mox-mw-Rqe" userLabel="emil stack view">
-                                        <rect key="frame" x="0.0" y="212.5" width="288" height="115"/>
+                                        <rect key="frame" x="0.0" y="213.5" width="288" height="115"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kpk-GI-kmo" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
@@ -341,28 +341,28 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="chB-HO-Rlh">
-                                        <rect key="frame" x="98" y="431" width="92" height="33"/>
+                                        <rect key="frame" x="94.5" y="433" width="99" height="31"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Back to">
                                                     <attributes>
                                                         <color key="NSColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="16" name="Tajawal-Regular"/>
-                                                        <font key="NSOriginalFont" size="16" name="Tajawal-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="16"/>
+                                                        <font key="NSOriginalFont" metaFont="system" size="16"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                                 <fragment content=" ">
                                                     <attributes>
                                                         <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" size="16" name="SylphieDEMO"/>
+                                                        <font key="NSFont" metaFont="system" size="16"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                                 <fragment content="Login">
                                                     <attributes>
                                                         <color key="NSColor" red="0.11764705882352941" green="0.13725490196078433" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="16" name="Tajawal-Bold"/>
+                                                        <font key="NSFont" metaFont="system" size="16"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -502,10 +502,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Tk-IG-siq">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="535"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="543.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VxN-3J-prg">
-                                                <rect key="frame" x="16" y="60" width="288" height="455"/>
+                                                <rect key="frame" x="16" y="60" width="288" height="463.5"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sul-gf-SsI" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
@@ -673,30 +673,30 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylY-ar-kyq">
-                                                        <rect key="frame" x="0.0" y="330" width="288" height="28"/>
+                                                        <rect key="frame" x="0.0" y="330" width="288" height="33.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="When creating an account, you agree to the">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="14" name="Tajawal-Regular"/>
+                                                                    <font key="NSFont" metaFont="system" size="14"/>
                                                                 </attributes>
                                                             </fragment>
                                                             <fragment content=" ">
                                                                 <attributes>
-                                                                    <font key="NSFont" size="14" name="Tajawal-Regular"/>
+                                                                    <font key="NSFont" metaFont="menu" size="14"/>
                                                                 </attributes>
                                                             </fragment>
                                                             <fragment content="terms and conditions policy">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.58039215686274503" green="0.16862745098039217" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="14" name="Tajawal-Regular"/>
+                                                                    <font key="NSFont" metaFont="system" size="14"/>
                                                                 </attributes>
                                                             </fragment>
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5HG-0N-udD">
-                                                        <rect key="frame" x="0.0" y="368" width="288" height="20"/>
+                                                        <rect key="frame" x="0.0" y="373.5" width="288" height="20"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fo1-Jx-Ylg">
                                                                 <rect key="frame" x="0.0" y="9.5" width="128.5" height="1"/>
@@ -725,22 +725,22 @@
                                                         </constraints>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Act-zY-cQt" userLabel="space view">
-                                                        <rect key="frame" x="0.0" y="378" width="288" height="30"/>
+                                                        <rect key="frame" x="0.0" y="383.5" width="288" height="30"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="RU6-CW-duB"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zkV-Sg-88p">
-                                                        <rect key="frame" x="0.0" y="428" width="288" height="27"/>
+                                                        <rect key="frame" x="0.0" y="433.5" width="288" height="30"/>
                                                         <state key="normal">
                                                             <attributedString key="attributedTitle">
                                                                 <fragment content="You have an accou">
                                                                     <attributes>
                                                                         <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <color key="NSColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <font key="NSFont" size="15" name="Tajawal-Regular"/>
-                                                                        <font key="NSOriginalFont" size="15" name="Tajawal-Regular"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <font key="NSOriginalFont" metaFont="system" size="15"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="42" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                                             <tabStops>
                                                                                 <textTab alignment="left" location="42">
@@ -754,7 +754,7 @@
                                                                     <attributes>
                                                                         <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <color key="NSColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <font key="NSFont" size="15" name="Tajawal-Regular"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="42" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                                             <tabStops>
                                                                                 <textTab alignment="left" location="42">
@@ -768,8 +768,8 @@
                                                                     <attributes>
                                                                         <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <color key="NSColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <font key="NSFont" size="15" name="Tajawal-Regular"/>
-                                                                        <font key="NSOriginalFont" size="15" name="Tajawal-Regular"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                                        <font key="NSOriginalFont" metaFont="system" size="15"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="42" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                                             <tabStops>
                                                                                 <textTab alignment="left" location="42">
@@ -783,7 +783,7 @@
                                                                     <attributes>
                                                                         <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <color key="NSColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <font key="NSFont" size="15" name="Tajawal-Regular"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="42" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                                             <tabStops>
                                                                                 <textTab alignment="left" location="42">
@@ -797,7 +797,7 @@
                                                                     <attributes>
                                                                         <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <color key="NSColor" red="0.11764705882352941" green="0.13725490196078433" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <font key="NSFont" size="15" name="Tajawal-Bold"/>
+                                                                        <font key="NSFont" metaFont="system" size="15"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="42" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                                             <tabStops>
                                                                                 <textTab alignment="left" location="42">
@@ -861,7 +861,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Q3n-nj-Ur5">
-                                <rect key="frame" x="16" y="70" width="288" height="404"/>
+                                <rect key="frame" x="16" y="70" width="288" height="407"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_logo" translatesAutoresizingMaskIntoConstraints="NO" id="KVm-oa-asi">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="109"/>
@@ -956,15 +956,15 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yWx-de-RNC">
-                                        <rect key="frame" x="0.0" y="377" width="288" height="27"/>
+                                        <rect key="frame" x="0.0" y="377" width="288" height="30"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="You don't have an accou">
                                                     <attributes>
                                                         <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="NSColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="15" name="Tajawal-Regular"/>
-                                                        <font key="NSOriginalFont" size="15" name="Tajawal-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                        <font key="NSOriginalFont" metaFont="system" size="15"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="42" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                             <tabStops>
                                                                 <textTab alignment="left" location="42">
@@ -978,7 +978,7 @@
                                                     <attributes>
                                                         <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="NSColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="15" name="Tajawal-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="42" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                             <tabStops>
                                                                 <textTab alignment="left" location="42">
@@ -992,8 +992,8 @@
                                                     <attributes>
                                                         <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="NSColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="15" name="Tajawal-Regular"/>
-                                                        <font key="NSOriginalFont" size="15" name="Tajawal-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                        <font key="NSOriginalFont" metaFont="system" size="15"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="42" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                             <tabStops>
                                                                 <textTab alignment="left" location="42">
@@ -1007,7 +1007,7 @@
                                                     <attributes>
                                                         <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="NSColor" red="0.98824000000000001" green="0.27450999999999998" blue="0.31764999999999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="15" name="Tajawal-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="42" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                             <tabStops>
                                                                 <textTab alignment="left" location="42">
@@ -1021,8 +1021,8 @@
                                                     <attributes>
                                                         <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="NSColor" red="0.11764705882352941" green="0.13725490196078433" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="15" name="Tajawal-Bold"/>
-                                                        <font key="NSOriginalFont" size="15" name="Tajawal-Bold"/>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                        <font key="NSOriginalFont" metaFont="system" size="15"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="42" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                             <tabStops>
                                                                 <textTab alignment="left" location="42">
@@ -1039,7 +1039,7 @@
                                         </connections>
                                     </button>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3HO-10-NSW">
-                                        <rect key="frame" x="0.0" y="404" width="288" height="20"/>
+                                        <rect key="frame" x="0.0" y="407" width="288" height="20"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zk-dK-A0V">
                                                 <rect key="frame" x="0.0" y="9.5" width="128.5" height="1"/>
@@ -1102,7 +1102,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="LbY-Kt-l8a">
-                                        <rect key="frame" x="0.0" y="179" width="288" height="182"/>
+                                        <rect key="frame" x="0.0" y="180" width="288" height="182"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LH0-jr-3u1">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="16"/>
@@ -1229,28 +1229,28 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f9k-ZV-5Xs">
-                                        <rect key="frame" x="98" y="431" width="92" height="33"/>
+                                        <rect key="frame" x="94.5" y="433" width="99" height="31"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Back to">
                                                     <attributes>
                                                         <color key="NSColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="16" name="Tajawal-Regular"/>
-                                                        <font key="NSOriginalFont" size="16" name="Tajawal-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="16"/>
+                                                        <font key="NSOriginalFont" metaFont="system" size="16"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                                 <fragment content=" ">
                                                     <attributes>
                                                         <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" size="16" name="SylphieDEMO"/>
+                                                        <font key="NSFont" metaFont="system" size="16"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                                 <fragment content="Login">
                                                     <attributes>
                                                         <color key="NSColor" red="0.11764705882352941" green="0.13725490196078433" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="16" name="Tajawal-Bold"/>
+                                                        <font key="NSFont" metaFont="system" size="16"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -1298,7 +1298,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="s5J-k9-XI6" userLabel="new password stack view">
-                                        <rect key="frame" x="0.0" y="175" width="288" height="190"/>
+                                        <rect key="frame" x="0.0" y="176" width="288" height="190"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PtB-Nh-sOv" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
@@ -1374,28 +1374,28 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1PG-os-VTd">
-                                        <rect key="frame" x="98" y="431" width="92" height="33"/>
+                                        <rect key="frame" x="94.5" y="433" width="99" height="31"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Back to">
                                                     <attributes>
                                                         <color key="NSColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="16" name="Tajawal-Regular"/>
-                                                        <font key="NSOriginalFont" size="16" name="Tajawal-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="16"/>
+                                                        <font key="NSOriginalFont" metaFont="system" size="16"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                                 <fragment content=" ">
                                                     <attributes>
                                                         <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" size="16" name="SylphieDEMO"/>
+                                                        <font key="NSFont" metaFont="system" size="16"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                                 <fragment content="Login">
                                                     <attributes>
                                                         <color key="NSColor" red="0.11764705882352941" green="0.13725490196078433" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="16" name="Tajawal-Bold"/>
+                                                        <font key="NSFont" metaFont="system" size="16"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>

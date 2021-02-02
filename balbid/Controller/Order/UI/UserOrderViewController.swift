@@ -53,6 +53,9 @@ class UserOrderViewController: BaseViewController {
     private func setupOrderTableView(){
         orderTableView.dataSource = orderTableViewDataSource
         orderTableView.delegate = orderTableViewDelegate
+        orderTableViewDelegate.didSelectRow = { indexPath in
+            self.router?.navigate(to: .orderDetailRoute)
+        }
     }
     
   

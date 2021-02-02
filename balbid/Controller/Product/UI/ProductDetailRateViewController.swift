@@ -17,15 +17,12 @@ class ProductDetailRateViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-
-
     }
     
 
     private func setupTableView(){
         tableView.delegate = rateTableViewDelegate
         tableView.dataSource = rateTableViewDataSource
-
     }
 
 }

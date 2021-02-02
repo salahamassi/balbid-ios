@@ -20,10 +20,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Product Detail New View Controller-->
+        <!--Product Detail View Controller-->
         <scene sceneID="YaV-AZ-kn9">
             <objects>
-                <viewController storyboardIdentifier="ProductDetailNewViewController" id="z1O-Mi-dAl" customClass="ProductDetailNewViewController" customModule="balbid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductDetailNewViewController" id="z1O-Mi-dAl" customClass="ProductDetailViewController" customModule="balbid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k92-hb-pYq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,6 +165,7 @@
                                                                             <subviews>
                                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqS-j3-pdR">
                                                                                     <rect key="frame" x="22" y="0.0" width="87" height="32"/>
+                                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="17"/>
                                                                                     <state key="normal" title="Quick Look">
                                                                                         <color key="titleColor" name="primaryColor"/>
@@ -175,6 +176,7 @@
                                                                                 </button>
                                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="941-J3-yEN">
                                                                                     <rect key="frame" x="169" y="0.0" width="36" height="32"/>
+                                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="17"/>
                                                                                     <state key="normal" title="Rate">
                                                                                         <color key="titleColor" name="borderGrayColor2"/>
@@ -217,6 +219,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="TkT-TY-y7p" firstAttribute="leading" secondItem="RFO-km-d0g" secondAttribute="leading" id="Haz-bv-IXz"/>
                                                 <constraint firstItem="bsQ-7W-Pby" firstAttribute="centerX" secondItem="vqS-j3-pdR" secondAttribute="centerX" id="Sy8-Ld-FmA"/>
@@ -225,6 +228,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="TkT-TY-y7p" secondAttribute="trailing" id="unq-il-qxs"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="396" height="714"/>
                                         <connections>
                                             <outlet property="containerView" destination="iIG-lg-Prm" id="kGF-xb-4Rd"/>
@@ -283,26 +287,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUw-eR-9sO">
-                                <rect key="frame" x="10" y="11" width="394" height="252"/>
-                                <string key="text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3Pe-59-boa">
+                                <rect key="frame" x="10" y="10.999999999999996" width="394" height="56.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUw-eR-9sO">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="32.666666666666664"/>
+                                        <gestureRecognizers/>
+                                        <string key="text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
 
 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.\</string>
-                                <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                        <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaN-5p-W7B">
+                                        <rect key="frame" x="0.0" y="32.666666666666664" width="394" height="24"/>
+                                        <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="10"/>
+                                        <state key="normal" title="Read More">
+                                            <color key="titleColor" name="B2B2B2"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dlj-2N-fmb" appends="YES" id="Nsu-8V-Zha"/>
+                                </connections>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7do-cO-vi3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7do-cO-vi3" firstAttribute="trailing" secondItem="JUw-eR-9sO" secondAttribute="trailing" constant="10" id="azR-9g-N7B"/>
-                            <constraint firstItem="JUw-eR-9sO" firstAttribute="top" secondItem="7do-cO-vi3" secondAttribute="top" constant="11" id="bRg-B0-u2Z"/>
-                            <constraint firstItem="JUw-eR-9sO" firstAttribute="leading" secondItem="7do-cO-vi3" secondAttribute="leading" constant="10" id="xsE-Wq-Zbh"/>
+                            <constraint firstAttribute="trailing" secondItem="3Pe-59-boa" secondAttribute="trailing" constant="10" id="HDr-JL-fNi"/>
+                            <constraint firstItem="3Pe-59-boa" firstAttribute="leading" secondItem="7do-cO-vi3" secondAttribute="leading" constant="10" id="Wzb-Hz-rh6"/>
+                            <constraint firstItem="3Pe-59-boa" firstAttribute="top" secondItem="7do-cO-vi3" secondAttribute="top" constant="11" id="rcC-XG-cny"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="detailLabel" destination="JUw-eR-9sO" id="xfi-1Q-q3M"/>
+                        <outlet property="readMoreButton" destination="oaN-5p-W7B" id="ZcN-Ea-WrX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ITq-HE-ou5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dlj-2N-fmb">
+                    <connections>
+                        <action selector="expandLabel:" destination="kpI-Sd-yho" id="Q6G-ma-zza"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1802" y="-39"/>
         </scene>
@@ -532,7 +562,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                                         <rect key="frame" x="0.0" y="175.33333333333337" width="414" height="300"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="rate_cell" rowHeight="111" id="EmO-hr-0LD">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="rate_cell" rowHeight="111" id="EmO-hr-0LD">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="111"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EmO-hr-0LD" id="7fh-yG-Ftk">
@@ -592,7 +622,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                                                     </constraints>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="footer_cell" rowHeight="70" id="Wzb-Hw-vEN">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="footer_cell" rowHeight="70" id="Wzb-Hw-vEN">
                                                 <rect key="frame" x="0.0" y="139" width="414" height="70"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wzb-Hw-vEN" id="504-Ak-rUw">
@@ -657,6 +687,9 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
     </designables>
     <resources>
         <image name="selected_cart" width="23" height="23"/>
+        <namedColor name="B2B2B2">
+            <color red="0.69800001382827759" green="0.69800001382827759" blue="0.69800001382827759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="accentColor">
             <color red="0.9100000262260437" green="0.9100000262260437" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

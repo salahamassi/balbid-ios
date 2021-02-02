@@ -1,95 +1,113 @@
 //
-//  ProductDetailViewController.swift
+//  ProductDetailNewViewController.swift
 //  balbid
 //
-//  Created by Qamar Nahed on 03/01/2021.
+//  Created by Memo Amassi on 28/01/2021.
 //
 
 import UIKit
 
 class ProductDetailViewController: BaseViewController {
     
-    @IBOutlet weak var smallHeaderView: UIView!
-    // header view or container for header view
-    @IBOutlet weak var headerView: UIView!
-
-    // scroll view container
-    @IBOutlet weak var containerView: UIView!
-
-    // constrain the height of the headerView
-    // in a more complex UI, use frame, let autolayout calculate based on subviews
-    @IBOutlet weak var headerViewHeight: NSLayoutConstraint!
-
-    // constraint between the top of headerView and the top of the screen
-    @IBOutlet weak var headerViewTop: NSLayoutConstraint!
-
-    // constraint between the top of the tableView container and the top of the screen
-    // also used for the "collapsed" height of the headerView
-    @IBOutlet weak var containerViewTop: NSLayoutConstraint!
+    override var mustHideNavigationBar: Bool {
+        true
+    }
     
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addToCartButton: UIButton!
     
-    override var mustHideNavigationBar: Bool {
-        return true
-    }
-    // how far the header view gets scrolled offscreen
-    var maxScrollAmount: CGFloat {
-        let expandedHeight = headerViewHeight.constant
-        let collapsedHeight = containerViewTop.constant
-        return expandedHeight - collapsedHeight
-    }
+    private var productDetailCollectionViewDelegate = ProductDetailCollectionViewDelegate()
+    private var productDetailCollectionViewDataSource =  ProductDetailCollectionViewDataSource()
+
+    private var headerView: ProductDetailHeaderView!
+    private let padding: CGFloat = 16
+    
+    
+    lazy var productDetailQuickViewViewController: ProductDetailQuickViewViewController = {
+        let viewController = UIStoryboard.productStoryboard.getViewController(with: .productDetailQuickViewViewController) as! ProductDetailQuickViewViewController
+        return viewController
+    }()
+    
+    lazy var productDetailRateViewController : ProductDetailRateViewController = {
+        let viewController = UIStoryboard.productStoryboard.getViewController(with: .productDetailRateViewController) as! ProductDetailRateViewController
+        return viewController
+    }()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupScrollView()
-        setupView()
+        setupCollectionView()
     }
-
-    private func setupScrollView() {
-        if let scrollView = containerView.subviews.first as? UIScrollView {
-            // adjust the scroll view's top inset to account for scrolling the header offscreen
-            scrollView.contentInset = UIEdgeInsets(top: maxScrollAmount, left: 0, bottom: 0, right: 0)
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    private func setupCollectionView(){
+       collectionView.register(ProductDetailHeaderView.self,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: .productDetailHeaderCellId)
+        
+        productDetailCollectionViewDataSource.assignViewHeader = { (headerView) in
+            self.headerView = headerView
+        }
+        productDetailCollectionViewDelegate.headerView = headerView
+        
+        collectionView.delegate = productDetailCollectionViewDelegate
+        collectionView.dataSource = productDetailCollectionViewDataSource
+        
+        
+        collectionView.contentInsetAdjustmentBehavior = .always
+        productDetailCollectionViewDataSource.productDetailCellDelegate = self
+        productDetailCollectionViewDataSource.productDetailHeaderCollectionReusableViewDelegate = self
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.minimumLineSpacing = 8 // spacing between 2 cell
+//            layout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding) // adding inset to the section
         }
         
-        if let scrollViewContained = children.first as? ProductDetailContentViewController {
-            scrollViewContained.delegate = self
-        }
-    }
-    
-    
-    private func setupView() {
         addToCartButton.withCornerRadius(12, corners: [.topLeft,.topRight])
     }
 
-}
-// MARK:- ScrollViewContaining Delegate
-
-extension ProductDetailViewController: ScrollViewContainingDelegate {
-    func scrollView(didScroll scrollView: UIScrollView) {
-        // need to adjust the content offset to account for the content inset
-        // negative because we are moving the header offscreen
-        let newTopConstraintConstant = -(scrollView.contentOffset.y + scrollView.contentInset.top)
-        headerViewTop.constant = min(0, max(-maxScrollAmount, newTopConstraintConstant))
-        let isAtTop = headerViewTop.constant == -maxScrollAmount
-
-        // handle changes for collapsed state
-        scrollViewScrolled(scrollView, didScrollToTop: isAtTop)
+    
+    @IBAction func addToCart(_ sender: Any){
+        
     }
+    
+    
+}
 
-    func scrollViewScrolled(_ scrollView: UIScrollView, didScrollToTop isAtTop:Bool) {
-        if isAtTop {
-            headerView.animateIsHidden(value: true)
-            smallHeaderView.animateIsHidden(value: false)
-        }else{
-            headerView.animateIsHidden(value: false)
-            smallHeaderView.animateIsHidden(value: true)
+extension ProductDetailViewController: ProductDetailCollectionViewCellDelegate {
+    func productDetailCollectionViewCell(_ cell: ProductDetailCollectionViewCell, performAction action: ProductDetailCollectionViewCell.ActionType) {
+        changeCurrentContentView(for: action, cell: cell)
+    }
+}
+
+extension ProductDetailViewController: ProductDetailHeaderCollectionReusableViewDelegate {
+    func ProductDetailHeaderCollectionReusableView(_ cell: ProductDetailHeaderView, performAction action: ProductDetailHeaderView.ActionType) {
+        if action == .back {
+            router?.popViewController()
+        }
+    }
+}
+
+extension ProductDetailViewController {
+    func changeCurrentContentView(for action: ProductDetailCollectionViewCell.ActionType, cell: ProductDetailCollectionViewCell){
+        switch action {
+        case .quickLook:
+            addProductDetailQuickViewViewController(to: cell)
+        case .rate:
+            addProductDetailRateViewController(to: cell)
         }
     }
     
-    
-    @IBAction func goBack(_ sender: Any){
-        router?.popViewController()
+    private func addProductDetailQuickViewViewController(to cell: ProductDetailCollectionViewCell) {
+        productDetailRateViewController.remove()
+        add(productDetailQuickViewViewController, to: cell.containerView, frame: cell.containerView.frame)
     }
-    
-    
+
+    private func addProductDetailRateViewController(to cell: ProductDetailCollectionViewCell) {
+        productDetailQuickViewViewController.remove()
+        add(productDetailRateViewController, to: cell.containerView, frame: cell.containerView.frame)
+    }
+
 }

@@ -130,4 +130,13 @@ extension String {
         dateFormatter.locale = Locale.current
         return dateFormatter.date(from: self)
     }
+    
+    func calculateNumberLine(for width: CGFloat, with font: UIFont) -> Int {
+        let maxSize = CGSize(width:width, height: CGFloat(Float.infinity))
+        let charSize = font.lineHeight
+        let textSize = (self as NSString).boundingRect(with: maxSize, options: .usesLineFragmentOrigin, attributes: [.font: font], context: nil)
+        let linesRoundedUp = Int(ceil(textSize.height/charSize))
+        return linesRoundedUp
+        
+    }
 }

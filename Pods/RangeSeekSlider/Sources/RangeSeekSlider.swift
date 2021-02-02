@@ -112,24 +112,6 @@ import UIKit
             }
         }
     }
-    
-    @IBInspectable open var labelImage: UIImage? {
-        didSet {
-            guard let image = labelImage else {
-                return
-            }
-            
-            var labelImage = CGRect.zero
-            labelImage.size = image.size
-            
-            minLabel.frame = labelImage
-            minLabel.contents = image.cgImage
-
-            maxLabel.frame = labelImage
-            maxLabel.contents = image.cgImage
-        }
-    }
-    
 
     /// The maximum distance the two selected slider values must be apart. Default is CGFloat.greatestFiniteMagnitude.
     @IBInspectable open var maxDistance: CGFloat = .greatestFiniteMagnitude {
@@ -491,41 +473,28 @@ import UIKit
     }
 
     private func updateLabelValues() {
-//        minLabel.isHidden = hideLabels || disableRange
-//        maxLabel.isHidden = hideLabels
-//
-//        if let replacedString = delegate?.rangeSeekSlider(self, stringForMinValue: selectedMinValue) {
-//            minLabel.string = replacedString
-//        } else {
-//            minLabel.string = numberFormatter.string(from: selectedMinValue as NSNumber)
-//        }
-//
-//        if let replacedString = delegate?.rangeSeekSlider(self, stringForMaxValue: selectedMaxValue) {
-//            maxLabel.string = replacedString
-//        } else {
-//            maxLabel.string = numberFormatter.string(from: selectedMaxValue as NSNumber)
-//        }
-//
-//        if let nsstring = minLabel.string as? NSString {
-//            minLabelTextSize = nsstring.size(withAttributes: [.font: minLabelFont])
-//        }
-//
-//        if let nsstring = maxLabel.string as? NSString {
-//            maxLabelTextSize = nsstring.size(withAttributes: [.font: maxLabelFont])
-//        }
-//
-        guard let image = labelImage else {
-            return
-        }
-        
-        var labelImage = CGRect.zero
-        labelImage.size = image.size
-        
-        minLabel.frame = labelImage
-        minLabel.contents = image.cgImage
+        minLabel.isHidden = hideLabels || disableRange
+        maxLabel.isHidden = hideLabels
 
-        maxLabel.frame = labelImage
-        maxLabel.contents = image.cgImage
+        if let replacedString = delegate?.rangeSeekSlider(self, stringForMinValue: selectedMinValue) {
+            minLabel.string = replacedString
+        } else {
+            minLabel.string = numberFormatter.string(from: selectedMinValue as NSNumber)
+        }
+
+        if let replacedString = delegate?.rangeSeekSlider(self, stringForMaxValue: selectedMaxValue) {
+            maxLabel.string = replacedString
+        } else {
+            maxLabel.string = numberFormatter.string(from: selectedMaxValue as NSNumber)
+        }
+
+        if let nsstring = minLabel.string as? NSString {
+            minLabelTextSize = nsstring.size(withAttributes: [.font: minLabelFont])
+        }
+
+        if let nsstring = maxLabel.string as? NSString {
+            maxLabelTextSize = nsstring.size(withAttributes: [.font: maxLabelFont])
+        }
     }
 
     private func updateColors() {
@@ -544,7 +513,6 @@ import UIKit
         } else {
             let tintCGColor: CGColor = tintColor.cgColor
             minLabel.foregroundColor = minLabelColor?.cgColor ?? tintCGColor
-
             maxLabel.foregroundColor = maxLabelColor?.cgColor ?? tintCGColor
             sliderLineBetweenHandles.backgroundColor = colorBetweenHandles?.cgColor ?? tintCGColor
             sliderLine.backgroundColor = tintCGColor

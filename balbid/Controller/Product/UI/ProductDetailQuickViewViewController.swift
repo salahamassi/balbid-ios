@@ -8,22 +8,33 @@
 import UIKit
 
 class ProductDetailQuickViewViewController: BaseViewController {
+    
+    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var readMoreButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupLabel()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    private func setupLabel(){
+        let numOfLine = detailLabel.text!.calculateNumberLine(for: view.frame.width, with: UIFont.regular.withSize(14))
+        readMoreButton.isHidden = numOfLine <= 2
     }
-    */
+
+   
+    
+    @IBAction func expandLabel(_ sender: Any){
+        UIView.animateKeyframes(withDuration: 0.6, delay: 0) {
+            self.detailLabel.numberOfLines =  self.detailLabel.numberOfLines != 0 ? 0 : 2
+        } completion: { (_) in
+            self.readMoreButton.isHidden =  self.detailLabel.numberOfLines == 0 
+        }
+
+    }
+    
+ 
+    
 
 }

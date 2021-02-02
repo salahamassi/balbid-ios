@@ -1,5 +1,5 @@
 //
-//  PorductDetailCollectionViewDataSource.swift
+//  ProductDetailCollectionViewDataSource.swift
 //  balbid
 //
 //  Created by Memo Amassi on 28/01/2021.
@@ -9,10 +9,11 @@ import UIKit
 
 class ProductDetailCollectionViewDataSource: NSObject, UICollectionViewDataSource {
    
-    var assignViewHeader: ((ProductDetailHeaderCollectionReusableView) -> ())?
+    var assignViewHeader: ((ProductDetailHeaderView) -> ())?
     
     weak var productDetailCellDelegate: ProductDetailCollectionViewCellDelegate?
-    
+    weak var productDetailHeaderCollectionReusableViewDelegate: ProductDetailHeaderCollectionReusableViewDelegate?
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .productDetailCellId, for: indexPath)
         (cell as? ProductDetailCollectionViewCell)?.delegate = productDetailCellDelegate
@@ -20,8 +21,9 @@ class ProductDetailCollectionViewDataSource: NSObject, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: .topKind, withReuseIdentifier: .productDetailHeaderCellId, for: indexPath) as! ProductDetailHeaderCollectionReusableView
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: .productDetailHeaderCellId, for: indexPath) as! ProductDetailHeaderView
         assignViewHeader?(headerView)
+        headerView.delegate = productDetailHeaderCollectionReusableViewDelegate
         return headerView
     }
     

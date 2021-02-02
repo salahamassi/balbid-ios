@@ -32,6 +32,10 @@ class ProfileViewController: BaseViewController {
     @IBAction func gotoFavoriteController(_ sender: Any){
         router?.navigate(to: .favoriteRoute)
     }
+    
+    @IBAction func gotoShippingAddressesController(_ sender: Any){
+        router?.navigate(to: .shippingAddressRoute)
+    }
 
 
 }
