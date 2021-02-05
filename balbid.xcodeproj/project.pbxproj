@@ -169,6 +169,8 @@
 		20BEBAE125CD69840051C900 /* CreditBalanceTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BEBAE025CD69840051C900 /* CreditBalanceTableViewDataSource.swift */; };
 		20C7F8F725CD7601001D0715 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C7F8F625CD7601001D0715 /* Payment.storyboard */; };
 		20C7F8FA25CD763B001D0715 /* PaymentRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7F8F925CD763B001D0715 /* PaymentRoutes.swift */; };
+		20C7F8FF25CD76C2001D0715 /* PaymentCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7F8FE25CD76C2001D0715 /* PaymentCardViewController.swift */; };
+		20C7F90425CD7706001D0715 /* PaymentCardRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7F90325CD7706001D0715 /* PaymentCardRoute.swift */; };
 		20FBE4AD25C823A200210190 /* TextViewWithHint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FBE4AC25C823A200210190 /* TextViewWithHint.swift */; };
 		20FBE4B025C8370800210190 /* AddNewShippingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FBE4AF25C8370800210190 /* AddNewShippingViewController.swift */; };
 		20FBE4B325C8375600210190 /* AddNewShippingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FBE4B225C8375600210190 /* AddNewShippingRoute.swift */; };
@@ -400,6 +402,8 @@
 		20BEBAE025CD69840051C900 /* CreditBalanceTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditBalanceTableViewDataSource.swift; sourceTree = "<group>"; };
 		20C7F8F625CD7601001D0715 /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
 		20C7F8F925CD763B001D0715 /* PaymentRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRoutes.swift; sourceTree = "<group>"; };
+		20C7F8FE25CD76C2001D0715 /* PaymentCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardViewController.swift; sourceTree = "<group>"; };
+		20C7F90325CD7706001D0715 /* PaymentCardRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardRoute.swift; sourceTree = "<group>"; };
 		20FBE4AC25C823A200210190 /* TextViewWithHint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithHint.swift; sourceTree = "<group>"; };
 		20FBE4AF25C8370800210190 /* AddNewShippingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewShippingViewController.swift; sourceTree = "<group>"; };
 		20FBE4B225C8375600210190 /* AddNewShippingRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewShippingRoute.swift; sourceTree = "<group>"; };
@@ -879,6 +883,7 @@
 		08B1A7442587A2EF003D49EF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				20C7F8FC25CD76A2001D0715 /* Payment */,
 				2092066F25C818E20072085E /* Shipping */,
 				206E049125BDA2AC00BD8902 /* Order */,
 				206E047225BC9E4B00BD8902 /* Profile */,
@@ -1165,6 +1170,31 @@
 				20AD836625C31C0B00070C78 /* CustomPDPLayout.swift */,
 			);
 			path = "Flow Layout";
+			sourceTree = "<group>";
+		};
+		20C7F8FC25CD76A2001D0715 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				20C7F90225CD76F4001D0715 /* Route */,
+				20C7F8FD25CD76A7001D0715 /* UI */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		20C7F8FD25CD76A7001D0715 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				20C7F8FE25CD76C2001D0715 /* PaymentCardViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		20C7F90225CD76F4001D0715 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				20C7F90325CD7706001D0715 /* PaymentCardRoute.swift */,
+			);
+			path = Route;
 			sourceTree = "<group>";
 		};
 		3D60C38C25975EB60092D594 /* UIKit Helper */ = {
@@ -1718,11 +1748,13 @@
 				083548782587C01100665DE0 /* LoginAnimationPresenter.swift in Sources */,
 				3DB1DB3225868A1000EF1E8F /* Extensions+Date.swift in Sources */,
 				083E759A259C9EDD00EDF708 /* ProductCollectionViewCell.swift in Sources */,
+				20C7F8FF25CD76C2001D0715 /* PaymentCardViewController.swift in Sources */,
 				3DB1DB4325868DE000EF1E8F /* BaseTableViewCell.swift in Sources */,
 				3DB1DB3B25868A1000EF1E8F /* Extensions+CACornerMask.swift in Sources */,
 				3DC76B6425975C2100EE2428 /* Extensions+PHAsset.swift in Sources */,
 				3DB1DB4F25868E6C00EF1E8F /* AnimationFactory.swift in Sources */,
 				206E04A525BDA9F500BD8902 /* OrderRoutes.swift in Sources */,
+				20C7F90425CD7706001D0715 /* PaymentCardRoute.swift in Sources */,
 				3DAC7BD02586986C00D57BB1 /* BottomSheetView.swift in Sources */,
 				206E049B25BDA3B600BD8902 /* FilterCollectionViewDelegate.swift in Sources */,
 				2085140325CAE9310025885B /* AddedToCartViewController.swift in Sources */,

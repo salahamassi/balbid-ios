@@ -153,6 +153,9 @@ extension String {
     static let reorderViewController = "ReorderViewController"
     static let addedToCartViewController = "AddedToCartViewController"
     
+    
+    static let paymentCardViewController = "PaymentCardViewController"
+    
     // image name
     static let lockedPasswordImage = "locked_password"
     static let unlockedPasswordImage = "unlocked_password"

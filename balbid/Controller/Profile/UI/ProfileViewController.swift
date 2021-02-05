@@ -40,6 +40,10 @@ class ProfileViewController: BaseViewController {
     @IBAction func gotoCreditBalanceController(_ sender: Any){
         router?.navigate(to: .creditBalanceRoute)
     }
+    
+    @IBAction func gotoPaymentCardController(_ sender: Any){
+        router?.navigate(to: .paymentCardRoute)
+    }
 
 
 }

@@ -10,7 +10,8 @@ import Foundation
 import AppRouter
 
 enum PaymentRoutes {
- 
+    case paymentCardRoute
+    
 }
 
 extension AppRouter {
@@ -18,7 +19,9 @@ extension AppRouter {
         let mRoute: Route
         let mParams: [String: Any]?
         switch route {
-        
+            case .paymentCardRoute:
+                  mRoute = PaymentCardRoute()
+                  mParams = nil
         }
         navigate(to: mRoute, with: mParams, completion: completion)
     }
