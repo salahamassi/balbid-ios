@@ -9,15 +9,18 @@ import UIKit
 
 class PaymentCardViewController: BaseViewController {
     
+    @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
     private var paymentCardTableViewDataSource = PaymentCardTableViewDataSource()
     private var paymentCardTableViewDelegate = PaymentCardTableViewDelegate()
-
+    private var addNewCardBottomSheet: AddNewCardBottomSheet!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavbar()
-        setupView()
+        setupTableView ()
+        setupAddButtonView()
+        setupAddNewCardBottomSheet()
     }
     
     private func setupNavbar(){
@@ -26,7 +29,7 @@ class PaymentCardViewController: BaseViewController {
     }
     
     
-    private func setupView(){
+    private func setupTableView(){
         tableView.dataSource = paymentCardTableViewDataSource
         tableView.delegate = paymentCardTableViewDelegate
         paymentCardTableViewDelegate.didSelectRow =  { indexPath in
@@ -35,6 +38,21 @@ class PaymentCardViewController: BaseViewController {
             self.tableView.reloadRows(at: preSelectedIndex != -1 ? [IndexPath(row: preSelectedIndex, section: 0),IndexPath(row: indexPath.row, section: 0)] : [IndexPath(row: indexPath.row, section: 0)] , with: .none)
         }
 
+    }
+    
+    private func setupAddButtonView(){
+        addButton.setImage(#imageLiteral(resourceName: "plus").withRenderingMode(.alwaysTemplate), for: .normal)
+        addButton.setImage(#imageLiteral(resourceName: "plus").withRenderingMode(.alwaysTemplate), for: .highlighted)
+
+        addButton.tintColor = .white
+    }
+    
+    private func setupAddNewCardBottomSheet(){
+        addNewCardBottomSheet = AddNewCardBottomSheet.initFromNib()
+    }
+    
+    @IBAction func addNewCard(_ sender: Any){
+        addNewCardBottomSheet.show()
     }
 
 }

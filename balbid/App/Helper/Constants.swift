@@ -48,7 +48,7 @@ extension String {
     static let addToCartView = "AddToCartView"
     static let productDetailHeaderView = "ProductDetailHeaderView"
     static let productImageCell = "ProductImageCell"
-
+    static let addNewCardBottomSheet = "AddNewCardView"
     
     
     //  cell's header's, Annotation's id's

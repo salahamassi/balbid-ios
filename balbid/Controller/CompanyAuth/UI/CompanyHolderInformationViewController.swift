@@ -11,6 +11,7 @@ class CompanyHolderInformationViewController: BaseViewController {
 
     let releaseDatePicker: UIDatePicker = UIDatePicker()
     let endDatePicker: UIDatePicker = UIDatePicker()
+    
     @IBOutlet weak var releaseDateTextField: UITextField!
     @IBOutlet weak var endDateTextField: UITextField!
 

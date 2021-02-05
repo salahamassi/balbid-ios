@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k7t-q1-osi">
-                                <rect key="frame" x="16" y="14" width="382" height="722"/>
+                                <rect key="frame" x="16" y="14" width="382" height="652"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="payment_card_cell" rowHeight="238" id="uXM-IR-nGo" customClass="PaymentCardCell" customModule="balbid" customModuleProvider="target">
@@ -206,17 +206,40 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXY-cX-E7z">
+                                <rect key="frame" x="19" y="666" width="376" height="40"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.86274509799999999" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Pia-0k-xXf"/>
+                                </constraints>
+                                <inset key="titleEdgeInsets" minX="27" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="New Card" image="plus">
+                                    <color key="titleColor" name="whiteColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="21"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addNewCard:" destination="wlJ-Zv-mI9" eventType="touchUpInside" id="eKp-Cb-Ho5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eEN-dh-BEw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="k7t-q1-osi" firstAttribute="top" secondItem="eEN-dh-BEw" secondAttribute="top" constant="14" id="Emd-Wx-f1n"/>
+                            <constraint firstItem="RXY-cX-E7z" firstAttribute="leading" secondItem="eEN-dh-BEw" secondAttribute="leading" constant="19" id="JkG-KP-zIJ"/>
+                            <constraint firstItem="eEN-dh-BEw" firstAttribute="trailing" secondItem="RXY-cX-E7z" secondAttribute="trailing" constant="19" id="ZpY-Lb-VqP"/>
                             <constraint firstItem="eEN-dh-BEw" firstAttribute="trailing" secondItem="k7t-q1-osi" secondAttribute="trailing" constant="16" id="iEo-ye-jEr"/>
                             <constraint firstItem="k7t-q1-osi" firstAttribute="leading" secondItem="eEN-dh-BEw" secondAttribute="leading" constant="16" id="ih0-ew-Bro"/>
-                            <constraint firstItem="eEN-dh-BEw" firstAttribute="bottom" secondItem="k7t-q1-osi" secondAttribute="bottom" id="tbF-5R-8Au"/>
+                            <constraint firstItem="eEN-dh-BEw" firstAttribute="bottom" secondItem="RXY-cX-E7z" secondAttribute="bottom" constant="30" id="kp2-qe-ivZ"/>
+                            <constraint firstItem="eEN-dh-BEw" firstAttribute="bottom" secondItem="k7t-q1-osi" secondAttribute="bottom" constant="70" id="tbF-5R-8Au"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="RXY-cX-E7z" id="L1V-4k-L6a"/>
                         <outlet property="tableView" destination="k7t-q1-osi" id="abN-vo-v4q"/>
                     </connections>
                 </viewController>
@@ -230,6 +253,7 @@
         <image name="edit" width="24" height="24"/>
         <image name="favorite_delete" width="24" height="24"/>
         <image name="payment-sample" width="48.333332061767578" height="34.666667938232422"/>
+        <image name="plus" width="11.666666984558105" height="11.666666984558105"/>
         <image name="radio-on" width="16" height="16"/>
         <namedColor name="primaryColor">
             <color red="0.11800000071525574" green="0.13699999451637268" blue="0.32199999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

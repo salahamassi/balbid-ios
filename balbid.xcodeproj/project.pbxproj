@@ -159,6 +159,8 @@
 		2099ABCE25C979FB00FAB410 /* OrderProductTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2099ABCD25C979FB00FAB410 /* OrderProductTableViewDataSource.swift */; };
 		2099ABD125C98BEB00FAB410 /* ProductRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2099ABD025C98BEB00FAB410 /* ProductRatingViewController.swift */; };
 		2099ABD425C98C2C00FAB410 /* ProductRatingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2099ABD325C98C2C00FAB410 /* ProductRatingRoute.swift */; };
+		20A1A36525CDA34300C1115C /* AddNewCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A1A36425CDA34300C1115C /* AddNewCardView.xib */; };
+		20A1A36825CDA3A700C1115C /* AddNewCardBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A1A36725CDA3A700C1115C /* AddNewCardBottomSheet.swift */; };
 		20A411F725BC828000327371 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20A411F625BC828000327371 /* Profile.storyboard */; };
 		20AAF11925C2E68100CC31D4 /* ProductDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AAF11825C2E68100CC31D4 /* ProductDetailHeaderView.swift */; };
 		20AAF11C25C2E6D800CC31D4 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AAF11B25C2E6D800CC31D4 /* ProductDetailViewController.swift */; };
@@ -395,6 +397,8 @@
 		2099ABCD25C979FB00FAB410 /* OrderProductTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderProductTableViewDataSource.swift; sourceTree = "<group>"; };
 		2099ABD025C98BEB00FAB410 /* ProductRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRatingViewController.swift; sourceTree = "<group>"; };
 		2099ABD325C98C2C00FAB410 /* ProductRatingRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRatingRoute.swift; sourceTree = "<group>"; };
+		20A1A36425CDA34300C1115C /* AddNewCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewCardView.xib; sourceTree = "<group>"; };
+		20A1A36725CDA3A700C1115C /* AddNewCardBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCardBottomSheet.swift; sourceTree = "<group>"; };
 		20A411F625BC828000327371 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		20AAF11825C2E68100CC31D4 /* ProductDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailHeaderView.swift; sourceTree = "<group>"; };
 		20AAF11B25C2E6D800CC31D4 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
@@ -1170,6 +1174,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		20A1A36225CDA32800C1115C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				20A1A36325CDA33000C1115C /* Nib */,
+				20A1A36725CDA3A700C1115C /* AddNewCardBottomSheet.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		20A1A36325CDA33000C1115C /* Nib */ = {
+			isa = PBXGroup;
+			children = (
+				20A1A36425CDA34300C1115C /* AddNewCardView.xib */,
+			);
+			path = Nib;
+			sourceTree = "<group>";
+		};
 		20AD836525C31B9E00070C78 /* Flow Layout */ = {
 			isa = PBXGroup;
 			children = (
@@ -1181,6 +1202,7 @@
 		20C7F8FC25CD76A2001D0715 /* Payment */ = {
 			isa = PBXGroup;
 			children = (
+				20A1A36225CDA32800C1115C /* View */,
 				20C7F91125CD9A7E001D0715 /* Delegate */,
 				20C7F90C25CD8B78001D0715 /* Cell */,
 				20C7F90725CD8668001D0715 /* DataSource */,
@@ -1676,6 +1698,7 @@
 				20A411F725BC828000327371 /* Profile.storyboard in Resources */,
 				08B1A73E25879024003D49EF /* Tajawal-Medium 500.ttf in Resources */,
 				2092065125C719BE0072085E /* ProductImageCell.xib in Resources */,
+				20A1A36525CDA34300C1115C /* AddNewCardView.xib in Resources */,
 				087D90B9258BF9FA002BAE95 /* Poppins-Medium.ttf in Resources */,
 				087D90AF258BF86C002BAE95 /* CompanyAuth.storyboard in Resources */,
 				083E75C0259DF18600EDF708 /* CategoryContentHeaderCell.xib in Resources */,
@@ -1936,6 +1959,7 @@
 				2099ABCB25C979BD00FAB410 /* OrderProductTableViewDelegate.swift in Sources */,
 				20BEBAE125CD69840051C900 /* CreditBalanceTableViewDataSource.swift in Sources */,
 				208513FD25CADA1F0025885B /* ReorderCell.swift in Sources */,
+				20A1A36825CDA3A700C1115C /* AddNewCardBottomSheet.swift in Sources */,
 				0827C2AD2591351400034657 /* CompanyInformationViewController.swift in Sources */,
 				0807031525A24A5A002B1776 /* ColorCollectionViewDataSource.swift in Sources */,
 				3DB1DB3A25868A1000EF1E8F /* Extensions+UIButton.swift in Sources */,
