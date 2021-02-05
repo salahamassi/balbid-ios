@@ -171,6 +171,9 @@
 		20C7F8FA25CD763B001D0715 /* PaymentRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7F8F925CD763B001D0715 /* PaymentRoutes.swift */; };
 		20C7F8FF25CD76C2001D0715 /* PaymentCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7F8FE25CD76C2001D0715 /* PaymentCardViewController.swift */; };
 		20C7F90425CD7706001D0715 /* PaymentCardRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7F90325CD7706001D0715 /* PaymentCardRoute.swift */; };
+		20C7F90925CD8685001D0715 /* PaymentCardTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7F90825CD8685001D0715 /* PaymentCardTableViewDataSource.swift */; };
+		20C7F90F25CD8B98001D0715 /* PaymentCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7F90E25CD8B98001D0715 /* PaymentCardCell.swift */; };
+		20C7F91325CD9A93001D0715 /* PaymentCardTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7F91225CD9A92001D0715 /* PaymentCardTableViewDelegate.swift */; };
 		20FBE4AD25C823A200210190 /* TextViewWithHint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FBE4AC25C823A200210190 /* TextViewWithHint.swift */; };
 		20FBE4B025C8370800210190 /* AddNewShippingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FBE4AF25C8370800210190 /* AddNewShippingViewController.swift */; };
 		20FBE4B325C8375600210190 /* AddNewShippingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FBE4B225C8375600210190 /* AddNewShippingRoute.swift */; };
@@ -404,6 +407,9 @@
 		20C7F8F925CD763B001D0715 /* PaymentRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRoutes.swift; sourceTree = "<group>"; };
 		20C7F8FE25CD76C2001D0715 /* PaymentCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardViewController.swift; sourceTree = "<group>"; };
 		20C7F90325CD7706001D0715 /* PaymentCardRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardRoute.swift; sourceTree = "<group>"; };
+		20C7F90825CD8685001D0715 /* PaymentCardTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardTableViewDataSource.swift; sourceTree = "<group>"; };
+		20C7F90E25CD8B98001D0715 /* PaymentCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardCell.swift; sourceTree = "<group>"; };
+		20C7F91225CD9A92001D0715 /* PaymentCardTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardTableViewDelegate.swift; sourceTree = "<group>"; };
 		20FBE4AC25C823A200210190 /* TextViewWithHint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithHint.swift; sourceTree = "<group>"; };
 		20FBE4AF25C8370800210190 /* AddNewShippingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewShippingViewController.swift; sourceTree = "<group>"; };
 		20FBE4B225C8375600210190 /* AddNewShippingRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewShippingRoute.swift; sourceTree = "<group>"; };
@@ -1175,6 +1181,9 @@
 		20C7F8FC25CD76A2001D0715 /* Payment */ = {
 			isa = PBXGroup;
 			children = (
+				20C7F91125CD9A7E001D0715 /* Delegate */,
+				20C7F90C25CD8B78001D0715 /* Cell */,
+				20C7F90725CD8668001D0715 /* DataSource */,
 				20C7F90225CD76F4001D0715 /* Route */,
 				20C7F8FD25CD76A7001D0715 /* UI */,
 			);
@@ -1195,6 +1204,38 @@
 				20C7F90325CD7706001D0715 /* PaymentCardRoute.swift */,
 			);
 			path = Route;
+			sourceTree = "<group>";
+		};
+		20C7F90725CD8668001D0715 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				20C7F90825CD8685001D0715 /* PaymentCardTableViewDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		20C7F90C25CD8B78001D0715 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				20C7F90D25CD8B81001D0715 /* TableView */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		20C7F90D25CD8B81001D0715 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				20C7F90E25CD8B98001D0715 /* PaymentCardCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		20C7F91125CD9A7E001D0715 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				20C7F91225CD9A92001D0715 /* PaymentCardTableViewDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		3D60C38C25975EB60092D594 /* UIKit Helper */ = {
@@ -1714,6 +1755,7 @@
 				08A9B8CB25A6582900AE5238 /* RateTableViewDelegate.swift in Sources */,
 				3DB1DB4E25868E6C00EF1E8F /* Animator.swift in Sources */,
 				08C567752593F58A00C80A75 /* AuthCompanyCreatedSuccessfullyRoute.swift in Sources */,
+				20C7F91325CD9A93001D0715 /* PaymentCardTableViewDelegate.swift in Sources */,
 				20AD836F25C34FF300070C78 /* ProductDetailCollectionViewCell.swift in Sources */,
 				08809ED7259377A900AD41EE /* AuthorizePeopleViewController.swift in Sources */,
 				3D60C38E25975EC70092D594 /* UIKitInteroperability.swift in Sources */,
@@ -1782,6 +1824,7 @@
 				2099ABC525C9691900FAB410 /* OrderDetailViewController.swift in Sources */,
 				3DB1DB2F25868A1000EF1E8F /* Extensions+UINavigationBar.swift in Sources */,
 				3DC76B5E25975C2100EE2428 /* AlbumCell.swift in Sources */,
+				20C7F90F25CD8B98001D0715 /* PaymentCardCell.swift in Sources */,
 				08F3B5052596A0380099AC2B /* HomeViewController.swift in Sources */,
 				08B73789259C95D400880213 /* ProductHeaderCell.swift in Sources */,
 				3DB1DBA1258693D600EF1E8F /* AppViewController.swift in Sources */,
@@ -1872,6 +1915,7 @@
 				2085140925CAF8200025885B /* CreditBalanceViewController.swift in Sources */,
 				081C3CF32589123B00C8740C /* LoginOptionRoute.swift in Sources */,
 				08A9B8BA25A6441A00AE5238 /* ProductDetailQuickViewViewController.swift in Sources */,
+				20C7F90925CD8685001D0715 /* PaymentCardTableViewDataSource.swift in Sources */,
 				3DB1DB3C25868A1000EF1E8F /* Extensions+Data+UIImage.swift in Sources */,
 				083E75AA259DE4EC00EDF708 /* CategoriesTableViewDataSource.swift in Sources */,
 				08F0CC36258BC19500FA2261 /* LoginViewControllerViewController.swift in Sources */,

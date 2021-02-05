@@ -89,6 +89,7 @@ extension String {
     static let orderProductCellId = "order_product_cell"
     static let reorderCellId = "reorder_cell"
     static let creditBalanceCellId = "credit_balance_cell"
+    static let paymentCardCellId = "payment_card_cell"
 
     
     
