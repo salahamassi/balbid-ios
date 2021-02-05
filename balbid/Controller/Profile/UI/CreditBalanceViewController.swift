@@ -14,6 +14,7 @@ class CreditBalanceViewController: BaseViewController {
     @IBOutlet weak var creditBalanceTableView: UITableView!
     
     private let creditBalanceTableViewDataSource = CreditBalanceTableViewDataSource()
+    let shapeLayer = CAShapeLayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,12 @@ class CreditBalanceViewController: BaseViewController {
         setupConsumedTextLabel()
         setupTableView()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupCreditBalanceView()
+    }
+    
     
     private func setupNavbar() {
         title = "Credit Balance"
@@ -37,5 +44,19 @@ class CreditBalanceViewController: BaseViewController {
         let secondaryText =  "10.000 SR".convertToAttributedString(with: UIFont.medium.withSize(14), and: #colorLiteral(red: 0.8823529412, green: 0.431372549, blue: 0.03921568627, alpha: 1))
         mainText.append(secondaryText)
         consumedLabel.attributedText = mainText
+    }
+    
+    private func setupCreditBalanceView(){
+//        creditBalanceView.backgroundColor = .systemOrange
+//        let circularPath = UIBezierPath(arcCenter: creditBalanceView.center, radius: 124, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
+//        shapeLayer.fillColor = UIColor.red.cgColor
+//        shapeLayer.path = circularPath.cgPath
+//        shapeLayer.strokeColor = UIColor.appColor(.brownColor)?.cgColor
+//        shapeLayer.lineWidth = 9
+//        shapeLayer.strokeEnd = 4
+////        shapeLayer.lineCap = .round
+//        self.creditBalanceView.layer.addSublayer(shapeLayer)
+//        self.creditBalanceView.layer.borderWidth = 3
+        creditBalanceView.withOuterBorder(with: 63, strokeColor: UIColor.appColor(.primaryColor) ?? .white, lineWidth: 9, strokeEnd: 3, clockwise: true)
     }
 }

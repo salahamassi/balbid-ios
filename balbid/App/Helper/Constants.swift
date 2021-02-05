@@ -102,6 +102,7 @@ extension String {
     static let profileStoryboard = "Profile"
     static let orderStoryboard = "Order"
     static let shippingStoryboard = "Shipping"
+    static let paymentStoryboard = "Payment"
 
     // view  controller id's
     static let splashViewControllerId = "SplashViewController"

@@ -167,6 +167,8 @@
 		20AD836725C31C0B00070C78 /* CustomPDPLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AD836625C31C0B00070C78 /* CustomPDPLayout.swift */; };
 		20AD836F25C34FF300070C78 /* ProductDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AD836E25C34FF300070C78 /* ProductDetailCollectionViewCell.swift */; };
 		20BEBAE125CD69840051C900 /* CreditBalanceTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BEBAE025CD69840051C900 /* CreditBalanceTableViewDataSource.swift */; };
+		20C7F8F725CD7601001D0715 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C7F8F625CD7601001D0715 /* Payment.storyboard */; };
+		20C7F8FA25CD763B001D0715 /* PaymentRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7F8F925CD763B001D0715 /* PaymentRoutes.swift */; };
 		20FBE4AD25C823A200210190 /* TextViewWithHint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FBE4AC25C823A200210190 /* TextViewWithHint.swift */; };
 		20FBE4B025C8370800210190 /* AddNewShippingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FBE4AF25C8370800210190 /* AddNewShippingViewController.swift */; };
 		20FBE4B325C8375600210190 /* AddNewShippingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FBE4B225C8375600210190 /* AddNewShippingRoute.swift */; };
@@ -396,6 +398,8 @@
 		20AD836625C31C0B00070C78 /* CustomPDPLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPDPLayout.swift; sourceTree = "<group>"; };
 		20AD836E25C34FF300070C78 /* ProductDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		20BEBAE025CD69840051C900 /* CreditBalanceTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditBalanceTableViewDataSource.swift; sourceTree = "<group>"; };
+		20C7F8F625CD7601001D0715 /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
+		20C7F8F925CD763B001D0715 /* PaymentRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRoutes.swift; sourceTree = "<group>"; };
 		20FBE4AC25C823A200210190 /* TextViewWithHint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithHint.swift; sourceTree = "<group>"; };
 		20FBE4AF25C8370800210190 /* AddNewShippingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewShippingViewController.swift; sourceTree = "<group>"; };
 		20FBE4B225C8375600210190 /* AddNewShippingRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewShippingRoute.swift; sourceTree = "<group>"; };
@@ -856,6 +860,7 @@
 				20A411F625BC828000327371 /* Profile.storyboard */,
 				206E048E25BD9E6400BD8902 /* Order.storyboard */,
 				2092066C25C818B90072085E /* Shipping.storyboard */,
+				20C7F8F625CD7601001D0715 /* Payment.storyboard */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -1244,6 +1249,7 @@
 				206E047D25BC9F9000BD8902 /* ProfileRoutes.swift */,
 				206E04A425BDA9F500BD8902 /* OrderRoutes.swift */,
 				2092067725C819920072085E /* ShippingRoutes.swift */,
+				20C7F8F925CD763B001D0715 /* PaymentRoutes.swift */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -1581,6 +1587,7 @@
 				3DB1DB5B25868FC000EF1E8F /* EmptyView.xib in Resources */,
 				08B1A73D25879024003D49EF /* Tajawal-Regular.ttf in Resources */,
 				083548A925890A2A00665DE0 /* Splash.storyboard in Resources */,
+				20C7F8F725CD7601001D0715 /* Payment.storyboard in Resources */,
 				087CA9D72599072B00113CEC /* Assets.xcassets in Resources */,
 				3DB1DBB8258695B100EF1E8F /* ErrorAlertView.xib in Resources */,
 				206E048F25BD9E6500BD8902 /* Order.storyboard in Resources */,
@@ -1829,6 +1836,7 @@
 				08438E6925A2694000796373 /* ProductRoutes.swift in Sources */,
 				3DC76B6125975C2100EE2428 /* PhotosPickerRoute.swift in Sources */,
 				20FBE4BB25C87F3600210190 /* ShippingMapRoute.swift in Sources */,
+				20C7F8FA25CD763B001D0715 /* PaymentRoutes.swift in Sources */,
 				2085140925CAF8200025885B /* CreditBalanceViewController.swift in Sources */,
 				081C3CF32589123B00C8740C /* LoginOptionRoute.swift in Sources */,
 				08A9B8BA25A6441A00AE5238 /* ProductDetailQuickViewViewController.swift in Sources */,

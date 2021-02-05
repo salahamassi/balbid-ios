@@ -123,6 +123,19 @@ extension UIView {
         layer.insertSublayer(gradientLayer, at: 0)
         return self
     }
+    
+    @discardableResult
+    func withOuterBorder(with radius: CGFloat, strokeColor: UIColor, lineWidth:CGFloat, strokeEnd: CGFloat, startAngle: CGFloat = -CGFloat.pi / 2, endAngle: CGFloat = 2 * CGFloat.pi, fillColor: UIColor = .clear, clockwise: Bool = true) -> UIView {
+        let shapeLayer = CAShapeLayer()
+        let circularPath = UIBezierPath(arcCenter: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: clockwise)
+        shapeLayer.fillColor = fillColor.cgColor
+        shapeLayer.path = circularPath.cgPath
+        shapeLayer.strokeColor = strokeColor.cgColor
+        shapeLayer.lineWidth = lineWidth
+        shapeLayer.strokeEnd = strokeEnd
+        layer.addSublayer(shapeLayer)
+        return self
+    }
 
     func animateBorder(with color: UIColor, border: CGFloat? = nil) {
         let colorBasicAnimation = CABasicAnimation(keyPath: "borderColor")
@@ -282,5 +295,7 @@ extension UIView {
 
         layer.mask = gradient
     }
+    
+    
 
 }
