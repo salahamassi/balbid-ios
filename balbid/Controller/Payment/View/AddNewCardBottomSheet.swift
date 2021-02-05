@@ -32,9 +32,7 @@ class AddNewCardBottomSheet: BottomSheetView {
     func dateChanged(_ sender: UIDatePicker) {
         let components = Calendar.current.dateComponents([.year, .month, .day], from: sender.date)
            if let day = components.day, let month = components.month, let year = components.year {
-            if sender == expireDateTextField {
-                expireDateTextField.text = "\(day) \(month) \(year)"
-            }
+                expireDateTextField.text = "\(day)/\(month)/\(year)"
         }
     }
 }
