@@ -16,6 +16,11 @@ class ShippingMapViewController: BaseViewController {
     @IBOutlet weak var locateMyLocationButton: UIButton!
     @IBOutlet weak var confirmLocation: UIButton!
     var userLocation: CLLocationCoordinate2D!
+    let annotation = MKPointAnnotation()
+    
+    override var mustClearNavigationBar: Bool {
+        true
+    }
 
     
     override func viewDidLoad() {
@@ -41,19 +46,18 @@ class ShippingMapViewController: BaseViewController {
     private func setupMapView(){
         let center = CLLocationCoordinate2D(latitude: 21.4359571, longitude: 39.9866319)
         mapView.setRegion(MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)), animated: true)
-        let annotation = MKPointAnnotation()
         annotation.coordinate = center
         mapView.addAnnotation(annotation)
     }
     
     
     private func setLocationInfo(){
-        userLocation = LocationManager.init().currentLocation?.coordinate
+        userLocation = LocationManager.shared.currentLocation?.coordinate
     }
     
     @IBAction func loacateMyLocation(_ sender: Any){
         mapView.setRegion(MKCoordinateRegion(center: userLocation, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)), animated: true)
-
+        annotation.coordinate = userLocation
     }
     
     @IBAction func confirmLocation(_ sender: Any) {

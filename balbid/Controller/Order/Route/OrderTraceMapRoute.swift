@@ -6,24 +6,15 @@
 //
 
 import UIKit
+import AppRouter
 
-class orderTraceMapRoute: BaseViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class OrderTraceMapRoute: Route {
+    var navigateType: NavigateType{
+        .push
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func create(_ router: AppRouter, _ params: [String : Any]?) -> UIViewController {
+        let viewController = UIStoryboard.orderStoryboard.getViewController(with: .orderTraceMapViewController)
+        return viewController
     }
-    */
-
 }

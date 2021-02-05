@@ -8,7 +8,7 @@
 import UIKit
 import AppRouter
 
-class ReorderRouter: Router {
+class ReorderRoute: Route {
     var navigateType: NavigateType{
         .push
     }

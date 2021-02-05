@@ -6,7 +6,16 @@
 //
 
 import UIKit
+import AppRouter
 
-class AddedToCartRoute: ROute {
-
+class AddedToCartRoute: Route {
+    var navigateType: NavigateType{
+        .push
+    }
+    
+    func create(_ router: AppRouter, _ params: [String : Any]?) -> UIViewController {
+        let viewController = UIStoryboard.orderStoryboard.getViewController(with: .addedToCartViewController)
+        return viewController
+    }
+    
 }

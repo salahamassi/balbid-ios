@@ -7,6 +7,12 @@
 
 import UIKit
 
-class ReorderCollectionViewDelegate: NSObject {
+class ReorderCollectionViewDelegate: NSObject, UICollectionViewDelegate {
+    
+    var didSelectRow: ((IndexPath) -> ())?
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        didSelectRow?(indexPath)
+    }
 
 }

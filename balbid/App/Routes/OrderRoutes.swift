@@ -10,7 +10,11 @@ import AppRouter
 enum OrderRoutes {
     case userOrderRoute
     case orderDetailRoute
+    case productRatingRoute
     case productTraceRoute
+    case orderTraceMapRoute
+    case reorderRoute
+    case addedToCartRoute
 }
 
 extension AppRouter {
@@ -21,13 +25,24 @@ extension AppRouter {
           case .userOrderRoute:
                 mRoute = UserOrderRoute()
                 mParams = nil
-        case .orderDetailRoute:
+          case .orderDetailRoute:
                 mRoute = OrderDetailRoute()
                 mParams = nil
-        case .productTraceRoute:
+          case .productTraceRoute:
                 mRoute = ProductTraceRoute()
                 mParams = nil
-                
+          case .productRatingRoute:
+                mRoute = ProductRatingRoute()
+                mParams = nil
+          case .orderTraceMapRoute:
+                mRoute = OrderTraceMapRoute()
+                mParams = nil
+         case .reorderRoute:
+              mRoute = ReorderRoute()
+              mParams = nil
+         case .addedToCartRoute:
+             mRoute = AddedToCartRoute()
+             mParams = nil
         }
         navigate(to: mRoute, with: mParams, completion: completion)
     }

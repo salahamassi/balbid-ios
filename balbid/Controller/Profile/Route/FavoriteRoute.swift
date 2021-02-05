@@ -9,7 +9,6 @@ import UIKit
 import AppRouter
 
 class FavoriteRoute: Route {
-    
     var navigateType: NavigateType {
         return .push
     }

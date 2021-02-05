@@ -9,21 +9,25 @@ import UIKit
 
 class OrderTraceMapViewController: BaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var shippingInformationView: UIView!
+    @IBOutlet weak var mapTransparentView: UIView!
+    
+    override var mustClearNavigationBar: Bool {
+        true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupNavbar()
+        setupView()
     }
-    */
+    
+    private func setupNavbar(){
+        self.title = "#9254112114455141"
+    }
 
+    private func setupView(){
+        shippingInformationView.withShadow(color: .black, alpha: 0.7, x: 0, y: 10, blur: 16, spread: 0)
+        mapTransparentView.withGradainate(with: [#colorLiteral(red: 0.2549019608, green: 0.431372549, blue: 0.5333333333, alpha: 1),#colorLiteral(red: 0.2196078431, green: 0.5137254902, blue: 0.7725490196, alpha: 1)], locations: [0,1])
+    }
 }

@@ -29,6 +29,13 @@ class ProductTraceViewController: BaseViewController {
         binCodeLabel.attributedText = mainText
     }
     
-
+    @IBAction func goToRateController(_ sender: Any){
+        router?.navigate(to: .productRatingRoute)
+    }
+    
+    @IBAction func goToMapTraceController(_ sender: Any){
+        router?.navigate(to: .orderTraceMapRoute)
+    }
+    
 
 }

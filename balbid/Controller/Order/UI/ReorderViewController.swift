@@ -8,22 +8,49 @@
 import UIKit
 
 class ReorderViewController: BaseViewController {
-
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    private var reorderCollectionViewDataSource = ReorderCollectionViewDataSource()
+    private var reorderCollectionViewDelegate = ReorderCollectionViewDelegate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavbar()
+        setupView()
+    }
 
-        // Do any additional setup after loading the view.
+    private func setupNavbar(){
+        self.title = "Reorder"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupView(){
+        collectionView.dataSource = reorderCollectionViewDataSource
+        collectionView.delegate = reorderCollectionViewDelegate
+        reorderCollectionViewDelegate.didSelectRow = { indexPath in
+            if self.reorderCollectionViewDataSource.checkedIndexPath.contains(indexPath) {
+                guard let index = self.reorderCollectionViewDataSource.checkedIndexPath.firstIndex(of: indexPath) else {
+                    return
+                }
+                self.reorderCollectionViewDataSource.checkedIndexPath.remove(at: index)
+            }else{
+                self.reorderCollectionViewDataSource.checkedIndexPath.append(indexPath)
+            }
+            self.collectionView.reloadItems(at: [indexPath])
+        }
     }
-    */
 
+    
+    @IBAction func selectAllAction(_ sender: Any){
+        self.reorderCollectionViewDataSource.checkedIndexPath.removeAll()
+        for i in 0 ..< 10 {
+            self.reorderCollectionViewDataSource.checkedIndexPath.append(IndexPath(row: i, section: 0))
+        }
+        self.collectionView.reloadData()
+    }
+    
+    @IBAction func addToCart(_ sender: Any) {
+        router?.navigate(to: .addedToCartRoute)
+    }
+    
 }

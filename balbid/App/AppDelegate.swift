@@ -65,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
         appRouter = AppRouter(window: window, rootViewController: nil)
         appRouter?.navigate(to: .splashRoute)
-//        LocationManager.shared.startTracking(router: appRouter!)
+        LocationManager.shared.startTracking(router: appRouter!)
     }
 
     func refreshApp() {

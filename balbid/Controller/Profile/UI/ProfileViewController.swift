@@ -36,6 +36,10 @@ class ProfileViewController: BaseViewController {
     @IBAction func gotoShippingAddressesController(_ sender: Any){
         router?.navigate(to: .shippingAddressRoute)
     }
+    
+    @IBAction func gotoCreditBalanceController(_ sender: Any){
+        router?.navigate(to: .creditBalanceRoute)
+    }
 
 
 }

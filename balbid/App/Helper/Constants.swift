@@ -87,7 +87,10 @@ extension String {
     static let productImageCellId = "product_image_cell"
     static let shippingAddressCellId = "shipping_address_cell"
     static let orderProductCellId = "order_product_cell"
+    static let reorderCellId = "reorder_cell"
+    static let creditBalanceCellId = "credit_balance_cell"
 
+    
     
     // storyboard names
     static let mainStoryboard = "Main"
@@ -140,11 +143,14 @@ extension String {
     static let shippingAdressViewController = "ShippingAdressViewController"
     static let addNewShippingViewController = "AddNewShippingViewController"
     static let shippingMapViewController = "ShippingMapViewController"
+    static let creditBalanceViewController = "CreditBalanceViewController"
 
     
     static let userOrderViewController = "UserOrderViewController"
     static let orderDetailViewController = "OrderDetailViewController"
-    
+    static let orderTraceMapViewController = "OrderTraceMapViewController"
+    static let reorderViewController = "ReorderViewController"
+    static let addedToCartViewController = "AddedToCartViewController"
     
     // image name
     static let lockedPasswordImage = "locked_password"

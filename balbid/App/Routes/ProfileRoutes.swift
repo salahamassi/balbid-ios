@@ -11,6 +11,7 @@ enum ProfileRoutes {
     case editProfileRoute
     case pointRoute
     case favoriteRoute
+    case creditBalanceRoute
 
 }
 
@@ -27,6 +28,9 @@ extension AppRouter {
               mParams = nil
         case .favoriteRoute:
               mRoute = FavoriteRoute()
+              mParams = nil
+        case .creditBalanceRoute:
+              mRoute = CreditBalanceRoute()
               mParams = nil
      
         }

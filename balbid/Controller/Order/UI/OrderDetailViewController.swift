@@ -43,6 +43,10 @@ class OrderDetailViewController: BaseViewController {
         productsTableView.dataSource = orderProductTableViewDataSource
         orderProductTableViewDataSource.orderProductCellDelegate = self
     }
+    
+    @IBAction func goToReorderController(_ sender: Any){
+        router?.navigate(to: .reorderRoute)
+    }
 
 
 }

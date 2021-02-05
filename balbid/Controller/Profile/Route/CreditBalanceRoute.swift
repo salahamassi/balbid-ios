@@ -6,7 +6,17 @@
 //
 
 import UIKit
+import AppRouter
 
 class CreditBalanceRoute: Route {
+    var navigateType: NavigateType {
+        return .push
+    }
+    
+    func create(_ router: AppRouter, _ params: [String : Any]?) -> UIViewController {
+        let viewController = UIStoryboard.profileStoryboard.getViewController(with: .creditBalanceViewController)
+        return viewController
+    }
 
+    
 }
