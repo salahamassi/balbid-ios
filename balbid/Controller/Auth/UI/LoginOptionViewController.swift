@@ -25,5 +25,8 @@ class LoginOptionViewController: BaseViewController {
         router?.navigate(to: .accountOptionRoute)
     }
 
-    @IBAction func continueAsGuest(sender: UIButton) {}
+    @IBAction func continueAsGuest(sender: UIButton) {
+        router?.navigate(to: .mainTabBarRoute)
+
+    }
 }

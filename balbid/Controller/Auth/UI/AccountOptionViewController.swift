@@ -35,5 +35,6 @@ class AccountOptionViewController: BaseViewController {
             router?.navigate(to: .authCompanyMainRoute)
         }
     }
-
+    
+    
 }
