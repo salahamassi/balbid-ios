@@ -16,14 +16,12 @@ class LoginViewModel: NSObject {
     }
     
     func login(email: String, password: String){
+        if password.isEmpty{
+            delegate.loginViewModel(self, displayError: "Password Must be filled",withEntry: .password)
+        }
         if !email.isValidEmail() {
             delegate.loginViewModel(self, displayError: "Invalid Email",withEntry: .email)
-        }else if password.isEmpty{
-            delegate.loginViewModel(self, displayError: "Password Must be filled",withEntry: .password)
-        }else{
-            //TO Do Perform Login Api
-        }
-        
+        } 
     }
     
     enum ErrorEntryType {
@@ -34,6 +32,6 @@ class LoginViewModel: NSObject {
 
 
 protocol LoginViewModelDelegate {
-    func loginViewModel(_ loginViewModel: LoginViewModel, displayError errMessage: String, withEntry errorEntry: LoginViewModel.ErrorEntryType)
+    func loginViewModel(_ loginViewModel: LoginViewModel, displayError errorMessage: String, withEntry errorEntry: LoginViewModel.ErrorEntryType)
     
 }

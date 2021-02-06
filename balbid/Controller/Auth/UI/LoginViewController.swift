@@ -12,6 +12,7 @@ class LoginViewController: BaseViewController {
     
     @IBOutlet weak var emailTextField: BorderedTextField!
     @IBOutlet weak var passwordTextField: BorderedTextField!
+    @IBOutlet weak var errorLabel: UILabel!
     
     private var loginViewModel: LoginViewModel!
 
@@ -50,13 +51,14 @@ class LoginViewController: BaseViewController {
 }
 
 extension LoginViewController: LoginViewModelDelegate {
-    func loginViewModel(_ loginViewModel: LoginViewModel, displayError errMessage: String, withEntry errorEntry: LoginViewModel.ErrorEntryType) {
+    func loginViewModel(_ loginViewModel: LoginViewModel, displayError errorMessage: String, withEntry errorEntry: LoginViewModel.ErrorEntryType) {
         if errorEntry == .email {
             emailTextField.isError = true
         }else{
             passwordTextField.isError = true
         }
-       displayAlert(message: errMessage)
+        errorLabel.isHidden = false 
+        errorLabel.text = errorMessage
     }
     
     

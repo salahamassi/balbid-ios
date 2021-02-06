@@ -14,6 +14,7 @@ class RegisterViewController: BaseViewController {
     @IBOutlet weak var emailTextField: BorderedTextField!
     @IBOutlet weak var phoneTextField: BorderedTextField!
     @IBOutlet weak var passwordTextField: BorderedTextField!
+    @IBOutlet weak var errorLabel: UILabel!
 
     override var mustClearNavigationBar: Bool {
         true
@@ -47,7 +48,7 @@ class RegisterViewController: BaseViewController {
 }
 
 extension RegisterViewController: RegisterViewModelDelegate {
-    func registerViewModel(_ registerViewModelViewModel: RegisterViewModel, displayError errMessage: String, withEntry errorEntry: RegisterViewModel.ErrorEntryType) {
+    func registerViewModel(_ registerViewModelViewModel: RegisterViewModel, displayError errorMessage: String, withEntry errorEntry: RegisterViewModel.ErrorEntryType) {
         switch errorEntry {
             case .email:
                 emailTextField.isError = true
@@ -59,10 +60,9 @@ extension RegisterViewController: RegisterViewModelDelegate {
                 passwordTextField.isError = true
             case .name:
                 nameTextField.isError = true
-      
         }
-        
-        displayAlert(message: errMessage)
+        errorLabel.isHidden = false
+        errorLabel.text = errorMessage
     }
     
     
