@@ -12,6 +12,18 @@ class BorderedTextField: UITextField, UITextFieldDelegate {
     @IBOutlet weak var containerView: UIView!
 
     @IBInspectable var isInsideContainer: Bool = false
+    
+    var isError: Bool = false {
+        didSet{
+            if isError {
+                if !isInsideContainer {
+                    animateBorder(with: UIColor.appColor(.redColor)  ?? .clear, border: 1)
+                } else {
+                    containerView.animateBorder(with: UIColor.appColor(.redColor) ?? .clear, border: 1)
+                }
+            }
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

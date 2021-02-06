@@ -15,7 +15,7 @@ class SplashViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
-            self.router?.navigate(to: .mainTabBarRoute)
+            self.router?.navigate(to: .loginOptionRoute)
         }
     }
 }

@@ -96,10 +96,10 @@
 		08C567832596583600C80A75 /* MainTabBarRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C567822596583600C80A75 /* MainTabBarRoute.swift */; };
 		08C567882596597400C80A75 /* AppRouter in Frameworks */ = {isa = PBXBuildFile; productRef = 08C567872596597400C80A75 /* AppRouter */; };
 		08C5678C25965D6500C80A75 /* AuthCompanyCreatedSuccessfullyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C5678B25965D6500C80A75 /* AuthCompanyCreatedSuccessfullyViewController.swift */; };
-		08F0CC1A258BAA4D00FA2261 /* RegsiterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F0CC19258BAA4D00FA2261 /* RegsiterViewController.swift */; };
+		08F0CC1A258BAA4D00FA2261 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F0CC19258BAA4D00FA2261 /* RegisterViewController.swift */; };
 		08F0CC1D258BAA8C00FA2261 /* RegisterRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F0CC1C258BAA8C00FA2261 /* RegisterRoute.swift */; };
 		08F0CC20258BAC9200FA2261 /* AuthRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F0CC1F258BAC9200FA2261 /* AuthRoutes.swift */; };
-		08F0CC36258BC19500FA2261 /* LoginViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F0CC35258BC19500FA2261 /* LoginViewControllerViewController.swift */; };
+		08F0CC36258BC19500FA2261 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F0CC35258BC19500FA2261 /* LoginViewController.swift */; };
 		08F0CC3A258BC1BF00FA2261 /* LoginRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F0CC39258BC1BF00FA2261 /* LoginRoute.swift */; };
 		08F0CC3E258BD3A200FA2261 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F0CC3D258BD3A200FA2261 /* ForgetPasswordViewController.swift */; };
 		08F0CC41258BD3D800FA2261 /* ForgetPasswordRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F0CC40258BD3D800FA2261 /* ForgetPasswordRoute.swift */; };
@@ -110,6 +110,11 @@
 		08F2B8D6258BE8E000CAEC9A /* Tajawal-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08F2B8D5258BE8E000CAEC9A /* Tajawal-Bold.ttf */; };
 		08F3B5052596A0380099AC2B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F3B5042596A0380099AC2B /* HomeViewController.swift */; };
 		08F3B50B2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F3B50A2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift */; };
+		2006B90C25CEC84500DB3EE0 /* AuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006B90B25CEC84500DB3EE0 /* AuthApi.swift */; };
+		2006B91025CECA6F00DB3EE0 /* Extension+String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006B90F25CECA6F00DB3EE0 /* Extension+String+Validation.swift */; };
+		2006B91725CECAD900DB3EE0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006B91625CECAD900DB3EE0 /* LoginViewModel.swift */; };
+		2006B91B25CED18700DB3EE0 /* AppApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006B91A25CED18700DB3EE0 /* AppApi.swift */; };
+		2006B91E25CED1E500DB3EE0 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006B91D25CED1E500DB3EE0 /* RegisterViewModel.swift */; };
 		2019AC3C25C9DC6D00455166 /* OrderTraceMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019AC3B25C9DC6D00455166 /* OrderTraceMapViewController.swift */; };
 		2019AC3F25CA093500455166 /* OrderTraceMapRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019AC3E25CA093500455166 /* OrderTraceMapRoute.swift */; };
 		2019AC4325CA14EC00455166 /* ReorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019AC4225CA14EC00455166 /* ReorderViewController.swift */; };
@@ -360,10 +365,10 @@
 		08C567772594A59700C80A75 /* Extension+String+FileType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String+FileType.swift"; sourceTree = "<group>"; };
 		08C567822596583600C80A75 /* MainTabBarRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarRoute.swift; sourceTree = "<group>"; };
 		08C5678B25965D6500C80A75 /* AuthCompanyCreatedSuccessfullyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCompanyCreatedSuccessfullyViewController.swift; sourceTree = "<group>"; };
-		08F0CC19258BAA4D00FA2261 /* RegsiterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegsiterViewController.swift; sourceTree = "<group>"; };
+		08F0CC19258BAA4D00FA2261 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		08F0CC1C258BAA8C00FA2261 /* RegisterRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRoute.swift; sourceTree = "<group>"; };
 		08F0CC1F258BAC9200FA2261 /* AuthRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRoutes.swift; sourceTree = "<group>"; };
-		08F0CC35258BC19500FA2261 /* LoginViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerViewController.swift; sourceTree = "<group>"; };
+		08F0CC35258BC19500FA2261 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		08F0CC39258BC1BF00FA2261 /* LoginRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRoute.swift; sourceTree = "<group>"; };
 		08F0CC3D258BD3A200FA2261 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		08F0CC40258BD3D800FA2261 /* ForgetPasswordRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordRoute.swift; sourceTree = "<group>"; };
@@ -374,6 +379,11 @@
 		08F2B8D5258BE8E000CAEC9A /* Tajawal-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Bold.ttf"; sourceTree = "<group>"; };
 		08F3B5042596A0380099AC2B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		08F3B50A2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		2006B90B25CEC84500DB3EE0 /* AuthApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApi.swift; sourceTree = "<group>"; };
+		2006B90F25CECA6F00DB3EE0 /* Extension+String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String+Validation.swift"; sourceTree = "<group>"; };
+		2006B91625CECAD900DB3EE0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		2006B91A25CED18700DB3EE0 /* AppApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppApi.swift; sourceTree = "<group>"; };
+		2006B91D25CED1E500DB3EE0 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		2019AC3B25C9DC6D00455166 /* OrderTraceMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTraceMapViewController.swift; sourceTree = "<group>"; };
 		2019AC3E25CA093500455166 /* OrderTraceMapRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTraceMapRoute.swift; sourceTree = "<group>"; };
 		2019AC4225CA14EC00455166 /* ReorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReorderViewController.swift; sourceTree = "<group>"; };
@@ -564,8 +574,8 @@
 				0827BF732589283F00DE8CD5 /* View */,
 				0835487B2587C18B00665DE0 /* LoginOptionViewController.swift */,
 				0827BF702589278500DE8CD5 /* AccountOptionViewController.swift */,
-				08F0CC19258BAA4D00FA2261 /* RegsiterViewController.swift */,
-				08F0CC35258BC19500FA2261 /* LoginViewControllerViewController.swift */,
+				08F0CC19258BAA4D00FA2261 /* RegisterViewController.swift */,
+				08F0CC35258BC19500FA2261 /* LoginViewController.swift */,
 				08F0CC3D258BD3A200FA2261 /* ForgetPasswordViewController.swift */,
 				08F2B8C9258BD60B00CAEC9A /* ForgetPasswordCodeViewController.swift */,
 				08F2B8CF258BD77900CAEC9A /* SetNewPasswordViewController.swift */,
@@ -1029,6 +1039,32 @@
 			path = FlowLayout;
 			sourceTree = "<group>";
 		};
+		2006B90A25CEC83400DB3EE0 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				2006B90B25CEC84500DB3EE0 /* AuthApi.swift */,
+				2006B91A25CED18700DB3EE0 /* AppApi.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		2006B91325CECAC300DB3EE0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2006B91425CECACA00DB3EE0 /* Auth */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2006B91425CECACA00DB3EE0 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2006B91625CECAD900DB3EE0 /* LoginViewModel.swift */,
+				2006B91D25CED1E500DB3EE0 /* RegisterViewModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		205F23C525C9946600BB52FD /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1429,6 +1465,7 @@
 		3DB1DAD12586737D00EF1E8F /* balbid */ = {
 			isa = PBXGroup;
 			children = (
+				2006B91325CECAC300DB3EE0 /* ViewModel */,
 				3DB1DAE02586737E00EF1E8F /* Info.plist */,
 				3D4EEA1625CDF9F9001DD389 /* Models */,
 				3DB1DAE92586778500EF1E8F /* App */,
@@ -1455,6 +1492,7 @@
 		3DB1DAE92586778500EF1E8F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				2006B90A25CEC83400DB3EE0 /* Api */,
 				3D4EE9E425CDF920001DD389 /* Data Source */,
 				3DB1DB01258686FD00EF1E8F /* Helper */,
 				3DB1DAEB2586788B00EF1E8F /* Routes */,
@@ -1534,6 +1572,7 @@
 				3DB1DB2025868A1000EF1E8F /* Extensions+UIViewController.swift */,
 				3DB1DB2325868A1000EF1E8F /* Extenstions+UICollectionViewFlowLayout.swift */,
 				08C567772594A59700C80A75 /* Extension+String+FileType.swift */,
+				2006B90F25CECA6F00DB3EE0 /* Extension+String+Validation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1935,7 +1974,7 @@
 				206E048725BD92D700BD8902 /* PointRoute.swift in Sources */,
 				3D4EEA0C25CDF920001DD389 /* DataSource.swift in Sources */,
 				083F4A1A259F7BC9005DEF75 /* AdCategoriesCollectionFlowLayout.swift in Sources */,
-				08F0CC1A258BAA4D00FA2261 /* RegsiterViewController.swift in Sources */,
+				08F0CC1A258BAA4D00FA2261 /* RegisterViewController.swift in Sources */,
 				08F0CC20258BAC9200FA2261 /* AuthRoutes.swift in Sources */,
 				3D4EEA0125CDF920001DD389 /* UserDefaultsCache.swift in Sources */,
 				3D4EEA3625CDFF18001DD389 /* AppRealTimeDataSource.swift in Sources */,
@@ -2000,6 +2039,7 @@
 				3DB1DB3D25868A1000EF1E8F /* Extensions+UITextField.swift in Sources */,
 				2019AC4325CA14EC00455166 /* ReorderViewController.swift in Sources */,
 				20AAF11C25C2E6D800CC31D4 /* ProductDetailViewController.swift in Sources */,
+				2006B91E25CED1E500DB3EE0 /* RegisterViewModel.swift in Sources */,
 				08809EF42593C18F00AD41EE /* BankInfrormationTableViewDelegate.swift in Sources */,
 				3DB1DB07258687C300EF1E8F /* LocationManager.swift in Sources */,
 				0894854925A1FC1B001934A9 /* AddToCartBottomSheet.swift in Sources */,
@@ -2063,6 +2103,7 @@
 				3DB1DAD32586737D00EF1E8F /* AppDelegate.swift in Sources */,
 				206E048425BD8C1000BD8902 /* PointViewController.swift in Sources */,
 				087CA9DC2599083100113CEC /* SliderIndicatorCollectionViewCell.swift in Sources */,
+				2006B90C25CEC84500DB3EE0 /* AuthApi.swift in Sources */,
 				20AD836725C31C0B00070C78 /* CustomPDPLayout.swift in Sources */,
 				205F23BF25C993DE00BB52FD /* ProductTraceRoute.swift in Sources */,
 				208513F725CACEE10025885B /* ReorderCollectionViewDataSource.swift in Sources */,
@@ -2094,12 +2135,14 @@
 				20C7F8FA25CD763B001D0715 /* PaymentRoutes.swift in Sources */,
 				3D4EEA2D25CDFEA9001DD389 /* RealTimeDataSourceService.swift in Sources */,
 				2085140925CAF8200025885B /* CreditBalanceViewController.swift in Sources */,
+				2006B91B25CED18700DB3EE0 /* AppApi.swift in Sources */,
 				081C3CF32589123B00C8740C /* LoginOptionRoute.swift in Sources */,
 				08A9B8BA25A6441A00AE5238 /* ProductDetailQuickViewViewController.swift in Sources */,
+				2006B91725CECAD900DB3EE0 /* LoginViewModel.swift in Sources */,
 				20C7F90925CD8685001D0715 /* PaymentCardTableViewDataSource.swift in Sources */,
 				3DB1DB3C25868A1000EF1E8F /* Extensions+Data+UIImage.swift in Sources */,
 				083E75AA259DE4EC00EDF708 /* CategoriesTableViewDataSource.swift in Sources */,
-				08F0CC36258BC19500FA2261 /* LoginViewControllerViewController.swift in Sources */,
+				08F0CC36258BC19500FA2261 /* LoginViewController.swift in Sources */,
 				202569E425BDFFC800FD61AD /* OrderTableViewDataSource.swift in Sources */,
 				20AAF11925C2E68100CC31D4 /* ProductDetailHeaderView.swift in Sources */,
 				3DB1DB3325868A1000EF1E8F /* Extensions+UIViewController.swift in Sources */,
@@ -2126,6 +2169,7 @@
 				20FBE4B825C87D5700210190 /* ShippingMapViewController.swift in Sources */,
 				0894855525A22381001934A9 /* ProductCellDelegate.swift in Sources */,
 				08C5678C25965D6500C80A75 /* AuthCompanyCreatedSuccessfullyViewController.swift in Sources */,
+				2006B91025CECA6F00DB3EE0 /* Extension+String+Validation.swift in Sources */,
 				202569EA25BE0E0800FD61AD /* FavoriteViewController.swift in Sources */,
 				087A90E725A5E57B00B8AA96 /* ScrollViewContainingDelegate.swift in Sources */,
 				20AAF11F25C2E86B00CC31D4 /* ProductDetailCollectionViewDataSource.swift in Sources */,
