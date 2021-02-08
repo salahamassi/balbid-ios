@@ -12,6 +12,6 @@ struct Home: SwiftyModelData {
     let imageSlider: [SliderImage]
 
     init(json: JSON) {
-        imageSlider = json["slider_images"].arrayObject as? [SliderImage] ?? []
+        imageSlider  = json["slider_images"].arrayValue.map { SliderImage(json: $0) }
     }
 }

@@ -20,8 +20,7 @@ class HomeViewModel {
         dataSource.perform(service: .init(path: .homePath, domain: .domain, method: .get, params: [:]), Home.self) { (result) in
             switch result {
               case .data(let data):
-                print(data)
-                self.delegate?.loadHomeSuccess()
+                self.delegate?.loadHomeSuccess(home: data.data)
               case .failure(let error):
                 self.delegate?.apiError(error: error)
               default:
@@ -34,7 +33,7 @@ class HomeViewModel {
 
 
 protocol HomeViewModelDelegate: class {
-    func loadHomeSuccess()
+    func loadHomeSuccess(home: Home)
     func apiError(error: String)
 
 }

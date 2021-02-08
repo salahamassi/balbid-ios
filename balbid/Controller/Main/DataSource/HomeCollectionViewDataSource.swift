@@ -10,11 +10,12 @@ import UIKit
 class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
     var numberOfSection = 0
-    var home: Home!
+    var home: Home?
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .sliderCellId, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .sliderCellId, for: indexPath) as! HomeSliderCell
+            cell.sliderImage = home?.imageSlider[indexPath.row]
             return cell
         }else if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .sliderIndicatorCellId, for: indexPath) as! SliderIndicatorCollectionViewCell
@@ -52,7 +53,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0{
-            return 5
+            return home?.imageSlider.count ?? 0
         }else if section == 1 {
             return 1
         }else if section == 3 {

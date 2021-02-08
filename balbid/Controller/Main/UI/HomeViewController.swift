@@ -68,9 +68,10 @@ extension HomeViewController: HomeSelectionProtocol{
 }
 
 extension HomeViewController: HomeViewModelDelegate {
-    func loadHomeSuccess() {
+    func loadHomeSuccess(home: Home) {
         activityIndicator.stopAnimating()
         homeCollectionViewDataSource.numberOfSection = 13
+        homeCollectionViewDataSource.home = home
         collectionView.reloadData()
     }
     
