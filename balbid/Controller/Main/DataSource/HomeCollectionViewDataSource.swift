@@ -19,6 +19,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
             return cell
         }else if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .sliderIndicatorCellId, for: indexPath) as! SliderIndicatorCollectionViewCell
+            cell.pageControl.numberOfPages = home?.imageSlider.count ?? 0
             return cell
         }else if indexPath.section == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .categoryCellId, for: indexPath)

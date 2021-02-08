@@ -10,5 +10,11 @@ import UIKit
 class SliderIndicatorCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var pageControl: UIPageControl!
     
+    var currentPage = 0 {
+        didSet {
+            pageControl.currentPage = currentPage
+        }
+    }
+    
   
 }
