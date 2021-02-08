@@ -35,7 +35,7 @@ extension UIFont {
 //            if Locale.current.languageCode == "ar"{
 //                return UIFont.boldSystemFont(ofSize: 15)
 //            }else{
-                return UIFont(name: "Tajawal-Regular", size: 15)!
+                return UIFont(name: "Tajawal-Medium", size: 15)!
 //            }
         }
     }

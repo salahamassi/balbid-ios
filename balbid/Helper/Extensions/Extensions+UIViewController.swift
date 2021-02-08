@@ -13,7 +13,8 @@ extension UIViewController {
     func displayAlert(message: String) {
         let errorAlert = ErrorAlert.initFromNib()
         errorAlert.message = "\(message)"
-        errorAlert.actionButtonTitle = "keyword.ok".localized
+//        errorAlert.actionButtonTitle = "keyword.ok".localized
+        errorAlert.actionButtonTitle = "Ok"
         errorAlert.didPressActionButton = .some({ [weak self] (_) in
             guard let _ = self else { return }
             errorAlert.hide()

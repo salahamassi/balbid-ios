@@ -9,10 +9,22 @@ import UIKit
 
 class ProfileViewController: BaseViewController {
 
+    @IBOutlet weak var logoutArrowImageView: UIImageView!
+    @IBOutlet weak var logoutActivityIndicator: UIActivityIndicatorView!
+    
+    var profileViewModel: ProfileViewModel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupviewModel()
 
         // Do any additional setup after loading the view.
+    }
+    
+    private func setupviewModel(){
+        let dataSource = AppDataSource()
+        profileViewModel = ProfileViewModel(dataSource: dataSource)
+        profileViewModel.delegate = self
     }
     
 
@@ -45,5 +57,28 @@ class ProfileViewController: BaseViewController {
         router?.navigate(to: .paymentCardRoute)
     }
 
+    
+    @IBAction func logout(_ sender: Any){
+        logoutActivityIndicator.startAnimating()
+        logoutArrowImageView.isHidden = true
+        profileViewModel.logout()
+    }
 
+
+}
+
+extension ProfileViewController: ProfileViewModelDelegate {
+    func apiError(error: String) {
+        logoutActivityIndicator.stopAnimating()
+        logoutArrowImageView.isHidden = false
+        displayAlert(message: error)
+    }
+    
+    func logoutSuccess() {
+        logoutActivityIndicator.stopAnimating()
+        logoutArrowImageView.isHidden = false
+        router?.navigate(to: .mainTabBarRoute)
+    }
+    
+    
 }

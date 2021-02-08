@@ -53,12 +53,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         MOLH.shared.activate(true)
         MOLHLanguage.setDefaultLanguage(Locale.current.languageCode ?? "en")
         if #available(iOS 13.0, *) {
-//            print("Scene delegate will start app!")
+            print("Scene delegate will start app!")
         } else {
             window = UIWindow()
             startApp(using: window!)
             remoteNotificationUserInfo = launchOptions?[UIApplication.LaunchOptionsKey.remoteNotification] as? [String: Any]
         }
+        ReachabilityManager.shared.observe()
     }
 
     func startApp(using window: UIWindow) {

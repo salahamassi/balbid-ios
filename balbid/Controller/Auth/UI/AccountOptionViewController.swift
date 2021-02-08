@@ -9,18 +9,15 @@ import UIKit
 import AppRouter
 
 class AccountOptionViewController: BaseViewController {
-
-    override var mustClearNavigationBar: Bool {
+     override var mustClearNavigationBar: Bool {
         true
     }
 
     @IBOutlet weak var companyOptionView: AccountOptionView!
     @IBOutlet weak var individualOptionView: AccountOptionView!
-
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func setAccountOption(_ sender: UIButton) {
@@ -37,3 +34,4 @@ class AccountOptionViewController: BaseViewController {
     }
 
 }
+

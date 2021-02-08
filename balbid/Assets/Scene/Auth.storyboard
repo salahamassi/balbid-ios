@@ -490,10 +490,10 @@
             </objects>
             <point key="canvasLocation" x="1243" y="-523"/>
         </scene>
-        <!--Regsiter View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="Nid-LJ-Hy3">
             <objects>
-                <viewController storyboardIdentifier="RegisterViewController" id="5xa-YI-0qr" customClass="RegsiterViewController" customModule="balbid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" id="5xa-YI-0qr" customClass="RegisterViewController" customModule="balbid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aoj-py-OhI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -646,6 +646,12 @@
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="setPassowrdImage" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geW-Ae-ScM">
+                                                        <rect key="frame" x="0.0" y="230" width="288" height="0.0"/>
+                                                        <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                                        <color key="textColor" name="redColor2"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7Q-NF-Drf" userLabel="space view">
                                                         <rect key="frame" x="0.0" y="240" width="288" height="10"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -669,7 +675,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="loginWithSender:" destination="U7D-Vd-UsZ" eventType="touchUpInside" id="vbq-ss-GMp"/>
+                                                            <action selector="register:" destination="5xa-YI-0qr" eventType="touchUpInside" id="tNt-Ng-vzh"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylY-ar-kyq">
@@ -847,6 +853,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sjO-sL-g8R"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="nZj-hr-C8q" id="hS5-74-Mjo"/>
+                        <outlet property="errorLabel" destination="geW-Ae-ScM" id="DoN-pL-wyT"/>
+                        <outlet property="nameTextField" destination="Sul-gf-SsI" id="OSB-7l-1E7"/>
+                        <outlet property="passwordTextField" destination="t4m-N5-KUS" id="Uxw-Cw-ocH"/>
+                        <outlet property="phoneTextField" destination="5wM-C8-vLi" id="ISv-CE-h0n"/>
+                        <outlet property="registerButton" destination="Vmw-kE-iLg" id="PuS-SD-hTL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G2H-qi-Mt9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -919,6 +933,12 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EX6-hu-GHy">
+                                        <rect key="frame" x="0.0" y="239" width="288" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                        <color key="textColor" name="redColor2"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nF-HM-MTW" userLabel="space view">
                                         <rect key="frame" x="0.0" y="249" width="288" height="10"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -942,7 +962,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="loginWithSender:" destination="U7D-Vd-UsZ" eventType="touchUpInside" id="pua-vv-FRy"/>
+                                            <action selector="login:" destination="CLT-qz-eZs" eventType="touchUpInside" id="FRP-6G-v2j"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyS-FB-xTL">
@@ -1079,6 +1099,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9Kf-Nj-ZEg"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="Klp-NL-mqu" id="9jZ-0g-2h3"/>
+                        <outlet property="errorLabel" destination="EX6-hu-GHy" id="cUK-T0-MTh"/>
+                        <outlet property="loginButton" destination="QRq-GV-Acf" id="JJH-U3-iu3"/>
+                        <outlet property="passwordTextField" destination="6ZZ-N3-dIq" id="Kiz-1j-qg1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egJ-rj-FJ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1488,6 +1514,9 @@
         </namedColor>
         <namedColor name="primaryColor">
             <color red="0.11800000071525574" green="0.13699999451637268" blue="0.32199999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="redColor2">
+            <color red="1" green="0.23899999260902405" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="textGrayColor">
             <color red="0.39599999785423279" green="0.39599999785423279" blue="0.39599999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

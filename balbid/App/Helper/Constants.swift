@@ -33,6 +33,18 @@ enum AssetsColor: String {
 
 extension String {
 
+    static let domain = "https://tradex.tahwolapps.com/api/"
+    static let customerRegisterPath = "customers/store"
+    static let loginPath = "customers/login"
+    static let logoutPath = "customers/logout"
+    static let homePath = "home"
+
+    
+    //api Method
+    static let post = "post"
+    static let get = "get"
+
+
     // view controller nib's name
 
     // nib's name's

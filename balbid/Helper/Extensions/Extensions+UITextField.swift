@@ -65,8 +65,10 @@ extension UITextField {
     private func togglePasswordIcon(_ sender: UIButton) {
         if sender.imageView?.image == UIImage(named: .lockedPasswordImage) {
             sender.setImage(UIImage(named: .unlockedPasswordImage), for: .normal)
+            isSecureTextEntry = false
         } else {
             sender.setImage(UIImage(named: .lockedPasswordImage), for: .normal)
+            isSecureTextEntry = true
         }
     }
 

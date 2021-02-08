@@ -23,7 +23,11 @@ class LoginRoute: Route {
     }
 
     func create(_ router: AppRouter, _ params: [String: Any]?) -> UIViewController {
-        let viewController = UIStoryboard.authStoryboard.getViewController(with: .loginViewControllerId) as!  BaseViewController
+        let dataSource = AppDataSource()
+        let viewController = UIStoryboard.authStoryboard.getViewController(with: .loginViewControllerId) as! LoginViewController
+        let loginViewModel = LoginViewModel(source: dataSource)
+        loginViewModel.delegate = viewController
+        viewController.validate = loginViewModel.validate
         return viewController
     }
 }

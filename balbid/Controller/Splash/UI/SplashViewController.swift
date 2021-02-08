@@ -15,7 +15,14 @@ class SplashViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
-            self.router?.navigate(to: .mainTabBarRoute)
+//            UserDefaultsManager.token = nil
+            print(UserDefaultsManager.token)
+            if UserDefaultsManager.token != nil {
+                self.router?.navigate(to: .mainTabBarRoute)
+            }else{
+                self.router?.navigate(to: .loginOptionRoute)
+            }
+                
         }
     }
 }

@@ -23,7 +23,15 @@ class RegisterRoute: Route {
     }
 
     func create(_ router: AppRouter, _ params: [String: Any]?) -> UIViewController {
-        let viewController = UIStoryboard.authStoryboard.getViewController(with: .registerViewControllerId) as!  BaseViewController
+        
+
+        let viewController = UIStoryboard.authStoryboard.getViewController(with: .registerViewControllerId) as! RegisterViewController
+        let presneter = RegisterViewPresenter<RegisterViewController>()
+        presneter.output = viewController
+        let registerViewModel = RegisterViewModel(dataSource: AppDataSource(), output: presneter)
+        viewController.validate = registerViewModel.validate
+        
         return viewController
     }
 }
+

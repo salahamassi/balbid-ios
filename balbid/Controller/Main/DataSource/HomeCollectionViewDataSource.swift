@@ -9,7 +9,8 @@ import UIKit
 
 class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
-    let numberOfSection = 13
+    var numberOfSection = 0
+    var home: Home!
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
