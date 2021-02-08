@@ -11,6 +11,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
     var numberOfSection = 0
     var home: Home?
+    var currentPage: Int = 0
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
@@ -20,6 +21,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         }else if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .sliderIndicatorCellId, for: indexPath) as! SliderIndicatorCollectionViewCell
             cell.pageControl.numberOfPages = home?.imageSlider.count ?? 0
+            cell.currentPage = currentPage
             return cell
         }else if indexPath.section == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .categoryCellId, for: indexPath)
@@ -86,6 +88,4 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         header.title = indexPath.section == 9 ? "New Arrive" : "Strongest Offer"
         return header
     }
-    
-    
 }

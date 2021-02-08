@@ -8,4 +8,6 @@
 import Foundation
 protocol HomeSelectionProtocol {
     func didSelect(item at : IndexPath)
+    func didMoveHomeSlider(to page : Int)
+
 }

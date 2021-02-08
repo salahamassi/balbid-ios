@@ -14,7 +14,7 @@ class HomeViewController: BaseViewController {
     
     let homeCollectionViewDataSource: HomeCollectionViewDataSource = HomeCollectionViewDataSource()
     let homeCollectionViewFlowLayout: HomeCollectionViewFlowLayout = HomeCollectionViewFlowLayout()
-    let homeCollectionViewDelegate: HomeCollectionViewDelegate = HomeCollectionViewDelegate()
+    var homeCollectionViewDelegate: HomeCollectionViewDelegate!
 
     let searchBar = UISearchBar(frame: .zero)
     
@@ -28,6 +28,7 @@ class HomeViewController: BaseViewController {
     }
         
     private func setupCollectionView(){
+        homeCollectionViewDelegate = HomeCollectionViewDelegate(collectionView: collectionView)
         collectionView.dataSource = homeCollectionViewDataSource
         collectionView.collectionViewLayout = homeCollectionViewFlowLayout.setupFlowLayout()
         homeCollectionViewDelegate.delegate = self
@@ -62,6 +63,11 @@ class HomeViewController: BaseViewController {
 }
 
 extension HomeViewController: HomeSelectionProtocol{
+    func didMoveHomeSlider(to page: Int) {
+        homeCollectionViewDataSource.currentPage = page
+        collectionView.reloadItems(at: [IndexPath(row: 0, section: 1)])
+    }
+    
     func didSelect(item at: IndexPath) {
         router?.navigate(to: .adCategoriesRoute)
     }
