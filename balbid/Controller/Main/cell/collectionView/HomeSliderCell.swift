@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeSliderCell: UICollectionViewCell {
     
@@ -13,6 +14,7 @@ class HomeSliderCell: UICollectionViewCell {
     
     var sliderImage: SliderImage? {
         didSet {
+            slierImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
             guard let imageUrl = URL(string: sliderImage?.image ?? "") else {
                 return
             }
