@@ -89,7 +89,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
             return header
         }
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: .topKind, withReuseIdentifier: .productHeaderCellId, for: indexPath) as! ProductHeaderCell
-        header.title = indexPath.section == 9 ? "New Arrive" : "Strongest Offer"
+        header.homeProductItem = home?.HomeProductItems[indexPath.section - 2]
         return header
     }
 }

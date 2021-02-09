@@ -9,11 +9,14 @@ import UIKit
 
 class ProductHeaderCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel : UILabel!
+    @IBOutlet weak var shopButton : UIButton!
+
     
-    
-    var title = "" {
+    var homeProductItem: HomeProductItem? {
         didSet {
-            titleLabel.text = title
+            titleLabel.text = homeProductItem?.name
+            shopButton.borderColor = UIColor(hexString: homeProductItem?.color ?? "#1E2352")
+            shopButton.setTitleColor(UIColor(hexString: homeProductItem?.color ?? "#1E2352"), for: .normal)
         }
     }
 }
