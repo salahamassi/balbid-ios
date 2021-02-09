@@ -17,6 +17,7 @@ struct HomeProductItem: SwiftyModelData {
     let sortOrder: String
     let name: String
     let prodcuts: [Product]
+    
     init(json: JSON) {
         id = json["id"].intValue
         color = json["color"].stringValue
