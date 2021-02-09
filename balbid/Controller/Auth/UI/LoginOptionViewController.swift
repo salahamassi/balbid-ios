@@ -15,6 +15,10 @@ class LoginOptionViewController: BaseViewController {
     }
 
     @IBOutlet weak var splashLogoImageView: UIImageView!
+    @IBOutlet weak var createAccountButton: UIButton!
+    @IBOutlet weak var continueAsguestButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+
 
     @IBAction func login(sender: UIButton) {
         router?.navigate(to: .loginRoute)
@@ -25,5 +29,7 @@ class LoginOptionViewController: BaseViewController {
         router?.navigate(to: .accountOptionRoute)
     }
 
-    @IBAction func continueAsGuest(sender: UIButton) {}
+    @IBAction func continueAsGuest(sender: UIButton) {
+        router?.navigate(to: .mainTabBarRoute)
+    }
 }

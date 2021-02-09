@@ -483,6 +483,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="j0C-Os-b6w"/>
                     <connections>
+                        <outlet property="continueAsguestButton" destination="bL0-vf-SUM" id="tAx-1I-u5t"/>
+                        <outlet property="createAccountButton" destination="ske-N1-vJs" id="Stb-Id-3wf"/>
+                        <outlet property="loginButton" destination="2JT-tD-dGn" id="0sd-nN-uWY"/>
                         <outlet property="splashLogoImageView" destination="3hg-D9-IZL" id="d0l-Ka-Xdm"/>
                     </connections>
                 </viewController>
@@ -699,20 +702,20 @@
                                                         <rect key="frame" x="0.0" y="373.5" width="288" height="20"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fo1-Jx-Ylg">
-                                                                <rect key="frame" x="0.0" y="9.5" width="128.5" height="1"/>
+                                                                <rect key="frame" x="0.0" y="9.5" width="126.5" height="1"/>
                                                                 <color key="backgroundColor" name="light gray"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="1" id="bdo-Wn-535"/>
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="  OR  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SF3-wF-dp5">
-                                                                <rect key="frame" x="128.5" y="3" width="31" height="14"/>
+                                                                <rect key="frame" x="126.5" y="2" width="35" height="16.5"/>
                                                                 <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
                                                                 <color key="textColor" name="textGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i13-6B-flv">
-                                                                <rect key="frame" x="159.5" y="9.5" width="128.5" height="1"/>
+                                                                <rect key="frame" x="161.5" y="9.5" width="126.5" height="1"/>
                                                                 <color key="backgroundColor" name="light gray"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="1" id="bVS-vh-bP7"/>
@@ -1042,20 +1045,20 @@
                                         <rect key="frame" x="0.0" y="407" width="288" height="20"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zk-dK-A0V">
-                                                <rect key="frame" x="0.0" y="9.5" width="128.5" height="1"/>
+                                                <rect key="frame" x="0.0" y="9.5" width="126.5" height="1"/>
                                                 <color key="backgroundColor" name="light gray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="mQD-8k-uve"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="  OR  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isO-PM-Tl2">
-                                                <rect key="frame" x="128.5" y="3" width="31" height="14"/>
+                                                <rect key="frame" x="126.5" y="2" width="35" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
                                                 <color key="textColor" name="textGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qnV-05-kXL">
-                                                <rect key="frame" x="159.5" y="9.5" width="128.5" height="1"/>
+                                                <rect key="frame" x="161.5" y="9.5" width="126.5" height="1"/>
                                                 <color key="backgroundColor" name="light gray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="NT3-2P-4e8"/>
@@ -1102,16 +1105,16 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="LbY-Kt-l8a">
-                                        <rect key="frame" x="0.0" y="180" width="288" height="182"/>
+                                        <rect key="frame" x="0.0" y="178.5" width="288" height="185"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LH0-jr-3u1">
-                                                <rect key="frame" x="0.0" y="0.0" width="288" height="16"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="19"/>
                                                 <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="3WA-gE-vTx" userLabel="pin  stack view">
-                                                <rect key="frame" x="0.0" y="51" width="288" height="56"/>
+                                                <rect key="frame" x="0.0" y="54" width="288" height="56"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="___" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="55Y-uW-6oG" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
                                                         <rect key="frame" x="8" y="0.0" width="48" height="48"/>
@@ -1208,7 +1211,7 @@
                                                 <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="8" right="8"/>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SO2-qf-qkR">
-                                                <rect key="frame" x="0.0" y="142" width="288" height="40"/>
+                                                <rect key="frame" x="0.0" y="145" width="288" height="40"/>
                                                 <color key="backgroundColor" name="primaryColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="bQP-t3-cRZ"/>
@@ -1426,47 +1429,6 @@
             <point key="canvasLocation" x="1988" y="230"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="55Y-uW-6oG">
-            <size key="intrinsicContentSize" width="77" height="15.5"/>
-        </designable>
-        <designable name="5wM-C8-vLi">
-            <size key="intrinsicContentSize" width="94" height="18.5"/>
-        </designable>
-        <designable name="6ZZ-N3-dIq">
-            <size key="intrinsicContentSize" width="115" height="14"/>
-        </designable>
-        <designable name="GyX-HJ-ldy">
-            <size key="intrinsicContentSize" width="77" height="15.5"/>
-        </designable>
-        <designable name="Klp-NL-mqu">
-            <size key="intrinsicContentSize" width="92.5" height="15.5"/>
-        </designable>
-        <designable name="Kpk-GI-kmo">
-            <size key="intrinsicContentSize" width="92.5" height="15.5"/>
-        </designable>
-        <designable name="LZo-wX-jyO">
-            <size key="intrinsicContentSize" width="77" height="15.5"/>
-        </designable>
-        <designable name="PtB-Nh-sOv">
-            <size key="intrinsicContentSize" width="134" height="14"/>
-        </designable>
-        <designable name="Sul-gf-SsI">
-            <size key="intrinsicContentSize" width="94.5" height="15.5"/>
-        </designable>
-        <designable name="gtR-0a-Y0m">
-            <size key="intrinsicContentSize" width="77" height="15.5"/>
-        </designable>
-        <designable name="hec-FO-PGT">
-            <size key="intrinsicContentSize" width="215" height="14"/>
-        </designable>
-        <designable name="nZj-hr-C8q">
-            <size key="intrinsicContentSize" width="92.5" height="15.5"/>
-        </designable>
-        <designable name="t4m-N5-KUS">
-            <size key="intrinsicContentSize" width="105" height="14"/>
-        </designable>
-    </designables>
     <resources>
         <image name="arrowtriangle.down.fill" catalog="system" width="128" height="124"/>
         <image name="check" width="18" height="18"/>
