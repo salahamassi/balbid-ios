@@ -10,7 +10,7 @@ import UIKit
 class BankInfrormationTableViewDelegate: NSObject, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        247
+        243
     }
 
 }

@@ -31,6 +31,5 @@ class LoginOptionViewController: BaseViewController {
 
     @IBAction func continueAsGuest(sender: UIButton) {
         router?.navigate(to: .mainTabBarRoute)
-
     }
 }

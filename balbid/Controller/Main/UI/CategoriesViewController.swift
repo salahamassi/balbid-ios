@@ -15,6 +15,7 @@ class CategoriesViewController: BaseViewController {
     let categoriesTableViewDataSource = CategoriesTableViewDataSource()
     let categoriesContentCollectionViewDataSource = CategoriesContentCollectionViewDataSource()
     let categoriesContentCollectionViewFloawLayout = CategriesContentCollectionViewFlowLayout()
+    let categriesContentCollectionViewDelegate = CategriesContentCollectionViewDelegate()
 
     let searchBar = UISearchBar(frame: .zero)
 
@@ -32,11 +33,23 @@ class CategoriesViewController: BaseViewController {
         categoriesTableView.dataSource = categoriesTableViewDataSource
     }
     
+    fileprivate func registerCellForCollectionView() {
+        categoriesContentCollectionView.register(UINib(nibName: .categoryContentHeader, bundle: nil), forSupplementaryViewOfKind: .topKind, withReuseIdentifier: .categoryContentHeaderCellId)
+    }
+    
     private func setupCategoriesContentCollectionView(){
         categoriesContentCollectionView.dataSource = categoriesContentCollectionViewDataSource
         categoriesContentCollectionView.collectionViewLayout = categoriesContentCollectionViewFloawLayout.setupFlowLayout()
-        categoriesContentCollectionView.register(UINib(nibName: .categoryContentHeader, bundle: nil), forSupplementaryViewOfKind: .topKind, withReuseIdentifier: .categoryContentHeaderCellId)
+        categoriesContentCollectionView.delegate = categriesContentCollectionViewDelegate
+        registerCellForCollectionView()
         categoriesContentCollectionViewDataSource.delegate = self
+        
+        //Handle select row action
+        categriesContentCollectionViewDelegate.didSelectRow = { indexPath in
+            self.router?.navigate(to: .adCategoriesRoute)
+        }
+        
+        
     }
 
     private func setupNavbar(){

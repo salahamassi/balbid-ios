@@ -14,6 +14,14 @@ class AdCategoriesRoute: Route {
         .push
     }
     
+    var transition: CATransition? {
+        .fadeTransition
+    }
+    
+    var animated: Bool {
+        false
+    }
+    
     func create(_ router: AppRouter, _ params: [String : Any]?) -> UIViewController {
         let viewController = UIStoryboard.categoriesStoryboard.getViewController(with: .adCategoriesViewController)
         return viewController
