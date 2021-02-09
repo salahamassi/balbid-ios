@@ -13,7 +13,7 @@ extension CATransition {
         let transition = CATransition()
         transition.type = .fade
         transition.subtype = .none
-        transition.duration = 1
+        transition.duration = 0.6
         return transition
     }
     
