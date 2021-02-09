@@ -25,7 +25,7 @@
         <!--Categories Filter View Controller-->
         <scene sceneID="I7P-GO-Xik">
             <objects>
-                <viewController storyboardIdentifier="CategoriesFilterViewController" id="rSl-k7-MDv" customClass="CategoriesFilterViewController" customModule="balbid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategoriesFilterViewController" modalTransitionStyle="crossDissolve" id="rSl-k7-MDv" customClass="CategoriesFilterViewController" customModule="balbid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jce-91-yNX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
