@@ -11,12 +11,14 @@ class ProfileViewController: BaseViewController {
 
     @IBOutlet weak var logoutArrowImageView: UIImageView!
     @IBOutlet weak var logoutActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var logLabel: UILabel!
     
     var profileViewModel: ProfileViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupviewModel()
+        setupView()
 
         // Do any additional setup after loading the view.
     }
@@ -27,6 +29,9 @@ class ProfileViewController: BaseViewController {
         profileViewModel.delegate = self
     }
     
+    private func setupView(){
+        logLabel.text = UserDefaultsManager.token == nil ? "Login" : "Logout"
+    }
 
     
     @IBAction func gotoEditProfileController(_ sender: Any){
@@ -59,9 +64,13 @@ class ProfileViewController: BaseViewController {
 
     
     @IBAction func logout(_ sender: Any){
-        logoutActivityIndicator.startAnimating()
-        logoutArrowImageView.isHidden = true
-        profileViewModel.logout()
+        if(UserDefaultsManager.token != nil){
+            logoutActivityIndicator.startAnimating()
+            logoutArrowImageView.isHidden = true
+            profileViewModel.logout()
+        }else{
+            router?.navigate(to: .loginRoute)
+        }
     }
 
 
@@ -77,7 +86,8 @@ extension ProfileViewController: ProfileViewModelDelegate {
     func logoutSuccess() {
         logoutActivityIndicator.stopAnimating()
         logoutArrowImageView.isHidden = false
-        router?.navigate(to: .mainTabBarRoute)
+        router?.navigate(to: .loginRoute)
+        setupView()
     }
     
     

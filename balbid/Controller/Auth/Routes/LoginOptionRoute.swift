@@ -9,20 +9,24 @@ import UIKit
 import AppRouter
 
 class LoginOptionRoute: Route {
+    
+    let transitioningDelegate = LoginViewControllerTransitioningDelegate()
+
     var modalPresentationStyle: UIModalPresentationStyle {
-        return .fullScreen
+        .fullScreen
     }
 
     var animatedTransitioningDelegate: UIViewControllerTransitioningDelegate? {
-        return nil
+        transitioningDelegate
     }
-
+    
     var navigateType: NavigateType {
-        .windowRoot
+        .present
     }
 
     func create(_ router: AppRouter, _ params: [String: Any]?) -> UIViewController {
-        let navigationController = UIStoryboard.authStoryboard.getViewController(with: .loginNavigationViewControllerId) as!  AppNavigationController
+        let navigationController = UIStoryboard.authStoryboard.getViewController(with: .loginNavigationViewControllerId) as! AppNavigationController
         return navigationController
     }
 }
+

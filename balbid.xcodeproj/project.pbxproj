@@ -142,6 +142,7 @@
 		206E04A125BDA8DC00BD8902 /* UserOrderRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E04A025BDA8DC00BD8902 /* UserOrderRoute.swift */; };
 		206E04A525BDA9F500BD8902 /* OrderRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E04A425BDA9F500BD8902 /* OrderRoutes.swift */; };
 		206E04AC25BDB20B00BD8902 /* OrderFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E04AB25BDB20B00BD8902 /* OrderFilterCollectionViewCell.swift */; };
+		2083641225D2BE73003F0D9B /* LoginViewControllerTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2083641125D2BE73003F0D9B /* LoginViewControllerTransitioningDelegate.swift */; };
 		208513F425CAC7860025885B /* ReorderRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208513F325CAC7860025885B /* ReorderRoute.swift */; };
 		208513F725CACEE10025885B /* ReorderCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208513F625CACEE10025885B /* ReorderCollectionViewDataSource.swift */; };
 		208513FD25CADA1F0025885B /* ReorderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208513FC25CADA1F0025885B /* ReorderCell.swift */; };
@@ -180,6 +181,8 @@
 		20B2EE0C25D15716004B1DA2 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B2EE0B25D15716004B1DA2 /* Home.swift */; };
 		20B2EE1025D157A7004B1DA2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B2EE0F25D157A7004B1DA2 /* HomeViewModel.swift */; };
 		20B2EE1325D15E31004B1DA2 /* HomeSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B2EE1225D15E31004B1DA2 /* HomeSliderCell.swift */; };
+		20B2EE1725D16CF8004B1DA2 /* HomeProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B2EE1625D16CF8004B1DA2 /* HomeProductItem.swift */; };
+		20B2EE1B25D16D2B004B1DA2 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B2EE1A25D16D2B004B1DA2 /* Product.swift */; };
 		20BEBAE125CD69840051C900 /* CreditBalanceTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BEBAE025CD69840051C900 /* CreditBalanceTableViewDataSource.swift */; };
 		20C7F8F725CD7601001D0715 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C7F8F625CD7601001D0715 /* Payment.storyboard */; };
 		20C7F8FA25CD763B001D0715 /* PaymentRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7F8F925CD763B001D0715 /* PaymentRoutes.swift */; };
@@ -420,6 +423,7 @@
 		206E04A025BDA8DC00BD8902 /* UserOrderRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOrderRoute.swift; sourceTree = "<group>"; };
 		206E04A425BDA9F500BD8902 /* OrderRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRoutes.swift; sourceTree = "<group>"; };
 		206E04AB25BDB20B00BD8902 /* OrderFilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		2083641125D2BE73003F0D9B /* LoginViewControllerTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTransitioningDelegate.swift; sourceTree = "<group>"; };
 		208513F325CAC7860025885B /* ReorderRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReorderRoute.swift; sourceTree = "<group>"; };
 		208513F625CACEE10025885B /* ReorderCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReorderCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		208513FC25CADA1F0025885B /* ReorderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReorderCell.swift; sourceTree = "<group>"; };
@@ -458,6 +462,8 @@
 		20B2EE0B25D15716004B1DA2 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		20B2EE0F25D157A7004B1DA2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		20B2EE1225D15E31004B1DA2 /* HomeSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSliderCell.swift; sourceTree = "<group>"; };
+		20B2EE1625D16CF8004B1DA2 /* HomeProductItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductItem.swift; sourceTree = "<group>"; };
+		20B2EE1A25D16D2B004B1DA2 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		20BEBAE025CD69840051C900 /* CreditBalanceTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditBalanceTableViewDataSource.swift; sourceTree = "<group>"; };
 		20C7F8F625CD7601001D0715 /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
 		20C7F8F925CD763B001D0715 /* PaymentRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRoutes.swift; sourceTree = "<group>"; };
@@ -628,6 +634,7 @@
 			isa = PBXGroup;
 			children = (
 				083548772587C01100665DE0 /* LoginAnimationPresenter.swift */,
+				2083641125D2BE73003F0D9B /* LoginViewControllerTransitioningDelegate.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -1463,7 +1470,9 @@
 				3D4EEA1725CDFA21001DD389 /* Helper */,
 				2069AD2525CF34DD004ED42B /* User.swift */,
 				20B2EE0725D15646004B1DA2 /* SliderImage.swift */,
+				20B2EE1625D16CF8004B1DA2 /* HomeProductItem.swift */,
 				20B2EE0B25D15716004B1DA2 /* Home.swift */,
+				20B2EE1A25D16D2B004B1DA2 /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2022,6 +2031,7 @@
 				081AF824259F9D71000E3B04 /* CartCollectionViewDataSource.swift in Sources */,
 				081ADF822591023100B5AE47 /* AuthCompanyMainRoute.swift in Sources */,
 				20FBE4B325C8375600210190 /* AddNewShippingRoute.swift in Sources */,
+				2083641225D2BE73003F0D9B /* LoginViewControllerTransitioningDelegate.swift in Sources */,
 				08809EE525937E4B00AD41EE /* AuthorizePeopleProtocol.swift in Sources */,
 				20B2EE0C25D15716004B1DA2 /* Home.swift in Sources */,
 				081ADF85259102F600B5AE47 /* AuthCompanyRoutes.swift in Sources */,
@@ -2168,11 +2178,13 @@
 				0807031825A24AE5002B1776 /* ColorCollectionViewDelegate.swift in Sources */,
 				205F23C725C9948100BB52FD /* OrderProductCell.swift in Sources */,
 				083F4A21259F7D91005DEF75 /* HomeSelectionProtocol.swift in Sources */,
+				20B2EE1725D16CF8004B1DA2 /* HomeProductItem.swift in Sources */,
 				0894855225A1FD38001934A9 /* AddProductToCartDelegate.swift in Sources */,
 				087D90BC258BFAAA002BAE95 /* ProgressView.swift in Sources */,
 				3D4EEA0925CDF920001DD389 /* AlamofireFileDownload.swift in Sources */,
 				206E047A25BC9EF500BD8902 /* EditProfileRoute.swift in Sources */,
 				3DB1DB602586901200EF1E8F /* Validator.swift in Sources */,
+				20B2EE1B25D16D2B004B1DA2 /* Product.swift in Sources */,
 				08F0CC3A258BC1BF00FA2261 /* LoginRoute.swift in Sources */,
 				2092065D25C740D10072085E /* ShippingAdressTableViewDataSource.swift in Sources */,
 				206E048125BCA01400BD8902 /* ProfileViewController.swift in Sources */,
@@ -2462,7 +2474,7 @@
 			repositoryURL = "https://github.com/salahamassi/AppRouter-UIKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
+				minimumVersion = 1.0.7;
 			};
 		};
 		3D4EEA1225CDF9F2001DD389 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {

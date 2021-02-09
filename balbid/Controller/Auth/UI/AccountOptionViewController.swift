@@ -15,11 +15,18 @@ class AccountOptionViewController: BaseViewController {
 
     @IBOutlet weak var companyOptionView: AccountOptionView!
     @IBOutlet weak var individualOptionView: AccountOptionView!
+    @IBOutlet weak var logoImageView: UIImageView!
+
         
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     @IBAction func setAccountOption(_ sender: UIButton) {
         companyOptionView.isSet = sender.tag == 1
         individualOptionView.isSet = sender.tag == 0
@@ -32,6 +39,8 @@ class AccountOptionViewController: BaseViewController {
             router?.navigate(to: .authCompanyMainRoute)
         }
     }
+    
+    
 
 }
 

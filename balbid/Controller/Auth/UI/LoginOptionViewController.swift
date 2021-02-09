@@ -15,6 +15,10 @@ class LoginOptionViewController: BaseViewController {
     }
 
     @IBOutlet weak var splashLogoImageView: UIImageView!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var createAccountButton: UIButton!
+    @IBOutlet weak var continueAsguestButton: UIButton!
+
 
     @IBAction func login(sender: UIButton) {
         router?.navigate(to: .loginRoute)

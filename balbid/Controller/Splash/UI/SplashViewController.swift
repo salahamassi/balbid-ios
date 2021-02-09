@@ -11,12 +11,16 @@ import AppRouter
 class SplashViewController: BaseViewController {
 
     @IBOutlet weak var splashLogoImageView: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
 //            UserDefaultsManager.token = nil
-            print(UserDefaultsManager.token)
+//            print(UserDefaultsManager.token)
             if UserDefaultsManager.token != nil {
                 self.router?.navigate(to: .mainTabBarRoute)
             }else{
@@ -25,4 +29,6 @@ class SplashViewController: BaseViewController {
                 
         }
     }
+    
+    
 }
