@@ -47,7 +47,8 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
 //            return cell
 //        }
         else{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .productCellId, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .productCellId, for: indexPath) as! ProductCollectionViewCell
+            cell.product = home?.HomeProductItems[indexPath.section - 2].prodcuts[indexPath.row]
             return cell
         }
     }

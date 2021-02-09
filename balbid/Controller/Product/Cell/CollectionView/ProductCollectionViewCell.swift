@@ -6,11 +6,26 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProductCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var productDiscountPriceView: UIView!
+    @IBOutlet weak var productDiscountPriceLabel: UILabel!
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var offerLabel: UILabel!
     @IBOutlet weak var addToCartButton: UIButton!
+    @IBOutlet weak var productPriceLabel: UILabel!
+    @IBOutlet weak var productImageView: UIImageView!
+    
     var delegate : ProductCellDelegate?
+    
+    
+    var product: Product? {
+        didSet {
+            setProductData(product: product)
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +34,24 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     @IBAction func addToCart(_ sender: Any){
         delegate?.productCollectionViewCell(productCollectionViewCell: self, didSelect: self)
+    }
+    
+    private func setProductData(product: Product?){
+//        if let discount = product?.discount {
+//            productDiscountPriceLabel.text = discount + "% OFF"
+//        }else{
+            productDiscountPriceView.isHidden = true
+            productDiscountPriceLabel.isHidden = true
+            offerLabel.isHidden = true
+//        }
+        
+        productNameLabel.text = product?.name
+        productPriceLabel.text = (product?.price ?? "0") + " SR"
+        guard let imageUrl = URL(string: product?.image ?? "") else {
+            return
+        }
+        productImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        productImageView.sd_setImage(with: imageUrl)
     }
     
 }

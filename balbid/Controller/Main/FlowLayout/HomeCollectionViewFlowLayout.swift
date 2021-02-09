@@ -16,30 +16,30 @@ class HomeCollectionViewFlowLayout  {
                 return self.sliderSection()
             case 1 :
                 return self.sliderIndicatorSection()
-            case 2 :
-                return self.categorySection()
-            case 3 :
-                return self.featureSection()
-            case 4 :
-                return self.pickedFeatureSection()
-            case 5 :
-                return self.productSection(headerMarginTop: 0, headerMarginBottom: 0)
-            case 6 :
-                return self.productSection(headerMarginTop: 30, headerMarginBottom: 16)
-            case 7 :
-                return self.adSection(height: 125)
-            case 8 :
-                return self.strongestOfferSection()
-            case 9 :
-                return self.productSection(headerMarginTop: 0, headerMarginBottom: 0)
-            case 10 :
-                return self.adSection(height: 159)
-            case 11 :
-                return self.productCategorySection()
-            case 12 :
-                return self.productSection(headerMarginTop: 0, headerMarginBottom: 0,shouldShowHeader: false)
+//            case 2 :
+//                return self.categorySection()
+//            case 3 :
+//                return self.featureSection()
+//            case 4 :
+//                return self.pickedFeatureSection()
+//            case 5 :
+//                return self.productSection(headerMarginTop: 0, headerMarginBottom: 0)
+//            case 6 :
+//                return self.productSection(headerMarginTop: 30, headerMarginBottom: 16)
+//            case 7 :
+//                return self.adSection(height: 125)
+//            case 8 :
+//                return self.strongestOfferSection()
+//            case 9 :
+//                return self.productSection(headerMarginTop: 0, headerMarginBottom: 0)
+//            case 10 :
+//                return self.adSection(height: 159)
+//            case 11 :
+//                return self.productCategorySection()
+//            case 12 :
+//                return self.productSection(headerMarginTop: 0, headerMarginBottom: 0,shouldShowHeader: false)
             default :
-                return self.sliderSection()
+                return self.productSection(headerMarginTop: 0, headerMarginBottom: 0)
             }
         }
         return layout
