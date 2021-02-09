@@ -8,12 +8,14 @@
 import Foundation
 import SwiftyJSON
 
-class Banner:  SwiftyModelData {
+struct Banner:  SwiftyModelData {
     let id: Int
     let image: String
     let enterpriseId: String
     let brandId: String
     let sortOrder: String
+    let startDate: String
+    let expireDate: String
 
     init(json: JSON) {
         id = json["id"].intValue
@@ -21,6 +23,8 @@ class Banner:  SwiftyModelData {
         enterpriseId = json["enterprise_id"].stringValue
         brandId = json["brand_id"].stringValue
         sortOrder = json["sort_order"].stringValue
+        startDate = json["start_date"].stringValue
+        expireDate = json["expire_date"].stringValue
     }
 }
 
