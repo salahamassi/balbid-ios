@@ -50,7 +50,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         //        }
         else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .productCellId, for: indexPath) as! ProductCollectionViewCell
-            cell.product = home?.HomeProductItems[indexPath.section - 2].prodcuts[indexPath.row]
+            cell.product = home?.homeProductItems[indexPath.section - 2].prodcuts[indexPath.row]
             return cell
         }
     }
@@ -78,7 +78,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         //        }else if section == 10 {
         //            return 1
         //        }
-        return home?.HomeProductItems[section - 2].prodcuts.count ?? 0
+        return home?.homeProductItems[section - 2].prodcuts.count ?? 0
     }
     
     
@@ -100,7 +100,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
             }
         }
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: .topKind, withReuseIdentifier: .productHeaderCellId, for: indexPath) as! ProductHeaderCell
-        header.homeProductItem = home?.HomeProductItems[indexPath.section - 2]
+        header.homeProductItem = home?.homeProductItems[indexPath.section - 2]
         return header
         
     }

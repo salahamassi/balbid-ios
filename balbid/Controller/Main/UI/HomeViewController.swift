@@ -14,7 +14,8 @@ class HomeViewController: BaseViewController {
     
     let homeCollectionViewDataSource: HomeCollectionViewDataSource = HomeCollectionViewDataSource()
     let homeCollectionViewFlowLayout: HomeCollectionViewFlowLayout = HomeCollectionViewFlowLayout()
-    var homeCollectionViewDelegate: HomeCollectionViewDelegate!
+    var homeCollectionViewDelegate:
+        HomeCollectionViewDelegate!
 
     let searchBar = UISearchBar(frame: .zero)
     
@@ -85,7 +86,7 @@ extension HomeViewController: HomeSelectionProtocol{
 extension HomeViewController: HomeViewModelDelegate {
     func loadHomeSuccess(home: Home) {
         activityIndicator.stopAnimating()
-        homeCollectionViewDataSource.numberOfSection = 2 + home.HomeProductItems.count
+        homeCollectionViewDataSource.numberOfSection = 2 + home.homeProductItems.count
         homeCollectionViewDataSource.home = home
         collectionView.reloadData()
         let banners = home.banners.sorted { (item1, item2) -> Bool in
