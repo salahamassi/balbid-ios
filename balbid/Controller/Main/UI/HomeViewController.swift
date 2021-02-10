@@ -89,11 +89,8 @@ extension HomeViewController: HomeViewModelDelegate {
         homeCollectionViewDataSource.numberOfSection = 2 + home.homeProductItems.count
         homeCollectionViewDataSource.home = home
         collectionView.reloadData()
-        let banners = home.banners.sorted { (item1, item2) -> Bool in
-            item1.sortOrder == item2.sortOrder
-        }
-        
-        homeCollectionViewFlowLayout.sectionWithFooters = banners.map {
+
+        homeCollectionViewFlowLayout.sectionWithFooters = home.banners.map {
             (Int($0.sortOrder) ?? 0) + 1
         }
         

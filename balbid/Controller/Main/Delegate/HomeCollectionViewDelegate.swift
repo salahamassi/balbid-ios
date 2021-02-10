@@ -24,5 +24,6 @@ class HomeCollectionViewDelegate: NSObject, UICollectionViewDelegate {
         let currentIndex = collectionView.contentOffset.x / collectionView.frame.size.width
         delegate?.didMoveHomeSlider(to: Int(currentIndex))
     }
+
     
 }
