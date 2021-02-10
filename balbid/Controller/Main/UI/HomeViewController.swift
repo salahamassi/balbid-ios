@@ -27,12 +27,7 @@ class HomeViewController: BaseViewController {
         setupViewModel()
     }
         
-    private func setupCollectionView(){
-        homeCollectionViewDelegate = HomeCollectionViewDelegate(collectionView: collectionView)
-        collectionView.dataSource = homeCollectionViewDataSource
-        collectionView.collectionViewLayout = homeCollectionViewFlowLayout.setupFlowLayout()
-        homeCollectionViewDelegate.delegate = self
-        collectionView.delegate = homeCollectionViewDelegate
+    fileprivate func registerCell() {
         collectionView.register(UINib(nibName: .productHeader, bundle: nil), forSupplementaryViewOfKind: .topKind, withReuseIdentifier: .productHeaderCellId)
         
         collectionView.register(UINib(nibName: .wholeSaleOfferHeader, bundle: nil), forSupplementaryViewOfKind: .topKind, withReuseIdentifier: .wholesaleOffersHeaderCellId)
@@ -40,6 +35,19 @@ class HomeViewController: BaseViewController {
         collectionView.register(UINib(nibName: .strongestOfferHeader, bundle: nil), forSupplementaryViewOfKind: .topKind, withReuseIdentifier: .strongestOfferProductHeaderCellId)
         
         collectionView.register(UINib(nibName: .productCell, bundle: nil), forCellWithReuseIdentifier: .productCellId)
+        
+        collectionView.register(UINib(nibName: .productFooter, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: .productFooterCellId)
+
+        
+    }
+    
+    private func setupCollectionView(){
+        homeCollectionViewDelegate = HomeCollectionViewDelegate(collectionView: collectionView)
+        collectionView.dataSource = homeCollectionViewDataSource
+        collectionView.collectionViewLayout = homeCollectionViewFlowLayout.setupFlowLayout()
+        homeCollectionViewDelegate.delegate = self
+        collectionView.delegate = homeCollectionViewDelegate
+        registerCell()
     }
 
     
@@ -79,6 +87,14 @@ extension HomeViewController: HomeViewModelDelegate {
         homeCollectionViewDataSource.numberOfSection = 2 + home.HomeProductItems.count
         homeCollectionViewDataSource.home = home
         collectionView.reloadData()
+        let banners = home.banners.sorted { (item1, item2) -> Bool in
+            item1.sortOrder == item2.sortOrder
+        }
+        
+        homeCollectionViewFlowLayout.sectionWithFooters = banners.map {
+            (Int($0.sortOrder) ?? 0) + 1
+        }
+        
     }
     
     func apiError(error: String) {

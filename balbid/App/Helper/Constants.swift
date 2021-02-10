@@ -53,6 +53,7 @@ extension String {
     static let confirmAlertView = "ConfirmAlertView"
     static let progressView = "ProgressView"
     static let productHeader = "ProductHeaderCell"
+    static let productFooter = "ProductFooterCell"
     static let wholeSaleOfferHeader = "WholeSaleOfferHeaderCell"
     static let strongestOfferHeader = "StrongestOfferHeaderCell"
     static let categoryContentHeader = "CategoryContentHeaderCell"
@@ -102,6 +103,7 @@ extension String {
     static let reorderCellId = "reorder_cell"
     static let creditBalanceCellId = "credit_balance_cell"
     static let paymentCardCellId = "payment_card_cell"
+    static let productFooterCellId = "product_footer_cell"
 
     
     

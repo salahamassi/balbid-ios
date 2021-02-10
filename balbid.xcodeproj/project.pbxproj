@@ -193,6 +193,8 @@
 		20C7F90F25CD8B98001D0715 /* PaymentCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7F90E25CD8B98001D0715 /* PaymentCardCell.swift */; };
 		20C7F91325CD9A93001D0715 /* PaymentCardTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7F91225CD9A92001D0715 /* PaymentCardTableViewDelegate.swift */; };
 		20CE078325D32B5F0012BAC4 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CE078225D32B5F0012BAC4 /* Banner.swift */; };
+		20CE078925D339920012BAC4 /* ProductFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20CE078825D339920012BAC4 /* ProductFooterCell.xib */; };
+		20CE078B25D339E40012BAC4 /* ProductFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CE078A25D339E40012BAC4 /* ProductFooterCell.swift */; };
 		20D9828525D325A500C421E6 /* Extension+String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D9828425D325A500C421E6 /* Extension+String+Validation.swift */; };
 		20FBE4AD25C823A200210190 /* TextViewWithHint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FBE4AC25C823A200210190 /* TextViewWithHint.swift */; };
 		20FBE4B025C8370800210190 /* AddNewShippingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FBE4AF25C8370800210190 /* AddNewShippingViewController.swift */; };
@@ -477,6 +479,8 @@
 		20C7F90E25CD8B98001D0715 /* PaymentCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardCell.swift; sourceTree = "<group>"; };
 		20C7F91225CD9A92001D0715 /* PaymentCardTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardTableViewDelegate.swift; sourceTree = "<group>"; };
 		20CE078225D32B5F0012BAC4 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		20CE078825D339920012BAC4 /* ProductFooterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductFooterCell.xib; sourceTree = "<group>"; };
+		20CE078A25D339E40012BAC4 /* ProductFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFooterCell.swift; sourceTree = "<group>"; };
 		20D9828425D325A500C421E6 /* Extension+String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String+Validation.swift"; sourceTree = "<group>"; };
 		20FBE4AC25C823A200210190 /* TextViewWithHint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithHint.swift; sourceTree = "<group>"; };
 		20FBE4AF25C8370800210190 /* AddNewShippingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewShippingViewController.swift; sourceTree = "<group>"; };
@@ -678,6 +682,7 @@
 				083E759C259CA24200EDF708 /* WholeSaleOfferHeaderCell.xib */,
 				083E75A2259CAB6C00EDF708 /* StrongestOfferHeaderCell.xib */,
 				083E75BF259DF18600EDF708 /* CategoryContentHeaderCell.xib */,
+				20CE078825D339920012BAC4 /* ProductFooterCell.xib */,
 			);
 			path = nib;
 			sourceTree = "<group>";
@@ -828,6 +833,7 @@
 				08B73788259C95D400880213 /* ProductHeaderCell.swift */,
 				083F4A04259F36A3005DEF75 /* CategoryContentHeaderCollectionViewCell.swift */,
 				20B2EE1225D15E31004B1DA2 /* HomeSliderCell.swift */,
+				20CE078A25D339E40012BAC4 /* ProductFooterCell.swift */,
 			);
 			path = collectionView;
 			sourceTree = "<group>";
@@ -1948,6 +1954,7 @@
 				083E759D259CA24200EDF708 /* WholeSaleOfferHeaderCell.xib in Resources */,
 				083F4A2C259F895E005DEF75 /* Cart.storyboard in Resources */,
 				20A411F725BC828000327371 /* Profile.storyboard in Resources */,
+				20CE078925D339920012BAC4 /* ProductFooterCell.xib in Resources */,
 				08B1A73E25879024003D49EF /* Tajawal-Medium 500.ttf in Resources */,
 				2092065125C719BE0072085E /* ProductImageCell.xib in Resources */,
 				20A1A36525CDA34300C1115C /* AddNewCardView.xib in Resources */,
@@ -2265,6 +2272,7 @@
 				087A90E725A5E57B00B8AA96 /* ScrollViewContainingDelegate.swift in Sources */,
 				20AAF11F25C2E86B00CC31D4 /* ProductDetailCollectionViewDataSource.swift in Sources */,
 				08A507C3259FCA5900507D8C /* SwipeActionDelegate.swift in Sources */,
+				20CE078B25D339E40012BAC4 /* ProductFooterCell.swift in Sources */,
 				083E75BA259DEF1F00EDF708 /* CategriesContentCollectionViewFlowLayout.swift in Sources */,
 				3D4EEA3325CDFEF7001DD389 /* AppDownloadFiles.swift in Sources */,
 				3DB1DB2D25868A1000EF1E8F /* Extensions+UIColor.swift in Sources */,

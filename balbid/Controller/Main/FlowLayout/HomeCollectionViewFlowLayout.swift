@@ -8,6 +8,7 @@
 import UIKit
 
 class HomeCollectionViewFlowLayout  {
+    var sectionWithFooters: [Int] = []
     func setupFlowLayout() -> UICollectionViewLayout{
         let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int,
                                                             layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
@@ -39,7 +40,7 @@ class HomeCollectionViewFlowLayout  {
 //            case 12 :
 //                return self.productSection(headerMarginTop: 0, headerMarginBottom: 0,shouldShowHeader: false)
             default :
-                return self.productSection(headerMarginTop: 0, headerMarginBottom: 0)
+                return self.productSection(headerMarginTop: sectionIndex == 2 ? 16 : 0, headerMarginBottom: 0, shouldShowFooter: self.sectionWithFooters.contains(sectionIndex))
             }
         }
         return layout
@@ -106,7 +107,7 @@ class HomeCollectionViewFlowLayout  {
         return section
     }
     
-    private func productSection(headerMarginTop:CGFloat,headerMarginBottom:CGFloat,shouldShowHeader : Bool = true)-> NSCollectionLayoutSection{
+    private func productSection(headerMarginTop:CGFloat,headerMarginBottom:CGFloat,shouldShowHeader : Bool = true, shouldShowFooter: Bool = false )-> NSCollectionLayoutSection{
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets.leading = 18
@@ -116,7 +117,12 @@ class HomeCollectionViewFlowLayout  {
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets.top = 14
         if  shouldShowHeader {
-            section.boundarySupplementaryItems = [NSCollectionLayoutBoundarySupplementaryItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),heightDimension: .estimated(60 + headerMarginTop+headerMarginBottom)), elementKind: .topKind, alignment: .topLeading)]
+            let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),heightDimension: .estimated(35 + headerMarginTop+headerMarginBottom)), elementKind: .topKind, alignment: .topLeading)
+            let footer = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),heightDimension: .absolute(159)), elementKind: UICollectionView.elementKindSectionFooter , alignment: .bottomLeading)
+            section.boundarySupplementaryItems = [header]
+            if shouldShowFooter {
+                section.boundarySupplementaryItems.append(footer)
+            }
         }
         section.orthogonalScrollingBehavior = .continuous
         return section

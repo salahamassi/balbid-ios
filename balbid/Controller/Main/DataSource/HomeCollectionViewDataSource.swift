@@ -24,28 +24,28 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
             cell.currentPage = currentPage
             return cell
         }
-//        else if indexPath.section == 2 {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .categoryCellId, for: indexPath)
-//            return cell
-//        }else if indexPath.section == 3{
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .offerCellId, for: indexPath)
-//            return cell
-//        }else if indexPath.section == 4{
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .pickedFeatureCellId, for: indexPath)
-//            return cell
-//        }else if indexPath.section == 7 {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .addCellId, for: indexPath)
-//            return cell
-//        }else if indexPath.section == 8 {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .strongestOfferCellId, for: indexPath)
-//            return cell
-//        }else if indexPath.section == 10 {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .offerAdCellId, for: indexPath)
-//            return cell
-//        }else if indexPath.section == 11 {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .productCategoryCellId, for: indexPath)
-//            return cell
-//        }
+        //        else if indexPath.section == 2 {
+        //            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .categoryCellId, for: indexPath)
+        //            return cell
+        //        }else if indexPath.section == 3{
+        //            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .offerCellId, for: indexPath)
+        //            return cell
+        //        }else if indexPath.section == 4{
+        //            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .pickedFeatureCellId, for: indexPath)
+        //            return cell
+        //        }else if indexPath.section == 7 {
+        //            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .addCellId, for: indexPath)
+        //            return cell
+        //        }else if indexPath.section == 8 {
+        //            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .strongestOfferCellId, for: indexPath)
+        //            return cell
+        //        }else if indexPath.section == 10 {
+        //            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .offerAdCellId, for: indexPath)
+        //            return cell
+        //        }else if indexPath.section == 11 {
+        //            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .productCategoryCellId, for: indexPath)
+        //            return cell
+        //        }
         else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .productCellId, for: indexPath) as! ProductCollectionViewCell
             cell.product = home?.HomeProductItems[indexPath.section - 2].prodcuts[indexPath.row]
@@ -63,19 +63,19 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         }else if section == 1 {
             return 1
         }
-//        else if section == 3 {
-//            return 2
-//        }else if section == 4 {
-//            return 2
-//        }else if section == 5 {
-//            return 7
-//        }else if section == 7 {
-//            return 1
-//        }else if section == 8 {
-//            return 4
-//        }else if section == 10 {
-//            return 1
-//        }
+        //        else if section == 3 {
+        //            return 2
+        //        }else if section == 4 {
+        //            return 2
+        //        }else if section == 5 {
+        //            return 7
+        //        }else if section == 7 {
+        //            return 1
+        //        }else if section == 8 {
+        //            return 4
+        //        }else if section == 10 {
+        //            return 1
+        //        }
         return home?.HomeProductItems[section - 2].prodcuts.count ?? 0
     }
     
@@ -87,9 +87,19 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         }else if indexPath.section == 8 {
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: .topKind, withReuseIdentifier: .strongestOfferProductHeaderCellId, for: indexPath)
             return header
+        }else if kind == UICollectionView.elementKindSectionFooter  {
+            
+            if let banner = home?.banners.first(where: { (banner) -> Bool in
+                banner.sortOrder == "\(indexPath.section - 1)"
+            }) {
+                let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter , withReuseIdentifier: .productFooterCellId, for: indexPath) as! ProductFooterCell
+                footer.banner = banner
+                return footer
+            }
         }
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: .topKind, withReuseIdentifier: .productHeaderCellId, for: indexPath) as! ProductHeaderCell
         header.homeProductItem = home?.HomeProductItems[indexPath.section - 2]
         return header
+        
     }
 }

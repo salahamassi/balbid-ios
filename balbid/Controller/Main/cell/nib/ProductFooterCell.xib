@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="product_footer_cell" id="7Cy-Y9-vMI" customClass="ProductFooterCell" customModule="balbid" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yj7-z8-dDm">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad_sample" translatesAutoresizingMaskIntoConstraints="NO" id="yev-ZO-fok">
+                        <rect key="frame" x="15" y="0.0" width="384" height="125"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="yev-ZO-fok" secondAttribute="bottom" id="8be-RV-dfx"/>
+                    <constraint firstItem="yev-ZO-fok" firstAttribute="leading" secondItem="yj7-z8-dDm" secondAttribute="leading" constant="15" id="Qwx-KO-4K6"/>
+                    <constraint firstAttribute="trailing" secondItem="yev-ZO-fok" secondAttribute="trailing" constant="15" id="f1G-ce-9mr"/>
+                    <constraint firstItem="yev-ZO-fok" firstAttribute="top" secondItem="yj7-z8-dDm" secondAttribute="top" id="ma5-Yb-kaY"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <size key="customSize" width="414" height="125"/>
+            <connections>
+                <outlet property="bannerImageView" destination="yev-ZO-fok" id="Vkt-5e-fQB"/>
+            </connections>
+            <point key="canvasLocation" x="-383" y="43"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ad_sample" width="344" height="125"/>
+    </resources>
+</document>
