@@ -65,7 +65,7 @@ class AdCategoriesViewController: BaseViewController {
     }
     
     func addDarkView(){
-        darkLayer.backgroundColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:0.5).cgColor
+        darkLayer.backgroundColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:0.7).cgColor
         darkLayer.frame = UIScreen.main.bounds
         UIView.animate(withDuration: 0.5) {
             UIApplication.shared.keyWindow?.layer.insertSublayer(self.darkLayer, below: self.addedToCarView.layer)
