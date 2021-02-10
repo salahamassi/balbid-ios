@@ -8,7 +8,9 @@
 import UIKit
 
 class SliderIndicatorCollectionViewCell: UICollectionViewCell {
+    
     @IBOutlet weak var pageControl: UIPageControl!
+    weak var delegate: SliderIndicatorCollectionViewCellDelegate?
     
     var currentPage = 0 {
         didSet {
@@ -17,4 +19,13 @@ class SliderIndicatorCollectionViewCell: UICollectionViewCell {
     }
     
   
+    @IBAction func pageChanged(_ sender: Any) {
+        delegate?.didChangePage(to: pageControl.currentPage)
+    }
+}
+
+
+
+protocol  SliderIndicatorCollectionViewCellDelegate: class {
+    func didChangePage(to page: Int)
 }

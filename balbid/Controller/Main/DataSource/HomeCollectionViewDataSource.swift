@@ -12,6 +12,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     var numberOfSection = 0
     var home: Home?
     var currentPage: Int = 0
+    weak var delegate: SliderIndicatorCollectionViewCellDelegate?
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
@@ -22,6 +23,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .sliderIndicatorCellId, for: indexPath) as! SliderIndicatorCollectionViewCell
             cell.pageControl.numberOfPages = home?.imageSlider.count ?? 0
             cell.currentPage = currentPage
+            cell.delegate = delegate
             return cell
         }
         //        else if indexPath.section == 2 {

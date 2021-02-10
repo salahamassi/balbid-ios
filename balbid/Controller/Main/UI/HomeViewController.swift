@@ -48,6 +48,7 @@ class HomeViewController: BaseViewController {
         homeCollectionViewDelegate.delegate = self
         collectionView.delegate = homeCollectionViewDelegate
         registerCell()
+        homeCollectionViewDataSource.delegate = self
     }
 
     
@@ -102,4 +103,11 @@ extension HomeViewController: HomeViewModelDelegate {
     }
     
     
+}
+
+
+extension HomeViewController: SliderIndicatorCollectionViewCellDelegate {
+    func didChangePage(to page: Int) {
+        collectionView.scrollToItem(at: IndexPath(row: page, section: 0), at: .centeredHorizontally, animated: true)
+    }    
 }

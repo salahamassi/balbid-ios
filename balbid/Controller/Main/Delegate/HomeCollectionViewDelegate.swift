@@ -17,7 +17,7 @@ class HomeCollectionViewDelegate: NSObject, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.didSelect(item : indexPath)
+//        delegate?.didSelect(item : indexPath)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -25,9 +25,4 @@ class HomeCollectionViewDelegate: NSObject, UICollectionViewDelegate {
         delegate?.didMoveHomeSlider(to: Int(currentIndex))
     }
     
-
-    
-     
-    
-
 }
