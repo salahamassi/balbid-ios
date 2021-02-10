@@ -45,8 +45,8 @@ class CategoriesViewController: BaseViewController {
         categoriesContentCollectionViewDataSource.delegate = self
         
         //Handle select row action
-        categriesContentCollectionViewDelegate.didSelectRow = { indexPath in
-            self.router?.navigate(to: .adCategoriesRoute)
+        categriesContentCollectionViewDelegate.didSelectRow = { [weak self] indexPath in
+            self?.router?.navigate(to: .adCategoriesRoute)
         }
         
         

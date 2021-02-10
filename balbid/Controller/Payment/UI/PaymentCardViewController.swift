@@ -32,10 +32,12 @@ class PaymentCardViewController: BaseViewController {
     private func setupTableView(){
         tableView.dataSource = paymentCardTableViewDataSource
         tableView.delegate = paymentCardTableViewDelegate
-        paymentCardTableViewDelegate.didSelectRow =  { indexPath in
-            let preSelectedIndex = self.paymentCardTableViewDataSource.selectedIndex
-            self.paymentCardTableViewDataSource.selectedIndex = indexPath.row
-            self.tableView.reloadRows(at: preSelectedIndex != -1 ? [IndexPath(row: preSelectedIndex, section: 0),IndexPath(row: indexPath.row, section: 0)] : [IndexPath(row: indexPath.row, section: 0)] , with: .none)
+        paymentCardTableViewDelegate.didSelectRow =  { [weak self] indexPath in
+            guard let preSelectedIndex = self?.paymentCardTableViewDataSource.selectedIndex else {
+                return
+            }
+            self?.paymentCardTableViewDataSource.selectedIndex = indexPath.row
+            self?.tableView.reloadRows(at: preSelectedIndex != -1 ? [IndexPath(row: preSelectedIndex, section: 0),IndexPath(row: indexPath.row, section: 0)] : [IndexPath(row: indexPath.row, section: 0)] , with: .none)
         }
 
     }

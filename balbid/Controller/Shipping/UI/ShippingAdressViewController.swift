@@ -31,9 +31,9 @@ class ShippingAdressViewController: BaseViewController {
     private func setupTableView(){
         tableView.dataSource = shippingAdressTableViewDataSource
         tableView.delegate = shippingAddressTableViewDelegate
-        shippingAddressTableViewDelegate.didSelect = { indexPath in
-            self.shippingAdressTableViewDataSource.selectedIndex = indexPath.row
-            self.tableView.reloadData()
+        shippingAddressTableViewDelegate.didSelect = { [weak self] indexPath in
+            self?.shippingAdressTableViewDataSource.selectedIndex = indexPath.row
+            self?.tableView.reloadData()
         }
     }
     

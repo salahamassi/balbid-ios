@@ -37,13 +37,13 @@ class UserOrderViewController: BaseViewController {
 
     private func setupFilterCollectionView(){
         filterCollectionViewDelegate = FilterCollectionViewDelegate(filters: filters)
-        filterCollectionViewDelegate.didSelectItem = { [self] indexPath in
-            if(!self.filterCollectionViewDataSource.selectedIndexPath.contains(indexPath)){
-                self.filterCollectionViewDataSource.selectedIndexPath.append(indexPath)
+        filterCollectionViewDelegate.didSelectItem = { [weak self] indexPath in
+            if(!(self?.filterCollectionViewDataSource.selectedIndexPath.contains(indexPath) ?? false) ){
+                self?.filterCollectionViewDataSource.selectedIndexPath.append(indexPath)
             }else{
-                self.filterCollectionViewDataSource.selectedIndexPath.remove(at: self.filterCollectionViewDataSource .selectedIndexPath.firstIndex(of: indexPath) ?? 0)
+                self?.filterCollectionViewDataSource.selectedIndexPath.remove(at: self?.filterCollectionViewDataSource .selectedIndexPath.firstIndex(of: indexPath) ?? 0)
             }
-            self.filterCollectionView.reloadItems(at: [indexPath])
+            self?.filterCollectionView.reloadItems(at: [indexPath])
         }
         filterCollectionViewDataSource = FilterCollectionViewDataSource(filters: filters)
         filterCollectionView.dataSource = filterCollectionViewDataSource

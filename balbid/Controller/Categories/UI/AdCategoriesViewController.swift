@@ -14,12 +14,14 @@ class AdCategoriesViewController: BaseViewController {
     let adCategoriesCollectionFlowLayout = AdCategoriesCollectionFlowLayout()
     let adCategoriesCollectionDataSource = AdCategoriesCollectionDataSource()
     private let addToCartBottomSheet = AddToCartBottomSheet.initFromNib()
+    private let addedToCarView = AddedToCartView.initFromNib()
+    let darkLayer = CALayer()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
-
+        setupAddedToCartView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,7 +44,9 @@ class AdCategoriesViewController: BaseViewController {
             guard let indexPath = self?.collectionView.indexPath(for: cell) else {
                 return
             }
-            self?.addToCartBottomSheet.show()
+//            self?.addToCartBottomSheet.show()
+            self?.addedToCarView.showView()
+            self?.addDarkView()
         }
         adCategoriesCollectionFlowLayout.showProductDetail = { [weak self] (row) in
             self?.router?.navigate(to: .productDetailRoute)
@@ -50,11 +54,28 @@ class AdCategoriesViewController: BaseViewController {
         collectionView.register(cells: (nibName: .productCell, cellId: .productCellId))
     }
     
-    private func setupAddToCartView(){
+    
+    private func setupAddedToCartView(){
+        UIApplication.shared.keyWindow?.addSubview(addedToCarView)
+        addedToCarView.setupView()
     }
     
     @IBAction func goToFilter(_ sender: Any){
         router?.navigate(to: .categoriesFilterRoute)
+    }
+    
+    func addDarkView(){
+        darkLayer.backgroundColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:0.5).cgColor
+        darkLayer.frame = UIScreen.main.bounds
+        UIView.animate(withDuration: 0.5) {
+            UIApplication.shared.keyWindow?.layer.insertSublayer(self.darkLayer, below: self.addedToCarView.layer)
+        }
+    }
+    
+    func removeDarkView(){
+        UIView.animate(withDuration: 0.5) {
+            self.darkLayer.removeFromSuperlayer()
+        }
     }
 }
 

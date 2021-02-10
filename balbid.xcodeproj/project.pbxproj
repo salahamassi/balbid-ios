@@ -110,6 +110,7 @@
 		08F2B8D6258BE8E000CAEC9A /* Tajawal-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08F2B8D5258BE8E000CAEC9A /* Tajawal-Bold.ttf */; };
 		08F3B5052596A0380099AC2B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F3B5042596A0380099AC2B /* HomeViewController.swift */; };
 		08F3B50B2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F3B50A2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift */; };
+		2016B38225D487FE00E98DBC /* AddedToCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2016B38125D487FE00E98DBC /* AddedToCartView.swift */; };
 		2019AC3C25C9DC6D00455166 /* OrderTraceMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019AC3B25C9DC6D00455166 /* OrderTraceMapViewController.swift */; };
 		2019AC3F25CA093500455166 /* OrderTraceMapRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019AC3E25CA093500455166 /* OrderTraceMapRoute.swift */; };
 		2019AC4325CA14EC00455166 /* ReorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019AC4225CA14EC00455166 /* ReorderViewController.swift */; };
@@ -352,6 +353,7 @@
 		08F2B8D5258BE8E000CAEC9A /* Tajawal-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Bold.ttf"; sourceTree = "<group>"; };
 		08F3B5042596A0380099AC2B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		08F3B50A2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		2016B38125D487FE00E98DBC /* AddedToCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedToCartView.swift; sourceTree = "<group>"; };
 		2019AC3B25C9DC6D00455166 /* OrderTraceMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTraceMapViewController.swift; sourceTree = "<group>"; };
 		2019AC3E25CA093500455166 /* OrderTraceMapRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTraceMapRoute.swift; sourceTree = "<group>"; };
 		2019AC4225CA14EC00455166 /* ReorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReorderViewController.swift; sourceTree = "<group>"; };
@@ -729,7 +731,6 @@
 		087CA9D92599080800113CEC /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				08A507B9259FB67100507D8C /* TableView */,
 				083E7595259C9CD400EDF708 /* nib */,
 				087CA9DA2599080F00113CEC /* collectionView */,
 			);
@@ -825,6 +826,7 @@
 			children = (
 				0894853B25A1EC26001934A9 /* nib */,
 				0894854825A1FC1B001934A9 /* AddToCartBottomSheet.swift */,
+				2016B38125D487FE00E98DBC /* AddedToCartView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -844,13 +846,6 @@
 				0894855125A1FD38001934A9 /* AddProductToCartDelegate.swift */,
 			);
 			path = Protocol;
-			sourceTree = "<group>";
-		};
-		08A507B9259FB67100507D8C /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TableView;
 			sourceTree = "<group>";
 		};
 		08A9B8C425A657B100AE5238 /* datasource */ = {
@@ -1945,6 +1940,7 @@
 				3DB1DB3625868A1000EF1E8F /* Extenstions+UICollectionViewFlowLayout.swift in Sources */,
 				083F4A28259F7EE9005DEF75 /* CategoriesRoutes.swift in Sources */,
 				206E047E25BC9F9000BD8902 /* ProfileRoutes.swift in Sources */,
+				2016B38225D487FE00E98DBC /* AddedToCartView.swift in Sources */,
 				08C567832596583600C80A75 /* MainTabBarRoute.swift in Sources */,
 				08438E6925A2694000796373 /* ProductRoutes.swift in Sources */,
 				3DC76B6125975C2100EE2428 /* PhotosPickerRoute.swift in Sources */,
