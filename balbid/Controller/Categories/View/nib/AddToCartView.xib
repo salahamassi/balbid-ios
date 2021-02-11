@@ -120,6 +120,9 @@
                                     <real key="value" value="16"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="addToCart:" destination="iN0-l3-epB" eventType="touchUpInside" id="1sd-Md-emh"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>

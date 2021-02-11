@@ -21,6 +21,7 @@ class AdCategoriesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
+        setupAddToCartView()
         setupAddedToCartView()
     }
     
@@ -44,9 +45,8 @@ class AdCategoriesViewController: BaseViewController {
             guard let indexPath = self?.collectionView.indexPath(for: cell) else {
                 return
             }
-//            self?.addToCartBottomSheet.show()
-            self?.addedToCarView.showView()
-            self?.addDarkView()
+            self?.addToCartBottomSheet.show()
+            
         }
         adCategoriesCollectionFlowLayout.showProductDetail = { [weak self] (row) in
             self?.router?.navigate(to: .productDetailRoute)
@@ -54,6 +54,13 @@ class AdCategoriesViewController: BaseViewController {
         collectionView.register(cells: (nibName: .productCell, cellId: .productCellId))
     }
     
+    private func setupAddToCartView(){
+        addToCartBottomSheet.addProductsToCart = { [weak self] in
+            self?.addToCartBottomSheet.hide()
+            self?.addedToCarView.showView()
+            self?.addDarkView()
+        }
+    }
     
     private func setupAddedToCartView(){
         UIApplication.shared.keyWindow?.addSubview(addedToCarView)

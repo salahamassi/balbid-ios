@@ -20,8 +20,10 @@ class AddedToCartView: UIView {
     // setup the constraint of the view
     func setupView(){
         let screenWidth = UIScreen.main.bounds.width
-        anchor(top: nil, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor , size: CGSize(width: screenWidth , height: 116 + safeAreaInsets.top))
-        topConstraint = topAnchor.constraint(equalTo: superview?.topAnchor ?? topAnchor, constant: -116)
+        let height = 116 + safeAreaInsets.top
+        anchor(top: nil, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor , size: CGSize(width: screenWidth , height: height))
+        
+        topConstraint = topAnchor.constraint(equalTo: superview?.topAnchor ?? topAnchor, constant: -116 - safeAreaInsets.top)
         centerXAnchor.constraint(equalTo: (superview?.centerXAnchor)!).isActive = true
         topConstraint.isActive = true
         withCornerRadius(15, corners: [.bottomLeft,.bottomRight])
