@@ -112,6 +112,7 @@
 		08F3B50B2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F3B50A2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift */; };
 		1882794425D702030008D50F /* PriceSeekBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1882794325D702030008D50F /* PriceSeekBarView.xib */; };
 		1882794725D705F60008D50F /* PriceSeekBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882794625D705F60008D50F /* PriceSeekBarView.swift */; };
+		1882794B25D718950008D50F /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882794A25D718950008D50F /* MainTabBarViewController.swift */; };
 		18FC1BF325D6070B0087706E /* CreateOrder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FC1BF225D6070B0087706E /* CreateOrder.storyboard */; };
 		18FC1BF825D6AF640087706E /* CreateOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC1BF725D6AF640087706E /* CreateOrderViewController.swift */; };
 		18FC1BFD25D6B0900087706E /* CreateOrderRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC1BFC25D6B0900087706E /* CreateOrderRoute.swift */; };
@@ -361,6 +362,7 @@
 		08F3B50A2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		1882794325D702030008D50F /* PriceSeekBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceSeekBarView.xib; sourceTree = "<group>"; };
 		1882794625D705F60008D50F /* PriceSeekBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceSeekBarView.swift; sourceTree = "<group>"; };
+		1882794A25D718950008D50F /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		18FC1BF225D6070B0087706E /* CreateOrder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateOrder.storyboard; sourceTree = "<group>"; };
 		18FC1BF725D6AF640087706E /* CreateOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderViewController.swift; sourceTree = "<group>"; };
 		18FC1BFC25D6B0900087706E /* CreateOrderRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderRoute.swift; sourceTree = "<group>"; };
@@ -966,6 +968,7 @@
 				08F3B5042596A0380099AC2B /* HomeViewController.swift */,
 				083E75A6259DE3B900EDF708 /* CategoriesViewController.swift */,
 				081AF820259F9CC5000E3B04 /* CartViewController.swift */,
+				1882794A25D718950008D50F /* MainTabBarViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1964,6 +1967,7 @@
 				083548A2258908FA00665DE0 /* Extension+UIStoryboard.swift in Sources */,
 				3DB1DAD32586737D00EF1E8F /* AppDelegate.swift in Sources */,
 				206E048425BD8C1000BD8902 /* PointViewController.swift in Sources */,
+				1882794B25D718950008D50F /* MainTabBarViewController.swift in Sources */,
 				087CA9DC2599083100113CEC /* SliderIndicatorCollectionViewCell.swift in Sources */,
 				20AD836725C31C0B00070C78 /* CustomPDPLayout.swift in Sources */,
 				205F23BF25C993DE00BB52FD /* ProductTraceRoute.swift in Sources */,

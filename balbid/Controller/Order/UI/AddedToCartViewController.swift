@@ -20,7 +20,7 @@ class AddedToCartViewController: BaseViewController {
     }
     
     @IBAction func backToShopping(_ sender: Any){
-//        router?.removeAllAndKeep(types: [HomeViewController.self])
+
         router?.popToRootViewController()
         guard  let tabBarController = ((UIApplication.shared.delegate as! AppDelegate).window?.rootViewController as? UITabBarController) else {
             return
