@@ -101,7 +101,13 @@ extension AdCategoriesViewController: AddedToCartViewDelegate {
             removeDarkView()
         case .pay:
             addedToCartView.showOrHideView(isOpen: false)
-            router?.navigate(to: .createOrderRoute)
+            router?.popToRootViewController()
+            guard let tabBarController = ((UIApplication.shared.delegate as! AppDelegate).window?.rootViewController as? UITabBarController) else {
+                return
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                tabBarController.selectedIndex = 3
+            }
         
         }
     }
