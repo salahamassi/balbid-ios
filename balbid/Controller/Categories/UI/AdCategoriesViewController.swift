@@ -14,7 +14,7 @@ class AdCategoriesViewController: BaseViewController {
     let adCategoriesCollectionFlowLayout = AdCategoriesCollectionFlowLayout()
     let adCategoriesCollectionDataSource = AdCategoriesCollectionDataSource()
     private let addToCartBottomSheet = AddToCartBottomSheet.initFromNib()
-    private let addedToCarView = AddedToCartView.initFromNib()
+    private let addedToCarView = balbid.AddedToCartView.initFromNib()
     let darkLayer = CALayer()
 
     
@@ -22,13 +22,12 @@ class AdCategoriesViewController: BaseViewController {
         super.viewDidLoad()
         setupNavBar()
         setupAddToCartView()
-        setupAddedToCartView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupCollectionView()
-
+        setupAddedToCartView()
     }
     
     private func setupNavBar(){
@@ -57,12 +56,13 @@ class AdCategoriesViewController: BaseViewController {
     private func setupAddToCartView(){
         addToCartBottomSheet.addProductsToCart = { [weak self] in
             self?.addToCartBottomSheet.hide()
-            self?.addedToCarView.showView()
+            self?.addedToCarView.showOrHideView(isOpen: true)
             self?.addDarkView()
         }
     }
     
     private func setupAddedToCartView(){
+        addedToCarView.delegate = self
         UIApplication.shared.keyWindow?.addSubview(addedToCarView)
         addedToCarView.setupView()
     }
@@ -84,6 +84,27 @@ class AdCategoriesViewController: BaseViewController {
             self.darkLayer.removeFromSuperlayer()
         }
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        addedToCarView.removeFromSuperview()
+        removeDarkView()
+    }
 }
 
 
+extension AdCategoriesViewController: AddedToCartViewDelegate {
+    func AddedToCartView(_ addedToCartView: AddedToCartView, perform actionType: AddedToCartView.ActionType) {
+        switch actionType {
+        case .continueShopping:
+            addedToCartView.showOrHideView(isOpen: false)
+            removeDarkView()
+        case .pay:
+            addedToCartView.showOrHideView(isOpen: false)
+            router?.navigate(to: .createOrderRoute)
+        
+        }
+    }
+    
+    
+}

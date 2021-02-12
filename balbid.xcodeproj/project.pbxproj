@@ -110,6 +110,12 @@
 		08F2B8D6258BE8E000CAEC9A /* Tajawal-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08F2B8D5258BE8E000CAEC9A /* Tajawal-Bold.ttf */; };
 		08F3B5052596A0380099AC2B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F3B5042596A0380099AC2B /* HomeViewController.swift */; };
 		08F3B50B2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F3B50A2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift */; };
+		1882794425D702030008D50F /* PriceSeekBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1882794325D702030008D50F /* PriceSeekBarView.xib */; };
+		1882794725D705F60008D50F /* PriceSeekBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882794625D705F60008D50F /* PriceSeekBarView.swift */; };
+		18FC1BF325D6070B0087706E /* CreateOrder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FC1BF225D6070B0087706E /* CreateOrder.storyboard */; };
+		18FC1BF825D6AF640087706E /* CreateOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC1BF725D6AF640087706E /* CreateOrderViewController.swift */; };
+		18FC1BFD25D6B0900087706E /* CreateOrderRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC1BFC25D6B0900087706E /* CreateOrderRoute.swift */; };
+		18FC1C0125D6B2430087706E /* CreateOrderRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC1C0025D6B2430087706E /* CreateOrderRoutes.swift */; };
 		2016B38225D487FE00E98DBC /* AddedToCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2016B38125D487FE00E98DBC /* AddedToCartView.swift */; };
 		2019AC3C25C9DC6D00455166 /* OrderTraceMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019AC3B25C9DC6D00455166 /* OrderTraceMapViewController.swift */; };
 		2019AC3F25CA093500455166 /* OrderTraceMapRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019AC3E25CA093500455166 /* OrderTraceMapRoute.swift */; };
@@ -353,6 +359,12 @@
 		08F2B8D5258BE8E000CAEC9A /* Tajawal-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Bold.ttf"; sourceTree = "<group>"; };
 		08F3B5042596A0380099AC2B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		08F3B50A2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		1882794325D702030008D50F /* PriceSeekBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceSeekBarView.xib; sourceTree = "<group>"; };
+		1882794625D705F60008D50F /* PriceSeekBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceSeekBarView.swift; sourceTree = "<group>"; };
+		18FC1BF225D6070B0087706E /* CreateOrder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateOrder.storyboard; sourceTree = "<group>"; };
+		18FC1BF725D6AF640087706E /* CreateOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderViewController.swift; sourceTree = "<group>"; };
+		18FC1BFC25D6B0900087706E /* CreateOrderRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderRoute.swift; sourceTree = "<group>"; };
+		18FC1C0025D6B2430087706E /* CreateOrderRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderRoutes.swift; sourceTree = "<group>"; };
 		2016B38125D487FE00E98DBC /* AddedToCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedToCartView.swift; sourceTree = "<group>"; };
 		2019AC3B25C9DC6D00455166 /* OrderTraceMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTraceMapViewController.swift; sourceTree = "<group>"; };
 		2019AC3E25CA093500455166 /* OrderTraceMapRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTraceMapRoute.swift; sourceTree = "<group>"; };
@@ -827,6 +839,7 @@
 				0894853B25A1EC26001934A9 /* nib */,
 				0894854825A1FC1B001934A9 /* AddToCartBottomSheet.swift */,
 				2016B38125D487FE00E98DBC /* AddedToCartView.swift */,
+				1882794625D705F60008D50F /* PriceSeekBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -836,6 +849,7 @@
 			children = (
 				0894853C25A1EC48001934A9 /* AddToCartView.xib */,
 				20A1A36A25CDD96B00C1115C /* AddedToCartView.xib */,
+				1882794325D702030008D50F /* PriceSeekBarView.xib */,
 			);
 			path = nib;
 			sourceTree = "<group>";
@@ -881,6 +895,7 @@
 				206E048E25BD9E6400BD8902 /* Order.storyboard */,
 				2092066C25C818B90072085E /* Shipping.storyboard */,
 				20C7F8F625CD7601001D0715 /* Payment.storyboard */,
+				18FC1BF225D6070B0087706E /* CreateOrder.storyboard */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -899,6 +914,7 @@
 		08B1A7442587A2EF003D49EF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				18FC1BF525D6AF370087706E /* CreateOrder */,
 				20C7F8FC25CD76A2001D0715 /* Payment */,
 				2092066F25C818E20072085E /* Shipping */,
 				206E049125BDA2AC00BD8902 /* Order */,
@@ -982,6 +998,31 @@
 				083E75B9259DEF1F00EDF708 /* CategriesContentCollectionViewFlowLayout.swift */,
 			);
 			path = FlowLayout;
+			sourceTree = "<group>";
+		};
+		18FC1BF525D6AF370087706E /* CreateOrder */ = {
+			isa = PBXGroup;
+			children = (
+				18FC1BFB25D6B0780087706E /* Route */,
+				18FC1BF625D6AF400087706E /* UI */,
+			);
+			path = CreateOrder;
+			sourceTree = "<group>";
+		};
+		18FC1BF625D6AF400087706E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				18FC1BF725D6AF640087706E /* CreateOrderViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		18FC1BFB25D6B0780087706E /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				18FC1BFC25D6B0900087706E /* CreateOrderRoute.swift */,
+			);
+			path = Route;
 			sourceTree = "<group>";
 		};
 		205F23C525C9946600BB52FD /* TableView */ = {
@@ -1350,6 +1391,7 @@
 				206E04A425BDA9F500BD8902 /* OrderRoutes.swift */,
 				2092067725C819920072085E /* ShippingRoutes.swift */,
 				20C7F8F925CD763B001D0715 /* PaymentRoutes.swift */,
+				18FC1C0025D6B2430087706E /* CreateOrderRoutes.swift */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -1694,6 +1736,7 @@
 				2092066D25C818B90072085E /* Shipping.storyboard in Resources */,
 				0894853D25A1EC48001934A9 /* AddToCartView.xib in Resources */,
 				081C3CF825891F0B00C8740C /* Main.storyboard in Resources */,
+				1882794425D702030008D50F /* PriceSeekBarView.xib in Resources */,
 				3DB1DADF2586737E00EF1E8F /* LaunchScreen.storyboard in Resources */,
 				08438E6325A265CF00796373 /* Product.storyboard in Resources */,
 				083F4A11259F7747005DEF75 /* ProductCell.xib in Resources */,
@@ -1711,6 +1754,7 @@
 				087D90AF258BF86C002BAE95 /* CompanyAuth.storyboard in Resources */,
 				083E75C0259DF18600EDF708 /* CategoryContentHeaderCell.xib in Resources */,
 				3DB1DB122586898D00EF1E8F /* Localizable.strings in Resources */,
+				18FC1BF325D6070B0087706E /* CreateOrder.storyboard in Resources */,
 				08F2B8D6258BE8E000CAEC9A /* Tajawal-Bold.ttf in Resources */,
 				08B1A73825878B8F003D49EF /* Auth.storyboard in Resources */,
 			);
@@ -1820,6 +1864,7 @@
 				205F23BC25C993C400BB52FD /* ProductTraceViewController.swift in Sources */,
 				083548782587C01100665DE0 /* LoginAnimationPresenter.swift in Sources */,
 				3DB1DB3225868A1000EF1E8F /* Extensions+Date.swift in Sources */,
+				18FC1BF825D6AF640087706E /* CreateOrderViewController.swift in Sources */,
 				083E759A259C9EDD00EDF708 /* ProductCollectionViewCell.swift in Sources */,
 				20C7F8FF25CD76C2001D0715 /* PaymentCardViewController.swift in Sources */,
 				3DB1DB4325868DE000EF1E8F /* BaseTableViewCell.swift in Sources */,
@@ -1873,6 +1918,7 @@
 				2099ABC825C96DA300FAB410 /* OrderDetailRoute.swift in Sources */,
 				202569E125BDFFB400FD61AD /* OrderTableViewCell.swift in Sources */,
 				08438E6D25A2696F00796373 /* ProductDetailRoute.swift in Sources */,
+				1882794725D705F60008D50F /* PriceSeekBarView.swift in Sources */,
 				08F3B50B2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift in Sources */,
 				3DB1DB3025868A1000EF1E8F /* Extensions+UIScrollView.swift in Sources */,
 				0827BF712589278500DE8CD5 /* AccountOptionViewController.swift in Sources */,
@@ -1921,6 +1967,7 @@
 				087CA9DC2599083100113CEC /* SliderIndicatorCollectionViewCell.swift in Sources */,
 				20AD836725C31C0B00070C78 /* CustomPDPLayout.swift in Sources */,
 				205F23BF25C993DE00BB52FD /* ProductTraceRoute.swift in Sources */,
+				18FC1BFD25D6B0900087706E /* CreateOrderRoute.swift in Sources */,
 				208513F725CACEE10025885B /* ReorderCollectionViewDataSource.swift in Sources */,
 				08F0CC41258BD3D800FA2261 /* ForgetPasswordRoute.swift in Sources */,
 				0807031825A24AE5002B1776 /* ColorCollectionViewDelegate.swift in Sources */,
@@ -1967,6 +2014,7 @@
 				2099ABD425C98C2C00FAB410 /* ProductRatingRoute.swift in Sources */,
 				3D60C39225975EDF0092D594 /* DiffableDataSourceInteroperability.swift in Sources */,
 				3DC76B5F25975C2100EE2428 /* PhotosCollectionViewController.swift in Sources */,
+				18FC1C0125D6B2430087706E /* CreateOrderRoutes.swift in Sources */,
 				081ADF88259118B000B5AE47 /* CompanyHolderInformationViewController.swift in Sources */,
 				2099ABCB25C979BD00FAB410 /* OrderProductTableViewDelegate.swift in Sources */,
 				20BEBAE125CD69840051C900 /* CreditBalanceTableViewDataSource.swift in Sources */,

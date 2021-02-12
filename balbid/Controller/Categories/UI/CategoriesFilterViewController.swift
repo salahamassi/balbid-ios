@@ -9,6 +9,7 @@ import UIKit
 
 class CategoriesFilterViewController: BaseViewController {
     
+    @IBOutlet weak var priceView: UIView!
     @IBOutlet weak var colorCollectionView: UICollectionView!
     @IBOutlet weak var colorValueLabel: UILabel!
     @IBOutlet var colorSpaceView: [UIView]!
@@ -17,7 +18,8 @@ class CategoriesFilterViewController: BaseViewController {
     
     let colorCollectionViewDelegate = ColorCollectionViewDelegate()
     let colorCollectionViewDataSource = ColorCollectionViewDataSource()
-
+    let priceSeekBarView = PriceSeekBarView.initFromNib()
+    
     override var mustClearNavigationBar: Bool {
         return true
     }
@@ -27,6 +29,7 @@ class CategoriesFilterViewController: BaseViewController {
         setupView()
         setupNavBar()
         setupCollectionView()
+        setupPriceView()
     }
     
     private func setupView(){
@@ -49,6 +52,10 @@ class CategoriesFilterViewController: BaseViewController {
         colorValueLabel.animateIsHidden(value: colorCollectionView.isHidden)
         colorSpaceView[0].animateIsHidden(value: colorCollectionView.isHidden)
         colorCollectionView.animateIsHidden(value: !colorCollectionView.isHidden)
+    }
+    
+    private func setupPriceView(){
+        priceView.addSubview(priceSeekBarView)
     }
     
     @objc func back(){

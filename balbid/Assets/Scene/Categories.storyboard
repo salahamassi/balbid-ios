@@ -130,7 +130,7 @@
                                                             <constraint firstAttribute="height" constant="11" id="ciq-An-Gij"/>
                                                         </constraints>
                                                     </view>
-                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v1U-Kw-vWR" customClass="RangeSeekSlider" customModule="RangeSeekSlider">
+                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v1U-Kw-vWR">
                                                         <rect key="frame" x="0.0" y="65" width="382" height="75"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" name="accentColor"/>
@@ -388,6 +388,7 @@
                         <outlet property="bottomView" destination="SGH-Gc-wI3" id="Ohm-oa-Fs6"/>
                         <outlet property="colorCollectionView" destination="B2N-es-kcm" id="tmM-HT-qXc"/>
                         <outlet property="colorValueLabel" destination="dEG-cY-hEi" id="n8o-SM-mL8"/>
+                        <outlet property="priceView" destination="v1U-Kw-vWR" id="Jal-UL-PAJ"/>
                         <outletCollection property="colorSpaceView" destination="M7b-ep-KOX" collectionClass="NSMutableArray" id="teZ-6d-YRQ"/>
                         <outletCollection property="colorSpaceView" destination="TjM-5X-Tfl" collectionClass="NSMutableArray" id="cll-tX-3oP"/>
                     </connections>
@@ -542,11 +543,6 @@
             <point key="canvasLocation" x="-188.40579710144928" y="-11.383928571428571"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="v1U-Kw-vWR">
-            <size key="intrinsicContentSize" width="-1" height="65"/>
-        </designable>
-    </designables>
     <resources>
         <image name="ad_sample" width="344" height="125"/>
         <image name="arrow_bottom" width="14.5" height="8"/>

@@ -11,6 +11,7 @@ class ShippingAdressViewController: BaseViewController {
     
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var scrollView: UIScrollView!
 
     private var shippingAdressTableViewDataSource = ShippingAdressTableViewDataSource()
     private var shippingAddressTableViewDelegate = ShippingAddressTableViewDelegate()
@@ -25,7 +26,7 @@ class ShippingAdressViewController: BaseViewController {
     
     private func setupNav(){
         title = "Shipping addresses"
-        (navigationController as! AppNavigationController).restyleBackButton()
+        (navigationController as? AppNavigationController)?.restyleBackButton()
     }
     
     private func setupTableView(){

@@ -50,6 +50,7 @@ extension String {
     static let productImageCell = "ProductImageCell"
     static let addNewCardBottomSheet = "AddNewCardView"
     static let addedToCartView = "AddedToCartView"
+    static let priceSeekBarView = "PriceSeekBarView"
 
     
     
@@ -106,6 +107,7 @@ extension String {
     static let orderStoryboard = "Order"
     static let shippingStoryboard = "Shipping"
     static let paymentStoryboard = "Payment"
+    static let createOrderStoryboard = "CreateOrder"
 
     // view  controller id's
     static let splashViewControllerId = "SplashViewController"
@@ -145,6 +147,7 @@ extension String {
     
     
     static let shippingAdressViewController = "ShippingAdressViewController"
+    static let OrderShippingAdressViewController = "OrderShippingAdressViewController"
     static let addNewShippingViewController = "AddNewShippingViewController"
     static let shippingMapViewController = "ShippingMapViewController"
     static let creditBalanceViewController = "CreditBalanceViewController"
@@ -158,6 +161,10 @@ extension String {
     
     
     static let paymentCardViewController = "PaymentCardViewController"
+    
+    
+    static let createOrderViewController = "CreateOrderViewController"
+    
     
     // image name
     static let lockedPasswordImage = "locked_password"
@@ -173,8 +180,7 @@ extension String {
     static let starImage = "star"
     static let closeImage = "close"
 
-    
-    
+        
     //collection view header kind
     static let leadingKind = "leadingKind"
     static let topKind = "topKind"

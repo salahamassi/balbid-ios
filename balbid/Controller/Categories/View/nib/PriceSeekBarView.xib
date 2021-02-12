@@ -17,7 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PriceSeekBarView" customModule="balbid" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -31,7 +31,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="70" height="36"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SR0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7X5-l1-M4v">
-                                    <rect key="frame" x="25.5" y="10" width="19.5" height="12"/>
+                                    <rect key="frame" x="23.5" y="10" width="23" height="14"/>
                                     <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="12"/>
                                     <color key="textColor" name="whiteColor"/>
                                     <nil key="highlightedColor"/>
@@ -80,9 +80,16 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JcT-Rf-eCh" secondAttribute="trailing" id="yfx-tG-6bn"/>
                 <constraint firstItem="JcT-Rf-eCh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zjs-r3-ojh"/>
             </constraints>
+            <connections>
+                <outlet property="indicatorView" destination="Cvf-f7-7jG" id="pJa-FW-Xcd"/>
+            </connections>
             <point key="canvasLocation" x="20" y="78"/>
         </view>
-        <swipeGestureRecognizer direction="right" id="e1s-go-87Y"/>
+        <swipeGestureRecognizer direction="right" id="e1s-go-87Y">
+            <connections>
+                <action selector="minPriceSwipeAction:" destination="iN0-l3-epB" id="0lO-nx-DTG"/>
+            </connections>
+        </swipeGestureRecognizer>
     </objects>
     <resources>
         <image name="radio-on" width="16" height="16"/>

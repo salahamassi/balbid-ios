@@ -22,6 +22,8 @@ extension UIStoryboard {
         .shippingStoryboard, bundle: nil)
     static let paymentStoryboard = UIStoryboard(name:
         .paymentStoryboard, bundle: nil)
+    static let createOrderStoryboard = UIStoryboard(name:
+        .createOrderStoryboard, bundle: nil)
     
     func getViewController(with identifier: String) -> UIViewController {
         return instantiateViewController(withIdentifier: identifier)

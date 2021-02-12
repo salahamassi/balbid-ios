@@ -8,22 +8,52 @@
 import UIKit
 
 class CreateOrderViewController: BaseViewController {
+    
+    @IBOutlet weak var cartImageView: UIImageView!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var containerViewHeightConstant: NSLayoutConstraint!
+    
+    var step = 1
 
+    var currentViewController: UIViewController!
+    
+    lazy var  shippingAddressViewController: ShippingAdressViewController = {
+        let viewController = UIStoryboard.shippingStoryboard.getViewController(with: .OrderShippingAdressViewController)as! ShippingAdressViewController
+        return viewController
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setContainerView()
     }
-    */
+    
+    private func setupView(){
+        cartImageView.image = cartImageView.image?.withRenderingMode(.alwaysTemplate)
+    }
+    
+    func setContainerView() {
+        currentViewController?.remove()
+        switch step {
+        case 1:
+            currentViewController = shippingAddressViewController
+        default:
+            currentViewController = shippingAddressViewController
 
+        }
+        add(currentViewController, to: containerView, frame: containerView.frame)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            self.containerViewHeightConstant?.constant = self.currentViewController.view.subviews.first?.frame.height ?? .zero
+            print(self.currentViewController.view.subviews.first?.frame.height ?? .zero)
+
+        }
+     
+    }
+    
+    
+    
 }
