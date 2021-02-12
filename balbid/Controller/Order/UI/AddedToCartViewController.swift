@@ -25,8 +25,9 @@ class AddedToCartViewController: BaseViewController {
         guard  let tabBarController = ((UIApplication.shared.delegate as! AppDelegate).window?.rootViewController as? UITabBarController) else {
             return
         }
-//        tabBarController.hidesBottomBarWhenPushed = false
-        tabBarController.selectedIndex = 0
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            tabBarController.selectedIndex = 0
+        }
         
     }
 
