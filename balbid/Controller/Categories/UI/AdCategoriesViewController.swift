@@ -11,8 +11,8 @@ class AdCategoriesViewController: BaseViewController {
 
     @IBOutlet weak var collectionView: ISIntrinsicCollectionView!
     
-    let adCategoriesCollectionFlowLayout = AdCategoriesCollectionFlowLayout()
-    let adCategoriesCollectionDataSource = AdCategoriesCollectionDataSource()
+    private let adCategoriesCollectionFlowLayout = AdCategoriesCollectionFlowLayout()
+    private let adCategoriesCollectionDataSource = AdCategoriesCollectionDataSource()
     private let addToCartBottomSheet = AddToCartBottomSheet.initFromNib()
 
     

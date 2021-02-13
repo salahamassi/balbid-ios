@@ -11,9 +11,9 @@ class FavoriteViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-
     
-    let favoriteTableViewDataSource = FavoriteTableViewDataSource()
+    private let favoriteTableViewDataSource = FavoriteTableViewDataSource()
+    private let addToCartBottomSheet = AddToCartBottomSheet.initFromNib()
     
     var loadFavorite: (() -> Void)?
 
