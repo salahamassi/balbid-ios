@@ -12,7 +12,8 @@ class FavoriteTableViewDataSource: NSObject, UITableViewDataSource {
     var favorite: Favorite?
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: .favoriteCellId, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: .favoriteCellId, for: indexPath) as! FavoriteCell
+        cell.favorite = favorite?.favoriteItems[indexPath.row]
         return cell
     }
     

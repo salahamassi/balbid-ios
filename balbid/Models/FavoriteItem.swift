@@ -15,6 +15,8 @@ struct FavoriteItem: SwiftyModelData {
     let enterpriseId: String
     let brandId: String
     let barCode: String
+    let price: String
+    let name: String
 
     init(json: JSON) {
         id = json["id"].intValue
@@ -22,6 +24,8 @@ struct FavoriteItem: SwiftyModelData {
         enterpriseId = json["enterprise_id"].stringValue
         brandId = json["brand_id"].stringValue
         barCode = json["barcode"].stringValue
+        price = json["price"].stringValue
+        name = json["name"].stringValue
     }
     
 
