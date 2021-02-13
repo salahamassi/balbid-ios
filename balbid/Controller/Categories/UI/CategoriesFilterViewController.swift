@@ -13,6 +13,11 @@ class CategoriesFilterViewController: BaseViewController {
     @IBOutlet weak var colorCollectionView: UICollectionView!
     @IBOutlet weak var colorValueLabel: UILabel!
     @IBOutlet var colorSpaceView: [UIView]!
+    
+    @IBOutlet weak var priceViewLabel: UILabel!
+    @IBOutlet var priceSpaceView: [UIView]!
+
+    
 
     @IBOutlet weak var bottomView: UIView!
     

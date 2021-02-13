@@ -18,11 +18,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PriceSeekBarView" customModule="balbid" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="405" height="70"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Cvf-f7-7jG">
-                    <rect key="frame" x="0.0" y="387" width="70" height="62"/>
+                    <rect key="frame" x="0.0" y="4" width="70" height="62"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pep-Hy-4zO">
                             <rect key="frame" x="0.0" y="0.0" width="70" height="36"/>
@@ -37,7 +37,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="m4c-53-U6N" secondAttribute="bottom" id="4ay-Z1-Ojk"/>
                                 <constraint firstAttribute="height" constant="36" id="4cL-g4-gdL"/>
@@ -55,11 +55,11 @@
                     </subviews>
                     <gestureRecognizers/>
                     <connections>
-                        <outletCollection property="gestureRecognizers" destination="e1s-go-87Y" appends="YES" id="hqv-hz-y8E"/>
+                        <outletCollection property="gestureRecognizers" destination="aTS-Da-Iwk" appends="YES" id="Bbh-S0-BaP"/>
                     </connections>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JcT-Rf-eCh">
-                    <rect key="frame" x="0.0" y="447" width="414" height="2"/>
+                    <rect key="frame" x="10" y="56" width="383" height="2"/>
                     <color key="backgroundColor" red="0.74117647058823533" green="0.76862745098039209" blue="0.80000000000000004" alpha="0.14000000000000001" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="2" id="Gvt-Fq-hb7"/>
@@ -74,22 +74,25 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="JcT-Rf-eCh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0dy-PJ-nP9"/>
-                <constraint firstItem="Cvf-f7-7jG" firstAttribute="bottom" secondItem="JcT-Rf-eCh" secondAttribute="bottom" id="60w-Tm-WcD"/>
+                <constraint firstItem="Cvf-f7-7jG" firstAttribute="bottom" secondItem="JcT-Rf-eCh" secondAttribute="bottom" constant="8" id="60w-Tm-WcD"/>
+                <constraint firstItem="JcT-Rf-eCh" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-12" id="8U0-cq-89C"/>
                 <constraint firstItem="Cvf-f7-7jG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="bmc-zk-5vv"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JcT-Rf-eCh" secondAttribute="trailing" id="yfx-tG-6bn"/>
-                <constraint firstItem="JcT-Rf-eCh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zjs-r3-ojh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JcT-Rf-eCh" secondAttribute="trailing" constant="12" id="yfx-tG-6bn"/>
+                <constraint firstItem="JcT-Rf-eCh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="zjs-r3-ojh"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="indicatorView" destination="Cvf-f7-7jG" id="pJa-FW-Xcd"/>
+                <outlet property="leadingConstraint" destination="bmc-zk-5vv" id="GMg-MJ-adH"/>
             </connections>
-            <point key="canvasLocation" x="20" y="78"/>
+            <point key="canvasLocation" x="305.07246376811594" y="89.397321428571431"/>
         </view>
-        <swipeGestureRecognizer direction="right" id="e1s-go-87Y">
+        <panGestureRecognizer minimumNumberOfTouches="1" id="aTS-Da-Iwk">
+            <scrollTypes key="allowedScrollTypesMask" continuous="YES"/>
             <connections>
-                <action selector="minPriceSwipeAction:" destination="iN0-l3-epB" id="0lO-nx-DTG"/>
+                <action selector="minPricePan:" destination="iN0-l3-epB" id="9Mz-wW-hz2"/>
             </connections>
-        </swipeGestureRecognizer>
+        </panGestureRecognizer>
     </objects>
     <resources>
         <image name="radio-on" width="16" height="16"/>
