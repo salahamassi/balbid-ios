@@ -13,6 +13,8 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     var home: Home?
     var currentPage: Int = 0
     weak var delegate: SliderIndicatorCollectionViewCellDelegate?
+    weak var productCellDelegate: ProductCellDelegate?
+
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
@@ -51,6 +53,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .productCellId, for: indexPath) as! ProductCollectionViewCell
             cell.product = home?.homeProductItems[indexPath.section - 2].prodcuts[indexPath.row]
+            cell.delegate = productCellDelegate
             return cell
         }
     }

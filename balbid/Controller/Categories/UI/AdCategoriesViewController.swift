@@ -38,12 +38,7 @@ class AdCategoriesViewController: BaseViewController {
     private func setupCollectionView(){
         collectionView.dataSource = adCategoriesCollectionDataSource
         collectionView.delegate = adCategoriesCollectionFlowLayout
-        adCategoriesCollectionDataSource.openCartSheet = { [weak self] (cell) in
-            guard let indexPath = self?.collectionView.indexPath(for: cell) else {
-                return
-            }
-            self?.addToCartBottomSheet.show()
-        }
+        adCategoriesCollectionDataSource.delegate = self
         adCategoriesCollectionFlowLayout.showProductDetail = { [weak self] (row) in
             self?.router?.navigate(to: .productDetailRoute)
         }
@@ -59,3 +54,23 @@ class AdCategoriesViewController: BaseViewController {
 }
 
 
+
+extension AdCategoriesViewController: ProductCellDelegate {
+    func productCollectionViewCell(productCollectionViewCell: ProductCollectionViewCell, perform action: ProductCollectionViewCell.ActionType, with product: Product?) {
+        switch action {
+        case .addToCart:
+            showAddToCartView(cell: productCollectionViewCell)
+        case .favorite:
+            print("add TO Favorite")
+        }
+    }
+    
+    func showAddToCartView(cell: ProductCollectionViewCell){
+        guard let indexPath = self.collectionView.indexPath(for: cell) else {
+            return
+        }
+        self.addToCartBottomSheet.show()
+    }
+    
+    
+}

@@ -20,7 +20,7 @@ class SplashViewController: BaseViewController {
         super.viewDidAppear(animated)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
 //            UserDefaultsManager.token = nil
-//            print(UserDefaultsManager.token)
+            print(UserDefaultsManager.token)
             if UserDefaultsManager.token != nil {
                 self.router?.navigate(to: .mainTabBarRoute)
             }else{

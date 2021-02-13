@@ -38,6 +38,7 @@ extension String {
     static let loginPath = "customers/login"
     static let logoutPath = "customers/logout"
     static let homePath = "home"
+    static let addToFavoritePath = "customers/products/favorite"
 
     
     //api Method

@@ -9,12 +9,12 @@ import UIKit
 
 class AdCategoriesCollectionDataSource: NSObject, UICollectionViewDataSource {
     
-    var openCartSheet: ((_ cell: UICollectionViewCell) -> ())?
+    weak var delegate: ProductCellDelegate?
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .productCellId, for: indexPath) as! ProductCollectionViewCell
         
-        cell.delegate = self
+        cell.delegate = delegate
         
         return cell
     }
@@ -29,14 +29,3 @@ class AdCategoriesCollectionDataSource: NSObject, UICollectionViewDataSource {
 }
 
 
-extension AdCategoriesCollectionDataSource: ProductCellDelegate {
-    func productCollectionViewCell(productCollectionViewCell: ProductCollectionViewCell, didSelect cell: ProductCollectionViewCell) {
-        guard let openCartSheet = self.openCartSheet else {
-            return
-        }
-        openCartSheet(cell)
-    }
-    
-    
-    
-}

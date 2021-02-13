@@ -17,7 +17,8 @@ class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var addToCartButton: UIButton!
     @IBOutlet weak var productPriceLabel: UILabel!
     @IBOutlet weak var productImageView: UIImageView!
-    
+    @IBOutlet weak var favoriteButton: UIButton!
+
     var delegate : ProductCellDelegate?
     
     
@@ -33,7 +34,17 @@ class ProductCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func addToCart(_ sender: Any){
-        delegate?.productCollectionViewCell(productCollectionViewCell: self, didSelect: self)
+        delegate?.productCollectionViewCell(productCollectionViewCell: self, perform: .addToCart, with: product)
+    }
+    
+    @IBAction func addToFavorite(_ sender: UIButton){
+        sender.loadingIndicator(true)
+        delegate?.productCollectionViewCell(productCollectionViewCell: self, perform: .favorite,  with: product)
+    }
+    
+    func addToFavorite(){
+        favoriteButton.loadingIndicator(false)
+        favoriteButton.animateImageChange(#imageLiteral(resourceName: "selected_favorite"))
     }
     
     private func setProductData(product: Product?){
@@ -52,6 +63,10 @@ class ProductCollectionViewCell: UICollectionViewCell {
         }
         productImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         productImageView.sd_setImage(with: imageUrl)
+    }
+    
+    enum ActionType {
+        case addToCart, favorite
     }
     
 }

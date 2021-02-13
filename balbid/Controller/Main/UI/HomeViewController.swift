@@ -1,3 +1,4 @@
+
 //
 //  HomeViewController.swift
 //  balbid
@@ -50,6 +51,8 @@ class HomeViewController: BaseViewController {
         collectionView.delegate = homeCollectionViewDelegate
         registerCell()
         homeCollectionViewDataSource.delegate = self
+        homeCollectionViewDataSource.productCellDelegate = self
+
     }
 
     
@@ -108,4 +111,22 @@ extension HomeViewController: SliderIndicatorCollectionViewCellDelegate {
     func didChangePage(to page: Int) {
         collectionView.scrollToItem(at: IndexPath(row: page, section: 0), at: .centeredHorizontally, animated: true)
     }    
+}
+
+
+extension HomeViewController: ProductCellDelegate {
+    func productCollectionViewCell(productCollectionViewCell: ProductCollectionViewCell, perform action: ProductCollectionViewCell.ActionType, with product: Product?) {
+        guard let product = product else {
+            return
+        }
+        switch action {
+        case .addToCart:
+            break
+        case .favorite:
+            homeViewModel.addProductToFavorite(productId: product.id)
+        }
+    }
+    
+  
+    
 }

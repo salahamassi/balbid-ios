@@ -7,6 +7,6 @@
 
 import UIKit
 
-protocol ProductCellDelegate {
-    func productCollectionViewCell(productCollectionViewCell: ProductCollectionViewCell, didSelect cell : ProductCollectionViewCell)
+protocol ProductCellDelegate: class {
+    func productCollectionViewCell(productCollectionViewCell: ProductCollectionViewCell, perform action: ProductCollectionViewCell.ActionType, with product: Product?)
 }
