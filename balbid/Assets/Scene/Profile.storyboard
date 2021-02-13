@@ -608,6 +608,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="bhs-gw-iTh">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" name="primaryColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3e9-eU-qsh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -615,10 +619,13 @@
                             <constraint firstItem="3e9-eU-qsh" firstAttribute="trailing" secondItem="TIk-JV-c19" secondAttribute="trailing" id="66G-ga-ffr"/>
                             <constraint firstItem="TIk-JV-c19" firstAttribute="leading" secondItem="3e9-eU-qsh" secondAttribute="leading" id="IZd-CD-cGz"/>
                             <constraint firstItem="TIk-JV-c19" firstAttribute="top" secondItem="3e9-eU-qsh" secondAttribute="top" id="MbS-gG-zTR"/>
+                            <constraint firstItem="bhs-gw-iTh" firstAttribute="centerY" secondItem="YlU-nl-0Db" secondAttribute="centerY" id="Tka-3g-81X"/>
                             <constraint firstItem="3e9-eU-qsh" firstAttribute="bottom" secondItem="TIk-JV-c19" secondAttribute="bottom" id="YiS-6L-Wrg"/>
+                            <constraint firstItem="bhs-gw-iTh" firstAttribute="centerX" secondItem="YlU-nl-0Db" secondAttribute="centerX" id="ep2-E4-EBg"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="bhs-gw-iTh" id="EWS-iv-ArE"/>
                         <outlet property="tableView" destination="TIk-JV-c19" id="6v1-it-H21"/>
                     </connections>
                 </viewController>

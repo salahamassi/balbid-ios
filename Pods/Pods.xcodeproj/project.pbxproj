@@ -108,8 +108,8 @@
 		6F7B092564EE6D219BD242AEF57DD577 /* VICMAImageView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = VICMAImageView.modulemap; sourceTree = "<group>"; };
 		716BB36E19C2D481FA6476CAC1F516CB /* SwipeCellKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwipeCellKit.debug.xcconfig; sourceTree = "<group>"; };
 		7A62AD7F07EB4EB40E64BE93FCB386CD /* VICMAImageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VICMAImageView.debug.xcconfig; sourceTree = "<group>"; };
-		83B7B07BF8E13525CF42E8BDE386CC27 /* VICMAImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VICMAImageView.framework; path = VICMAImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		85056B631DDA65DBF0F3D04E8058BD5D /* Pods_balbid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_balbid.framework; path = "Pods-balbid.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83B7B07BF8E13525CF42E8BDE386CC27 /* VICMAImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VICMAImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85056B631DDA65DBF0F3D04E8058BD5D /* Pods_balbid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_balbid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7D2CDC5CC8F7FA346C1E10791BC454 /* SwipeCollectionViewCell+Display.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeCollectionViewCell+Display.swift"; path = "Source/SwipeCollectionViewCell+Display.swift"; sourceTree = "<group>"; };
 		8F09F47C5C434EF6E62C20CFD67641F9 /* Swipeable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Swipeable.swift; path = Source/Swipeable.swift; sourceTree = "<group>"; };
 		907C3053C3BE07901BBC3CA99BA44B17 /* RangeSeekSlider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RangeSeekSlider-Info.plist"; sourceTree = "<group>"; };
@@ -117,8 +117,8 @@
 		9211CCC87427A7F766E1AD078F6647C4 /* RangeSeekSliderDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RangeSeekSliderDelegate.swift; path = Sources/RangeSeekSliderDelegate.swift; sourceTree = "<group>"; };
 		92C52F52C259AB5E15D1B5DF6F013D78 /* Pods-balbid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-balbid.debug.xcconfig"; sourceTree = "<group>"; };
 		99D27AF4C368574F398FBD85F7CE782A /* SwipeCellKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwipeCellKit-dummy.m"; sourceTree = "<group>"; };
-		9D443E759FE97A6C0CA5A3B5E4142EBA /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwipeCellKit.framework; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D443E759FE97A6C0CA5A3B5E4142EBA /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EC664F2A0330F9D6B0D7832514EC66C /* Pods-balbid-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-balbid-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A0099C32CD052D2679865CAE3EEEEAB2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		A05086718D8992EAD3C146131FDEEE19 /* RangeSeekSlider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RangeSeekSlider.release.xcconfig; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 		B3EEC49EC252C065586BB61A821FAA37 /* SwipeTableViewCell+Display.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeTableViewCell+Display.swift"; path = "Source/SwipeTableViewCell+Display.swift"; sourceTree = "<group>"; };
 		B7AB4DF65755C634EB37B0D92F0AE052 /* RangeSeekSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RangeSeekSlider.modulemap; sourceTree = "<group>"; };
 		B7B5FEB2180C48DA9FFCB949A3EA6E1D /* VICMAImageView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VICMAImageView-umbrella.h"; sourceTree = "<group>"; };
-		C027A7405E856E45431E9E1E7913015F /* RangeSeekSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RangeSeekSlider.framework; path = RangeSeekSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C027A7405E856E45431E9E1E7913015F /* RangeSeekSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RangeSeekSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4FCE2F8AF9D8CC0CFB32EE6DFE92FDF /* Pods-balbid-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-balbid-acknowledgements.plist"; sourceTree = "<group>"; };
 		C565C33F710616374719DE84F88B4D7E /* SwipeActionsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionsView.swift; path = Source/SwipeActionsView.swift; sourceTree = "<group>"; };
 		CA967A32F300C116E11687AD65CF9FFC /* Pods-balbid-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-balbid-dummy.m"; sourceTree = "<group>"; };
@@ -228,7 +228,6 @@
 				217CD555EA6903F5724DE035B5C92062 /* VICMAImageView.m */,
 				D4CF7D47426B502A2FA9E6350F96A9B0 /* Support Files */,
 			);
-			name = VICMAImageView;
 			path = VICMAImageView;
 			sourceTree = "<group>";
 		};
@@ -301,7 +300,6 @@
 				F778F37C7BF1B6B405549E8A349D4497 /* SwipeTransitionLayout.swift */,
 				524004C96DDFB60174D9F2C9544CD8AB /* Support Files */,
 			);
-			name = SwipeCellKit;
 			path = SwipeCellKit;
 			sourceTree = "<group>";
 		};
@@ -350,7 +348,6 @@
 				6E81DE11324787E23F84CBB045ACE846 /* TapticEngine.swift */,
 				0A8F68111517D1DA4DF25840DC7D5537 /* Support Files */,
 			);
-			name = RangeSeekSlider;
 			path = RangeSeekSlider;
 			sourceTree = "<group>";
 		};

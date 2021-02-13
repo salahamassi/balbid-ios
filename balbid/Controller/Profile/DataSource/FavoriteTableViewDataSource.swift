@@ -9,13 +9,15 @@ import UIKit
 
 class FavoriteTableViewDataSource: NSObject, UITableViewDataSource {
     
+    var favorite: Favorite?
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: .favoriteCellId, for: indexPath)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        favorite?.favoriteItems.count ?? 0
     }
 
 }
