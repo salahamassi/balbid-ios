@@ -20,12 +20,16 @@ class AddedToCartViewController: BaseViewController {
     }
     
     @IBAction func backToShopping(_ sender: Any){
+
         router?.popToRootViewController()
-        guard  let tabBarController = (router?.window.rootViewController as? UITabBarController) else {
+        guard  let tabBarController = ((UIApplication.shared.delegate as! AppDelegate).window?.rootViewController as? UITabBarController) else {
             return
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            tabBarController.selectedIndex = .zero
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            tabBarController.selectedIndex = 0
         }
+        
     }
+
+
 }

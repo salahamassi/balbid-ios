@@ -11,21 +11,23 @@ class AdCategoriesViewController: BaseViewController {
 
     @IBOutlet weak var collectionView: ISIntrinsicCollectionView!
     
-    private let adCategoriesCollectionFlowLayout = AdCategoriesCollectionFlowLayout()
-    private let adCategoriesCollectionDataSource = AdCategoriesCollectionDataSource()
+    let adCategoriesCollectionFlowLayout = AdCategoriesCollectionFlowLayout()
+    let adCategoriesCollectionDataSource = AdCategoriesCollectionDataSource()
     private let addToCartBottomSheet = AddToCartBottomSheet.initFromNib()
+    private let addedToCarView = balbid.AddedToCartView.initFromNib()
+    let darkLayer = CALayer()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
-
+        setupAddToCartView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupCollectionView()
-
+        setupAddedToCartView()
     }
     
     private func setupNavBar(){
@@ -46,14 +48,66 @@ class AdCategoriesViewController: BaseViewController {
     }
     
     private func setupAddToCartView(){
+        addToCartBottomSheet.addProductsToCart = { [weak self] in
+            self?.addToCartBottomSheet.hide()
+            self?.addedToCarView.showOrHideView(isOpen: true)
+            self?.addDarkView()
+        }
+    }
+    
+    private func setupAddedToCartView(){
+        addedToCarView.delegate = self
+        UIApplication.shared.keyWindow?.addSubview(addedToCarView)
+        addedToCarView.setupView()
     }
     
     @IBAction func goToFilter(_ sender: Any){
         router?.navigate(to: .categoriesFilterRoute)
     }
+    
+    func addDarkView(){
+        darkLayer.backgroundColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:0.7).cgColor
+        darkLayer.frame = UIScreen.main.bounds
+        UIView.animate(withDuration: 0.5) {
+            UIApplication.shared.keyWindow?.layer.insertSublayer(self.darkLayer, below: self.addedToCarView.layer)
+        }
+    }
+    
+    func removeDarkView(){
+        UIView.animate(withDuration: 0.5) {
+            self.darkLayer.removeFromSuperlayer()
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        addedToCarView.removeFromSuperview()
+        removeDarkView()
+    }
 }
 
 
+extension AdCategoriesViewController: AddedToCartViewDelegate {
+    func AddedToCartView(_ addedToCartView: AddedToCartView, perform actionType: AddedToCartView.ActionType) {
+        switch actionType {
+        case .continueShopping:
+            addedToCartView.showOrHideView(isOpen: false)
+            removeDarkView()
+        case .pay:
+            addedToCartView.showOrHideView(isOpen: false)
+            router?.popToRootViewController()
+            guard let tabBarController = ((UIApplication.shared.delegate as! AppDelegate).window?.rootViewController as? UITabBarController) else {
+                return
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                tabBarController.selectedIndex = 3
+            }
+        
+        }
+    }
+    
+    
+}
 
 extension AdCategoriesViewController: ProductCellDelegate {
     func productCollectionViewCell(productCollectionViewCell: ProductCollectionViewCell, perform action: ProductCollectionViewCell.ActionType, with product: Product?) {
@@ -74,3 +128,4 @@ extension AdCategoriesViewController: ProductCellDelegate {
     
     
 }
+

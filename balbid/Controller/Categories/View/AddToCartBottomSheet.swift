@@ -8,6 +8,8 @@
 import UIKit
 
 class AddToCartBottomSheet: BottomSheetView {
+    
+    var addProductsToCart: (() -> Void)?
 
     override class func initFromNib() -> AddToCartBottomSheet {
         return Bundle.init(for: AddToCartBottomSheet.self).loadNibNamed(.addToCartView, owner: self, options: nil)!.first as! AddToCartBottomSheet
@@ -16,6 +18,10 @@ class AddToCartBottomSheet: BottomSheetView {
     override func awakeFromNib() {
         viewHeight = 159
         super.awakeFromNib()
+    }
+    
+    @IBAction func addToCart(_ sender: Any) {
+        addProductsToCart?()
     }
 
 }
