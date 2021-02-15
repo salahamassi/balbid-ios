@@ -203,6 +203,7 @@
             <size key="customSize" width="414" height="400"/>
             <connections>
                 <outlet property="addToCartButton" destination="eeN-Hk-9oZ" id="wCU-Hg-RAV"/>
+                <outlet property="favoriteButton" destination="zGJ-1K-pso" id="96a-1z-P62"/>
                 <outlet property="offerLabel" destination="hNE-Hm-917" id="6Sj-GA-jrc"/>
                 <outlet property="productDiscountPriceLabel" destination="H0O-xy-rDK" id="ADt-RK-yfu"/>
                 <outlet property="productDiscountPriceView" destination="W3S-oh-btB" id="3yZ-j0-qql"/>

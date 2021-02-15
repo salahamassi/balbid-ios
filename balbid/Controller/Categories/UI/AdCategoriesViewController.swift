@@ -11,11 +11,10 @@ class AdCategoriesViewController: BaseViewController {
 
     @IBOutlet weak var collectionView: ISIntrinsicCollectionView!
     
-    let adCategoriesCollectionFlowLayout = AdCategoriesCollectionFlowLayout()
-    let adCategoriesCollectionDataSource = AdCategoriesCollectionDataSource()
+    private let adCategoriesCollectionFlowLayout = AdCategoriesCollectionFlowLayout()
+    private  let adCategoriesCollectionDataSource = AdCategoriesCollectionDataSource()
     private let addToCartBottomSheet = AddToCartBottomSheet.initFromNib()
     private let addedToCarView = balbid.AddedToCartView.initFromNib()
-    let darkLayer = CALayer()
 
     
     override func viewDidLoad() {
@@ -51,7 +50,7 @@ class AdCategoriesViewController: BaseViewController {
         addToCartBottomSheet.addProductsToCart = { [weak self] in
             self?.addToCartBottomSheet.hide()
             self?.addedToCarView.showOrHideView(isOpen: true)
-            self?.addDarkView()
+            self?.addDarkView(below: self?.addedToCarView)
         }
     }
     
@@ -65,19 +64,7 @@ class AdCategoriesViewController: BaseViewController {
         router?.navigate(to: .categoriesFilterRoute)
     }
     
-    func addDarkView(){
-        darkLayer.backgroundColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:0.7).cgColor
-        darkLayer.frame = UIScreen.main.bounds
-        UIView.animate(withDuration: 0.5) {
-            UIApplication.shared.keyWindow?.layer.insertSublayer(self.darkLayer, below: self.addedToCarView.layer)
-        }
-    }
-    
-    func removeDarkView(){
-        UIView.animate(withDuration: 0.5) {
-            self.darkLayer.removeFromSuperlayer()
-        }
-    }
+  
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -110,7 +97,7 @@ extension AdCategoriesViewController: AddedToCartViewDelegate {
 }
 
 extension AdCategoriesViewController: ProductCellDelegate {
-    func productCollectionViewCell(productCollectionViewCell: ProductCollectionViewCell, perform action: ProductCollectionViewCell.ActionType, with product: Product?) {
+    func productCollectionViewCell(_ productCollectionViewCell: ProductCollectionViewCell, perform action: ProductCollectionViewCell.ActionType, with product: Product?) {
         switch action {
         case .addToCart:
             showAddToCartView(cell: productCollectionViewCell)

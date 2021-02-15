@@ -34,17 +34,24 @@ class ProductCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func addToCart(_ sender: Any){
-        delegate?.productCollectionViewCell(productCollectionViewCell: self, perform: .addToCart, with: product)
+        delegate?.productCollectionViewCell(self, perform: .addToCart, with: product)
     }
     
     @IBAction func addToFavorite(_ sender: UIButton){
-        sender.loadingIndicator(true)
-        delegate?.productCollectionViewCell(productCollectionViewCell: self, perform: .favorite,  with: product)
+        sender.loadingIndicator(true, centerPoint: CGPoint(x: favoriteButton.frame.origin.x, y: favoriteButton.frame.midY))
+        delegate?.productCollectionViewCell(self, perform: .favorite,  with: product)
     }
     
     func addToFavorite(){
         favoriteButton.loadingIndicator(false)
         favoriteButton.animateImageChange(#imageLiteral(resourceName: "selected_favorite"))
+        product?.isFavorite = "1"
+    }
+    
+    func removeFromFavorite(){
+        favoriteButton.loadingIndicator(false)
+        favoriteButton.animateImageChange(#imageLiteral(resourceName: "unselected_favorite"))
+        product?.isFavorite = "0"
     }
     
     private func setProductData(product: Product?){
@@ -55,7 +62,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
             productDiscountPriceLabel.isHidden = true
             offerLabel.isHidden = true
 //        }
-        
+        favoriteButton.setImage(product?.isFavorite == "0" ? #imageLiteral(resourceName: "unselected_favorite") : #imageLiteral(resourceName: "selected_favorite") , for: .normal)
         productNameLabel.text = product?.name
         productPriceLabel.text = (product?.price ?? "0") + " SR"
         guard let imageUrl = URL(string: product?.image ?? "") else {
@@ -63,6 +70,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         }
         productImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         productImageView.sd_setImage(with: imageUrl)
+
     }
     
     enum ActionType {

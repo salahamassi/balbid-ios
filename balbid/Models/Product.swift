@@ -22,7 +22,8 @@ struct Product: SwiftyModelData {
     let minQuantity: String
     let maxQuantity: String
     let discount: String?
-    
+    var isFavorite: String?
+
     init(json: JSON) {
         id = json["id"].intValue
         image = json["image"].stringValue
@@ -36,7 +37,7 @@ struct Product: SwiftyModelData {
         minQuantity = json["price_under_min_quantity"].stringValue
         maxQuantity = json["price_upper_max_quantity"].stringValue
         discount = json["discount"].stringValue
-
+        isFavorite = json["is_favorite"].stringValue
     }
     
     

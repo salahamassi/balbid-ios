@@ -115,7 +115,7 @@ extension HomeViewController: SliderIndicatorCollectionViewCellDelegate {
 
 
 extension HomeViewController: ProductCellDelegate {
-    func productCollectionViewCell(productCollectionViewCell: ProductCollectionViewCell, perform action: ProductCollectionViewCell.ActionType, with product: Product?) {
+    func productCollectionViewCell(_ productCollectionViewCell: ProductCollectionViewCell, perform action: ProductCollectionViewCell.ActionType, with product: Product?) {
         guard let product = product else {
             return
         }
@@ -123,10 +123,19 @@ extension HomeViewController: ProductCellDelegate {
         case .addToCart:
             break
         case .favorite:
-            homeViewModel.addProductToFavorite(productId: product.id)
+            if product.isFavorite == "1" {
+                homeViewModel.removeProductFromFavorite(productId:  product.id) {
+                    productCollectionViewCell.removeFromFavorite()
+                }
+            }else{
+                homeViewModel.addProductToFavorite(productId: product.id, didAddToFavorite: {
+                    productCollectionViewCell.addToFavorite()
+                })
+            }
         }
     }
     
   
     
 }
+

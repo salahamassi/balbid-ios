@@ -9,6 +9,7 @@
 import UIKit
 
 var tempTitle: String?
+var tempImage: UIImage?
 
 extension UIButton {
 
@@ -79,7 +80,7 @@ extension UIButton {
                           completion: nil)
     }
 
-    func loadingIndicator(_ show: Bool) {
+    func loadingIndicator(_ show: Bool, centerPoint: CGPoint? = nil) {
         let tag = 808404
         if show {
             self.isEnabled = false
@@ -88,16 +89,18 @@ extension UIButton {
             if #available(iOS 13.0, *) {
                 indicator.style = .medium
             } else {
-                indicator.style = .white
+                indicator.style = .gray
             }
-            indicator.color = .white
+            indicator.color = .red
             let buttonHeight = self.bounds.size.height
             let buttonWidth = self.bounds.size.width
-            indicator.center = CGPoint(x: buttonWidth/2, y: buttonHeight/2)
+            indicator.center = centerPoint == nil ? CGPoint(x: buttonWidth/2, y: buttonHeight/2) : centerPoint!
             indicator.tag = tag
             self.addSubview(indicator)
             tempTitle = self.titleLabel?.text
+            tempImage = self.imageView?.image
             setTitle(nil, for: .normal)
+            setImage(nil, for: .normal)
             indicator.startAnimating()
         } else {
             self.isEnabled = true
@@ -107,6 +110,7 @@ extension UIButton {
                 indicator.removeFromSuperview()
             }
             setTitle(tempTitle, for: .normal)
+            setImage(tempImage, for: .normal)
         }
     }
 

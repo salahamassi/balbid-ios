@@ -39,12 +39,14 @@ extension String {
     static let logoutPath = "customers/logout"
     static let homePath = "home"
     static let addToFavoritePath = "customers/products/favorite"
+    static let removeFromFavoritePath = "/customers/products/favorite?product_id="
     static let favoritePath = "customers/products/favorite"
 
     
     //api Method
     static let post = "post"
     static let get = "get"
+    static let delete = "delete"
 
 
     // view controller nib's name
