@@ -31,6 +31,19 @@ class FavoriteViewModel: NSObject {
         }
     }
     
+    func removeProductFromFavorite(productId: Int, didRemoveFromFavorite: @escaping () -> Void){
+        dataSource.perform(service: .init(path: .removeFromFavoritePath + "\(productId)", domain: .domain, method: .delete, params: [:], mustUseAuth: true), Product.self) { (result) in
+            switch result {
+            case .data(_):
+                didRemoveFromFavorite()
+            case .failure(let error):
+                self.delegate?.apiError(error: error)
+            default:
+                break
+            }
+        }
+    }
+    
     
 }
 

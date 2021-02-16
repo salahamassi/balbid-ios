@@ -80,7 +80,7 @@ extension UIButton {
                           completion: nil)
     }
 
-    func loadingIndicator(_ show: Bool, centerPoint: CGPoint? = nil) {
+    func loadingIndicator(_ show: Bool, centerPoint: CGPoint? = nil, indicatorColor:  UIColor = .white) {
         let tag = 808404
         if show {
             self.isEnabled = false
@@ -91,7 +91,7 @@ extension UIButton {
             } else {
                 indicator.style = .gray
             }
-            indicator.color = .red
+            indicator.color =  indicatorColor
             let buttonHeight = self.bounds.size.height
             let buttonWidth = self.bounds.size.width
             indicator.center = centerPoint == nil ? CGPoint(x: buttonWidth/2, y: buttonHeight/2) : centerPoint!

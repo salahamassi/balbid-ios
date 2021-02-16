@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7243E9FD-2B8F-49C9-9A22-E90E3FC2DD2D"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "balbid/ViewModel/Main/HomeViewModel.swift"
@@ -72,7 +72,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "926FCB71-A5E3-4B21-9F12-09C228A35F1E"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "balbid/ViewModel/Main/HomeViewModel.swift"
@@ -120,7 +120,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E9B525A4-75EC-4A6E-B99B-56822DAFAE9E"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "balbid/ViewModel/Main/HomeViewModel.swift"
@@ -193,6 +193,86 @@
             startingLineNumber = "53"
             endingLineNumber = "53"
             landmarkName = "removeProductFromFavorite(productId:didRemoveFromFavorite:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C4CE642D-585E-4094-AD95-47E39DB1780D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/App/Data Source/Network Api/AlamofireNetworkApi.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "request(url:method:params:files:headers:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A54A060-DEC1-4084-B221-0F1D1F268F95"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/App/Data Source/Network Api/AlamofireNetworkApi.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "request(url:method:params:files:headers:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1A54A060-DEC1-4084-B221-0F1D1F268F95 - 74f9423b19bad946"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "balbid.AlamofireNetworkApi.request(url: Swift.String, method: Swift.String, params: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, files: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Foundation.URL&gt;&gt;, headers: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, completion: Swift.Optional&lt;(Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;balbid.LLError&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "balbid"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/balod/balbid/App/Data%20Source/Network%20Api/AlamofireNetworkApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "3127">
+               </Location>
+               <Location
+                  uuid = "1A54A060-DEC1-4084-B221-0F1D1F268F95 - d210f0c24305d296"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Alamofire.DataResponse&lt;Swift.String, Alamofire.AFError&gt;) -&gt; () in balbid.AlamofireNetworkApi.request(url: Swift.String, method: Swift.String, params: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, files: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Foundation.URL&gt;&gt;, headers: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, completion: Swift.Optional&lt;(Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;balbid.LLError&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "balbid"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/balod/balbid/App/Data%20Source/Network%20Api/AlamofireNetworkApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "237">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6B7F837-5774-4F9C-9DDD-9CD132B2E92F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/App/Data Source/Network Api/AlamofireNetworkApi.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "request(url:method:params:files:headers:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

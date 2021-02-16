@@ -10,7 +10,7 @@ import SwiftyJSON
 
 struct Favorite: SwiftyModelData {
     
-    let favoriteItems: [FavoriteItem]
+    var favoriteItems: [FavoriteItem]
 
     init(json: JSON) {
         favoriteItems = json.arrayValue.map {FavoriteItem(json: $0)}

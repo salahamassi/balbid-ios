@@ -17,7 +17,11 @@ class FavoriteViewController: BaseViewController {
     private let addedToCarView = balbid.AddedToCartView.initFromNib()
     private let darkLayer = CALayer()
 
+    
+    var favorite: Favorite?
     var loadFavorite: (() -> Void)?
+    var deleteFavorite: ((_ id: Int,_ didRemoveFromFavorite: @escaping ()->Void) -> Void)?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +72,7 @@ extension FavoriteViewController: FavoriteViewModelDelegate {
     }
     
     func loadFavoriteSuccess(favorite: Favorite) {
+        self.favorite = favorite
         activityIndicator.stopAnimating()
         favoriteTableViewDataSource.favorite = favorite
         tableView.reloadData()
@@ -80,6 +85,13 @@ extension FavoriteViewController: FavoriteCellDelegate {
         case .addToCart:
               addToCartBottomSheet.show()
         case .delete:
+            guard let indexPath = self.tableView.indexPath(for: favoriteCell), let favorite = favorite?.favoriteItems[indexPath.row] else {
+                return
+            }
+            deleteFavorite?(favorite.id, {
+                self.favoriteTableViewDataSource.favorite?.favoriteItems.remove(at: indexPath.row)
+                self.tableView.deleteRows(at: [indexPath], with: .none)
+            })
             break
         }
     }

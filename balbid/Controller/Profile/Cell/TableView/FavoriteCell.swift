@@ -12,7 +12,7 @@ class FavoriteCell: UITableViewCell {
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productPriceLabel: UILabel!
     @IBOutlet weak var productImageView: UIImageView!
-    
+
     weak var delegate : FavoriteCellDelegate?
 
     var favorite: FavoriteItem? {
@@ -39,7 +39,7 @@ class FavoriteCell: UITableViewCell {
     }
     
     @IBAction func removeFromFavorite(_ sender: UIButton){
-        sender.loadingIndicator(true)
+        sender.loadingIndicator(true, centerPoint: CGPoint(x: sender.frame.midX, y: sender.frame.height/2), indicatorColor: UIColor.appColor(.redColor2) ?? .gray)
         delegate?.favoriteCell(self, perform: .delete,  with: favorite)
     }
     

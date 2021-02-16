@@ -38,7 +38,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func addToFavorite(_ sender: UIButton){
-        sender.loadingIndicator(true, centerPoint: CGPoint(x: favoriteButton.frame.origin.x, y: favoriteButton.frame.midY))
+        sender.loadingIndicator(true, centerPoint: CGPoint(x: favoriteButton.frame.origin.x, y: favoriteButton.frame.midY), indicatorColor: UIColor.appColor(.primaryColor) ?? .gray)
         delegate?.productCollectionViewCell(self, perform: .favorite,  with: product)
     }
     

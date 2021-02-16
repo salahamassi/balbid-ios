@@ -19,7 +19,7 @@ class FavoriteRoute: Route {
         let favoriteViewModel = FavoriteViewModel(dataSource: AppDataSource())
         favoriteViewModel.delegate = viewController
         viewController.loadFavorite = favoriteViewModel.loadFavorite
-        
+        viewController.deleteFavorite = favoriteViewModel.removeProductFromFavorite
         
         return viewController
     }
