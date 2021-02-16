@@ -755,14 +755,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="138" height="300"/>
                                         <color key="backgroundColor" name="lightGrayColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="category_cell" id="iFc-ak-8Ik">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="category_cell" id="iFc-ak-8Ik" customClass="CategoryCell" customModule="balbid" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="138" height="47.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iFc-ak-8Ik" id="b6H-3V-Qfg">
                                                     <rect key="frame" x="0.0" y="0.0" width="138" height="47.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Market" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ef8-WY-avt">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Market" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="Ef8-WY-avt">
                                                             <rect key="frame" x="30" y="21" width="94" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
                                                             <nil key="textColor"/>
@@ -778,6 +778,9 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="nameLabel" destination="Ef8-WY-avt" id="cFF-WS-slx"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <userDefinedRuntimeAttributes>

@@ -122,6 +122,7 @@
 		18DC820225D9C2C50007983C /* AddedToCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DC820125D9C2C50007983C /* AddedToCartView.swift */; };
 		18E1249A25DC3DF200D561C5 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1249925DC3DF200D561C5 /* CategoriesViewModel.swift */; };
 		18E1249D25DC3E8B00D561C5 /* Constants+Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E1249C25DC3E8B00D561C5 /* Constants+Api.swift */; };
+		18E124A225DC418C00D561C5 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E124A125DC418C00D561C5 /* CategoryCell.swift */; };
 		2006B91725CECAD900DB3EE0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006B91625CECAD900DB3EE0 /* LoginViewModel.swift */; };
 		2006B91E25CED1E500DB3EE0 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006B91D25CED1E500DB3EE0 /* RegisterViewModel.swift */; };
 		2019AC3C25C9DC6D00455166 /* OrderTraceMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019AC3B25C9DC6D00455166 /* OrderTraceMapViewController.swift */; };
@@ -420,6 +421,7 @@
 		18DC820125D9C2C50007983C /* AddedToCartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddedToCartView.swift; path = "../../../../../Downloads/balbid-ios-design_branch/balbid/Controller/Categories/View/AddedToCartView.swift"; sourceTree = "<group>"; };
 		18E1249925DC3DF200D561C5 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		18E1249C25DC3E8B00D561C5 /* Constants+Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Api.swift"; sourceTree = "<group>"; };
+		18E124A125DC418C00D561C5 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		2006B91625CECAD900DB3EE0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		2006B91D25CED1E500DB3EE0 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		2019AC3B25C9DC6D00455166 /* OrderTraceMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTraceMapViewController.swift; sourceTree = "<group>"; };
@@ -725,6 +727,7 @@
 		083F4A07259F6934005DEF75 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				18E1249F25DC416E00D561C5 /* Cell */,
 				0894855025A1FD1C001934A9 /* Protocol */,
 				0894853A25A1EC1F001934A9 /* View */,
 				083F4A18259F7BB2005DEF75 /* FlowLayout */,
@@ -1123,6 +1126,22 @@
 				18E1249925DC3DF200D561C5 /* CategoriesViewModel.swift */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		18E1249F25DC416E00D561C5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				18E124A025DC417800D561C5 /* TableView */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		18E124A025DC417800D561C5 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				18E124A125DC418C00D561C5 /* CategoryCell.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		2006B90A25CEC83400DB3EE0 /* Api */ = {
@@ -2138,6 +2157,7 @@
 				3DB1DB4825868E1B00EF1E8F /* LayoutHelper.swift in Sources */,
 				083F4A25259F7E35005DEF75 /* AdCategoriesRoute.swift in Sources */,
 				3DB1DB4925868E1B00EF1E8F /* Extensions+view+stacking.swift in Sources */,
+				18E124A225DC418C00D561C5 /* CategoryCell.swift in Sources */,
 				205F23BC25C993C400BB52FD /* ProductTraceViewController.swift in Sources */,
 				1863F18225D85F480052CA27 /* AdCategoriesViewModel.swift in Sources */,
 				083548782587C01100665DE0 /* LoginAnimationPresenter.swift in Sources */,

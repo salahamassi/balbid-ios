@@ -28,6 +28,7 @@ class CategoriesViewController: BaseViewController {
         setupCategoriesTableView()
         setupCategoriesContentCollectionView()
         setupNavbar()
+        setupViewModel()
     }
     
     private func setupCategoriesTableView(){
@@ -66,7 +67,9 @@ class CategoriesViewController: BaseViewController {
     private func setupViewModel(){
         viewModel = CategoriesViewModel(dataSource: AppDataSource())
         viewModel.delegate = self
+        viewModel.getCategries()
     }
+
 }
 
 extension CategoriesViewController: ChangableRowDelegate {
@@ -90,6 +93,7 @@ extension CategoriesViewController: CategoriesViewModelDelegate  {
     }
     
     func loadCategoriesSuccess(category: Category) {
+        categoriesTableViewDataSource.category = category
         activityIndicator.stopAnimating()
         categoriesTableView.reloadData()
         categoriesContentCollectionView.reloadData()
