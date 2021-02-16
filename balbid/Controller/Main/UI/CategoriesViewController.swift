@@ -11,14 +11,17 @@ class CategoriesViewController: BaseViewController {
     
     @IBOutlet weak var categoriesTableView: UITableView!
     @IBOutlet weak var categoriesContentCollectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
-    let categoriesTableViewDataSource = CategoriesTableViewDataSource()
-    let categoriesContentCollectionViewDataSource = CategoriesContentCollectionViewDataSource()
-    let categoriesContentCollectionViewFloawLayout = CategriesContentCollectionViewFlowLayout()
-    let categriesContentCollectionViewDelegate = CategriesContentCollectionViewDelegate()
+    private let categoriesTableViewDataSource = CategoriesTableViewDataSource()
+    private let categoriesContentCollectionViewDataSource = CategoriesContentCollectionViewDataSource()
+    private let categoriesContentCollectionViewFloawLayout = CategriesContentCollectionViewFlowLayout()
+    private let categriesContentCollectionViewDelegate = CategriesContentCollectionViewDelegate()
 
-    let searchBar = UISearchBar(frame: .zero)
-
+    private let searchBar = UISearchBar(frame: .zero)
+    
+    
+    private var viewModel: CategoriesViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,8 +51,6 @@ class CategoriesViewController: BaseViewController {
         categriesContentCollectionViewDelegate.didSelectRow = { indexPath in
             self.router?.navigate(to: .adCategoriesRoute)
         }
-        
-        
     }
 
     private func setupNavbar(){
@@ -60,6 +61,11 @@ class CategoriesViewController: BaseViewController {
     
     @objc private func barCode(){
         
+    }
+    
+    private func setupViewModel(){
+        viewModel = CategoriesViewModel(dataSource: AppDataSource())
+        viewModel.delegate = self
     }
 }
 
@@ -75,4 +81,19 @@ extension CategoriesViewController: ChangableRowDelegate {
             categoriesContentCollectionView.deleteItems(at: indexPathes)
         }
     }
+}
+
+
+extension CategoriesViewController: CategoriesViewModelDelegate  {
+    func apiError(error: String) {
+        displayAlert(message: error)
+    }
+    
+    func loadCategoriesSuccess(category: Category) {
+        activityIndicator.stopAnimating()
+        categoriesTableView.reloadData()
+        categoriesContentCollectionView.reloadData()
+    }
+    
+    
 }

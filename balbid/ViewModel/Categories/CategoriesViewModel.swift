@@ -10,7 +10,7 @@ import UIKit
 class CategoriesViewModel: NSObject {
     
     let dataSource: AppDataSource
-    weak var delegate: CategoriesDelegate?
+    weak var delegate: CategoriesViewModelDelegate?
     
     init(dataSource: AppDataSource) {
         self.dataSource = dataSource
@@ -34,7 +34,7 @@ class CategoriesViewModel: NSObject {
 }
 
 
-protocol CategoriesDelegate: class {
+protocol CategoriesViewModelDelegate: class {
     func apiError(error: String)
     func loadCategoriesSuccess(category: Category)
 }
