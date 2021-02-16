@@ -396,10 +396,10 @@
             </objects>
             <point key="canvasLocation" x="-1069" y="-123"/>
         </scene>
-        <!--Ad Categories View Controller-->
+        <!--Category Products View Controller-->
         <scene sceneID="CjW-XA-zR3">
             <objects>
-                <viewController storyboardIdentifier="AdCategoriesViewController" hidesBottomBarWhenPushed="YES" id="IfJ-e2-UXd" customClass="AdCategoriesViewController" customModule="balbid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdCategoriesViewController" hidesBottomBarWhenPushed="YES" id="IfJ-e2-UXd" customClass="CategoryProductsViewController" customModule="balbid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w9k-6v-fzY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -521,11 +521,17 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="Pld-PP-8dO"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Wgd-Km-Uzv"/>
                             </scrollView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Nh2-MF-Y6m">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" name="primaryColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b0O-TX-Nz7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Nh2-MF-Y6m" firstAttribute="centerX" secondItem="w9k-6v-fzY" secondAttribute="centerX" id="Leb-pE-380"/>
                             <constraint firstItem="kXZ-nA-yd5" firstAttribute="leading" secondItem="b0O-TX-Nz7" secondAttribute="leading" id="NFB-yg-YK9"/>
+                            <constraint firstItem="Nh2-MF-Y6m" firstAttribute="centerY" secondItem="w9k-6v-fzY" secondAttribute="centerY" id="QVq-ij-3xk"/>
                             <constraint firstAttribute="bottom" secondItem="kXZ-nA-yd5" secondAttribute="bottom" id="VJN-ra-xl3"/>
                             <constraint firstItem="kXZ-nA-yd5" firstAttribute="top" secondItem="b0O-TX-Nz7" secondAttribute="top" constant="11" id="pDT-Q1-cqu"/>
                             <constraint firstItem="kXZ-nA-yd5" firstAttribute="trailing" secondItem="b0O-TX-Nz7" secondAttribute="trailing" id="uyK-bz-iin"/>
@@ -534,6 +540,8 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="activtiyIndicator" destination="Nh2-MF-Y6m" id="wkw-iq-zXa"/>
+                        <outlet property="categoryImageView" destination="7C3-jn-9vp" id="slA-ni-Znb"/>
                         <outlet property="collectionView" destination="WmP-0C-87J" id="l3O-6D-55G"/>
                     </connections>
                 </viewController>

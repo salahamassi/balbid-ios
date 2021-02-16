@@ -23,118 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7243E9FD-2B8F-49C9-9A22-E90E3FC2DD2D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "balbid/ViewModel/Main/HomeViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "removeProductFromFavorite(productId:didRemoveFromFavorite:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7243E9FD-2B8F-49C9-9A22-E90E3FC2DD2D - 5d8b18424aed2284"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (balbid.DataSourceResult&lt;balbid.Product&gt;) -&gt; () in balbid.HomeViewModel.removeProductFromFavorite(productId: Swift.Int, didRemoveFromFavorite: () -&gt; ()) -&gt; ()"
-                  moduleName = "balbid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/balod/balbid/ViewModel/Main/HomeViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "94">
-               </Location>
-               <Location
-                  uuid = "7243E9FD-2B8F-49C9-9A22-E90E3FC2DD2D - 5d8b18424aed2284"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (balbid.DataSourceResult&lt;balbid.Product&gt;) -&gt; () in balbid.HomeViewModel.removeProductFromFavorite(productId: Swift.Int, didRemoveFromFavorite: () -&gt; ()) -&gt; ()"
-                  moduleName = "balbid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/balod/balbid/ViewModel/Main/HomeViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "238">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "926FCB71-A5E3-4B21-9F12-09C228A35F1E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "balbid/ViewModel/Main/HomeViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "removeProductFromFavorite(productId:didRemoveFromFavorite:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "926FCB71-A5E3-4B21-9F12-09C228A35F1E - 5d8b18424aed2284"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (balbid.DataSourceResult&lt;balbid.Product&gt;) -&gt; () in balbid.HomeViewModel.removeProductFromFavorite(productId: Swift.Int, didRemoveFromFavorite: () -&gt; ()) -&gt; ()"
-                  moduleName = "balbid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/balod/balbid/ViewModel/Main/HomeViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "94">
-               </Location>
-               <Location
-                  uuid = "926FCB71-A5E3-4B21-9F12-09C228A35F1E - 5d8b18424aed2284"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (balbid.DataSourceResult&lt;balbid.Product&gt;) -&gt; () in balbid.HomeViewModel.removeProductFromFavorite(productId: Swift.Int, didRemoveFromFavorite: () -&gt; ()) -&gt; ()"
-                  moduleName = "balbid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/balod/balbid/ViewModel/Main/HomeViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "238">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E9B525A4-75EC-4A6E-B99B-56822DAFAE9E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "balbid/ViewModel/Main/HomeViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "removeProductFromFavorite(productId:didRemoveFromFavorite:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "6D8CC0D5-7F06-4D0F-8747-59B71CBEFB92"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -385,6 +273,166 @@
             endingLineNumber = "24"
             landmarkName = "getCategries()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "671C9E33-C64E-471B-92D0-4F14EDFE3ED3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/Controller/Main/UI/CategoriesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "toggleRows(at:isExpand:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "63F1629D-00BE-4F3D-B547-42BCC7D9B749"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/Controller/Main/UI/CategoriesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "toggleRows(at:isExpand:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C9C3DE13-A093-4AC2-A2BD-B97214E77C17"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/Controller/Main/UI/CategoriesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "toggleRows(at:isExpand:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2C849E0-A7DC-4ED3-A35B-5DEAE7F3E767"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/Controller/Main/DataSource/CategoriesContentCollectionViewDataSource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "toggleSection(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B096C0FD-A8FA-4902-B9A5-1F49FB26269E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/Controller/Categories/Cell/CollectionView/CategoryContentCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "setCategoryData(categoryItem:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C9BDDA3B-AF43-451C-9AFA-03F97E050C8B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/Controller/Categories/Cell/CollectionView/CategoryContentCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "setCategoryData(categoryItem:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F8478F08-E638-4B3A-BDD6-7A0837E3623C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/App/Data Source/Network Api/AlamofireNetworkApi.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "request(url:method:params:files:headers:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F57508EB-6DB9-4D42-B75A-28877982A5F0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/App/Data Source/Network Api/AlamofireNetworkApi.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "request(url:method:params:files:headers:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F57508EB-6DB9-4D42-B75A-28877982A5F0 - d210f0c24305d2d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Alamofire.DataResponse&lt;Swift.String, Alamofire.AFError&gt;) -&gt; () in balbid.AlamofireNetworkApi.request(url: Swift.String, method: Swift.String, params: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, files: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Foundation.URL&gt;&gt;, headers: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, completion: Swift.Optional&lt;(Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;balbid.LLError&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "balbid"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/balod/balbid/App/Data%20Source/Network%20Api/AlamofireNetworkApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "392">
+               </Location>
+               <Location
+                  uuid = "F57508EB-6DB9-4D42-B75A-28877982A5F0 - d210f0c24305d2d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Alamofire.DataResponse&lt;Swift.String, Alamofire.AFError&gt;) -&gt; () in balbid.AlamofireNetworkApi.request(url: Swift.String, method: Swift.String, params: Swift.Dictionary&lt;Swift.String, Swift.Optional&lt;Any&gt;&gt;, files: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Foundation.URL&gt;&gt;, headers: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, completion: Swift.Optional&lt;(Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;balbid.LLError&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "balbid"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/balod/balbid/App/Data%20Source/Network%20Api/AlamofireNetworkApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "978">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

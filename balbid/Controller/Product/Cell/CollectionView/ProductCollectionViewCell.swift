@@ -22,7 +22,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     var delegate : ProductCellDelegate?
     
     
-    var product: Product? {
+    var product: ProductItem? {
         didSet {
             setProductData(product: product)
         }
@@ -54,7 +54,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         product?.isFavorite = "0"
     }
     
-    private func setProductData(product: Product?){
+    private func setProductData(product: ProductItem?){
 //        if let discount = product?.discount {
 //            productDiscountPriceLabel.text = discount + "% OFF"
 //        }else{
@@ -65,7 +65,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         favoriteButton.setImage(product?.isFavorite == "0" ? #imageLiteral(resourceName: "unselected_favorite") : #imageLiteral(resourceName: "selected_favorite") , for: .normal)
         productNameLabel.text = product?.name
         productPriceLabel.text = (product?.price ?? "0") + " SR"
-        guard let imageUrl = URL(string: product?.image ?? "") else {
+        guard let imageUrl = URL(string: product?.image.encodedText ?? "") else {
             return
         }
         productImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray

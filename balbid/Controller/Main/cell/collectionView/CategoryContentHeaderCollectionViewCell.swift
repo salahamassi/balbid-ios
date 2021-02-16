@@ -10,11 +10,18 @@ import UIKit
 class CategoryContentHeaderCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var arrowImageView: UIImageView!
-    
+    @IBOutlet weak var nameLabel: UILabel!
+
     
     var isExpanded: Bool = false {
         didSet {
             arrowImageView.image = UIImage(named: isExpanded ? .arrowUpImage : .arrowDownImage)
+        }
+    }
+    
+    var categoryItem: CategoryItem? {
+        didSet {
+            nameLabel.text = categoryItem?.name
         }
     }
 

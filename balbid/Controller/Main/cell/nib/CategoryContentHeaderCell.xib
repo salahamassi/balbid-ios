@@ -24,33 +24,30 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ybq-2c-JIX">
-                        <rect key="frame" x="10" y="16" width="108" height="22"/>
+                        <rect key="frame" x="10" y="16" width="108" height="25"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="WPn-PO-por">
-                                <rect key="frame" x="0.0" y="0.0" width="108" height="11"/>
+                                <rect key="frame" x="0.0" y="0.0" width="108" height="14"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Rice and pasta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X52-ze-BcR">
-                                        <rect key="frame" x="0.0" y="0.0" width="74.5" height="11"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="74.5" height="14"/>
                                         <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="arrow_bottom" translatesAutoresizingMaskIntoConstraints="NO" id="9bk-WS-xs3">
-                                        <rect key="frame" x="93.5" y="0.0" width="14.5" height="11"/>
+                                        <rect key="frame" x="93.5" y="0.0" width="14.5" height="14"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Py4-Md-YPW">
-                                <rect key="frame" x="0.0" y="21" width="108" height="1"/>
+                                <rect key="frame" x="0.0" y="24" width="108" height="1"/>
                                 <color key="backgroundColor" name="borderGrayColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Nbz-dT-8hl"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="22" id="11W-pK-3XS"/>
-                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
@@ -61,6 +58,7 @@
             </collectionViewCellContentView>
             <connections>
                 <outlet property="arrowImageView" destination="9bk-WS-xs3" id="6qx-Iv-Ggx"/>
+                <outlet property="nameLabel" destination="X52-ze-BcR" id="Wpg-f8-jvv"/>
             </connections>
             <point key="canvasLocation" x="118.84057971014494" y="35.491071428571423"/>
         </collectionViewCell>

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AdCategoriesCollectionFlowLayout: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class CategoryProductsCollectionFlowLayout: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     var showProductDetail: ((_ row: Int) -> ())?
 

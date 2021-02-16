@@ -799,41 +799,8 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="category_content_header" id="Nhg-ZA-eIW">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="category_content_cell" id="DcQ-4c-Kb8" customClass="CategoryContentCell" customModule="balbid" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hBn-7A-UPl">
-                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="HUg-0O-cMI">
-                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="22"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rice and pasta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l24-JM-CRU">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="80.5" height="22"/>
-                                                                    <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="12"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_bottom" translatesAutoresizingMaskIntoConstraints="NO" id="iAZ-Ap-IQ9">
-                                                                    <rect key="frame" x="113.5" y="0.0" width="14.5" height="22"/>
-                                                                </imageView>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="22" id="03X-Na-Pyl"/>
-                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="xkL-zb-91H"/>
-                                                            </constraints>
-                                                        </stackView>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="HUg-0O-cMI" firstAttribute="leading" secondItem="hBn-7A-UPl" secondAttribute="leading" id="3bk-Hj-SEi"/>
-                                                        <constraint firstItem="HUg-0O-cMI" firstAttribute="top" secondItem="hBn-7A-UPl" secondAttribute="top" id="AXx-9q-Ykj"/>
-                                                        <constraint firstAttribute="trailing" secondItem="HUg-0O-cMI" secondAttribute="trailing" id="ahT-dt-kB0"/>
-                                                    </constraints>
-                                                </collectionViewCellContentView>
-                                            </collectionViewCell>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="category_content_cell" id="DcQ-4c-Kb8">
-                                                <rect key="frame" x="140" y="0.0" width="128" height="128"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Itg-gx-p5x">
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -876,6 +843,10 @@
                                                     </constraints>
                                                 </collectionViewCellContentView>
                                                 <size key="customSize" width="128" height="128"/>
+                                                <connections>
+                                                    <outlet property="categoryImageView" destination="hC9-nR-7yS" id="cY1-Om-8gL"/>
+                                                    <outlet property="categoryNameLabel" destination="L8V-Ck-B6N" id="tF0-Ff-eF1"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
@@ -1765,7 +1736,6 @@ Product</string>
     <resources>
         <image name="action_arrow" width="6.5" height="11.5"/>
         <image name="ad_sample" width="344" height="125"/>
-        <image name="arrow_bottom" width="14.5" height="8"/>
         <image name="balance" width="14.5" height="10"/>
         <image name="buisness_trade" width="14.5" height="14.5"/>
         <image name="call-us" width="18" height="18.5"/>

@@ -7,25 +7,58 @@
 
 import UIKit
 
-struct AdCategoriesViewModel {
+struct CategoryProductsViewModel {
     
-    let dataSource = AppDataSource()
+    let dataSource: AppDataSource
+    weak var delegate: AdCategoriesViewModelDelegate?
     
-    func addProductToFavorite(productId: Int){
-        dataSource.perform(service: .init(path: .addToFavoritePath, domain: .domain, method: .post, params: ["product_id" : productId], mustUseAuth: true), Product.self) { (result) in
+    init(dataSource: AppDataSource) {
+        self.dataSource =  dataSource
+    }
+    
+    func getProductCategory(from categoryId: Int) {
+        dataSource.perform(service: .init(path: .categoryProductPath  + "\(categoryId)&paginate=5&page=1&order_by=price&sort_direction=ASC", domain: .domain, method: .get, params: [:], mustUseAuth: true), Product.self) { (result) in
             switch result {
-            case .success(let data):
-                 print(data)
+            case .data(let data):
+                self.delegate?.loadProductSuccess(product: data.data)
             case .failure(let error):
-                 print(error)
+                self.delegate?.apiError(error: error)
             default:
                 break
+            }
         }
     }
-  }
 
+    
+    func addProductToFavorite(productId: Int, didAddToFavorite:  @escaping () -> Void){
+        dataSource.perform(service: .init(path: .addToFavoritePath, domain: .domain, method: .post, params: ["product_id" : productId], mustUseAuth: true), ProductItem.self) { (result) in
+            switch result {
+            case .data(_):
+                didAddToFavorite()
+            case .failure(let error):
+                self.delegate?.apiError(error: error)
+            default:
+                break
+            }
+        }
+    }
+    
+    func removeProductFromFavorite(productId: Int, didRemoveFromFavorite: @escaping () -> Void){
+        dataSource.perform(service: .init(path: .removeFromFavoritePath + "\(productId)", domain: .domain, method: .delete, params: [:], mustUseAuth: true), ProductItem.self) { (result) in
+            switch result {
+            case .data(_):
+                didRemoveFromFavorite()
+            case .failure(let error):
+                self.delegate?.apiError(error: error)
+            default:
+                break
+            }
+        }
+    }
+    
+    
 }
-protocol AdCategoriesViewModelDelegate {
-    
-    
+protocol AdCategoriesViewModelDelegate: class {
+    func apiError(error: String)
+    func loadProductSuccess(product: Product)
 }

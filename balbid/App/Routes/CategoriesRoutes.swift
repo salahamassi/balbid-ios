@@ -8,7 +8,7 @@
 import AppRouter
 
 enum CategoriesRoutes {
-    case adCategoriesRoute
+    case adCategoriesRoute(params: [String: Any])
     case categoriesFilterRoute
 }
 
@@ -18,12 +18,12 @@ extension AppRouter {
         let mRoute: Route
         let mParams: [String: Any]?
         switch route {
-            case .adCategoriesRoute:
+            case .adCategoriesRoute (let params):
                 mRoute = AdCategoriesRoute()
+                mParams = params
+            case .categoriesFilterRoute:
+                mRoute = CategoriesFilterRoute()
                 mParams = nil
-        case .categoriesFilterRoute:
-            mRoute = CategoriesFilterRoute()
-            mParams = nil
         }
         navigate(to: mRoute, with: mParams, completion: completion)
     }

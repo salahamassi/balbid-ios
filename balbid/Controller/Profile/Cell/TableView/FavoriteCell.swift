@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class FavoriteCell: UITableViewCell {
 
@@ -28,9 +29,10 @@ class FavoriteCell: UITableViewCell {
         }
         productNameLabel.text = favorite.name
         productPriceLabel.text = favorite.price + " RS"
-        guard let imageUrl = URL(string: favorite.image) else {
+        guard let imageUrl = URL(string: favorite.image.encodedText ?? "") else {
             return
         }
+        productImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         productImageView.sd_setImage(with: imageUrl)
     }
     

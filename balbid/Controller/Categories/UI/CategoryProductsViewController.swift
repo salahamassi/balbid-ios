@@ -6,21 +6,32 @@
 //
 
 import UIKit
+import SDWebImage
 
-class AdCategoriesViewController: BaseViewController {
+
+class CategoryProductsViewController: BaseViewController {
 
     @IBOutlet weak var collectionView: ISIntrinsicCollectionView!
-    
-    private let adCategoriesCollectionFlowLayout = AdCategoriesCollectionFlowLayout()
-    private  let adCategoriesCollectionDataSource = AdCategoriesCollectionDataSource()
+    @IBOutlet weak var activtiyIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var categoryImageView: UIImageView!
+
+    private let categoryProductsCollectionFlowLayout = CategoryProductsCollectionFlowLayout()
+    private  let categoryProductsCollectionDataSource = CategoryProductsCollectionDataSource()
     private let addToCartBottomSheet = AddToCartBottomSheet.initFromNib()
     private let addedToCarView = balbid.AddedToCartView.initFromNib()
+    
+    var loadProducts: ((Int) -> Void)?
+    var deleteFavorite: ((_ id: Int,_ didRemoveFromFavorite: @escaping ()->Void) -> Void)?
+    var addToFavorite: ((_ id: Int,_ didAddToFavorite: @escaping ()->Void) -> Void)?
+    var category: CategoryItem?
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
         setupAddToCartView()
+        loadProducts?(111)
+        setData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,10 +48,10 @@ class AdCategoriesViewController: BaseViewController {
     }
     
     private func setupCollectionView(){
-        collectionView.dataSource = adCategoriesCollectionDataSource
-        collectionView.delegate = adCategoriesCollectionFlowLayout
-        adCategoriesCollectionDataSource.delegate = self
-        adCategoriesCollectionFlowLayout.showProductDetail = { [weak self] (row) in
+        collectionView.dataSource = categoryProductsCollectionDataSource
+        collectionView.delegate = categoryProductsCollectionFlowLayout
+        categoryProductsCollectionDataSource.delegate = self
+        categoryProductsCollectionFlowLayout.showProductDetail = { [weak self] (row) in
             self?.router?.navigate(to: .productDetailRoute)
         }
         collectionView.register(cells: (nibName: .productCell, cellId: .productCellId))
@@ -60,11 +71,19 @@ class AdCategoriesViewController: BaseViewController {
         addedToCarView.setupView()
     }
     
+    private func setData(){
+        guard let category = category,
+              let imageUrl = URL(string: category.image.encodedText ?? "") else {
+            return
+        }
+        categoryImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        categoryImageView.sd_setImage(with: imageUrl)
+    }
+    
     @IBAction func goToFilter(_ sender: Any){
         router?.navigate(to: .categoriesFilterRoute)
     }
     
-  
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -74,7 +93,7 @@ class AdCategoriesViewController: BaseViewController {
 }
 
 
-extension AdCategoriesViewController: AddedToCartViewDelegate {
+extension CategoryProductsViewController: AddedToCartViewDelegate {
     func AddedToCartView(_ addedToCartView: AddedToCartView, perform actionType: AddedToCartView.ActionType) {
         switch actionType {
         case .continueShopping:
@@ -96,14 +115,26 @@ extension AdCategoriesViewController: AddedToCartViewDelegate {
     
 }
 
-extension AdCategoriesViewController: ProductCellDelegate {
-    func productCollectionViewCell(_ productCollectionViewCell: ProductCollectionViewCell, perform action: ProductCollectionViewCell.ActionType, with product: Product?) {
+extension CategoryProductsViewController: ProductCellDelegate {
+    func productCollectionViewCell(_ productCollectionViewCell: ProductCollectionViewCell, perform action: ProductCollectionViewCell.ActionType, with product: ProductItem?) {
+        guard  let product = product else {
+            return
+        }
         switch action {
         case .addToCart:
             showAddToCartView(cell: productCollectionViewCell)
         case .favorite:
-            print("add TO Favorite")
+            if product.isFavorite == "1" {
+                deleteFavorite?(product.id) {
+                    productCollectionViewCell.removeFromFavorite()
+                }
+            }else{
+                addToFavorite?(product.id, {
+                    productCollectionViewCell.addToFavorite()
+                })
+            }
         }
+        
     }
     
     func showAddToCartView(cell: ProductCollectionViewCell){
@@ -116,3 +147,18 @@ extension AdCategoriesViewController: ProductCellDelegate {
     
 }
 
+extension CategoryProductsViewController: AdCategoriesViewModelDelegate {
+    
+    func apiError(error: String) {
+        displayAlert(message: error)
+    }
+    
+    func loadProductSuccess(product: Product) {
+        categoryProductsCollectionDataSource.product = product
+        activtiyIndicator.stopAnimating()
+        collectionView.reloadData()
+    }
+    
+    
+    
+}

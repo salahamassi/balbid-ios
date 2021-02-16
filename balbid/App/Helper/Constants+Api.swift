@@ -18,6 +18,7 @@ extension String {
     static let removeFromFavoritePath = "customers/products/favorite?product_id="
     static let favoritePath = "customers/products/favorite"
     static let categoryPath = "categories/getLeveling"
+    static let categoryProductPath = "products/getInCategory?category_id="
 
     
     //api Method

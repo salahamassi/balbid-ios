@@ -69,4 +69,14 @@ extension UICollectionView {
         }
         return self
     }
+    
+    func indexPathForSupplementaryElement(_ supplementaryView: UICollectionReusableView, ofKind kind: String) -> IndexPath? {
+           let visibleIndexPaths = self.indexPathsForVisibleSupplementaryElements(ofKind: kind)
+           return visibleIndexPaths.first(where: {
+               self.supplementaryView(forElementKind: kind, at: $0) == supplementaryView
+           })
+       }
+       
 }
+
+

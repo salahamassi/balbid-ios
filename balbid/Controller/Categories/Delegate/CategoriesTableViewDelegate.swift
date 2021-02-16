@@ -7,6 +7,11 @@
 
 import UIKit
 
-class categoriesTableViewDelegate: NSObject {
-
+class CategoriesTableViewDelegate: NSObject, UITableViewDelegate {
+    
+    var didSelect: ((IndexPath) -> Void)?
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        didSelect?(indexPath)
+    }
 }

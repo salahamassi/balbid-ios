@@ -82,7 +82,7 @@ extension HomeViewController: HomeSelectionProtocol{
     }
     
     func didSelect(item at: IndexPath) {
-        router?.navigate(to: .adCategoriesRoute)
+//        router?.navigate(to: CategoriesRoutes.adCategoriesRoute(params: ["category": ]))
     }
 }
 
@@ -115,7 +115,7 @@ extension HomeViewController: SliderIndicatorCollectionViewCellDelegate {
 
 
 extension HomeViewController: ProductCellDelegate {
-    func productCollectionViewCell(_ productCollectionViewCell: ProductCollectionViewCell, perform action: ProductCollectionViewCell.ActionType, with product: Product?) {
+    func productCollectionViewCell(_ productCollectionViewCell: ProductCollectionViewCell, perform action: ProductCollectionViewCell.ActionType, with product: ProductItem?) {
         guard let product = product else {
             return
         }
