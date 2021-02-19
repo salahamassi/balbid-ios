@@ -22,7 +22,8 @@ class HomeViewController: BaseViewController {
     private var productDelegate = ProductDelegate()
     private let addToCartBottomSheet = AddToCartBottomSheet.initFromNib()
     private let addedToCarView = balbid.AddedToCartView.initFromNib()
-    
+    private var itemAddedToCartDelegate  = ItemAddedToCartDelegate()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
@@ -30,6 +31,11 @@ class HomeViewController: BaseViewController {
         setupViewModel()
         setupProductDelegate()
         setupAddToCartView()
+        setupAddedToCartDelegate()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         setupAddedToCartView()
     }
         
@@ -93,18 +99,32 @@ class HomeViewController: BaseViewController {
     }
     
     private func setupAddedToCartView(){
-        addedToCarView.delegate = self
+        addedToCarView.delegate = itemAddedToCartDelegate
         UIApplication.shared.keyWindow?.addSubview(addedToCarView)
         addedToCarView.setupView()
     }
-
+    
+    
+    private func setupAddedToCartDelegate() {
+        itemAddedToCartDelegate.continueShopping = { [weak self] in
+            self?.removeDarkView()
+        }
+        itemAddedToCartDelegate.popController = { [weak self] in
+            self?.router?.popToRootViewController()
+        }
+    }
+    
     private func setupViewModel(){
         homeViewModel = HomeViewModel(dataSource: AppDataSource())
         homeViewModel.delegate = self
         homeViewModel.getHomeData()
     }
     
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        addedToCarView.removeFromSuperview()
+        removeDarkView()
+    }
     
 }
 
@@ -145,27 +165,4 @@ extension HomeViewController: SliderIndicatorCollectionViewCellDelegate {
         collectionView.scrollToItem(at: IndexPath(row: page, section: 0), at: .centeredHorizontally, animated: true)
     }    
 }
-
-extension HomeViewController: AddedToCartViewDelegate {
-    func AddedToCartView(_ addedToCartView: AddedToCartView, perform actionType: AddedToCartView.ActionType) {
-        switch actionType {
-        case .continueShopping:
-            addedToCartView.showOrHideView(isOpen: false)
-            removeDarkView()
-        case .pay:
-            addedToCartView.showOrHideView(isOpen: false)
-            router?.popToRootViewController()
-            guard let tabBarController = ((UIApplication.shared.delegate as! AppDelegate).window?.rootViewController as? UITabBarController) else {
-                return
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                tabBarController.selectedIndex = 3
-            }
-        
-        }
-    }
-    
-  
-}
-
 

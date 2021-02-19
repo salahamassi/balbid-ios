@@ -21,6 +21,7 @@ class FavoriteViewController: BaseViewController {
     var favorite: Favorite?
     var loadFavorite: (() -> Void)?
     var deleteFavorite: ((_ id: Int,_ didRemoveFromFavorite: @escaping ()->Void) -> Void)?
+    private var itemAddedToCartDelegate  = ItemAddedToCartDelegate()
 
 
     override func viewDidLoad() {
@@ -29,6 +30,11 @@ class FavoriteViewController: BaseViewController {
         setupFavoriteTableView()
         loadFavorite?()
         setupAddToCartView()
+        setupAddedToCartDelegate()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         setupAddedToCartView()
     }
     
@@ -51,9 +57,28 @@ class FavoriteViewController: BaseViewController {
     }
     
     private func setupAddedToCartView(){
-        addedToCarView.delegate = self
+        addedToCarView.delegate = itemAddedToCartDelegate
         UIApplication.shared.keyWindow?.addSubview(addedToCarView)
         addedToCarView.setupView()
+    }
+    
+    private func setupAddedToCartDelegate() {
+        itemAddedToCartDelegate.continueShopping = { [weak self] in
+            self?.backToHome(selectedIndex: 0)
+        }
+        itemAddedToCartDelegate.popController = { [weak self] in
+            self?.router?.popToRootViewController()
+        }
+    }
+    
+    func backToHome(selectedIndex: Int) {
+        router?.popToRootViewController()
+        guard  let tabBarController = ((UIApplication.shared.delegate as! AppDelegate).window?.rootViewController as? UITabBarController) else {
+            return
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            tabBarController.selectedIndex = selectedIndex
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -96,29 +121,7 @@ extension FavoriteViewController: FavoriteCellDelegate {
         }
     }
     
-
-    
 }
 
 
-extension FavoriteViewController: AddedToCartViewDelegate {
-    func AddedToCartView(_ addedToCartView: AddedToCartView, perform actionType: AddedToCartView.ActionType) {
-        switch actionType {
-        case .continueShopping:
-            backToHome(selectedIndex: 0)
-        case .pay:
-            addedToCartView.showOrHideView(isOpen: false)
-            backToHome(selectedIndex: 3)
-        }
-    }
-    
-    func backToHome(selectedIndex: Int) {
-        router?.popToRootViewController()
-        guard  let tabBarController = ((UIApplication.shared.delegate as! AppDelegate).window?.rootViewController as? UITabBarController) else {
-            return
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            tabBarController.selectedIndex = selectedIndex
-        }
-    }
-}
+

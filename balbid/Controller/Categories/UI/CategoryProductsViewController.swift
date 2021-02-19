@@ -27,8 +27,8 @@ class CategoryProductsViewController: BaseViewController {
     var category: CategoryItem?
     private var isVerticalScrolling = true
     private var lastContentOffset : CGFloat = 0
-    
     private var productDelegate = ProductDelegate()
+    private var itemAddedToCartDelegate  = ItemAddedToCartDelegate()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +37,7 @@ class CategoryProductsViewController: BaseViewController {
         loadProducts?(category?.id ?? -1,false)
         setData()
         setupProductDelegate()
+        setupAddedToCartDelegate()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -70,12 +71,19 @@ class CategoryProductsViewController: BaseViewController {
         }
     }
     
+    private func setupAddedToCartDelegate() {
+        itemAddedToCartDelegate.continueShopping = { [weak self] in
+            self?.removeDarkView()
+        }
+        itemAddedToCartDelegate.popController = { [weak self] in
+            self?.router?.popToRootViewController()
+        }
+    }
     
     @objc
     private func paginateMore() {
         print("New Pagination")
         loadProducts?(category?.id ?? -1,true)
-
     }
     
     private func setupAddToCartView(){
@@ -87,7 +95,7 @@ class CategoryProductsViewController: BaseViewController {
     }
     
     private func setupAddedToCartView(){
-        addedToCarView.delegate = self
+        addedToCarView.delegate = itemAddedToCartDelegate
         UIApplication.shared.keyWindow?.addSubview(addedToCarView)
         addedToCarView.setupView()
     }
@@ -118,30 +126,6 @@ class CategoryProductsViewController: BaseViewController {
         removeDarkView()
     }
 }
-
-
-extension CategoryProductsViewController: AddedToCartViewDelegate {
-    func AddedToCartView(_ addedToCartView: AddedToCartView, perform actionType: AddedToCartView.ActionType) {
-        switch actionType {
-        case .continueShopping:
-            addedToCartView.showOrHideView(isOpen: false)
-            removeDarkView()
-        case .pay:
-            addedToCartView.showOrHideView(isOpen: false)
-            router?.popToRootViewController()
-            guard let tabBarController = ((UIApplication.shared.delegate as! AppDelegate).window?.rootViewController as? UITabBarController) else {
-                return
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                tabBarController.selectedIndex = 3
-            }
-        
-        }
-    }
-    
-  
-}
-
 
 extension CategoryProductsViewController: AdCategoriesViewModelDelegate {
     func didLoadNewPaginate(product: Product) {
