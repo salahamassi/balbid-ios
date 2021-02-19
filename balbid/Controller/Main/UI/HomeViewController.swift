@@ -13,20 +13,24 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    let homeCollectionViewDataSource: HomeCollectionViewDataSource = HomeCollectionViewDataSource()
-    let homeCollectionViewFlowLayout: HomeCollectionViewFlowLayout = HomeCollectionViewFlowLayout()
-    var homeCollectionViewDelegate:
+    private let homeCollectionViewDataSource: HomeCollectionViewDataSource = HomeCollectionViewDataSource()
+    private let homeCollectionViewFlowLayout: HomeCollectionViewFlowLayout = HomeCollectionViewFlowLayout()
+    private var homeCollectionViewDelegate:
         HomeCollectionViewDelegate!
-
-    let searchBar = UISearchBar(frame: .zero)
-    
+    private let searchBar = UISearchBar(frame: .zero)
     private var homeViewModel: HomeViewModel!
+    private var productDelegate = ProductDelegate()
+    private let addToCartBottomSheet = AddToCartBottomSheet.initFromNib()
+    private let addedToCarView = balbid.AddedToCartView.initFromNib()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
         setupNavbar()
         setupViewModel()
+        setupProductDelegate()
+        setupAddToCartView()
+        setupAddedToCartView()
     }
         
     fileprivate func registerCell() {
@@ -39,8 +43,6 @@ class HomeViewController: BaseViewController {
         collectionView.register(UINib(nibName: .productCell, bundle: nil), forCellWithReuseIdentifier: .productCellId)
         
         collectionView.register(UINib(nibName: .productFooter, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: .productFooterCellId)
-
-        
     }
     
     private func setupCollectionView(){
@@ -51,10 +53,18 @@ class HomeViewController: BaseViewController {
         collectionView.delegate = homeCollectionViewDelegate
         registerCell()
         homeCollectionViewDataSource.delegate = self
-        homeCollectionViewDataSource.productCellDelegate = self
+        homeCollectionViewDataSource.productCellDelegate = productDelegate
 
     }
-
+    
+    private func setupProductDelegate() {
+        productDelegate.deleteFavorite = homeViewModel.removeProductFromFavorite
+        productDelegate.addToFavorite = homeViewModel.addProductToFavorite
+        productDelegate.showAddToCartView = { [weak self] cell in
+            self?.showAddToCartView(cell: cell)
+        }
+    }
+    
     
     private  func setupNavbar(){
         navigationItem.titleView = searchBar
@@ -66,12 +76,35 @@ class HomeViewController: BaseViewController {
     @objc private func barCode(){
         
     }
+    
+    private func showAddToCartView(cell: ProductCollectionViewCell){
+        guard let indexPath = self.collectionView.indexPath(for: cell) else {
+            return
+        }
+        self.addToCartBottomSheet.show()
+    }
+    
+    private func setupAddToCartView(){
+        addToCartBottomSheet.addProductsToCart = { [weak self] in
+            self?.addToCartBottomSheet.hide()
+            self?.addedToCarView.showOrHideView(isOpen: true)
+            self?.addDarkView(below: self?.addedToCarView)
+        }
+    }
+    
+    private func setupAddedToCartView(){
+        addedToCarView.delegate = self
+        UIApplication.shared.keyWindow?.addSubview(addedToCarView)
+        addedToCarView.setupView()
+    }
 
     private func setupViewModel(){
         homeViewModel = HomeViewModel(dataSource: AppDataSource())
         homeViewModel.delegate = self
         homeViewModel.getHomeData()
     }
+    
+    
     
 }
 
@@ -113,29 +146,26 @@ extension HomeViewController: SliderIndicatorCollectionViewCellDelegate {
     }    
 }
 
-
-extension HomeViewController: ProductCellDelegate {
-    func productCollectionViewCell(_ productCollectionViewCell: ProductCollectionViewCell, perform action: ProductCollectionViewCell.ActionType, with product: ProductItem?) {
-        guard let product = product else {
-            return
-        }
-        switch action {
-        case .addToCart:
-            break
-        case .favorite:
-            if product.isFavorite == "1" {
-                homeViewModel.removeProductFromFavorite(productId:  product.id) {
-                    productCollectionViewCell.removeFromFavorite()
-                }
-            }else{
-                homeViewModel.addProductToFavorite(productId: product.id, didAddToFavorite: {
-                    productCollectionViewCell.addToFavorite()
-                })
+extension HomeViewController: AddedToCartViewDelegate {
+    func AddedToCartView(_ addedToCartView: AddedToCartView, perform actionType: AddedToCartView.ActionType) {
+        switch actionType {
+        case .continueShopping:
+            addedToCartView.showOrHideView(isOpen: false)
+            removeDarkView()
+        case .pay:
+            addedToCartView.showOrHideView(isOpen: false)
+            router?.popToRootViewController()
+            guard let tabBarController = ((UIApplication.shared.delegate as! AppDelegate).window?.rootViewController as? UITabBarController) else {
+                return
             }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                tabBarController.selectedIndex = 3
+            }
+        
         }
     }
     
   
-    
 }
+
 

@@ -23,11 +23,11 @@ class CategoryContentCell: UICollectionViewCell {
         guard let categoryItem =  categoryItem  else {
             return
         }
+        categoryImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         categoryNameLabel.text =  categoryItem.name
         guard let imageUrl = URL(string: categoryItem.image.encodedText ?? "") else {
             return
         }
-        categoryImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         categoryImageView.sd_setImage(with: imageUrl)
         
     }

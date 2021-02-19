@@ -24,7 +24,7 @@ class AdCategoriesRoute: Route {
     
     func create(_ router: AppRouter, _ params: [String : Any]?) -> UIViewController {
         let viewController = UIStoryboard.categoriesStoryboard.getViewController(with: .adCategoriesViewController) as! CategoryProductsViewController
-        var viewModel = CategoryProductsViewModel(dataSource: AppDataSource())
+        let viewModel = CategoryProductsViewModel(dataSource: AppDataSource())
         viewModel.delegate = viewController
         viewController.loadProducts = viewModel.getProductCategory
         viewController.addToFavorite = viewModel.addProductToFavorite

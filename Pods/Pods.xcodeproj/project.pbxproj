@@ -7,157 +7,189 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DCE2C313C121F613D50ACC3FE3EDFD0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0099C32CD052D2679865CAE3EEEEAB2 /* CoreGraphics.framework */; };
-		166BFDACD221323FA6EBBBE82B88BFD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233AEAA73D843C0E91D6A0EF6C3F0E2F /* Foundation.framework */; };
-		1808BFCB8294885EF9E8B8A4C8A94D58 /* RangeSeekSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 447D6B9E2BD872DF7A1BE97C6705D80B /* RangeSeekSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A3DA90BAE28885E15657CF35A0A6F8B /* VICMAImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2783A545422789B593729D3D2688D341 /* VICMAImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		219A000E2DF2A37663CCB2D68B993E65 /* Pods-balbid-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CA967A32F300C116E11687AD65CF9FFC /* Pods-balbid-dummy.m */; };
-		29475D5358B52176A590E3DAF07F698E /* VICMAImageView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64EC85B58A61144761887C8C468791DC /* VICMAImageView-dummy.m */; };
-		2AE1CB979809662C29C04D3F00B62259 /* SwipeExpansionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0944C97F2282764349A5F4A0EFD2788 /* SwipeExpansionStyle.swift */; };
-		2EF2351AA2011DC27C94F950B7FD8550 /* TapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E81DE11324787E23F84CBB045ACE846 /* TapticEngine.swift */; };
-		346F1121DE5579B550A08D85F01E81A7 /* RangeSeekSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE3F8AE309053B80140A089F16A6421 /* RangeSeekSlider.swift */; };
-		37B21598D79AAB24127E025FD2915CAB /* SwipeCollectionViewCell+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7D2CDC5CC8F7FA346C1E10791BC454 /* SwipeCollectionViewCell+Display.swift */; };
-		3BFA20EF94DCACFF0B0EE3996FC729C0 /* Pods-balbid-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 090527BC5AB42627604B2168B9939A3B /* Pods-balbid-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		48DF235B2EE3C0DF0D3016635EB81C71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233AEAA73D843C0E91D6A0EF6C3F0E2F /* Foundation.framework */; };
-		4C09DF4559F1ED92F2D5FCF68B9533BB /* SwipeActionTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CBECA980076A918B5B5F142ADBAB30 /* SwipeActionTransitioning.swift */; };
-		5F29D68FABD1DBFB2CE81CD0EEB8C717 /* Swipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F47C5C434EF6E62C20CFD67641F9 /* Swipeable.swift */; };
-		673675F0D1021CC1AFC87DDDB66F3280 /* SwipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF46AA928868E6D5EEAE2B959EFFA33 /* SwipeTableViewCell.swift */; };
-		683808AB342CD6D4B49238896FA41A89 /* SwipeActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565C33F710616374719DE84F88B4D7E /* SwipeActionsView.swift */; };
-		6D511F288B33A0B110DD241009EADDF3 /* SwipeFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CA93FD4AD0E1F08EE6AB1CF636FB1D /* SwipeFeedback.swift */; };
-		72569E896ED47EA31E1E990004E94C9E /* VICMAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 217CD555EA6903F5724DE035B5C92062 /* VICMAImageView.m */; };
-		77B80B1AF5452E5544C84C319F9895C6 /* SwipeCellKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7CA8BFCA29A0EA608FDF1A3DE27302A /* SwipeCellKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B5FEBC758BE2C3E569600DFA545E083 /* SwipeTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCEE558E7671A7478C79B1AD62A8EE /* SwipeTableViewCellDelegate.swift */; };
-		7CFF7CEAACD1B839D0949659B0A983CC /* SwipeTransitionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F778F37C7BF1B6B405549E8A349D4497 /* SwipeTransitionLayout.swift */; };
-		93DE825E02AB8DD74859BF5124306CE1 /* SwipeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AA93A7E1A5FF0DB89B7049E1D42827 /* SwipeAnimator.swift */; };
-		98FD4EE4D50D5431B633D2CFE35E6490 /* SwipeActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB89D9F3FB8C27DFA51FD9406E59DCD /* SwipeActionButton.swift */; };
-		9D94E9855EB48604692E0A6EA874541D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B30E27BBA97D95203E4E70F2A04FC37 /* Extensions.swift */; };
-		A465A69E28DDC33494F2D7B235CDB4CD /* SwipeExpanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2586884108D3ED1F0A0AF6C415BDCF /* SwipeExpanding.swift */; };
-		A827AC7E2BF92ED0BF5C9254FA3CE2CA /* SwipeTableViewCell+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEC49EC252C065586BB61A821FAA37 /* SwipeTableViewCell+Display.swift */; };
-		A90D490E57A38E6C83DC0A626E316834 /* SwipeCellKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D27AF4C368574F398FBD85F7CE782A /* SwipeCellKit-dummy.m */; };
-		AE26D355E9E86F3079A48C29C7AD3D82 /* SwipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE4655972D9DEDFFFB8F6D131AF2A1E /* SwipeCollectionViewCell.swift */; };
-		BCEEED7C9BF7E717A596FD76B0ED027B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233AEAA73D843C0E91D6A0EF6C3F0E2F /* Foundation.framework */; };
-		C22AD7C3CA285C5E4F754B2D4AA71B52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233AEAA73D843C0E91D6A0EF6C3F0E2F /* Foundation.framework */; };
-		C563DDB75BD87800D1E962DB87BF5A5C /* VICMAImageView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B5FEB2180C48DA9FFCB949A3EA6E1D /* VICMAImageView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C8D0704B2906CB54EE63116317370DE4 /* SwipeCollectionViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6565CACAB63732CCDCF6E50FF17C1D68 /* SwipeCollectionViewCellDelegate.swift */; };
-		D0549E548B8DC5D7A4BACB8E96C9D441 /* SwipeAccessibilityCustomAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143E3208C0B8A30BA2B689454E01D602 /* SwipeAccessibilityCustomAction.swift */; };
-		D11C8923B0451C47BA946C43CA7B3CC3 /* SwipeCollectionViewCell+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C7425827156E3B32773D90D46B5C0 /* SwipeCollectionViewCell+Accessibility.swift */; };
-		D147BCBC15708326CA8DF3A9EB465E51 /* SwipeTableViewCell+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D6827971C65BE435DD5B6403211733 /* SwipeTableViewCell+Accessibility.swift */; };
-		D5B1E67C77F1C26ED6606BFBB0791D66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300D7C9C38226ED88862DA2E4F6D939A /* UIKit.framework */; };
-		D6DFB1257A5B7662A05ABB0983A2715D /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A8270164D2D33B6C2F4651A70EC6F /* SwipeAction.swift */; };
-		D9482577B4860BD359C1A55E173E4EE4 /* RangeSeekSliderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9211CCC87427A7F766E1AD078F6647C4 /* RangeSeekSliderDelegate.swift */; };
-		DB3DAAA9D1BB76ECD1CD6D702D6A2887 /* SwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7D048453CBADC2BD0F48735F06F8BE /* SwipeController.swift */; };
-		E514C59F3A036397E120B3D7E7E848A1 /* SwipeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEF3A427C08540E2F58F3E51253B9D6 /* SwipeOptions.swift */; };
-		F478B450905B29213993F76A223A52A4 /* RangeSeekSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 541F95E1ACEB987C9ECA3A5758131989 /* RangeSeekSlider-dummy.m */; };
+		1808BFCB8294885EF9E8B8A4C8A94D58 /* RangeSeekSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 384E67A51E17E76CC449931F863D90BD /* RangeSeekSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A3DA90BAE28885E15657CF35A0A6F8B /* VICMAImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = A4D9B86CF8D32A6E1AB2EECC67C97991 /* VICMAImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29475D5358B52176A590E3DAF07F698E /* VICMAImageView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1FAB3B7853914CDC6D47A42DB2608D /* VICMAImageView-dummy.m */; };
+		2AE1CB979809662C29C04D3F00B62259 /* SwipeExpansionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD42DF18EAAD09EB13DD58749DE5B0 /* SwipeExpansionStyle.swift */; };
+		2EF2351AA2011DC27C94F950B7FD8550 /* TapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1726E1041E0A173DA2171AAFD3E5F59A /* TapticEngine.swift */; };
+		33D3E16A7C3580B04F4872F646C71AA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */; };
+		346F1121DE5579B550A08D85F01E81A7 /* RangeSeekSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD0D2A1B422F5F8C3830E9CF087F570 /* RangeSeekSlider.swift */; };
+		37B21598D79AAB24127E025FD2915CAB /* SwipeCollectionViewCell+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170517F1E4F4446F5A185AB417766A44 /* SwipeCollectionViewCell+Display.swift */; };
+		45498AB82E73FB6188E183FD7631690A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFAC17E35C4C855B7DD30B7CFD8A28A0 /* UIKit.framework */; };
+		4C09DF4559F1ED92F2D5FCF68B9533BB /* SwipeActionTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474817454311B283D1F0008E0CD2A258 /* SwipeActionTransitioning.swift */; };
+		4EB9AFD24C4CEEBD69AC61E57B8460AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */; };
+		5F29D68FABD1DBFB2CE81CD0EEB8C717 /* Swipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C773A82A747F0A6012CAD2F1AE00450 /* Swipeable.swift */; };
+		60C05E6967A79710F8B70E04890EA40B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFAC17E35C4C855B7DD30B7CFD8A28A0 /* UIKit.framework */; };
+		673675F0D1021CC1AFC87DDDB66F3280 /* SwipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6581786C70A31B71FB52D1DD2A3A80A /* SwipeTableViewCell.swift */; };
+		683808AB342CD6D4B49238896FA41A89 /* SwipeActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75470BB03174CFD86CD5A46D861CBA55 /* SwipeActionsView.swift */; };
+		6D511F288B33A0B110DD241009EADDF3 /* SwipeFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEC5143281AB1DBA6B492E45A367A52 /* SwipeFeedback.swift */; };
+		72569E896ED47EA31E1E990004E94C9E /* VICMAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55549F799C23CE2C7DBC691E918F8102 /* VICMAImageView.m */; };
+		77A86EAFCB1427F6E4A0F284C78144CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */; };
+		77B80B1AF5452E5544C84C319F9895C6 /* SwipeCellKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 01155FEF72B7B0AFF81C0F43B0A98FDB /* SwipeCellKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B5FEBC758BE2C3E569600DFA545E083 /* SwipeTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12415C61FAC5E1F0138DF5C1DD8B5C /* SwipeTableViewCellDelegate.swift */; };
+		7CFF7CEAACD1B839D0949659B0A983CC /* SwipeTransitionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E354CFBB602DE990FBD559F9CE10E9E /* SwipeTransitionLayout.swift */; };
+		84468A0971D454B2E6F25CEE1EFD5BC8 /* Pods-balbid-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CA967A32F300C116E11687AD65CF9FFC /* Pods-balbid-dummy.m */; };
+		8EA690CBFEE0DAB2AC339629CBE4831E /* CCBottomRefreshControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B6890AAECBECB300AB9BC5D2A9D1162 /* CCBottomRefreshControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93DE825E02AB8DD74859BF5124306CE1 /* SwipeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7722DAD2FFBDA77C1D803B801F6D814 /* SwipeAnimator.swift */; };
+		98FD4EE4D50D5431B633D2CFE35E6490 /* SwipeActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813317F5D5FB85F6569506E780AEE4D /* SwipeActionButton.swift */; };
+		9D94E9855EB48604692E0A6EA874541D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1C551355A7E4DAA999D0FC5D1D6D70 /* Extensions.swift */; };
+		9F75545E1D5C00C434AC4F6150F3AFB5 /* Pods-balbid-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 090527BC5AB42627604B2168B9939A3B /* Pods-balbid-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A29EC048C0EA9932F9F7CDE6E85F70EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553F02396820467C46BFBDBFD5A82BB7 /* CoreGraphics.framework */; };
+		A465A69E28DDC33494F2D7B235CDB4CD /* SwipeExpanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1405AC31BC9DD06C4FA51A6FB04A167 /* SwipeExpanding.swift */; };
+		A827AC7E2BF92ED0BF5C9254FA3CE2CA /* SwipeTableViewCell+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A95206C60C373453FE6AF23FE7C4F2 /* SwipeTableViewCell+Display.swift */; };
+		A90D490E57A38E6C83DC0A626E316834 /* SwipeCellKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7AB8499071791790F3F7E87C36C4E92 /* SwipeCellKit-dummy.m */; };
+		AE26D355E9E86F3079A48C29C7AD3D82 /* SwipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0648DF716AFA8ABE7A585897F4179A2E /* SwipeCollectionViewCell.swift */; };
+		AF9A79E3C04F1174CB790E313DD9283E /* CCBottomRefreshControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9B16B5FAE766D051F2178A27D37029 /* CCBottomRefreshControl-dummy.m */; };
+		C563DDB75BD87800D1E962DB87BF5A5C /* VICMAImageView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3740C1A2D756601672D4B00AF9E40201 /* VICMAImageView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C6018F1C6B1F4852F0BBD2CFC46AA8E7 /* UIScrollView+BottomRefreshControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 215F5A41A7BD267CB80830DB31D11599 /* UIScrollView+BottomRefreshControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8D0704B2906CB54EE63116317370DE4 /* SwipeCollectionViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5D3DED2C270ACB4EF2B24972990E7 /* SwipeCollectionViewCellDelegate.swift */; };
+		CD417849BAACEF9A1A99DEF0FB774191 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */; };
+		CD8D5E804547C478414976877F564916 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */; };
+		D0549E548B8DC5D7A4BACB8E96C9D441 /* SwipeAccessibilityCustomAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBBC0B138C3BF6740057B675C2D50E /* SwipeAccessibilityCustomAction.swift */; };
+		D11C8923B0451C47BA946C43CA7B3CC3 /* SwipeCollectionViewCell+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D6370EAA7D33F603F6DEB2D5CF9B35 /* SwipeCollectionViewCell+Accessibility.swift */; };
+		D147BCBC15708326CA8DF3A9EB465E51 /* SwipeTableViewCell+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D36BCF6BD39840CD423EE26B143623A /* SwipeTableViewCell+Accessibility.swift */; };
+		D6DFB1257A5B7662A05ABB0983A2715D /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE877C3303EB25BAECC70153183C2C8 /* SwipeAction.swift */; };
+		D9482577B4860BD359C1A55E173E4EE4 /* RangeSeekSliderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A7D55788B96A5D3501955D5A70744A /* RangeSeekSliderDelegate.swift */; };
+		DB3DAAA9D1BB76ECD1CD6D702D6A2887 /* SwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC3CC3CFE43D8FB352BB0F2991FB14 /* SwipeController.swift */; };
+		DE98AF6854205B034D3752EDC6E97386 /* UIScrollView+BottomRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 361FB60D7EB4C26738CBDA03619D9DC5 /* UIScrollView+BottomRefreshControl.m */; };
+		E514C59F3A036397E120B3D7E7E848A1 /* SwipeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A6679BD22F2534028348F2128EB09 /* SwipeOptions.swift */; };
+		F478B450905B29213993F76A223A52A4 /* RangeSeekSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D67CAA7AF832547658F897BCBD77E8F /* RangeSeekSlider-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0DBD8D60303E576EE7C5CF0A4462DE8F /* PBXContainerItemProxy */ = {
+		026706EAA725FE2706B19804EDA9B076 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1DE44C23B82E6671E9E1541D06DE0E87;
-			remoteInfo = SwipeCellKit;
+			remoteGlobalIDString = 41E250CA7FC71214C3FFAC283CEBC211;
+			remoteInfo = CCBottomRefreshControl;
 		};
-		1E20E887111A1B3058847AFF9BEA7334 /* PBXContainerItemProxy */ = {
+		10BA01CBDF982ED37D238CB0D3CF57C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4AFB864B337D1F74C1D79F4FC8F6C67F;
 			remoteInfo = RangeSeekSlider;
 		};
-		3CF24CFCF077EE1E254E7D7548440DD9 /* PBXContainerItemProxy */ = {
+		2255112A0478818E8179A38A772FCE80 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9D47BCC72FC49487AEAD76669EC186CE;
 			remoteInfo = VICMAImageView;
 		};
+		307DB15AF8C7F72855C3C8212BF8D638 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DE44C23B82E6671E9E1541D06DE0E87;
+			remoteInfo = SwipeCellKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03E825E5332E0F5018146E89176136B2 /* VICMAImageView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VICMAImageView-prefix.pch"; sourceTree = "<group>"; };
-		06CA93FD4AD0E1F08EE6AB1CF636FB1D /* SwipeFeedback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeFeedback.swift; path = Source/SwipeFeedback.swift; sourceTree = "<group>"; };
+		01155FEF72B7B0AFF81C0F43B0A98FDB /* SwipeCellKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeCellKit-umbrella.h"; sourceTree = "<group>"; };
+		0648DF716AFA8ABE7A585897F4179A2E /* SwipeCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCollectionViewCell.swift; path = Source/SwipeCollectionViewCell.swift; sourceTree = "<group>"; };
 		06CCFFA8EAB12F25F213868BEF787AAB /* Pods-balbid-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-balbid-frameworks.sh"; sourceTree = "<group>"; };
 		090527BC5AB42627604B2168B9939A3B /* Pods-balbid-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-balbid-umbrella.h"; sourceTree = "<group>"; };
+		0946D2509613A60DA34C95DD8BA47FC0 /* VICMAImageView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VICMAImageView-prefix.pch"; sourceTree = "<group>"; };
+		0B6890AAECBECB300AB9BC5D2A9D1162 /* CCBottomRefreshControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CCBottomRefreshControl-umbrella.h"; sourceTree = "<group>"; };
+		0DB70F1EE1025D09442C61886BDECFD5 /* RangeSeekSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RangeSeekSlider-prefix.pch"; sourceTree = "<group>"; };
 		0DCA6DC2DE1EF04B3D4E9A12582EE6EF /* Pods-balbid-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-balbid-Info.plist"; sourceTree = "<group>"; };
-		0E0E22A75B28E74F28C82D310EDFD436 /* SwipeCellKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeCellKit-prefix.pch"; sourceTree = "<group>"; };
-		0E99885AD82B85AA2DAF87E934936B8B /* SwipeCellKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwipeCellKit.release.xcconfig; sourceTree = "<group>"; };
-		125D7B71CB93466A2FF213419AF8671E /* SwipeCellKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwipeCellKit-Info.plist"; sourceTree = "<group>"; };
-		127AC46D9C4F8200BF00497957597111 /* SwipeCellKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwipeCellKit.modulemap; sourceTree = "<group>"; };
-		143E3208C0B8A30BA2B689454E01D602 /* SwipeAccessibilityCustomAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAccessibilityCustomAction.swift; path = Source/SwipeAccessibilityCustomAction.swift; sourceTree = "<group>"; };
-		179A8270164D2D33B6C2F4651A70EC6F /* SwipeAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAction.swift; path = Source/SwipeAction.swift; sourceTree = "<group>"; };
-		1F2586884108D3ED1F0A0AF6C415BDCF /* SwipeExpanding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeExpanding.swift; path = Source/SwipeExpanding.swift; sourceTree = "<group>"; };
-		217CD555EA6903F5724DE035B5C92062 /* VICMAImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VICMAImageView.m; path = VICMAImageView/VICMAImageView.m; sourceTree = "<group>"; };
-		233AEAA73D843C0E91D6A0EF6C3F0E2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		2783A545422789B593729D3D2688D341 /* VICMAImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VICMAImageView.h; path = VICMAImageView/VICMAImageView.h; sourceTree = "<group>"; };
-		2CB89D9F3FB8C27DFA51FD9406E59DCD /* SwipeActionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionButton.swift; path = Source/SwipeActionButton.swift; sourceTree = "<group>"; };
-		300D7C9C38226ED88862DA2E4F6D939A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		30BCEE558E7671A7478C79B1AD62A8EE /* SwipeTableViewCellDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTableViewCellDelegate.swift; path = Source/SwipeTableViewCellDelegate.swift; sourceTree = "<group>"; };
+		0E1C551355A7E4DAA999D0FC5D1D6D70 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Source/Extensions.swift; sourceTree = "<group>"; };
+		0E354CFBB602DE990FBD559F9CE10E9E /* SwipeTransitionLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTransitionLayout.swift; path = Source/SwipeTransitionLayout.swift; sourceTree = "<group>"; };
+		1647876A389D9D08D46C3398FF414FE4 /* VICMAImageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VICMAImageView.release.xcconfig; sourceTree = "<group>"; };
+		16A95206C60C373453FE6AF23FE7C4F2 /* SwipeTableViewCell+Display.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeTableViewCell+Display.swift"; path = "Source/SwipeTableViewCell+Display.swift"; sourceTree = "<group>"; };
+		170517F1E4F4446F5A185AB417766A44 /* SwipeCollectionViewCell+Display.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeCollectionViewCell+Display.swift"; path = "Source/SwipeCollectionViewCell+Display.swift"; sourceTree = "<group>"; };
+		17122B0D430436526CF307A26D12EEE5 /* CCBottomRefreshControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CCBottomRefreshControl.modulemap; sourceTree = "<group>"; };
+		1726E1041E0A173DA2171AAFD3E5F59A /* TapticEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TapticEngine.swift; path = Sources/TapticEngine.swift; sourceTree = "<group>"; };
+		1C5F1DAA92682BF63C82EA103CFE6CF1 /* CCBottomRefreshControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CCBottomRefreshControl-prefix.pch"; sourceTree = "<group>"; };
+		215F5A41A7BD267CB80830DB31D11599 /* UIScrollView+BottomRefreshControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+BottomRefreshControl.h"; path = "Classes/UIScrollView+BottomRefreshControl.h"; sourceTree = "<group>"; };
+		2D36BCF6BD39840CD423EE26B143623A /* SwipeTableViewCell+Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeTableViewCell+Accessibility.swift"; path = "Source/SwipeTableViewCell+Accessibility.swift"; sourceTree = "<group>"; };
+		2DD1296169A1A9284DC36E7D266B0240 /* RangeSeekSlider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RangeSeekSlider-Info.plist"; sourceTree = "<group>"; };
 		3467D6237689EF8ACAECE5EA87DC671F /* Pods-balbid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-balbid.release.xcconfig"; sourceTree = "<group>"; };
-		36CBECA980076A918B5B5F142ADBAB30 /* SwipeActionTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionTransitioning.swift; path = Source/SwipeActionTransitioning.swift; sourceTree = "<group>"; };
-		42D6827971C65BE435DD5B6403211733 /* SwipeTableViewCell+Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeTableViewCell+Accessibility.swift"; path = "Source/SwipeTableViewCell+Accessibility.swift"; sourceTree = "<group>"; };
+		361FB60D7EB4C26738CBDA03619D9DC5 /* UIScrollView+BottomRefreshControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+BottomRefreshControl.m"; path = "Classes/UIScrollView+BottomRefreshControl.m"; sourceTree = "<group>"; };
+		3740C1A2D756601672D4B00AF9E40201 /* VICMAImageView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VICMAImageView-umbrella.h"; sourceTree = "<group>"; };
+		384E67A51E17E76CC449931F863D90BD /* RangeSeekSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RangeSeekSlider-umbrella.h"; sourceTree = "<group>"; };
+		3BFF6ABDAC75B16FDE778E462482B02E /* SwipeCellKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwipeCellKit.modulemap; sourceTree = "<group>"; };
+		3D67CAA7AF832547658F897BCBD77E8F /* RangeSeekSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RangeSeekSlider-dummy.m"; sourceTree = "<group>"; };
+		3EEC5143281AB1DBA6B492E45A367A52 /* SwipeFeedback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeFeedback.swift; path = Source/SwipeFeedback.swift; sourceTree = "<group>"; };
 		436E927438AFF2A4FD3EF14344665747 /* Pods-balbid.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-balbid.modulemap"; sourceTree = "<group>"; };
-		447D6B9E2BD872DF7A1BE97C6705D80B /* RangeSeekSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RangeSeekSlider-umbrella.h"; sourceTree = "<group>"; };
-		451C7425827156E3B32773D90D46B5C0 /* SwipeCollectionViewCell+Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeCollectionViewCell+Accessibility.swift"; path = "Source/SwipeCollectionViewCell+Accessibility.swift"; sourceTree = "<group>"; };
-		4B30E27BBA97D95203E4E70F2A04FC37 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Source/Extensions.swift; sourceTree = "<group>"; };
-		541F95E1ACEB987C9ECA3A5758131989 /* RangeSeekSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RangeSeekSlider-dummy.m"; sourceTree = "<group>"; };
-		64EC85B58A61144761887C8C468791DC /* VICMAImageView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VICMAImageView-dummy.m"; sourceTree = "<group>"; };
-		6565CACAB63732CCDCF6E50FF17C1D68 /* SwipeCollectionViewCellDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCollectionViewCellDelegate.swift; path = Source/SwipeCollectionViewCellDelegate.swift; sourceTree = "<group>"; };
-		6CE4655972D9DEDFFFB8F6D131AF2A1E /* SwipeCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCollectionViewCell.swift; path = Source/SwipeCollectionViewCell.swift; sourceTree = "<group>"; };
-		6E81DE11324787E23F84CBB045ACE846 /* TapticEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TapticEngine.swift; path = Sources/TapticEngine.swift; sourceTree = "<group>"; };
-		6F7B092564EE6D219BD242AEF57DD577 /* VICMAImageView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = VICMAImageView.modulemap; sourceTree = "<group>"; };
-		716BB36E19C2D481FA6476CAC1F516CB /* SwipeCellKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwipeCellKit.debug.xcconfig; sourceTree = "<group>"; };
-		7A62AD7F07EB4EB40E64BE93FCB386CD /* VICMAImageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VICMAImageView.debug.xcconfig; sourceTree = "<group>"; };
-		83B7B07BF8E13525CF42E8BDE386CC27 /* VICMAImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VICMAImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		85056B631DDA65DBF0F3D04E8058BD5D /* Pods_balbid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_balbid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B7D2CDC5CC8F7FA346C1E10791BC454 /* SwipeCollectionViewCell+Display.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeCollectionViewCell+Display.swift"; path = "Source/SwipeCollectionViewCell+Display.swift"; sourceTree = "<group>"; };
-		8F09F47C5C434EF6E62C20CFD67641F9 /* Swipeable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Swipeable.swift; path = Source/Swipeable.swift; sourceTree = "<group>"; };
-		907C3053C3BE07901BBC3CA99BA44B17 /* RangeSeekSlider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RangeSeekSlider-Info.plist"; sourceTree = "<group>"; };
-		91B3A8D0AF6ACFC6A40E00E2F58EFB36 /* RangeSeekSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RangeSeekSlider-prefix.pch"; sourceTree = "<group>"; };
-		9211CCC87427A7F766E1AD078F6647C4 /* RangeSeekSliderDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RangeSeekSliderDelegate.swift; path = Sources/RangeSeekSliderDelegate.swift; sourceTree = "<group>"; };
+		46C3862F1EF547BF465CA063FDA07DF4 /* SwipeCellKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwipeCellKit-Info.plist"; sourceTree = "<group>"; };
+		474817454311B283D1F0008E0CD2A258 /* SwipeActionTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionTransitioning.swift; path = Source/SwipeActionTransitioning.swift; sourceTree = "<group>"; };
+		4A12415C61FAC5E1F0138DF5C1DD8B5C /* SwipeTableViewCellDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTableViewCellDelegate.swift; path = Source/SwipeTableViewCellDelegate.swift; sourceTree = "<group>"; };
+		4B9B16B5FAE766D051F2178A27D37029 /* CCBottomRefreshControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CCBottomRefreshControl-dummy.m"; sourceTree = "<group>"; };
+		531CCEB478CC294511C31578DF5CC34D /* RangeSeekSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RangeSeekSlider.modulemap; sourceTree = "<group>"; };
+		553F02396820467C46BFBDBFD5A82BB7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		55549F799C23CE2C7DBC691E918F8102 /* VICMAImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VICMAImageView.m; path = VICMAImageView/VICMAImageView.m; sourceTree = "<group>"; };
+		5852FE3ACCDE043250F7AD5C1E25B31F /* CCBottomRefreshControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CCBottomRefreshControl.debug.xcconfig; sourceTree = "<group>"; };
+		5A14EE11A246595D50E6664D9B4402CB /* CCBottomRefreshControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CCBottomRefreshControl.framework; path = CCBottomRefreshControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73D6370EAA7D33F603F6DEB2D5CF9B35 /* SwipeCollectionViewCell+Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeCollectionViewCell+Accessibility.swift"; path = "Source/SwipeCollectionViewCell+Accessibility.swift"; sourceTree = "<group>"; };
+		75470BB03174CFD86CD5A46D861CBA55 /* SwipeActionsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionsView.swift; path = Source/SwipeActionsView.swift; sourceTree = "<group>"; };
+		7CE877C3303EB25BAECC70153183C2C8 /* SwipeAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAction.swift; path = Source/SwipeAction.swift; sourceTree = "<group>"; };
+		7DAD8B581DC3F2A86EB9B5C0D3772382 /* RangeSeekSlider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RangeSeekSlider.release.xcconfig; sourceTree = "<group>"; };
+		83B7B07BF8E13525CF42E8BDE386CC27 /* VICMAImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VICMAImageView.framework; path = VICMAImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84BC3CC3CFE43D8FB352BB0F2991FB14 /* SwipeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeController.swift; path = Source/SwipeController.swift; sourceTree = "<group>"; };
+		85056B631DDA65DBF0F3D04E8058BD5D /* Pods_balbid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_balbid.framework; path = "Pods-balbid.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8EAD42DF18EAAD09EB13DD58749DE5B0 /* SwipeExpansionStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeExpansionStyle.swift; path = Source/SwipeExpansionStyle.swift; sourceTree = "<group>"; };
+		8F1A6679BD22F2534028348F2128EB09 /* SwipeOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeOptions.swift; path = Source/SwipeOptions.swift; sourceTree = "<group>"; };
 		92C52F52C259AB5E15D1B5DF6F013D78 /* Pods-balbid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-balbid.debug.xcconfig"; sourceTree = "<group>"; };
-		99D27AF4C368574F398FBD85F7CE782A /* SwipeCellKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwipeCellKit-dummy.m"; sourceTree = "<group>"; };
-		9D443E759FE97A6C0CA5A3B5E4142EBA /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9C773A82A747F0A6012CAD2F1AE00450 /* Swipeable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Swipeable.swift; path = Source/Swipeable.swift; sourceTree = "<group>"; };
+		9D443E759FE97A6C0CA5A3B5E4142EBA /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwipeCellKit.framework; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DEBBC0B138C3BF6740057B675C2D50E /* SwipeAccessibilityCustomAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAccessibilityCustomAction.swift; path = Source/SwipeAccessibilityCustomAction.swift; sourceTree = "<group>"; };
 		9EC664F2A0330F9D6B0D7832514EC66C /* Pods-balbid-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-balbid-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A0099C32CD052D2679865CAE3EEEEAB2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		A05086718D8992EAD3C146131FDEEE19 /* RangeSeekSlider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RangeSeekSlider.release.xcconfig; sourceTree = "<group>"; };
-		A7CA8BFCA29A0EA608FDF1A3DE27302A /* SwipeCellKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeCellKit-umbrella.h"; sourceTree = "<group>"; };
-		AF7D048453CBADC2BD0F48735F06F8BE /* SwipeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeController.swift; path = Source/SwipeController.swift; sourceTree = "<group>"; };
-		B0944C97F2282764349A5F4A0EFD2788 /* SwipeExpansionStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeExpansionStyle.swift; path = Source/SwipeExpansionStyle.swift; sourceTree = "<group>"; };
-		B3EEC49EC252C065586BB61A821FAA37 /* SwipeTableViewCell+Display.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeTableViewCell+Display.swift"; path = "Source/SwipeTableViewCell+Display.swift"; sourceTree = "<group>"; };
-		B7AB4DF65755C634EB37B0D92F0AE052 /* RangeSeekSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RangeSeekSlider.modulemap; sourceTree = "<group>"; };
-		B7B5FEB2180C48DA9FFCB949A3EA6E1D /* VICMAImageView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VICMAImageView-umbrella.h"; sourceTree = "<group>"; };
-		C027A7405E856E45431E9E1E7913015F /* RangeSeekSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RangeSeekSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F93482E50FBC8F9A3D5272760CCC594 /* CCBottomRefreshControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CCBottomRefreshControl.release.xcconfig; sourceTree = "<group>"; };
+		A0E0CC3961580CF0656F144183C0AF33 /* SwipeCellKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwipeCellKit.release.xcconfig; sourceTree = "<group>"; };
+		A4D9B86CF8D32A6E1AB2EECC67C97991 /* VICMAImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VICMAImageView.h; path = VICMAImageView/VICMAImageView.h; sourceTree = "<group>"; };
+		ADAFE4F08A07786A800DBB050A82062A /* SwipeCellKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwipeCellKit.debug.xcconfig; sourceTree = "<group>"; };
+		B1405AC31BC9DD06C4FA51A6FB04A167 /* SwipeExpanding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeExpanding.swift; path = Source/SwipeExpanding.swift; sourceTree = "<group>"; };
+		B3F5D3DED2C270ACB4EF2B24972990E7 /* SwipeCollectionViewCellDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCollectionViewCellDelegate.swift; path = Source/SwipeCollectionViewCellDelegate.swift; sourceTree = "<group>"; };
+		B4E5F8A5E0E0F0D3FF2D3F72DE8442F1 /* SwipeCellKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeCellKit-prefix.pch"; sourceTree = "<group>"; };
+		B7722DAD2FFBDA77C1D803B801F6D814 /* SwipeAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAnimator.swift; path = Source/SwipeAnimator.swift; sourceTree = "<group>"; };
+		B7747D3CCE44BC442257A2C395C027E5 /* VICMAImageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VICMAImageView.debug.xcconfig; sourceTree = "<group>"; };
+		C027A7405E856E45431E9E1E7913015F /* RangeSeekSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RangeSeekSlider.framework; path = RangeSeekSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C281B6EC2A38971F31A7C9EE1D11EAF1 /* RangeSeekSlider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RangeSeekSlider.debug.xcconfig; sourceTree = "<group>"; };
 		C4FCE2F8AF9D8CC0CFB32EE6DFE92FDF /* Pods-balbid-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-balbid-acknowledgements.plist"; sourceTree = "<group>"; };
-		C565C33F710616374719DE84F88B4D7E /* SwipeActionsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionsView.swift; path = Source/SwipeActionsView.swift; sourceTree = "<group>"; };
+		C5C0C8EAFD902569E5B926FD90E1A009 /* VICMAImageView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = VICMAImageView.modulemap; sourceTree = "<group>"; };
+		C7AB8499071791790F3F7E87C36C4E92 /* SwipeCellKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwipeCellKit-dummy.m"; sourceTree = "<group>"; };
 		CA967A32F300C116E11687AD65CF9FFC /* Pods-balbid-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-balbid-dummy.m"; sourceTree = "<group>"; };
-		CAF46AA928868E6D5EEAE2B959EFFA33 /* SwipeTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTableViewCell.swift; path = Source/SwipeTableViewCell.swift; sourceTree = "<group>"; };
-		EDE3F8AE309053B80140A089F16A6421 /* RangeSeekSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RangeSeekSlider.swift; path = Sources/RangeSeekSlider.swift; sourceTree = "<group>"; };
-		F47D870BC38F11E61D356C18DB4D329E /* RangeSeekSlider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RangeSeekSlider.debug.xcconfig; sourceTree = "<group>"; };
-		F5AA93A7E1A5FF0DB89B7049E1D42827 /* SwipeAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAnimator.swift; path = Source/SwipeAnimator.swift; sourceTree = "<group>"; };
-		F752406EBF113B59306978D5FB45AA53 /* VICMAImageView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "VICMAImageView-Info.plist"; sourceTree = "<group>"; };
-		F778F37C7BF1B6B405549E8A349D4497 /* SwipeTransitionLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTransitionLayout.swift; path = Source/SwipeTransitionLayout.swift; sourceTree = "<group>"; };
-		F80F54D8D9EAD0D428EB6CA50135BCE9 /* VICMAImageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VICMAImageView.release.xcconfig; sourceTree = "<group>"; };
-		FFEF3A427C08540E2F58F3E51253B9D6 /* SwipeOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeOptions.swift; path = Source/SwipeOptions.swift; sourceTree = "<group>"; };
+		CBD0D2A1B422F5F8C3830E9CF087F570 /* RangeSeekSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RangeSeekSlider.swift; path = Sources/RangeSeekSlider.swift; sourceTree = "<group>"; };
+		D6581786C70A31B71FB52D1DD2A3A80A /* SwipeTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTableViewCell.swift; path = Source/SwipeTableViewCell.swift; sourceTree = "<group>"; };
+		DFAC17E35C4C855B7DD30B7CFD8A28A0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		E16E1F4A8D9E3BD6351454FA9A4233D2 /* VICMAImageView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "VICMAImageView-Info.plist"; sourceTree = "<group>"; };
+		E270AD26AC81DCB45361D73F73EF438E /* CCBottomRefreshControl-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CCBottomRefreshControl-Info.plist"; sourceTree = "<group>"; };
+		E2A7D55788B96A5D3501955D5A70744A /* RangeSeekSliderDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RangeSeekSliderDelegate.swift; path = Sources/RangeSeekSliderDelegate.swift; sourceTree = "<group>"; };
+		E813317F5D5FB85F6569506E780AEE4D /* SwipeActionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionButton.swift; path = Source/SwipeActionButton.swift; sourceTree = "<group>"; };
+		FB1FAB3B7853914CDC6D47A42DB2608D /* VICMAImageView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VICMAImageView-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3BE2AA289C16ED6707FEC2F2992BAC45 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BCEEED7C9BF7E717A596FD76B0ED027B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5FCC93895667B12EB28483316005D81E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DCE2C313C121F613D50ACC3FE3EDFD0 /* CoreGraphics.framework in Frameworks */,
-				C22AD7C3CA285C5E4F754B2D4AA71B52 /* Foundation.framework in Frameworks */,
-				D5B1E67C77F1C26ED6606BFBB0791D66 /* UIKit.framework in Frameworks */,
+				A29EC048C0EA9932F9F7CDE6E85F70EE /* CoreGraphics.framework in Frameworks */,
+				CD8D5E804547C478414976877F564916 /* Foundation.framework in Frameworks */,
+				60C05E6967A79710F8B70E04890EA40B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98AEF65F0C2544F0223847281E795030 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77A86EAFCB1427F6E4A0F284C78144CF /* Foundation.framework in Frameworks */,
+				45498AB82E73FB6188E183FD7631690A /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2FEAEF831EBAF24E978BF5D0FCECB79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD417849BAACEF9A1A99DEF0FB774191 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				166BFDACD221323FA6EBBBE82B88BFD7 /* Foundation.framework in Frameworks */,
+				33D3E16A7C3580B04F4872F646C71AA1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,7 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48DF235B2EE3C0DF0D3016635EB81C71 /* Foundation.framework in Frameworks */,
+				4EB9AFD24C4CEEBD69AC61E57B8460AF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,24 +215,9 @@
 		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5246D3CB0F6FF3AC9502D9EA5C5D6540 /* iOS */,
+				20D8528256A7AF28D53631225E57465A /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0A8F68111517D1DA4DF25840DC7D5537 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B7AB4DF65755C634EB37B0D92F0AE052 /* RangeSeekSlider.modulemap */,
-				541F95E1ACEB987C9ECA3A5758131989 /* RangeSeekSlider-dummy.m */,
-				907C3053C3BE07901BBC3CA99BA44B17 /* RangeSeekSlider-Info.plist */,
-				91B3A8D0AF6ACFC6A40E00E2F58EFB36 /* RangeSeekSlider-prefix.pch */,
-				447D6B9E2BD872DF7A1BE97C6705D80B /* RangeSeekSlider-umbrella.h */,
-				F47D870BC38F11E61D356C18DB4D329E /* RangeSeekSlider.debug.xcconfig */,
-				A05086718D8992EAD3C146131FDEEE19 /* RangeSeekSlider.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/RangeSeekSlider";
 			sourceTree = "<group>";
 		};
 		1D48A68239298824E3D479D6050A29E0 /* Targets Support Files */ = {
@@ -211,49 +228,136 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		257C87605ED8FC0648A55FB25A9825C3 /* Pods */ = {
+		20D8528256A7AF28D53631225E57465A /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F93C56BC2F19D95E3B867CDABD82E7C8 /* RangeSeekSlider */,
-				C374BF328B4C8F8C2B8C68ADAD3544A4 /* SwipeCellKit */,
-				29C83C9309B733CC8FFDA3972A5A2FAC /* VICMAImageView */,
+				553F02396820467C46BFBDBFD5A82BB7 /* CoreGraphics.framework */,
+				8A0BCC50A12B61F847D207DBB8CFF0AF /* Foundation.framework */,
+				DFAC17E35C4C855B7DD30B7CFD8A28A0 /* UIKit.framework */,
 			);
-			name = Pods;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		29C83C9309B733CC8FFDA3972A5A2FAC /* VICMAImageView */ = {
+		21245FC6AD8A0754BE69A82A1CFF2CDF /* RangeSeekSlider */ = {
 			isa = PBXGroup;
 			children = (
-				2783A545422789B593729D3D2688D341 /* VICMAImageView.h */,
-				217CD555EA6903F5724DE035B5C92062 /* VICMAImageView.m */,
-				D4CF7D47426B502A2FA9E6350F96A9B0 /* Support Files */,
+				CBD0D2A1B422F5F8C3830E9CF087F570 /* RangeSeekSlider.swift */,
+				E2A7D55788B96A5D3501955D5A70744A /* RangeSeekSliderDelegate.swift */,
+				1726E1041E0A173DA2171AAFD3E5F59A /* TapticEngine.swift */,
+				54880B4D2B22E0BBB864BDE5AD60C6E7 /* Support Files */,
 			);
-			path = VICMAImageView;
+			name = RangeSeekSlider;
+			path = RangeSeekSlider;
 			sourceTree = "<group>";
 		};
-		524004C96DDFB60174D9F2C9544CD8AB /* Support Files */ = {
+		2400F4668E933034CFFD31579DADEF2D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				127AC46D9C4F8200BF00497957597111 /* SwipeCellKit.modulemap */,
-				99D27AF4C368574F398FBD85F7CE782A /* SwipeCellKit-dummy.m */,
-				125D7B71CB93466A2FF213419AF8671E /* SwipeCellKit-Info.plist */,
-				0E0E22A75B28E74F28C82D310EDFD436 /* SwipeCellKit-prefix.pch */,
-				A7CA8BFCA29A0EA608FDF1A3DE27302A /* SwipeCellKit-umbrella.h */,
-				716BB36E19C2D481FA6476CAC1F516CB /* SwipeCellKit.debug.xcconfig */,
-				0E99885AD82B85AA2DAF87E934936B8B /* SwipeCellKit.release.xcconfig */,
+				3BFF6ABDAC75B16FDE778E462482B02E /* SwipeCellKit.modulemap */,
+				C7AB8499071791790F3F7E87C36C4E92 /* SwipeCellKit-dummy.m */,
+				46C3862F1EF547BF465CA063FDA07DF4 /* SwipeCellKit-Info.plist */,
+				B4E5F8A5E0E0F0D3FF2D3F72DE8442F1 /* SwipeCellKit-prefix.pch */,
+				01155FEF72B7B0AFF81C0F43B0A98FDB /* SwipeCellKit-umbrella.h */,
+				ADAFE4F08A07786A800DBB050A82062A /* SwipeCellKit.debug.xcconfig */,
+				A0E0CC3961580CF0656F144183C0AF33 /* SwipeCellKit.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwipeCellKit";
 			sourceTree = "<group>";
 		};
-		5246D3CB0F6FF3AC9502D9EA5C5D6540 /* iOS */ = {
+		51A087608DB7FADE9FC8D033B5FEEE90 /* SwipeCellKit */ = {
 			isa = PBXGroup;
 			children = (
-				A0099C32CD052D2679865CAE3EEEEAB2 /* CoreGraphics.framework */,
-				233AEAA73D843C0E91D6A0EF6C3F0E2F /* Foundation.framework */,
-				300D7C9C38226ED88862DA2E4F6D939A /* UIKit.framework */,
+				0E1C551355A7E4DAA999D0FC5D1D6D70 /* Extensions.swift */,
+				9C773A82A747F0A6012CAD2F1AE00450 /* Swipeable.swift */,
+				9DEBBC0B138C3BF6740057B675C2D50E /* SwipeAccessibilityCustomAction.swift */,
+				7CE877C3303EB25BAECC70153183C2C8 /* SwipeAction.swift */,
+				E813317F5D5FB85F6569506E780AEE4D /* SwipeActionButton.swift */,
+				75470BB03174CFD86CD5A46D861CBA55 /* SwipeActionsView.swift */,
+				474817454311B283D1F0008E0CD2A258 /* SwipeActionTransitioning.swift */,
+				B7722DAD2FFBDA77C1D803B801F6D814 /* SwipeAnimator.swift */,
+				0648DF716AFA8ABE7A585897F4179A2E /* SwipeCollectionViewCell.swift */,
+				73D6370EAA7D33F603F6DEB2D5CF9B35 /* SwipeCollectionViewCell+Accessibility.swift */,
+				170517F1E4F4446F5A185AB417766A44 /* SwipeCollectionViewCell+Display.swift */,
+				B3F5D3DED2C270ACB4EF2B24972990E7 /* SwipeCollectionViewCellDelegate.swift */,
+				84BC3CC3CFE43D8FB352BB0F2991FB14 /* SwipeController.swift */,
+				B1405AC31BC9DD06C4FA51A6FB04A167 /* SwipeExpanding.swift */,
+				8EAD42DF18EAAD09EB13DD58749DE5B0 /* SwipeExpansionStyle.swift */,
+				3EEC5143281AB1DBA6B492E45A367A52 /* SwipeFeedback.swift */,
+				8F1A6679BD22F2534028348F2128EB09 /* SwipeOptions.swift */,
+				D6581786C70A31B71FB52D1DD2A3A80A /* SwipeTableViewCell.swift */,
+				2D36BCF6BD39840CD423EE26B143623A /* SwipeTableViewCell+Accessibility.swift */,
+				16A95206C60C373453FE6AF23FE7C4F2 /* SwipeTableViewCell+Display.swift */,
+				4A12415C61FAC5E1F0138DF5C1DD8B5C /* SwipeTableViewCellDelegate.swift */,
+				0E354CFBB602DE990FBD559F9CE10E9E /* SwipeTransitionLayout.swift */,
+				2400F4668E933034CFFD31579DADEF2D /* Support Files */,
 			);
-			name = iOS;
+			name = SwipeCellKit;
+			path = SwipeCellKit;
+			sourceTree = "<group>";
+		};
+		54880B4D2B22E0BBB864BDE5AD60C6E7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				531CCEB478CC294511C31578DF5CC34D /* RangeSeekSlider.modulemap */,
+				3D67CAA7AF832547658F897BCBD77E8F /* RangeSeekSlider-dummy.m */,
+				2DD1296169A1A9284DC36E7D266B0240 /* RangeSeekSlider-Info.plist */,
+				0DB70F1EE1025D09442C61886BDECFD5 /* RangeSeekSlider-prefix.pch */,
+				384E67A51E17E76CC449931F863D90BD /* RangeSeekSlider-umbrella.h */,
+				C281B6EC2A38971F31A7C9EE1D11EAF1 /* RangeSeekSlider.debug.xcconfig */,
+				7DAD8B581DC3F2A86EB9B5C0D3772382 /* RangeSeekSlider.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RangeSeekSlider";
+			sourceTree = "<group>";
+		};
+		936559F4164213C4F201C27273830FFF /* VICMAImageView */ = {
+			isa = PBXGroup;
+			children = (
+				A4D9B86CF8D32A6E1AB2EECC67C97991 /* VICMAImageView.h */,
+				55549F799C23CE2C7DBC691E918F8102 /* VICMAImageView.m */,
+				CB6BE203D41602B6E3D903ED70D8CD2B /* Support Files */,
+			);
+			name = VICMAImageView;
+			path = VICMAImageView;
+			sourceTree = "<group>";
+		};
+		96252129BC6ED601456938750FF3D01D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				17122B0D430436526CF307A26D12EEE5 /* CCBottomRefreshControl.modulemap */,
+				4B9B16B5FAE766D051F2178A27D37029 /* CCBottomRefreshControl-dummy.m */,
+				E270AD26AC81DCB45361D73F73EF438E /* CCBottomRefreshControl-Info.plist */,
+				1C5F1DAA92682BF63C82EA103CFE6CF1 /* CCBottomRefreshControl-prefix.pch */,
+				0B6890AAECBECB300AB9BC5D2A9D1162 /* CCBottomRefreshControl-umbrella.h */,
+				5852FE3ACCDE043250F7AD5C1E25B31F /* CCBottomRefreshControl.debug.xcconfig */,
+				9F93482E50FBC8F9A3D5272760CCC594 /* CCBottomRefreshControl.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CCBottomRefreshControl";
+			sourceTree = "<group>";
+		};
+		964D4E957FBDC329070654BD29FE3461 /* CCBottomRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				215F5A41A7BD267CB80830DB31D11599 /* UIScrollView+BottomRefreshControl.h */,
+				361FB60D7EB4C26738CBDA03619D9DC5 /* UIScrollView+BottomRefreshControl.m */,
+				96252129BC6ED601456938750FF3D01D /* Support Files */,
+			);
+			name = CCBottomRefreshControl;
+			path = CCBottomRefreshControl;
+			sourceTree = "<group>";
+		};
+		A5903B4DBCBCB16A5FC2611772ED311B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A14EE11A246595D50E6664D9B4402CB /* CCBottomRefreshControl.framework */,
+				85056B631DDA65DBF0F3D04E8058BD5D /* Pods_balbid.framework */,
+				C027A7405E856E45431E9E1E7913015F /* RangeSeekSlider.framework */,
+				9D443E759FE97A6C0CA5A3B5E4142EBA /* SwipeCellKit.framework */,
+				83B7B07BF8E13525CF42E8BDE386CC27 /* VICMAImageView.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		B7391B43186A797653670CB9B22CED34 /* Pods-balbid */ = {
@@ -273,34 +377,30 @@
 			path = "Target Support Files/Pods-balbid";
 			sourceTree = "<group>";
 		};
-		C374BF328B4C8F8C2B8C68ADAD3544A4 /* SwipeCellKit */ = {
+		C0EB42C259FD0D6C2BCB30D6F5FC3E92 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4B30E27BBA97D95203E4E70F2A04FC37 /* Extensions.swift */,
-				8F09F47C5C434EF6E62C20CFD67641F9 /* Swipeable.swift */,
-				143E3208C0B8A30BA2B689454E01D602 /* SwipeAccessibilityCustomAction.swift */,
-				179A8270164D2D33B6C2F4651A70EC6F /* SwipeAction.swift */,
-				2CB89D9F3FB8C27DFA51FD9406E59DCD /* SwipeActionButton.swift */,
-				C565C33F710616374719DE84F88B4D7E /* SwipeActionsView.swift */,
-				36CBECA980076A918B5B5F142ADBAB30 /* SwipeActionTransitioning.swift */,
-				F5AA93A7E1A5FF0DB89B7049E1D42827 /* SwipeAnimator.swift */,
-				6CE4655972D9DEDFFFB8F6D131AF2A1E /* SwipeCollectionViewCell.swift */,
-				451C7425827156E3B32773D90D46B5C0 /* SwipeCollectionViewCell+Accessibility.swift */,
-				8B7D2CDC5CC8F7FA346C1E10791BC454 /* SwipeCollectionViewCell+Display.swift */,
-				6565CACAB63732CCDCF6E50FF17C1D68 /* SwipeCollectionViewCellDelegate.swift */,
-				AF7D048453CBADC2BD0F48735F06F8BE /* SwipeController.swift */,
-				1F2586884108D3ED1F0A0AF6C415BDCF /* SwipeExpanding.swift */,
-				B0944C97F2282764349A5F4A0EFD2788 /* SwipeExpansionStyle.swift */,
-				06CA93FD4AD0E1F08EE6AB1CF636FB1D /* SwipeFeedback.swift */,
-				FFEF3A427C08540E2F58F3E51253B9D6 /* SwipeOptions.swift */,
-				CAF46AA928868E6D5EEAE2B959EFFA33 /* SwipeTableViewCell.swift */,
-				42D6827971C65BE435DD5B6403211733 /* SwipeTableViewCell+Accessibility.swift */,
-				B3EEC49EC252C065586BB61A821FAA37 /* SwipeTableViewCell+Display.swift */,
-				30BCEE558E7671A7478C79B1AD62A8EE /* SwipeTableViewCellDelegate.swift */,
-				F778F37C7BF1B6B405549E8A349D4497 /* SwipeTransitionLayout.swift */,
-				524004C96DDFB60174D9F2C9544CD8AB /* Support Files */,
+				964D4E957FBDC329070654BD29FE3461 /* CCBottomRefreshControl */,
+				21245FC6AD8A0754BE69A82A1CFF2CDF /* RangeSeekSlider */,
+				51A087608DB7FADE9FC8D033B5FEEE90 /* SwipeCellKit */,
+				936559F4164213C4F201C27273830FFF /* VICMAImageView */,
 			);
-			path = SwipeCellKit;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CB6BE203D41602B6E3D903ED70D8CD2B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5C0C8EAFD902569E5B926FD90E1A009 /* VICMAImageView.modulemap */,
+				FB1FAB3B7853914CDC6D47A42DB2608D /* VICMAImageView-dummy.m */,
+				E16E1F4A8D9E3BD6351454FA9A4233D2 /* VICMAImageView-Info.plist */,
+				0946D2509613A60DA34C95DD8BA47FC0 /* VICMAImageView-prefix.pch */,
+				3740C1A2D756601672D4B00AF9E40201 /* VICMAImageView-umbrella.h */,
+				B7747D3CCE44BC442257A2C395C027E5 /* VICMAImageView.debug.xcconfig */,
+				1647876A389D9D08D46C3398FF414FE4 /* VICMAImageView.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/VICMAImageView";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -308,57 +408,21 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
-				257C87605ED8FC0648A55FB25A9825C3 /* Pods */,
-				EDBB6C63BF59DAA8159F6E75CFF23744 /* Products */,
+				C0EB42C259FD0D6C2BCB30D6F5FC3E92 /* Pods */,
+				A5903B4DBCBCB16A5FC2611772ED311B /* Products */,
 				1D48A68239298824E3D479D6050A29E0 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D4CF7D47426B502A2FA9E6350F96A9B0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6F7B092564EE6D219BD242AEF57DD577 /* VICMAImageView.modulemap */,
-				64EC85B58A61144761887C8C468791DC /* VICMAImageView-dummy.m */,
-				F752406EBF113B59306978D5FB45AA53 /* VICMAImageView-Info.plist */,
-				03E825E5332E0F5018146E89176136B2 /* VICMAImageView-prefix.pch */,
-				B7B5FEB2180C48DA9FFCB949A3EA6E1D /* VICMAImageView-umbrella.h */,
-				7A62AD7F07EB4EB40E64BE93FCB386CD /* VICMAImageView.debug.xcconfig */,
-				F80F54D8D9EAD0D428EB6CA50135BCE9 /* VICMAImageView.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/VICMAImageView";
-			sourceTree = "<group>";
-		};
-		EDBB6C63BF59DAA8159F6E75CFF23744 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				85056B631DDA65DBF0F3D04E8058BD5D /* Pods_balbid.framework */,
-				C027A7405E856E45431E9E1E7913015F /* RangeSeekSlider.framework */,
-				9D443E759FE97A6C0CA5A3B5E4142EBA /* SwipeCellKit.framework */,
-				83B7B07BF8E13525CF42E8BDE386CC27 /* VICMAImageView.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F93C56BC2F19D95E3B867CDABD82E7C8 /* RangeSeekSlider */ = {
-			isa = PBXGroup;
-			children = (
-				EDE3F8AE309053B80140A089F16A6421 /* RangeSeekSlider.swift */,
-				9211CCC87427A7F766E1AD078F6647C4 /* RangeSeekSliderDelegate.swift */,
-				6E81DE11324787E23F84CBB045ACE846 /* TapticEngine.swift */,
-				0A8F68111517D1DA4DF25840DC7D5537 /* Support Files */,
-			);
-			path = RangeSeekSlider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		127CA384C5B48348461137176EE8352C /* Headers */ = {
+		45B61116907CD25B669E6827A22D3E0A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BFA20EF94DCACFF0B0EE3996FC729C0 /* Pods-balbid-umbrella.h in Headers */,
+				8EA690CBFEE0DAB2AC339629CBE4831E /* CCBottomRefreshControl-umbrella.h in Headers */,
+				C6018F1C6B1F4852F0BBD2CFC46AA8E7 /* UIScrollView+BottomRefreshControl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +439,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1808BFCB8294885EF9E8B8A4C8A94D58 /* RangeSeekSlider-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3ADD30C8B7EBE0D03E9AC5553CF109E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F75545E1D5C00C434AC4F6150F3AFB5 /* Pods-balbid-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +480,24 @@
 			productReference = 9D443E759FE97A6C0CA5A3B5E4142EBA /* SwipeCellKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		41E250CA7FC71214C3FFAC283CEBC211 /* CCBottomRefreshControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FE24CE8553B9334E7676EF41CA63D28 /* Build configuration list for PBXNativeTarget "CCBottomRefreshControl" */;
+			buildPhases = (
+				45B61116907CD25B669E6827A22D3E0A /* Headers */,
+				02C4A8374FC88EFBBB2939ACECBB7121 /* Sources */,
+				98AEF65F0C2544F0223847281E795030 /* Frameworks */,
+				FF872D655AA3522CBA99F4CDCDF1AFC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CCBottomRefreshControl;
+			productName = CCBottomRefreshControl;
+			productReference = 5A14EE11A246595D50E6664D9B4402CB /* CCBottomRefreshControl.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		4AFB864B337D1F74C1D79F4FC8F6C67F /* RangeSeekSlider */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F92D2D742855D9F023A19D0AA18BCFD /* Build configuration list for PBXNativeTarget "RangeSeekSlider" */;
@@ -428,19 +518,20 @@
 		};
 		7F8D5263FE4F87AB0CC5D80ED04768D9 /* Pods-balbid */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 839A40026EB1F58809489D6B91643057 /* Build configuration list for PBXNativeTarget "Pods-balbid" */;
+			buildConfigurationList = CABF2713A4CE4F04B6C5BE45902DD4D6 /* Build configuration list for PBXNativeTarget "Pods-balbid" */;
 			buildPhases = (
-				127CA384C5B48348461137176EE8352C /* Headers */,
-				8FB9C236F3D2917984ED85CD7588BB5A /* Sources */,
-				3BE2AA289C16ED6707FEC2F2992BAC45 /* Frameworks */,
-				9DC963A23DE458DECE5FA2DE6D052C98 /* Resources */,
+				A3ADD30C8B7EBE0D03E9AC5553CF109E /* Headers */,
+				F02B7AF46377703AE8DCB289468307D2 /* Sources */,
+				E2FEAEF831EBAF24E978BF5D0FCECB79 /* Frameworks */,
+				5A8358F3E0EE7981B447983F61D882A9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B10765CB7CAF238C63EC8C9A41977DDD /* PBXTargetDependency */,
-				171C5DBF02716E160E0F93BB88793716 /* PBXTargetDependency */,
-				1354B220D5D648670DA2E10407FEE07E /* PBXTargetDependency */,
+				76E6D5625D3EB9DB0AE85733CC11297C /* PBXTargetDependency */,
+				4C840DB04624FBFB71523EE9B83233AD /* PBXTargetDependency */,
+				1B861EC683A5A3397B796BE74323C6EF /* PBXTargetDependency */,
+				ACCB7DAF8C37729A6B6EA74BE9891B45 /* PBXTargetDependency */,
 			);
 			name = "Pods-balbid";
 			productName = "Pods-balbid";
@@ -483,10 +574,11 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = EDBB6C63BF59DAA8159F6E75CFF23744 /* Products */;
+			productRefGroup = A5903B4DBCBCB16A5FC2611772ED311B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				41E250CA7FC71214C3FFAC283CEBC211 /* CCBottomRefreshControl */,
 				7F8D5263FE4F87AB0CC5D80ED04768D9 /* Pods-balbid */,
 				4AFB864B337D1F74C1D79F4FC8F6C67F /* RangeSeekSlider */,
 				1DE44C23B82E6671E9E1541D06DE0E87 /* SwipeCellKit */,
@@ -497,6 +589,13 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		470E5422AA31FA9A402A1DC0BD314F6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A8358F3E0EE7981B447983F61D882A9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -517,7 +616,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9DC963A23DE458DECE5FA2DE6D052C98 /* Resources */ = {
+		FF872D655AA3522CBA99F4CDCDF1AFC6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -527,6 +626,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		02C4A8374FC88EFBBB2939ACECBB7121 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF9A79E3C04F1174CB790E313DD9283E /* CCBottomRefreshControl-dummy.m in Sources */,
+				DE98AF6854205B034D3752EDC6E97386 /* UIScrollView+BottomRefreshControl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		59C0E08F238FBFE43C70E4A0CC349DF3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -535,14 +643,6 @@
 				346F1121DE5579B550A08D85F01E81A7 /* RangeSeekSlider.swift in Sources */,
 				D9482577B4860BD359C1A55E173E4EE4 /* RangeSeekSliderDelegate.swift in Sources */,
 				2EF2351AA2011DC27C94F950B7FD8550 /* TapticEngine.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8FB9C236F3D2917984ED85CD7588BB5A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				219A000E2DF2A37663CCB2D68B993E65 /* Pods-balbid-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +676,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F02B7AF46377703AE8DCB289468307D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84468A0971D454B2E6F25CEE1EFD5BC8 /* Pods-balbid-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5E0D2ACC2FA25E03D6F3AC804CB5B6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -588,32 +696,37 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1354B220D5D648670DA2E10407FEE07E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = VICMAImageView;
-			target = 9D47BCC72FC49487AEAD76669EC186CE /* VICMAImageView */;
-			targetProxy = 3CF24CFCF077EE1E254E7D7548440DD9 /* PBXContainerItemProxy */;
-		};
-		171C5DBF02716E160E0F93BB88793716 /* PBXTargetDependency */ = {
+		1B861EC683A5A3397B796BE74323C6EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwipeCellKit;
 			target = 1DE44C23B82E6671E9E1541D06DE0E87 /* SwipeCellKit */;
-			targetProxy = 0DBD8D60303E576EE7C5CF0A4462DE8F /* PBXContainerItemProxy */;
+			targetProxy = 307DB15AF8C7F72855C3C8212BF8D638 /* PBXContainerItemProxy */;
 		};
-		B10765CB7CAF238C63EC8C9A41977DDD /* PBXTargetDependency */ = {
+		4C840DB04624FBFB71523EE9B83233AD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RangeSeekSlider;
 			target = 4AFB864B337D1F74C1D79F4FC8F6C67F /* RangeSeekSlider */;
-			targetProxy = 1E20E887111A1B3058847AFF9BEA7334 /* PBXContainerItemProxy */;
+			targetProxy = 10BA01CBDF982ED37D238CB0D3CF57C3 /* PBXContainerItemProxy */;
+		};
+		76E6D5625D3EB9DB0AE85733CC11297C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CCBottomRefreshControl;
+			target = 41E250CA7FC71214C3FFAC283CEBC211 /* CCBottomRefreshControl */;
+			targetProxy = 026706EAA725FE2706B19804EDA9B076 /* PBXContainerItemProxy */;
+		};
+		ACCB7DAF8C37729A6B6EA74BE9891B45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VICMAImageView;
+			target = 9D47BCC72FC49487AEAD76669EC186CE /* VICMAImageView */;
+			targetProxy = 2255112A0478818E8179A38A772FCE80 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		03BACAB209F70DF42F8C071FCD79BFD2 /* Release */ = {
+		0F6B1A2C2E1B16C8C419B575080416FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F80F54D8D9EAD0D428EB6CA50135BCE9 /* VICMAImageView.release.xcconfig */;
+			baseConfigurationReference = 1647876A389D9D08D46C3398FF414FE4 /* VICMAImageView.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -645,10 +758,79 @@
 			};
 			name = Release;
 		};
-		131356BE54884448CA49C07BEDF4BB2A /* Debug */ = {
+		1A843646C1134167AF81AA839BEFF0C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5852FE3ACCDE043250F7AD5C1E25B31F /* CCBottomRefreshControl.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CCBottomRefreshControl/CCBottomRefreshControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CCBottomRefreshControl/CCBottomRefreshControl-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CCBottomRefreshControl/CCBottomRefreshControl.modulemap";
+				PRODUCT_MODULE_NAME = CCBottomRefreshControl;
+				PRODUCT_NAME = CCBottomRefreshControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1B8F9C03B94FBF4C772EF28C74F2D393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADAFE4F08A07786A800DBB050A82062A /* SwipeCellKit.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwipeCellKit/SwipeCellKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit.modulemap";
+				PRODUCT_MODULE_NAME = SwipeCellKit;
+				PRODUCT_NAME = SwipeCellKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -671,6 +853,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -709,194 +892,10 @@
 			};
 			name = Debug;
 		};
-		3584595DD406CECEAB53C52F9E2E1154 /* Debug */ = {
+		3871F8AE890296F9D7011F3F29EE54D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 716BB36E19C2D481FA6476CAC1F516CB /* SwipeCellKit.debug.xcconfig */;
+			baseConfigurationReference = C281B6EC2A38971F31A7C9EE1D11EAF1 /* RangeSeekSlider.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwipeCellKit/SwipeCellKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit.modulemap";
-				PRODUCT_MODULE_NAME = SwipeCellKit;
-				PRODUCT_NAME = SwipeCellKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4C4E12677D41251F78FE69A40E4AE7C9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A62AD7F07EB4EB40E64BE93FCB386CD /* VICMAImageView.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/VICMAImageView/VICMAImageView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/VICMAImageView/VICMAImageView-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/VICMAImageView/VICMAImageView.modulemap";
-				PRODUCT_MODULE_NAME = VICMAImageView;
-				PRODUCT_NAME = VICMAImageView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		5733E228875D24D226AB76ADDEE73BFC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E99885AD82B85AA2DAF87E934936B8B /* SwipeCellKit.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwipeCellKit/SwipeCellKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit.modulemap";
-				PRODUCT_MODULE_NAME = SwipeCellKit;
-				PRODUCT_NAME = SwipeCellKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7CCBFB94B1EAD50925947FB00F40C8A6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3467D6237689EF8ACAECE5EA87DC671F /* Pods-balbid.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-balbid/Pods-balbid-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-balbid/Pods-balbid.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		93BE611AD5092589D6FFE4FDDB6CEBDE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92C52F52C259AB5E15D1B5DF6F013D78 /* Pods-balbid.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-balbid/Pods-balbid-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-balbid/Pods-balbid.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A92167EC3CC676D1ECAF2A12E3AF88AF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F47D870BC38F11E61D356C18DB4D329E /* RangeSeekSlider.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -927,46 +926,11 @@
 			};
 			name = Debug;
 		};
-		AA077B0D77387F804A43174EB7B3CEFF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A05086718D8992EAD3C146131FDEEE19 /* RangeSeekSlider.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RangeSeekSlider/RangeSeekSlider-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RangeSeekSlider/RangeSeekSlider-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/RangeSeekSlider/RangeSeekSlider.modulemap";
-				PRODUCT_MODULE_NAME = RangeSeekSlider;
-				PRODUCT_NAME = RangeSeekSlider;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F090CD07A80273D5A73C8EA19224ADDB /* Release */ = {
+		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -989,6 +953,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1023,14 +988,228 @@
 			};
 			name = Release;
 		};
+		6E6C4D42192E1107D19CE58DEB086E6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F93482E50FBC8F9A3D5272760CCC594 /* CCBottomRefreshControl.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CCBottomRefreshControl/CCBottomRefreshControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CCBottomRefreshControl/CCBottomRefreshControl-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CCBottomRefreshControl/CCBottomRefreshControl.modulemap";
+				PRODUCT_MODULE_NAME = CCBottomRefreshControl;
+				PRODUCT_NAME = CCBottomRefreshControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7A98F07E969F57F157440D4396BBE7D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0E0CC3961580CF0656F144183C0AF33 /* SwipeCellKit.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwipeCellKit/SwipeCellKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit.modulemap";
+				PRODUCT_MODULE_NAME = SwipeCellKit;
+				PRODUCT_NAME = SwipeCellKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A7570F1341A6CF29E45B04B6024D6A9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92C52F52C259AB5E15D1B5DF6F013D78 /* Pods-balbid.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-balbid/Pods-balbid-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-balbid/Pods-balbid.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AE62DB79B9B2E17EBB9A43F9E7E72CBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3467D6237689EF8ACAECE5EA87DC671F /* Pods-balbid.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-balbid/Pods-balbid-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-balbid/Pods-balbid.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B8BA1B66A480849BD0DDE22A004C414A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DAD8B581DC3F2A86EB9B5C0D3772382 /* RangeSeekSlider.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RangeSeekSlider/RangeSeekSlider-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RangeSeekSlider/RangeSeekSlider-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/RangeSeekSlider/RangeSeekSlider.modulemap";
+				PRODUCT_MODULE_NAME = RangeSeekSlider;
+				PRODUCT_NAME = RangeSeekSlider;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D2331E80824FC5599CAF1FC8668CDCE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7747D3CCE44BC442257A2C395C027E5 /* VICMAImageView.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VICMAImageView/VICMAImageView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VICMAImageView/VICMAImageView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/VICMAImageView/VICMAImageView.modulemap";
+				PRODUCT_MODULE_NAME = VICMAImageView;
+				PRODUCT_NAME = VICMAImageView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		0F92D2D742855D9F023A19D0AA18BCFD /* Build configuration list for PBXNativeTarget "RangeSeekSlider" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A92167EC3CC676D1ECAF2A12E3AF88AF /* Debug */,
-				AA077B0D77387F804A43174EB7B3CEFF /* Release */,
+				3871F8AE890296F9D7011F3F29EE54D9 /* Debug */,
+				B8BA1B66A480849BD0DDE22A004C414A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1038,8 +1217,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				131356BE54884448CA49C07BEDF4BB2A /* Debug */,
-				F090CD07A80273D5A73C8EA19224ADDB /* Release */,
+				2B9E26EAE2CD392AD762421F663075A1 /* Debug */,
+				63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1047,17 +1226,26 @@
 		7296479798A25194BEEAD8C2852CDC99 /* Build configuration list for PBXNativeTarget "SwipeCellKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3584595DD406CECEAB53C52F9E2E1154 /* Debug */,
-				5733E228875D24D226AB76ADDEE73BFC /* Release */,
+				1B8F9C03B94FBF4C772EF28C74F2D393 /* Debug */,
+				7A98F07E969F57F157440D4396BBE7D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		839A40026EB1F58809489D6B91643057 /* Build configuration list for PBXNativeTarget "Pods-balbid" */ = {
+		9FE24CE8553B9334E7676EF41CA63D28 /* Build configuration list for PBXNativeTarget "CCBottomRefreshControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				93BE611AD5092589D6FFE4FDDB6CEBDE /* Debug */,
-				7CCBFB94B1EAD50925947FB00F40C8A6 /* Release */,
+				1A843646C1134167AF81AA839BEFF0C1 /* Debug */,
+				6E6C4D42192E1107D19CE58DEB086E6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CABF2713A4CE4F04B6C5BE45902DD4D6 /* Build configuration list for PBXNativeTarget "Pods-balbid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7570F1341A6CF29E45B04B6024D6A9A /* Debug */,
+				AE62DB79B9B2E17EBB9A43F9E7E72CBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1065,8 +1253,8 @@
 		F24F8D8099B2C4759CC9F0A0717CF9DF /* Build configuration list for PBXNativeTarget "VICMAImageView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C4E12677D41251F78FE69A40E4AE7C9 /* Debug */,
-				03BACAB209F70DF42F8C071FCD79BFD2 /* Release */,
+				D2331E80824FC5599CAF1FC8668CDCE0 /* Debug */,
+				0F6B1A2C2E1B16C8C419B575080416FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

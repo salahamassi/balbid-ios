@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-balbid/Pods-balbid-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CCBottomRefreshControl/CCBottomRefreshControl.framework
 ${BUILT_PRODUCTS_DIR}/RangeSeekSlider/RangeSeekSlider.framework
 ${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework
 ${BUILT_PRODUCTS_DIR}/VICMAImageView/VICMAImageView.framework

@@ -62,13 +62,13 @@ class ProductCollectionViewCell: UICollectionViewCell {
             productDiscountPriceLabel.isHidden = true
             offerLabel.isHidden = true
 //        }
+        productImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         favoriteButton.setImage(product?.isFavorite == "0" ? #imageLiteral(resourceName: "unselected_favorite") : #imageLiteral(resourceName: "selected_favorite") , for: .normal)
         productNameLabel.text = product?.name
         productPriceLabel.text = (product?.price ?? "0") + " SR"
         guard let imageUrl = URL(string: product?.image.encodedText ?? "") else {
             return
         }
-        productImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         productImageView.sd_setImage(with: imageUrl)
 
     }

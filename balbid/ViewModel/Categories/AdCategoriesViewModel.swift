@@ -7,20 +7,28 @@
 
 import UIKit
 
-struct CategoryProductsViewModel {
+class CategoryProductsViewModel {
     
     let dataSource: AppDataSource
     weak var delegate: AdCategoriesViewModelDelegate?
+    var pageNumber = 0
     
     init(dataSource: AppDataSource) {
         self.dataSource =  dataSource
     }
     
-    func getProductCategory(from categoryId: Int) {
-        dataSource.perform(service: .init(path: .categoryProductPath  + "\(categoryId)&paginate=5&page=1&order_by=price&sort_direction=ASC", domain: .domain, method: .get, params: [:], mustUseAuth: true), Product.self) { (result) in
+    func getProductCategory(from categoryId: Int,isPaging: Bool) {
+        if(isPaging) {
+            pageNumber = pageNumber + 1
+        }
+        dataSource.perform(service: .init(path: .categoryProductPath  + "\(categoryId)&paginate=4&page=\(pageNumber)&order_by=price&sort_direction=ASC", domain: .domain, method: .get, params: [:], mustUseAuth: true), Product.self) { (result) in
             switch result {
             case .data(let data):
-                self.delegate?.loadProductSuccess(product: data.data)
+                if isPaging {
+                   self.delegate?.didLoadNewPaginate(product: data.data)
+                }else {
+                    self.delegate?.loadProductSuccess(product: data.data)
+                }
             case .failure(let error):
                 self.delegate?.apiError(error: error)
             default:
@@ -29,7 +37,6 @@ struct CategoryProductsViewModel {
         }
     }
 
-    
     func addProductToFavorite(productId: Int, didAddToFavorite:  @escaping () -> Void){
         dataSource.perform(service: .init(path: .addToFavoritePath, domain: .domain, method: .post, params: ["product_id" : productId], mustUseAuth: true), ProductItem.self) { (result) in
             switch result {
@@ -55,10 +62,10 @@ struct CategoryProductsViewModel {
             }
         }
     }
-    
-    
 }
 protocol AdCategoriesViewModelDelegate: class {
     func apiError(error: String)
     func loadProductSuccess(product: Product)
+    func didLoadNewPaginate(product: Product)
+
 }

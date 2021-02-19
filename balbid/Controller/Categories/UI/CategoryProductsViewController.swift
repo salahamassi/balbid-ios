@@ -7,11 +7,12 @@
 
 import UIKit
 import SDWebImage
-
+import CCBottomRefreshControl
 
 class CategoryProductsViewController: BaseViewController {
 
     @IBOutlet weak var collectionView: ISIntrinsicCollectionView!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var activtiyIndicator: UIActivityIndicatorView!
     @IBOutlet weak var categoryImageView: UIImageView!
 
@@ -20,18 +21,22 @@ class CategoryProductsViewController: BaseViewController {
     private let addToCartBottomSheet = AddToCartBottomSheet.initFromNib()
     private let addedToCarView = balbid.AddedToCartView.initFromNib()
     
-    var loadProducts: ((Int) -> Void)?
+    var loadProducts: ((Int,Bool) -> Void)?
     var deleteFavorite: ((_ id: Int,_ didRemoveFromFavorite: @escaping ()->Void) -> Void)?
     var addToFavorite: ((_ id: Int,_ didAddToFavorite: @escaping ()->Void) -> Void)?
     var category: CategoryItem?
-
+    private var isVerticalScrolling = true
+    private var lastContentOffset : CGFloat = 0
+    
+    private var productDelegate = ProductDelegate()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
         setupAddToCartView()
-        loadProducts?(111)
+        loadProducts?(category?.id ?? -1,false)
         setData()
+        setupProductDelegate()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -50,11 +55,27 @@ class CategoryProductsViewController: BaseViewController {
     private func setupCollectionView(){
         collectionView.dataSource = categoryProductsCollectionDataSource
         collectionView.delegate = categoryProductsCollectionFlowLayout
-        categoryProductsCollectionDataSource.delegate = self
+        categoryProductsCollectionDataSource.delegate = productDelegate
         categoryProductsCollectionFlowLayout.showProductDetail = { [weak self] (row) in
             self?.router?.navigate(to: .productDetailRoute)
         }
         collectionView.register(cells: (nibName: .productCell, cellId: .productCellId))
+    }
+    
+    private func setupProductDelegate() {
+        productDelegate.deleteFavorite = deleteFavorite
+        productDelegate.addToFavorite = addToFavorite
+        productDelegate.showAddToCartView = { [weak self] cell in
+            self?.showAddToCartView(cell: cell)
+        }
+    }
+    
+    
+    @objc
+    private func paginateMore() {
+        print("New Pagination")
+        loadProducts?(category?.id ?? -1,true)
+
     }
     
     private func setupAddToCartView(){
@@ -72,11 +93,11 @@ class CategoryProductsViewController: BaseViewController {
     }
     
     private func setData(){
+        categoryImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         guard let category = category,
               let imageUrl = URL(string: category.image.encodedText ?? "") else {
             return
         }
-        categoryImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         categoryImageView.sd_setImage(with: imageUrl)
     }
     
@@ -84,6 +105,12 @@ class CategoryProductsViewController: BaseViewController {
         router?.navigate(to: .categoriesFilterRoute)
     }
     
+    func showAddToCartView(cell: ProductCollectionViewCell){
+        guard let indexPath = self.collectionView.indexPath(for: cell) else {
+            return
+        }
+        self.addToCartBottomSheet.show()
+    }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -112,42 +139,15 @@ extension CategoryProductsViewController: AddedToCartViewDelegate {
         }
     }
     
-    
+  
 }
 
-extension CategoryProductsViewController: ProductCellDelegate {
-    func productCollectionViewCell(_ productCollectionViewCell: ProductCollectionViewCell, perform action: ProductCollectionViewCell.ActionType, with product: ProductItem?) {
-        guard  let product = product else {
-            return
-        }
-        switch action {
-        case .addToCart:
-            showAddToCartView(cell: productCollectionViewCell)
-        case .favorite:
-            if product.isFavorite == "1" {
-                deleteFavorite?(product.id) {
-                    productCollectionViewCell.removeFromFavorite()
-                }
-            }else{
-                addToFavorite?(product.id, {
-                    productCollectionViewCell.addToFavorite()
-                })
-            }
-        }
-        
-    }
-    
-    func showAddToCartView(cell: ProductCollectionViewCell){
-        guard let indexPath = self.collectionView.indexPath(for: cell) else {
-            return
-        }
-        self.addToCartBottomSheet.show()
-    }
-    
-    
-}
 
 extension CategoryProductsViewController: AdCategoriesViewModelDelegate {
+    func didLoadNewPaginate(product: Product) {
+        categoryProductsCollectionDataSource.product?.productItems.append(contentsOf: product.productItems)
+    }
+    
     
     func apiError(error: String) {
         displayAlert(message: error)
@@ -157,8 +157,33 @@ extension CategoryProductsViewController: AdCategoriesViewModelDelegate {
         categoryProductsCollectionDataSource.product = product
         activtiyIndicator.stopAnimating()
         collectionView.reloadData()
+
     }
     
+}
+
+
+extension CategoryProductsViewController : UIScrollViewDelegate {
+    //call pagination function when user scroll down
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        if (self.lastContentOffset > scrollView.contentOffset.x) {
+//            isVerticalScrolling = false
+//        } else if (self.lastContentOffset < scrollView.contentOffset.x) {
+//            isVerticalScrolling = false
+//        }else if (self.lastContentOffset > scrollView.contentOffset.y){
+//            isVerticalScrolling = false
+//        } else if (self.lastContentOffset < scrollView.contentOffset.y) {
+//            isVerticalScrolling = true
+//        }
+//
+//        self.lastContentOffset = scrollView.contentOffset.x;
+
+//    }
     
-    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height;
+        if (bottomEdge >= scrollView.contentSize.height) {
+            paginateMore()
+        }
+    }
 }

@@ -87,7 +87,7 @@
                                             <constraint firstAttribute="height" constant="10" id="Y4D-dR-UQS"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product_sample" translatesAutoresizingMaskIntoConstraints="NO" id="1Al-MY-g0s">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Al-MY-g0s">
                                         <rect key="frame" x="0.0" y="90" width="414" height="117"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="117" id="v4H-dy-D5h"/>
@@ -215,7 +215,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="product_sample" width="143" height="113"/>
         <image name="selected_cart" width="23" height="23"/>
         <image name="unselected_favorite" width="18" height="16.5"/>
         <namedColor name="accentColor">

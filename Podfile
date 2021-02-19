@@ -9,5 +9,5 @@ target 'balbid' do
   pod 'VICMAImageView', '~> 1.0'
   pod 'SwipeCellKit', :git => 'https://github.com/SwipeCellKit/SwipeCellKit.git', :branch => 'develop'
   pod 'RangeSeekSlider'
-
+  pod 'CCBottomRefreshControl'
 end
