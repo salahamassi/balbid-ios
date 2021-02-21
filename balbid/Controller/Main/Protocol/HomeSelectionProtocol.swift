@@ -6,8 +6,8 @@
 //
 
 import Foundation
-protocol HomeSelectionProtocol {
-    func didSelect(item at : IndexPath)
+protocol HomeSelectionProtocol: class {
+    func didSelectItem(at indexPath : IndexPath)
     func didMoveHomeSlider(to page : Int)
 
 }

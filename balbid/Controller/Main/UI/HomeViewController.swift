@@ -129,14 +129,20 @@ class HomeViewController: BaseViewController {
 }
 
 extension HomeViewController: HomeSelectionProtocol{
+    func didSelectItem(at indexPath: IndexPath) {
+        if indexPath.section != 0 && indexPath.section != 1 {
+            guard let product = homeViewModel.home?.homeProductItems[indexPath.section].prodcuts[indexPath.row] else {
+                return
+            }
+            router?.navigate(to: ProductRoutes.productDetailRoute(params: ["product": product]))
+        }
+    }
+    
     func didMoveHomeSlider(to page: Int) {
         homeCollectionViewDataSource.currentPage = page
         collectionView.reloadItems(at: [IndexPath(row: 0, section: 1)])
     }
-    
-    func didSelect(item at: IndexPath) {
-//        router?.navigate(to: CategoriesRoutes.adCategoriesRoute(params: ["category": ]))
-    }
+  
 }
 
 extension HomeViewController: HomeViewModelDelegate {

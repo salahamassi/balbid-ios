@@ -9,7 +9,7 @@ import UIKit
 
 class HomeCollectionViewDelegate: NSObject, UICollectionViewDelegate {
     
-    var delegate: HomeSelectionProtocol?
+    weak var delegate: HomeSelectionProtocol?
     let collectionView: UICollectionView
     
     init(collectionView: UICollectionView){
@@ -17,7 +17,7 @@ class HomeCollectionViewDelegate: NSObject, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        delegate?.didSelect(item : indexPath)
+        delegate?.didSelectItem(at: indexPath)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

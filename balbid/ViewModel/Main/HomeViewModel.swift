@@ -11,6 +11,7 @@ class HomeViewModel {
     
     weak var delegate: HomeViewModelDelegate?
     let dataSource: AppDataSource
+    var home: Home!
     
     init(dataSource: AppDataSource) {
         self.dataSource = dataSource
@@ -20,7 +21,9 @@ class HomeViewModel {
         dataSource.perform(service: .init(path: .homePath, domain: .domain, method: .get, params: [:], mustUseAuth: true), Home.self) { (result) in
             switch result {
             case .data(let data):
-                self.delegate?.loadHomeSuccess(home: data.data)
+                self.home = data.data
+                
+                self.delegate?.loadHomeSuccess(home: self.home)
             case .failure(let error):
                 self.delegate?.apiError(error: error)
             default:
