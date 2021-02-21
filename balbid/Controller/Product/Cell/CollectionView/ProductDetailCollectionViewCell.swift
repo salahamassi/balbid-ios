@@ -20,9 +20,13 @@ class ProductDetailCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var productSizeLabel: UILabel!
     @IBOutlet weak var productColorView: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
+    
+    @IBOutlet weak var sizeContainerView: UIView!
+    @IBOutlet weak var colorContainerView: UIView!
+    @IBOutlet weak var attributeContainerView: UIStackView!
+    @IBOutlet weak var emptyView: UIView!
 
-
-
+    
     weak var delegate: ProductDetailCollectionViewCellDelegate?
     
     var product: ProductItem? {
@@ -40,15 +44,15 @@ class ProductDetailCollectionViewCell: UICollectionViewCell {
         let viewController = UIStoryboard.productStoryboard.getViewController(with: .productDetailRateViewController) as! ProductDetailRateViewController
         return viewController
     }()
-  
+    
     @IBAction func viewQuickLook(_ sender: Any) {
         delegate?.productDetailCollectionViewCell(self, performAction: .quickLook)
         changeTabIndicatorPosition(value: 0)
         quickReadButton.setTitleColor(UIColor.appColor(.primaryColor), for: .normal)
         rateButton.setTitleColor(UIColor.appColor(.textLightGrayColor), for: .normal)
-
+        
     }
-
+    
     @IBAction func viewRate(_ sender: Any) {
         delegate?.productDetailCollectionViewCell(self, performAction: .rate)
         changeTabIndicatorPosition(value: tabIndicatorView.frame.width/2 + 60 + rateButton.frame.width/2 )
@@ -70,9 +74,39 @@ class ProductDetailCollectionViewCell: UICollectionViewCell {
         productNameLabel.text = product.name
         productPriceLabel.text = product.price + " RS"
         pageControl.numberOfPages = product.images.count
-
+        setSizeAttribute(product: product)
+        setColorAttribute(product: product)
     }
-        
+    
+    private func setSizeAttribute(product: ProductItem){
+        guard let sizeOption = product.options.first(where: { (option) -> Bool in
+            option.optionType == .size
+        }) else {
+            sizeContainerView.isHidden = true
+            emptyView.isHidden = false
+            return
+        }
+        if sizeOption.options.count > 0 {
+            productSizeLabel.text = sizeOption.options[0].name
+        }
+    }
+    
+    private func setColorAttribute(product: ProductItem){
+        guard let colorOption = product.options.first(where: { (option) -> Bool in
+            option.optionType == .color
+        }) else {
+            colorContainerView.isHidden = true
+            emptyView.isHidden = false
+            if sizeContainerView.isHidden {
+                attributeContainerView.isHidden = true
+            }
+            return
+        }
+        if colorOption.options.count > 0 {
+            productColorView.backgroundColor = UIColor(hexString: colorOption.options[0].name)
+        }
+    }
+    
     enum ActionType {
         case quickLook, rate
     }

@@ -24,6 +24,7 @@ struct ProductItem: SwiftyModelData {
     let discount: String?
     var isFavorite: String?
     let images: [String]
+    let options: [OptionGroupItem]
 
     init(json: JSON) {
         id = json["id"].intValue
@@ -40,6 +41,7 @@ struct ProductItem: SwiftyModelData {
         discount = json["discount"].stringValue
         isFavorite = json["is_favorite"].stringValue
         images = json["images"].arrayValue.map { $0["imagefullpath"].stringValue }
+        options = json["option_groups"].arrayValue.map { OptionGroupItem(json: $0) }
     }
     
     

@@ -117,6 +117,8 @@
 		188F941E25DFEC77006E9783 /* PaginateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F941D25DFEC77006E9783 /* PaginateDelegate.swift */; };
 		188F942225DFF7EB006E9783 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F942125DFF7EB006E9783 /* ProductViewModel.swift */; };
 		18920EC525E30E2600D5FD48 /* ProductImageCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18920EC425E30E2600D5FD48 /* ProductImageCollectionViewDelegate.swift */; };
+		18920EC825E313CD00D5FD48 /* OptionGroupItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18920EC725E313CD00D5FD48 /* OptionGroupItem.swift */; };
+		18920ECC25E3149000D5FD48 /* OptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18920ECB25E3149000D5FD48 /* OptionItem.swift */; };
 		189C933B25DB188F000258EA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C933A25DB188F000258EA /* Category.swift */; };
 		189C933E25DB18EF000258EA /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C933D25DB18EF000258EA /* CategoryItem.swift */; };
 		18AD3F7025D8847A007CBC15 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AD3F6F25D8847A007CBC15 /* FavoriteViewModel.swift */; };
@@ -425,6 +427,8 @@
 		188F941D25DFEC77006E9783 /* PaginateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginateDelegate.swift; sourceTree = "<group>"; };
 		188F942125DFF7EB006E9783 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		18920EC425E30E2600D5FD48 /* ProductImageCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		18920EC725E313CD00D5FD48 /* OptionGroupItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionGroupItem.swift; sourceTree = "<group>"; };
+		18920ECB25E3149000D5FD48 /* OptionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionItem.swift; sourceTree = "<group>"; };
 		189C933A25DB188F000258EA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		189C933D25DB18EF000258EA /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		18AD3F6F25D8847A007CBC15 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
@@ -1624,6 +1628,8 @@
 				189C933A25DB188F000258EA /* Category.swift */,
 				189C933D25DB18EF000258EA /* CategoryItem.swift */,
 				18E124B025DC5BAE00D561C5 /* Product.swift */,
+				18920EC725E313CD00D5FD48 /* OptionGroupItem.swift */,
+				18920ECB25E3149000D5FD48 /* OptionItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2245,6 +2251,7 @@
 				083F4A05259F36A3005DEF75 /* CategoryContentHeaderCollectionViewCell.swift in Sources */,
 				08F2B8CA258BD60B00CAEC9A /* ForgetPasswordCodeViewController.swift in Sources */,
 				2085140025CADDED0025885B /* ReorderCollectionViewDelegate.swift in Sources */,
+				18920ECC25E3149000D5FD48 /* OptionItem.swift in Sources */,
 				3DB1DB3925868A1000EF1E8F /* Extension+UIImageView.swift in Sources */,
 				3DB1DB3725868A1000EF1E8F /* Extensions+UICollectionView.swift in Sources */,
 				083E75B1259DEB9700EDF708 /* CategoriesContentCollectionViewDataSource.swift in Sources */,
@@ -2306,6 +2313,7 @@
 				3D4EEA2725CDFE6F001DD389 /* DownloadDataSourceService.swift in Sources */,
 				3DB1DB2E25868A1000EF1E8F /* Extensions+UIFont.swift in Sources */,
 				08B1A7472587A33D003D49EF /* SplashViewController.swift in Sources */,
+				18920EC825E313CD00D5FD48 /* OptionGroupItem.swift in Sources */,
 				2099ABCE25C979FB00FAB410 /* OrderProductTableViewDataSource.swift in Sources */,
 				3D4EEA0325CDF920001DD389 /* CacheOpreationType.swift in Sources */,
 				20CE078325D32B5F0012BAC4 /* Banner.swift in Sources */,

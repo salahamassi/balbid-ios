@@ -161,6 +161,10 @@
                                                                                 </userDefinedRuntimeAttribute>
                                                                             </userDefinedRuntimeAttributes>
                                                                         </view>
+                                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1Y-ML-JWA">
+                                                                            <rect key="frame" x="372" y="0.0" width="0.0" height="40"/>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        </view>
                                                                     </subviews>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hUD-zY-tON">
@@ -237,8 +241,11 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="396" height="714"/>
                                         <connections>
+                                            <outlet property="attributeContainerView" destination="6wT-g6-nkW" id="Vja-Ys-vqZ"/>
+                                            <outlet property="colorContainerView" destination="hc5-hU-aSw" id="PXQ-jy-14F"/>
                                             <outlet property="containerView" destination="iIG-lg-Prm" id="kGF-xb-4Rd"/>
                                             <outlet property="contentViewHeight" destination="MuC-iO-Qqz" id="nnQ-eC-no5"/>
+                                            <outlet property="emptyView" destination="J1Y-ML-JWA" id="XZ7-wu-icH"/>
                                             <outlet property="pageControl" destination="dfc-hZ-dJx" id="YvP-jT-xxF"/>
                                             <outlet property="productColorView" destination="cS3-Yu-QZ3" id="Ir0-8X-U6G"/>
                                             <outlet property="productNameLabel" destination="m8I-DX-ogn" id="Eb2-VB-yc0"/>
@@ -246,6 +253,7 @@
                                             <outlet property="productSizeLabel" destination="wGs-yd-Zfc" id="JPx-6s-PXb"/>
                                             <outlet property="quickReadButton" destination="vqS-j3-pdR" id="TEo-8h-EK6"/>
                                             <outlet property="rateButton" destination="941-J3-yEN" id="zMZ-66-L7T"/>
+                                            <outlet property="sizeContainerView" destination="Mkb-wy-Ypb" id="YwZ-3x-Fzi"/>
                                             <outlet property="tabIndicatorConstraint" destination="Sy8-Ld-FmA" id="WsE-p9-8lV"/>
                                             <outlet property="tabIndicatorView" destination="bsQ-7W-Pby" id="hSQ-mh-QAc"/>
                                         </connections>
