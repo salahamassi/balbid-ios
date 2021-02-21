@@ -8,14 +8,14 @@
 import UIKit
 import SDWebImage
 
-class HomeSliderCell: UICollectionViewCell {
+class ImageSliderCell: UICollectionViewCell {
     
     @IBOutlet weak var slierImageView: UIImageView!
     
-    var sliderImage: SliderImage? {
+    var sliderImage: String? {
         didSet {
             slierImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
-            guard let imageUrl = URL(string: sliderImage?.image ?? "") else {
+            guard let imageUrl = URL(string: sliderImage?.encodedText ?? "") else {
                 return
             }
             slierImageView.sd_setImage(with: imageUrl)

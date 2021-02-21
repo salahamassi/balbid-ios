@@ -18,8 +18,8 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .sliderCellId, for: indexPath) as! HomeSliderCell
-            cell.sliderImage = home?.imageSlider[indexPath.row]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .sliderCellId, for: indexPath) as! ImageSliderCell
+            cell.sliderImage = home?.imageSlider[indexPath.row].image
             return cell
         }else if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .sliderIndicatorCellId, for: indexPath) as! SliderIndicatorCollectionViewCell

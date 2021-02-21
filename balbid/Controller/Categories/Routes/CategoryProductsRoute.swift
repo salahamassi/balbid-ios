@@ -8,7 +8,7 @@
 import UIKit
 import AppRouter
 
-class AdCategoriesRoute: Route {
+class CategoryProductsRoute: Route {
     
     var navigateType: NavigateType {
         .push

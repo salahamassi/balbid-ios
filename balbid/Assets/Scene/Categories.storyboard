@@ -405,7 +405,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kXZ-nA-yd5">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="58" width="414" height="804"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="x0I-5N-fZw">
                                         <rect key="frame" x="16" y="0.0" width="382" height="309"/>
@@ -529,12 +529,12 @@
                         <viewLayoutGuide key="safeArea" id="b0O-TX-Nz7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="kXZ-nA-yd5" firstAttribute="leading" secondItem="b0O-TX-Nz7" secondAttribute="leading" id="6pg-yT-Oio"/>
                             <constraint firstItem="Nh2-MF-Y6m" firstAttribute="centerX" secondItem="w9k-6v-fzY" secondAttribute="centerX" id="Leb-pE-380"/>
-                            <constraint firstItem="kXZ-nA-yd5" firstAttribute="leading" secondItem="b0O-TX-Nz7" secondAttribute="leading" id="NFB-yg-YK9"/>
                             <constraint firstItem="Nh2-MF-Y6m" firstAttribute="centerY" secondItem="w9k-6v-fzY" secondAttribute="centerY" id="QVq-ij-3xk"/>
-                            <constraint firstAttribute="bottom" secondItem="kXZ-nA-yd5" secondAttribute="bottom" id="VJN-ra-xl3"/>
-                            <constraint firstItem="kXZ-nA-yd5" firstAttribute="top" secondItem="b0O-TX-Nz7" secondAttribute="top" constant="11" id="pDT-Q1-cqu"/>
-                            <constraint firstItem="kXZ-nA-yd5" firstAttribute="trailing" secondItem="b0O-TX-Nz7" secondAttribute="trailing" id="uyK-bz-iin"/>
+                            <constraint firstItem="kXZ-nA-yd5" firstAttribute="top" secondItem="b0O-TX-Nz7" secondAttribute="top" constant="14" id="R3u-T8-svN"/>
+                            <constraint firstItem="kXZ-nA-yd5" firstAttribute="bottom" secondItem="b0O-TX-Nz7" secondAttribute="bottom" id="ocY-aG-JQH"/>
+                            <constraint firstItem="kXZ-nA-yd5" firstAttribute="trailing" secondItem="b0O-TX-Nz7" secondAttribute="trailing" id="pqi-Nf-6FH"/>
                         </constraints>
                     </view>
                     <toolbarItems/>

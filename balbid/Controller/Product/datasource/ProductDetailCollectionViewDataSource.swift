@@ -13,10 +13,12 @@ class ProductDetailCollectionViewDataSource: NSObject, UICollectionViewDataSourc
     
     weak var productDetailCellDelegate: ProductDetailCollectionViewCellDelegate?
     weak var productDetailHeaderCollectionReusableViewDelegate: ProductDetailHeaderCollectionReusableViewDelegate?
+    var product: ProductItem?
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .productDetailCellId, for: indexPath)
-        (cell as? ProductDetailCollectionViewCell)?.delegate = productDetailCellDelegate
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .productDetailCellId, for: indexPath)  as! ProductDetailCollectionViewCell
+        cell.delegate = productDetailCellDelegate
+        cell.product = product
         return cell
     }
     

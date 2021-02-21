@@ -19,6 +19,7 @@ extension String {
     static let favoritePath = "customers/products/favorite"
     static let categoryPath = "categories/getLeveling"
     static let categoryProductPath = "products/getInCategory?category_id="
+    static let productDetailPath = "products/get?product_id="
 
     
     //api Method

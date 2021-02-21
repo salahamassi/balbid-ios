@@ -14,6 +14,7 @@ class CategoryProductsViewController: BaseViewController {
     @IBOutlet weak var collectionView: ISIntrinsicCollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var activtiyIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var paginateActivtiyIndicator: UIActivityIndicatorView!
     @IBOutlet weak var categoryImageView: UIImageView!
 
     private let categoryProductsCollectionFlowLayout = CategoryProductsCollectionFlowLayout()
@@ -29,15 +30,20 @@ class CategoryProductsViewController: BaseViewController {
     private var lastContentOffset : CGFloat = 0
     private var productDelegate = ProductDelegate()
     private var itemAddedToCartDelegate  = ItemAddedToCartDelegate()
+    private var paginateDelegate = PaginateDelegate()
+    private  var canPginate = true
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
         setupAddToCartView()
-        loadProducts?(category?.id ?? -1,false)
+//        loadProducts?(category?.id ?? -1,false)
+        loadProducts?(15,false)
         setData()
         setupProductDelegate()
         setupAddedToCartDelegate()
+        setupScrollDelegate()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -58,9 +64,25 @@ class CategoryProductsViewController: BaseViewController {
         collectionView.delegate = categoryProductsCollectionFlowLayout
         categoryProductsCollectionDataSource.delegate = productDelegate
         categoryProductsCollectionFlowLayout.showProductDetail = { [weak self] (row) in
-            self?.router?.navigate(to: .productDetailRoute)
+            guard let product =  self?.categoryProductsCollectionDataSource.product?.productItems[row] else {
+                return
+            }
+            self?.router?.navigate(to: ProductRoutes.productDetailRoute(params: ["product": product]))
         }
         collectionView.register(cells: (nibName: .productCell, cellId: .productCellId))
+        collectionView.register(UINib(nibName: .categoryFooterView, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: .categoryProductFooterCellId)
+    }
+    
+    private func setupScrollDelegate(){
+        scrollView.delegate = paginateDelegate
+        paginateDelegate.paginate = {  [weak self] in
+            if self?.canPginate ?? false {
+                self?.canPginate = false
+                self?.categoryProductsCollectionFlowLayout.isPaginate = true
+                self?.collectionView.reloadSections(.init(integer: 0))
+                self?.paginateMore()
+            }
+        }
     }
     
     private func setupProductDelegate() {
@@ -80,10 +102,8 @@ class CategoryProductsViewController: BaseViewController {
         }
     }
     
-    @objc
     private func paginateMore() {
-        print("New Pagination")
-        loadProducts?(category?.id ?? -1,true)
+        loadProducts?(15,true)
     }
     
     private func setupAddToCartView(){
@@ -129,7 +149,18 @@ class CategoryProductsViewController: BaseViewController {
 
 extension CategoryProductsViewController: AdCategoriesViewModelDelegate {
     func didLoadNewPaginate(product: Product) {
+        let preLastIndex =  categoryProductsCollectionDataSource.product?.productItems.count ?? 0
         categoryProductsCollectionDataSource.product?.productItems.append(contentsOf: product.productItems)
+        let count =  categoryProductsCollectionDataSource.product?.productItems.count ?? 0
+        var indexPath: [IndexPath] = []
+        for i in preLastIndex..<count {
+            indexPath.append(IndexPath(row: i, section: 0))
+        }
+        canPginate = product.productItems.count != 0
+        categoryProductsCollectionFlowLayout.isPaginate = false
+        collectionView.insertItems(at: indexPath)
+       
+//        collectionView.reloadSections(.init(integer: 0))
     }
     
     
@@ -141,33 +172,6 @@ extension CategoryProductsViewController: AdCategoriesViewModelDelegate {
         categoryProductsCollectionDataSource.product = product
         activtiyIndicator.stopAnimating()
         collectionView.reloadData()
-
     }
     
-}
-
-
-extension CategoryProductsViewController : UIScrollViewDelegate {
-    //call pagination function when user scroll down
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if (self.lastContentOffset > scrollView.contentOffset.x) {
-//            isVerticalScrolling = false
-//        } else if (self.lastContentOffset < scrollView.contentOffset.x) {
-//            isVerticalScrolling = false
-//        }else if (self.lastContentOffset > scrollView.contentOffset.y){
-//            isVerticalScrolling = false
-//        } else if (self.lastContentOffset < scrollView.contentOffset.y) {
-//            isVerticalScrolling = true
-//        }
-//
-//        self.lastContentOffset = scrollView.contentOffset.x;
-
-//    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height;
-        if (bottomEdge >= scrollView.contentSize.height) {
-            paginateMore()
-        }
-    }
 }

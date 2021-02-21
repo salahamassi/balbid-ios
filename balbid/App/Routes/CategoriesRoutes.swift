@@ -19,7 +19,7 @@ extension AppRouter {
         let mParams: [String: Any]?
         switch route {
             case .adCategoriesRoute (let params):
-                mRoute = AdCategoriesRoute()
+                mRoute = CategoryProductsRoute()
                 mParams = params
             case .categoriesFilterRoute:
                 mRoute = CategoriesFilterRoute()

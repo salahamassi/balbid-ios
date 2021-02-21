@@ -23,6 +23,10 @@ class ProductDetailViewController: BaseViewController {
     private let padding: CGFloat = 16
     
     
+    var product:  ProductItem!
+    var loadProduct: ((Int)-> Void)?
+    
+    
     lazy var productDetailQuickViewViewController: ProductDetailQuickViewViewController = {
         let viewController = UIStoryboard.productStoryboard.getViewController(with: .productDetailQuickViewViewController) as! ProductDetailQuickViewViewController
         return viewController
@@ -37,6 +41,7 @@ class ProductDetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        loadProduct?(product.id)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -110,4 +115,20 @@ extension ProductDetailViewController {
         add(productDetailRateViewController, to: cell.containerView, frame: cell.containerView.frame)
     }
 
+}
+
+extension ProductDetailViewController: ProductViewModelDelegate {
+    func apiError(error: String) {
+        displayAlert(message: error)
+    }
+    
+    func didLoadProductSuccess(product: ProductItem) {
+        self.product =  product
+        headerView.images = product.images
+        productDetailCollectionViewDataSource.product = product
+        collectionView.reloadData()
+    }
+    
+    
+    
 }

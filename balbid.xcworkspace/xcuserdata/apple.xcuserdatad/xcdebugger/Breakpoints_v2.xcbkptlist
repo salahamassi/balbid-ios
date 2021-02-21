@@ -419,5 +419,149 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9A0C67E7-4700-43FD-919B-A3EA7488DC69"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/ViewModel/Product/ProductViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "getProductData(id:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9A0C67E7-4700-43FD-919B-A3EA7488DC69 - 1b05ea5735902664"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "balbid.ProductViewModel.getProductData(id: Swift.Int) -&gt; ()"
+                  moduleName = "balbid"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/balod/balbid/ViewModel/Product/ProductViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "134">
+               </Location>
+               <Location
+                  uuid = "9A0C67E7-4700-43FD-919B-A3EA7488DC69 - c630b440d04e3d26"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (balbid.DataSourceResult&lt;balbid.ProductItem&gt;) -&gt; () in balbid.ProductViewModel.getProductData(id: Swift.Int) -&gt; ()"
+                  moduleName = "balbid"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/balod/balbid/ViewModel/Product/ProductViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "73">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A54E916-3751-474C-BA93-12836349C6A3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/ViewModel/Product/ProductViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getProductData(id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3EC84795-C20B-40AD-B1B6-5B01CB799E76"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/ViewModel/Product/ProductViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "getProductData(id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0D083A3-E0D4-432A-A778-53C8EF5E7859"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/App/Delegate/PaginateDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "scrollViewDidEndDecelerating(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "153579F9-1B5C-4707-B9B2-D7D4A12BE55E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/ViewModel/Categories/AdCategoriesViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getProductCategory(from:isPaging:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "153579F9-1B5C-4707-B9B2-D7D4A12BE55E - 57bac8e5f0191b88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "balbid.CategoryProductsViewModel.getProductCategory(from: Swift.Int, isPaging: Swift.Bool) -&gt; ()"
+                  moduleName = "balbid"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Downloads/Work/balod/balbid/ViewModel/Categories/AdCategoriesViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "278">
+               </Location>
+               <Location
+                  uuid = "153579F9-1B5C-4707-B9B2-D7D4A12BE55E - 10f252f9f9d9897d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (balbid.DataSourceResult&lt;balbid.Product&gt;) -&gt; () in balbid.CategoryProductsViewModel.getProductCategory(from: Swift.Int, isPaging: Swift.Bool) -&gt; ()"
+                  moduleName = "balbid"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Downloads/Work/balod/balbid/ViewModel/Categories/AdCategoriesViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "67">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

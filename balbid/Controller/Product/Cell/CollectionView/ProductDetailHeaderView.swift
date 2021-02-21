@@ -13,6 +13,12 @@ class ProductDetailHeaderView: UICollectionReusableView {
     public var animator: UIViewPropertyAnimator?
     weak var delegate: ProductDetailHeaderCollectionReusableViewDelegate?
     
+    var images: [String] = [] {
+        didSet  {
+            productImageCollectionViewDataSource.images  =  images
+            imageCollectionView.reloadData()
+        }
+    }
     lazy var imageCollectionView: UICollectionView = {
         let itemSize = frame.size
         let collectionView = UICollectionView(scrollDirection: .horizontal,
@@ -41,7 +47,6 @@ class ProductDetailHeaderView: UICollectionReusableView {
         setupCollectionView()
         arrangeView()
         addBlurVisulaEffectView()
-        imageCollectionView.backgroundColor = .brown
     }
     
     private func setupCollectionView(){

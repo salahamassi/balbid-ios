@@ -15,8 +15,20 @@ class ProductDetailCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var rateButton: UIButton!
     @IBOutlet weak var tabIndicatorConstraint: NSLayoutConstraint!
     @IBOutlet weak var tabIndicatorView: UIView!
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var productPriceLabel: UILabel!
+    @IBOutlet weak var productSizeLabel: UILabel!
+    @IBOutlet weak var productColorView: UIView!
+    @IBOutlet weak var pageControl: UIPageControl!
+
 
     weak var delegate: ProductDetailCollectionViewCellDelegate?
+    
+    var product: ProductItem? {
+        didSet {
+            setupProductData(product: product)
+        }
+    }
     
     lazy var productDetailQuickViewViewController : ProductDetailQuickViewViewController = {
         let viewController = UIStoryboard.productStoryboard.getViewController(with: .productDetailQuickViewViewController) as! ProductDetailQuickViewViewController
@@ -48,6 +60,16 @@ class ProductDetailCollectionViewCell: UICollectionViewCell {
             self.tabIndicatorConstraint.constant = value
             self.layoutIfNeeded()
         }
+    }
+    
+    private func setupProductData(product: ProductItem?) {
+        guard let product = product  else {
+            return
+        }
+        productNameLabel.text = product.name
+        productPriceLabel.text = product.price + " RS"
+        pageControl.numberOfPages = product.images.count
+
     }
         
     enum ActionType {

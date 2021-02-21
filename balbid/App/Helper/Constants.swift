@@ -52,6 +52,9 @@ extension String {
     static let addNewCardBottomSheet = "AddNewCardView"
     static let addedToCartView = "AddedToCartView"
     static let priceSeekBarView = "PriceSeekBarView"
+    static let categoryFooterView = "CategoryFooter"
+
+    
 
     
     
@@ -95,6 +98,9 @@ extension String {
     static let creditBalanceCellId = "credit_balance_cell"
     static let paymentCardCellId = "payment_card_cell"
     static let productFooterCellId = "product_footer_cell"
+    static let categoryProductFooterCellId = "category_product_footer"
+
+    
 
     
     

@@ -9,12 +9,15 @@ import UIKit
 
 class ProductImageCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
+    var images:  [String] = []
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .productImageCellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .productImageCellId, for: indexPath)  as!  ImageSliderCell
+        cell.sliderImage = images[indexPath.row]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        images.count
     }
 }

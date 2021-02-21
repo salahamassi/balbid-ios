@@ -23,6 +23,7 @@ struct ProductItem: SwiftyModelData {
     let maxQuantity: String
     let discount: String?
     var isFavorite: String?
+    let images: [String]
 
     init(json: JSON) {
         id = json["id"].intValue
@@ -38,6 +39,7 @@ struct ProductItem: SwiftyModelData {
         maxQuantity = json["price_upper_max_quantity"].stringValue
         discount = json["discount"].stringValue
         isFavorite = json["is_favorite"].stringValue
+        images = json["images"].arrayValue.map { $0["imagefullpath"].stringValue }
     }
     
     

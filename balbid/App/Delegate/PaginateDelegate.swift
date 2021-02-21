@@ -7,6 +7,14 @@
 
 import UIKit
 
-class PaginateDelegate: NSObject {
+class PaginateDelegate: NSObject, UIScrollViewDelegate {
     
+    var paginate: (() -> Void)?
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height;
+        if (bottomEdge >= scrollView.contentSize.height) {
+            paginate?()
+        }
+    }
 }

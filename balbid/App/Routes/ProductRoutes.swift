@@ -8,7 +8,7 @@
 import AppRouter
 
 enum ProductRoutes {
-    case productDetailRoute
+    case productDetailRoute(params: [String: Any])
 }
 
 extension AppRouter {
@@ -16,9 +16,9 @@ extension AppRouter {
         let mRoute: Route
         let mParams: [String: Any]?
         switch route {
-          case .productDetailRoute:
+          case .productDetailRoute (let params):
                 mRoute = ProductDetailRoute()
-                mParams = nil
+                mParams = params
         }
         navigate(to: mRoute, with: mParams, completion: completion)
     }

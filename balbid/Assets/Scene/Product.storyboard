@@ -233,6 +233,11 @@
                                         <connections>
                                             <outlet property="containerView" destination="iIG-lg-Prm" id="kGF-xb-4Rd"/>
                                             <outlet property="contentViewHeight" destination="MuC-iO-Qqz" id="nnQ-eC-no5"/>
+                                            <outlet property="pageControl" destination="dfc-hZ-dJx" id="YvP-jT-xxF"/>
+                                            <outlet property="productColorView" destination="cS3-Yu-QZ3" id="Ir0-8X-U6G"/>
+                                            <outlet property="productNameLabel" destination="Ls4-Iu-8VZ" id="IBk-xt-PNi"/>
+                                            <outlet property="productPriceLabel" destination="TyH-lf-djW" id="57M-Ny-9jl"/>
+                                            <outlet property="productSizeLabel" destination="wGs-yd-Zfc" id="JPx-6s-PXb"/>
                                             <outlet property="quickReadButton" destination="vqS-j3-pdR" id="TEo-8h-EK6"/>
                                             <outlet property="rateButton" destination="941-J3-yEN" id="zMZ-66-L7T"/>
                                             <outlet property="tabIndicatorConstraint" destination="Sy8-Ld-FmA" id="WsE-p9-8lV"/>

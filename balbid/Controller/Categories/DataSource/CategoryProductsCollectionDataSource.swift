@@ -24,7 +24,11 @@ class CategoryProductsCollectionDataSource: NSObject, UICollectionViewDataSource
         product?.productItems.count ?? 0
     }
     
-
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+       let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: .categoryProductFooterCellId , for: indexPath)
+        return footer
+    }
+    
     
 
 }

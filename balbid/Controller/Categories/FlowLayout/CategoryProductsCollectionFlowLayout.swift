@@ -10,6 +10,9 @@ import UIKit
 class CategoryProductsCollectionFlowLayout: NSObject, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     var showProductDetail: ((_ row: Int) -> ())?
+    var paginate: (()  -> Void)?
+    var isPaginate = false
+    
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width/2 - 16, height: 300)
@@ -29,5 +32,16 @@ class CategoryProductsCollectionFlowLayout: NSObject, UICollectionViewDelegate, 
         }
         showProductDetail(indexPath.row)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        CGSize(width: collectionView.frame.width, height: isPaginate ? 40 : 0)
+    }
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let animation = AnimationFactory.makeFadeAnimation(duration: 0.5, delayFactor: 0.05)
+        let animator = Animator(animation: animation)
+        animator.animate(cell: cell, at: indexPath, in: collectionView)
+    }
+    
+    
 }
 
