@@ -15,6 +15,7 @@ class ProductDetailViewController: BaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addToCartButton: UIButton!
+
     
     private var productDetailCollectionViewDelegate = ProductDetailCollectionViewDelegate()
     private var productDetailCollectionViewDataSource =  ProductDetailCollectionViewDataSource()
@@ -78,6 +79,9 @@ class ProductDetailViewController: BaseViewController {
         
     }
     
+    @IBAction func changePage(_ sender: UIPageControl) {
+        headerView.imageCollectionView.scrollToItem(at: IndexPath(row: sender.currentPage, section: 0), at: .centeredHorizontally, animated: true)
+    }
     
 }
 
@@ -88,6 +92,13 @@ extension ProductDetailViewController: ProductDetailCollectionViewCellDelegate {
 }
 
 extension ProductDetailViewController: ProductDetailHeaderCollectionReusableViewDelegate {
+    func ProductDetailHeaderCollectionReusableView(_ cell: ProductDetailHeaderView, didSliderScroll index: Int) {
+        guard let cell = collectionView.cellForItem(at: IndexPath(row: 0, section: 0)) as? ProductDetailCollectionViewCell else {
+            return
+        }
+        cell.pageControl.currentPage = index
+    }
+    
     func ProductDetailHeaderCollectionReusableView(_ cell: ProductDetailHeaderView, performAction action: ProductDetailHeaderView.ActionType) {
         if action == .back {
             router?.popViewController()

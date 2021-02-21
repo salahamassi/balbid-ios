@@ -27,10 +27,14 @@ class ProductDetailHeaderView: UICollectionReusableView {
                                               minimumLineSpacing: 0,
                                               isPagingEnabled: true)
         collectionView.showsHorizontalScrollIndicator = false
+        productImageCollectionViewDelegate = ProductImageCollectionViewDelegate(collectionView: collectionView)
+        collectionView.delegate = productImageCollectionViewDelegate
         return collectionView
     }()
     
     private var productImageCollectionViewDataSource = ProductImageCollectionViewDataSource()
+    private var productImageCollectionViewDelegate: ProductImageCollectionViewDelegate?
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -52,6 +56,12 @@ class ProductDetailHeaderView: UICollectionReusableView {
     private func setupCollectionView(){
         imageCollectionView.register(cells: (nibName: .productImageCell, cellId: .productImageCellId))
         imageCollectionView.dataSource = productImageCollectionViewDataSource
+        productImageCollectionViewDelegate?.didScroll = { [weak self] index in
+            guard let cell = self else {
+                return
+            }
+            self?.delegate?.ProductDetailHeaderCollectionReusableView(cell, didSliderScroll: index)
+        }
      //   imageCollectionView.delegate = self
     }
     
@@ -120,4 +130,6 @@ class ProductDetailHeaderView: UICollectionReusableView {
 
 protocol ProductDetailHeaderCollectionReusableViewDelegate: class {
     func ProductDetailHeaderCollectionReusableView(_ cell: ProductDetailHeaderView, performAction action: ProductDetailHeaderView.ActionType)
+    func ProductDetailHeaderCollectionReusableView(_ cell: ProductDetailHeaderView, didSliderScroll index: Int)
+
 }

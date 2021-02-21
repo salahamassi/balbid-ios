@@ -13,6 +13,7 @@ class ProductDetailCollectionViewDataSource: NSObject, UICollectionViewDataSourc
     
     weak var productDetailCellDelegate: ProductDetailCollectionViewCellDelegate?
     weak var productDetailHeaderCollectionReusableViewDelegate: ProductDetailHeaderCollectionReusableViewDelegate?
+   
     var product: ProductItem?
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

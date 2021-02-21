@@ -116,6 +116,7 @@
 		188F941A25DFE98C006E9783 /* ItemAddedToCartDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F941925DFE98C006E9783 /* ItemAddedToCartDelegate.swift */; };
 		188F941E25DFEC77006E9783 /* PaginateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F941D25DFEC77006E9783 /* PaginateDelegate.swift */; };
 		188F942225DFF7EB006E9783 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F942125DFF7EB006E9783 /* ProductViewModel.swift */; };
+		18920EC525E30E2600D5FD48 /* ProductImageCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18920EC425E30E2600D5FD48 /* ProductImageCollectionViewDelegate.swift */; };
 		189C933B25DB188F000258EA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C933A25DB188F000258EA /* Category.swift */; };
 		189C933E25DB18EF000258EA /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C933D25DB18EF000258EA /* CategoryItem.swift */; };
 		18AD3F7025D8847A007CBC15 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AD3F6F25D8847A007CBC15 /* FavoriteViewModel.swift */; };
@@ -423,6 +424,7 @@
 		188F941925DFE98C006E9783 /* ItemAddedToCartDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAddedToCartDelegate.swift; sourceTree = "<group>"; };
 		188F941D25DFEC77006E9783 /* PaginateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginateDelegate.swift; sourceTree = "<group>"; };
 		188F942125DFF7EB006E9783 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		18920EC425E30E2600D5FD48 /* ProductImageCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		189C933A25DB188F000258EA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		189C933D25DB18EF000258EA /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		18AD3F6F25D8847A007CBC15 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
@@ -1001,6 +1003,7 @@
 				08A9B8CA25A6582900AE5238 /* RateTableViewDelegate.swift */,
 				20AAF12125C2ED7F00CC31D4 /* PorductDetailCollectionViewDelegate.swift */,
 				188F941025DFDE26006E9783 /* ProductDelegate.swift */,
+				18920EC425E30E2600D5FD48 /* ProductImageCollectionViewDelegate.swift */,
 			);
 			path = delegate;
 			sourceTree = "<group>";
@@ -2284,6 +2287,7 @@
 				08F3B50B2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift in Sources */,
 				3DB1DB3025868A1000EF1E8F /* Extensions+UIScrollView.swift in Sources */,
 				0827BF712589278500DE8CD5 /* AccountOptionViewController.swift in Sources */,
+				18920EC525E30E2600D5FD48 /* ProductImageCollectionViewDelegate.swift in Sources */,
 				18E124AC25DC4C7B00D561C5 /* CategoriesTableViewDelegate.swift in Sources */,
 				2092066425C7442B0072085E /* ShippingAddressCell.swift in Sources */,
 				202569F025BE124C00FD61AD /* FavoriteTableViewDataSource.swift in Sources */,

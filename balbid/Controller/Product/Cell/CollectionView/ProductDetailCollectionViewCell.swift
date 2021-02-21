@@ -22,6 +22,7 @@ class ProductDetailCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var pageControl: UIPageControl!
 
 
+
     weak var delegate: ProductDetailCollectionViewCellDelegate?
     
     var product: ProductItem? {
