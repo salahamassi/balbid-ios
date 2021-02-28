@@ -131,6 +131,11 @@
 		18E124A825DC497400D561C5 /* CategoryContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E124A725DC497400D561C5 /* CategoryContentCell.swift */; };
 		18E124AC25DC4C7B00D561C5 /* CategoriesTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E124AB25DC4C7B00D561C5 /* CategoriesTableViewDelegate.swift */; };
 		18E124B125DC5BAE00D561C5 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E124B025DC5BAE00D561C5 /* Product.swift */; };
+		18F3707F25EBE0400005D19E /* EvaluationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3707E25EBE0400005D19E /* EvaluationItem.swift */; };
+		18F3708225EBE0EF0005D19E /* CommentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3708125EBE0EF0005D19E /* CommentItem.swift */; };
+		18F3708525EBE1380005D19E /* CommentEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3708425EBE1380005D19E /* CommentEvaluation.swift */; };
+		18F3708825EBE27F0005D19E /* ProductDetailRateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3708725EBE27F0005D19E /* ProductDetailRateViewModel.swift */; };
+		18F3708C25EBE44D0005D19E /* EvaluationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3708B25EBE44D0005D19E /* EvaluationCell.swift */; };
 		18F5EE6125E0510700BA7FBE /* AddedToCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5EE4625E04FE300BA7FBE /* AddedToCartView.swift */; };
 		18F5EE6525E0517300BA7FBE /* AddedToCartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A1A36A25CDD96B00C1115C /* AddedToCartView.xib */; };
 		18F5EE6825E0517C00BA7FBE /* PriceSeekBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F5EE6725E0517C00BA7FBE /* PriceSeekBarView.xib */; };
@@ -441,6 +446,11 @@
 		18E124A725DC497400D561C5 /* CategoryContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryContentCell.swift; sourceTree = "<group>"; };
 		18E124AB25DC4C7B00D561C5 /* CategoriesTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewDelegate.swift; sourceTree = "<group>"; };
 		18E124B025DC5BAE00D561C5 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		18F3707E25EBE0400005D19E /* EvaluationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationItem.swift; sourceTree = "<group>"; };
+		18F3708125EBE0EF0005D19E /* CommentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentItem.swift; sourceTree = "<group>"; };
+		18F3708425EBE1380005D19E /* CommentEvaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentEvaluation.swift; sourceTree = "<group>"; };
+		18F3708725EBE27F0005D19E /* ProductDetailRateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRateViewModel.swift; sourceTree = "<group>"; };
+		18F3708B25EBE44D0005D19E /* EvaluationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationCell.swift; sourceTree = "<group>"; };
 		18F5EE4625E04FE300BA7FBE /* AddedToCartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddedToCartView.swift; path = "../../../../../../balbid-ios-design_branch/balbid/Controller/Categories/View/AddedToCartView.swift"; sourceTree = "<group>"; };
 		18F5EE6725E0517C00BA7FBE /* PriceSeekBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PriceSeekBarView.xib; path = "../../../../../../../balbid-ios-design_branch/balbid/Controller/Categories/View/nib/PriceSeekBarView.xib"; sourceTree = "<group>"; };
 		18F5EE6A25E066E600BA7FBE /* CategoryFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryFooter.xib; sourceTree = "<group>"; };
@@ -823,6 +833,7 @@
 		08438E5E25A2650A00796373 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				18F3708A25EBE4390005D19E /* TableView */,
 				08438E5F25A2653200796373 /* CollectionView */,
 				08438E5D25A2650200796373 /* Nib */,
 			);
@@ -1167,6 +1178,7 @@
 			isa = PBXGroup;
 			children = (
 				188F942125DFF7EB006E9783 /* ProductViewModel.swift */,
+				18F3708725EBE27F0005D19E /* ProductDetailRateViewModel.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -1202,6 +1214,14 @@
 				18E124AB25DC4C7B00D561C5 /* CategoriesTableViewDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		18F3708A25EBE4390005D19E /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				18F3708B25EBE44D0005D19E /* EvaluationCell.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		2006B91325CECAC300DB3EE0 /* ViewModel */ = {
@@ -1630,6 +1650,9 @@
 				18E124B025DC5BAE00D561C5 /* Product.swift */,
 				18920EC725E313CD00D5FD48 /* OptionGroupItem.swift */,
 				18920ECB25E3149000D5FD48 /* OptionItem.swift */,
+				18F3707E25EBE0400005D19E /* EvaluationItem.swift */,
+				18F3708125EBE0EF0005D19E /* CommentItem.swift */,
+				18F3708425EBE1380005D19E /* CommentEvaluation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2176,6 +2199,7 @@
 				08A9B8CB25A6582900AE5238 /* RateTableViewDelegate.swift in Sources */,
 				3DB1DB4E25868E6C00EF1E8F /* Animator.swift in Sources */,
 				08C567752593F58A00C80A75 /* AuthCompanyCreatedSuccessfullyRoute.swift in Sources */,
+				18F3707F25EBE0400005D19E /* EvaluationItem.swift in Sources */,
 				20C7F91325CD9A93001D0715 /* PaymentCardTableViewDelegate.swift in Sources */,
 				20AD836F25C34FF300070C78 /* ProductDetailCollectionViewCell.swift in Sources */,
 				08809ED7259377A900AD41EE /* AuthorizePeopleViewController.swift in Sources */,
@@ -2194,6 +2218,7 @@
 				087CA9D52599055000113CEC /* HomeCollectionViewDataSource.swift in Sources */,
 				2092064B25C7198B0072085E /* ProductImageCollectionViewDataSource.swift in Sources */,
 				18AD3F7025D8847A007CBC15 /* FavoriteViewModel.swift in Sources */,
+				18F3708C25EBE44D0005D19E /* EvaluationCell.swift in Sources */,
 				081AF824259F9D71000E3B04 /* CartCollectionViewDataSource.swift in Sources */,
 				081ADF822591023100B5AE47 /* AuthCompanyMainRoute.swift in Sources */,
 				20FBE4B325C8375600210190 /* AddNewShippingRoute.swift in Sources */,
@@ -2249,6 +2274,7 @@
 				08F2B8CD258BD62F00CAEC9A /* ForgetPasswordCodeRoute.swift in Sources */,
 				2019AC3C25C9DC6D00455166 /* OrderTraceMapViewController.swift in Sources */,
 				083F4A05259F36A3005DEF75 /* CategoryContentHeaderCollectionViewCell.swift in Sources */,
+				18F3708525EBE1380005D19E /* CommentEvaluation.swift in Sources */,
 				08F2B8CA258BD60B00CAEC9A /* ForgetPasswordCodeViewController.swift in Sources */,
 				2085140025CADDED0025885B /* ReorderCollectionViewDelegate.swift in Sources */,
 				18920ECC25E3149000D5FD48 /* OptionItem.swift in Sources */,
@@ -2330,6 +2356,7 @@
 				3D4EEA1C25CDFA53001DD389 /* BaseModel.swift in Sources */,
 				0827BF7925892A6700DE8CD5 /* AccountOptionRoute.swift in Sources */,
 				3D4EE9FE25CDF920001DD389 /* DataSourceService.swift in Sources */,
+				18F3708825EBE27F0005D19E /* ProductDetailRateViewModel.swift in Sources */,
 				3DB1DB0B258687F500EF1E8F /* Constants.swift in Sources */,
 				08F2B8D0258BD77900CAEC9A /* SetNewPasswordViewController.swift in Sources */,
 				18E124A825DC497400D561C5 /* CategoryContentCell.swift in Sources */,
@@ -2349,6 +2376,7 @@
 				3DB1DB5C25868FC000EF1E8F /* EmptyView.swift in Sources */,
 				2085140C25CAF83F0025885B /* CreditBalanceRoute.swift in Sources */,
 				188F941A25DFE98C006E9783 /* ItemAddedToCartDelegate.swift in Sources */,
+				18F3708225EBE0EF0005D19E /* CommentItem.swift in Sources */,
 				083548A2258908FA00665DE0 /* Extension+UIStoryboard.swift in Sources */,
 				188F942225DFF7EB006E9783 /* ProductViewModel.swift in Sources */,
 				3D4EEA0A25CDF920001DD389 /* FilesStorage.swift in Sources */,

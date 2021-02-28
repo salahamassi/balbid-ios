@@ -35,6 +35,7 @@ class ProductDetailViewController: BaseViewController {
     
     lazy var productDetailRateViewController : ProductDetailRateViewController = {
         let viewController = UIStoryboard.productStoryboard.getViewController(with: .productDetailRateViewController) as! ProductDetailRateViewController
+        viewController.productId  = product.id
         return viewController
     }()
 
@@ -42,11 +43,11 @@ class ProductDetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
-        loadProduct?(product.id)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        loadProduct?(product.id)
     }
     
     private func setupCollectionView(){
@@ -118,6 +119,7 @@ extension ProductDetailViewController {
     
     private func addProductDetailQuickViewViewController(to cell: ProductDetailCollectionViewCell) {
         productDetailRateViewController.remove()
+        productDetailQuickViewViewController.product = product
         add(productDetailQuickViewViewController, to: cell.containerView, frame: cell.containerView.frame)
     }
 

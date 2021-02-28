@@ -20,6 +20,7 @@ extension String {
     static let categoryPath = "categories/getLeveling"
     static let categoryProductPath = "products/getInCategory?category_id="
     static let productDetailPath = "products/get?product_id="
+    static let productEvaluationPath = "customers/products/evaluation?product_id="
 
     
     //api Method

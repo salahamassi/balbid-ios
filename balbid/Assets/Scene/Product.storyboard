@@ -364,7 +364,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dQI-Yw-cOG">
-                                <rect key="frame" x="0.0" y="25.999999999999972" width="414" height="475.33333333333326"/>
+                                <rect key="frame" x="0.0" y="25.999999999999972" width="414" height="503.33333333333326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="58c-Mz-Kmt" userLabel="ratingStackView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="139.33333333333334"/>
@@ -560,8 +560,12 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                                         </subviews>
                                         <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="12" bottom="8" trailing="12"/>
                                     </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVg-sQ-SuO">
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="VIV-hN-OaP">
                                         <rect key="frame" x="0.0" y="147.33333333333334" width="414" height="20"/>
+                                        <color key="color" name="primaryColor"/>
+                                    </activityIndicatorView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVg-sQ-SuO">
+                                        <rect key="frame" x="0.0" y="175.33333333333334" width="414" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35 Comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvj-4k-SW1">
                                                 <rect key="frame" x="16" y="4.3333333333333135" width="63" height="11.666666666666664"/>
@@ -578,10 +582,10 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J2z-Ho-a0p" customClass="ISIntrinsicTableView" customModule="balbid" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="175.33333333333337" width="414" height="300"/>
+                                        <rect key="frame" x="0.0" y="203.33333333333337" width="414" height="300"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="rate_cell" rowHeight="111" id="EmO-hr-0LD">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="rate_cell" rowHeight="111" id="EmO-hr-0LD" customClass="EvaluationCell" customModule="balbid" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="111"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EmO-hr-0LD" id="7fh-yG-Ftk">
@@ -640,6 +644,12 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                                                         <constraint firstAttribute="trailing" secondItem="cbZ-2P-D0m" secondAttribute="trailing" constant="16" id="kiq-Xn-tQn"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="commentLabel" destination="4qa-l3-Dvz" id="dct-TP-TZA"/>
+                                                    <outlet property="dateLabel" destination="mPr-UF-0nW" id="i5F-cL-nzB"/>
+                                                    <outlet property="ratingView" destination="gku-IV-Wbv" id="naQ-iD-y0t"/>
+                                                    <outlet property="userNameLabel" destination="NEa-Lj-9Cx" id="q7w-C3-ffQ"/>
+                                                </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="footer_cell" rowHeight="70" id="Wzb-Hw-vEN">
                                                 <rect key="frame" x="0.0" y="139" width="414" height="70"/>
@@ -691,6 +701,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="VIV-hN-OaP" id="SuE-0b-AqX"/>
                         <outlet property="tableView" destination="J2z-Ho-a0p" id="100-Hj-sZd"/>
                     </connections>
                 </viewController>

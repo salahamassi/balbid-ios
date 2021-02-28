@@ -9,6 +9,7 @@ import UIKit
 
 class RateTableViewDelegate: NSObject, UITableViewDelegate {
 
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         60
     }
@@ -19,7 +20,7 @@ class RateTableViewDelegate: NSObject, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 60
+        return 0
     }
     
 }

@@ -11,10 +11,17 @@ class ProductDetailQuickViewViewController: BaseViewController {
     
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var readMoreButton: UIButton!
-
+    
+    var product: ProductItem?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLabel()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setData(product: product)
+        
     }
     
     
@@ -23,8 +30,6 @@ class ProductDetailQuickViewViewController: BaseViewController {
         readMoreButton.isHidden = numOfLine <= 2
     }
 
-   
-    
     @IBAction func expandLabel(_ sender: Any){
         UIView.animateKeyframes(withDuration: 0.6, delay: 0) {
             self.detailLabel.numberOfLines =  self.detailLabel.numberOfLines != 0 ? 0 : 2
@@ -32,6 +37,15 @@ class ProductDetailQuickViewViewController: BaseViewController {
             self.readMoreButton.isHidden =  self.detailLabel.numberOfLines == 0 
         }
 
+    }
+    
+    private func setData(product: ProductItem?){
+        guard let product = product,
+              let label = detailLabel else {
+            return
+        }
+        label.attributedText = product.description.htmlToAttributedString 
+        setupLabel()        
     }
     
  

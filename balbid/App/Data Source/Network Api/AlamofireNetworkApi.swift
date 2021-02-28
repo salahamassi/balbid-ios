@@ -28,7 +28,7 @@ final class AlamofireNetworkApi: NetworkApi {
         for header in headers{
             alamofireHeaders.add(HTTPHeader(name: header.key, value: header.value))
         }
-        
+        print(url)
         if let files = files{
             AF.upload(multipartFormData: { multipartFormData in
                 for (key, value) in params {
