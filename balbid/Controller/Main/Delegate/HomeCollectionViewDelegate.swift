@@ -20,10 +20,10 @@ class HomeCollectionViewDelegate: NSObject, UICollectionViewDelegate {
         delegate?.didSelectItem(at: indexPath)
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let currentIndex = collectionView.contentOffset.x / collectionView.frame.size.width
-        delegate?.didMoveHomeSlider(to: Int(currentIndex))
-    }
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let currentIndex = collectionView.contentOffset.x / collectionView.frame.size.width
+//        delegate?.didMoveHomeSlider(to: Int(currentIndex))
+//    }
 
     
 }

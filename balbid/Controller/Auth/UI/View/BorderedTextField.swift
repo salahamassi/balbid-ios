@@ -17,9 +17,11 @@ class BorderedTextField: UITextField, UITextFieldDelegate {
         didSet{
             if isError {
                 if !isInsideContainer {
-                    animateBorder(with: UIColor.appColor(.redColor)  ?? .clear, border: 1)
+                    layer.borderColor =  (UIColor.appColor(.redColor)  ?? .clear).cgColor
+                    layer.borderWidth = 1
                 } else {
-                    containerView.animateBorder(with: UIColor.appColor(.redColor) ?? .clear, border: 1)
+                    containerView.layer.borderColor =  (UIColor.appColor(.redColor)  ?? .clear).cgColor
+                    containerView.layer.borderWidth = 1
                 }
             }
         }
@@ -33,9 +35,11 @@ class BorderedTextField: UITextField, UITextFieldDelegate {
     var isActive: Bool = false {
         didSet {
             if !isInsideContainer {
-                animateBorder(with: UIColor.appColor(isActive ? .primaryColor : .lightGrayColor) ?? .clear, border: 1)
+                layer.borderColor =  (UIColor.appColor(isActive ? .primaryColor : .lightGrayColor)  ?? .clear).cgColor
+                layer.borderWidth = 1
             } else {
-                containerView.animateBorder(with: UIColor.appColor(isActive ? .primaryColor : .lightGrayColor) ?? .clear, border: 1)
+                containerView.layer.borderColor =  (UIColor.appColor(isActive ? .primaryColor : .lightGrayColor)  ?? .clear).cgColor
+                containerView.layer.borderWidth = 1
             }
         }
     }

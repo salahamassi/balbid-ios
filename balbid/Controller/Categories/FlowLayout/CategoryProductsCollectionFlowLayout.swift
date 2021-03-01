@@ -15,7 +15,7 @@ class CategoryProductsCollectionFlowLayout: NSObject, UICollectionViewDelegate, 
     
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width/2 - 16, height: 300)
+        return CGSize(width: collectionView.frame.width/2 - 16, height: collectionView.frame.height)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -36,6 +36,7 @@ class CategoryProductsCollectionFlowLayout: NSObject, UICollectionViewDelegate, 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         CGSize(width: collectionView.frame.width, height: isPaginate ? 40 : 0)
     }
+    
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         let animation = AnimationFactory.makeFadeAnimation(duration: 0.5, delayFactor: 0.05)
         let animator = Animator(animation: animation)

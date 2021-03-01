@@ -40,6 +40,7 @@ class ProductDetailRateViewController: BaseViewController {
     private func setupTableView(){
         tableView.delegate = rateTableViewDelegate
         tableView.dataSource = rateTableViewDataSource
+        rateTableViewDelegate.delegate = self
     }
     
     private func setupViewModel() {
@@ -80,7 +81,15 @@ extension ProductDetailRateViewController: ProductDetailRateViewModelDelegate {
         fifthCountStar.text = "( " + evaluation.rating5 + " )"
         
         commentNumberLabel.text = "\(evaluation.comments.count) Comments"
+        rateTableViewDelegate.shouldShowFooter = evaluation.comments.count >= 5
     }
     
     
+}
+
+extension ProductDetailRateViewController: EvaluationFooterCellDelegate {
+    func loadMore(_ evaluationFooterCell: EvaluationFooterCell) {
+        print("Hi Evaluation cellr" )
+        
+    }
 }

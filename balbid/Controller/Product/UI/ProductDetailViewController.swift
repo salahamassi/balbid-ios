@@ -54,7 +54,6 @@ class ProductDetailViewController: BaseViewController {
        collectionView.register(ProductDetailHeaderView.self,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: .productDetailHeaderCellId)
-        
         productDetailCollectionViewDataSource.assignViewHeader = { (headerView) in
             self.headerView = headerView
         }
@@ -71,7 +70,6 @@ class ProductDetailViewController: BaseViewController {
             layout.minimumLineSpacing = 8 // spacing between 2 cell
 //            layout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding) // adding inset to the section
         }
-        
         addToCartButton.withCornerRadius(12, corners: [.topLeft,.topRight])
     }
 
@@ -120,12 +118,22 @@ extension ProductDetailViewController {
     private func addProductDetailQuickViewViewController(to cell: ProductDetailCollectionViewCell) {
         productDetailRateViewController.remove()
         productDetailQuickViewViewController.product = product
-        add(productDetailQuickViewViewController, to: cell.containerView, frame: cell.containerView.frame)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            cell.changeContainerViewHeightAccording(to: self.productDetailQuickViewViewController)
+            self.add(self.productDetailQuickViewViewController, to: cell.containerView, frame: cell.containerView.frame)
+            self.collectionView.collectionViewLayout.invalidateLayout()
+
+        }
     }
 
     private func addProductDetailRateViewController(to cell: ProductDetailCollectionViewCell) {
         productDetailQuickViewViewController.remove()
-        add(productDetailRateViewController, to: cell.containerView, frame: cell.containerView.frame)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            cell.changeContainerViewHeightAccording(to: self.productDetailRateViewController)
+            self.add(self.productDetailRateViewController, to: cell.containerView, frame: cell.containerView.frame)
+            self.collectionView.collectionViewLayout.invalidateLayout()
+
+        }
     }
 
 }

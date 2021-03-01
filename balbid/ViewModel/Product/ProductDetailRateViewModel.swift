@@ -13,13 +13,14 @@ class ProductDetailRateViewModel {
     let dataSource: AppDataSource
     weak var delegate:  ProductDetailRateViewModelDelegate?
     var evaluation: EvaluationItem!
+    var pageNumber: Int = 1
     
     init(dataSource: AppDataSource) {
         self.dataSource = dataSource
     }
     
      func getProductEvaluation(id: Int){
-        dataSource.perform(service: .init(path: .productEvaluationPath + "\(id)" + "&page=1&paginate=10", domain: .domain, method: .get, params: [:], mustUseAuth: true), EvaluationItem.self) { (result) in
+        dataSource.perform(service: .init(path: .productEvaluationPath + "\(id)" + "&page=\(pageNumber)&paginate=10", domain: .domain, method: .get, params: [:], mustUseAuth: true), EvaluationItem.self) { (result) in
             switch result {
             case .data(let data):
                 self.evaluation = data.data

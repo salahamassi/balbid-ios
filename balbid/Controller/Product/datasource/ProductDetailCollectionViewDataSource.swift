@@ -20,7 +20,7 @@ class ProductDetailCollectionViewDataSource: NSObject, UICollectionViewDataSourc
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .productDetailCellId, for: indexPath)  as! ProductDetailCollectionViewCell
         cell.delegate = productDetailCellDelegate
         cell.product = product
-        cell.viewQuickLook(self)
+//        cell.viewQuickLook(self)
         return cell
     }
     

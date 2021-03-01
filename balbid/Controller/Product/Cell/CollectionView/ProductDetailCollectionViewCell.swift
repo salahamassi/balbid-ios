@@ -8,9 +8,8 @@
 import UIKit
 
 class ProductDetailCollectionViewCell: UICollectionViewCell {
-    
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var contentViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var containerViewHeight: NSLayoutConstraint!
     @IBOutlet weak var quickReadButton: UIButton!
     @IBOutlet weak var rateButton: UIButton!
     @IBOutlet weak var tabIndicatorConstraint: NSLayoutConstraint!
@@ -20,7 +19,6 @@ class ProductDetailCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var productSizeLabel: UILabel!
     @IBOutlet weak var productColorView: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
-    
     @IBOutlet weak var sizeContainerView: UIView!
     @IBOutlet weak var colorContainerView: UIView!
     @IBOutlet weak var attributeContainerView: UIStackView!
@@ -35,14 +33,12 @@ class ProductDetailCollectionViewCell: UICollectionViewCell {
         }
     }
     
-
-    
     @IBAction func viewQuickLook(_ sender: Any) {
         delegate?.productDetailCollectionViewCell(self, performAction: .quickLook)
         changeTabIndicatorPosition(value: 0)
         quickReadButton.setTitleColor(UIColor.appColor(.primaryColor), for: .normal)
         rateButton.setTitleColor(UIColor.appColor(.textLightGrayColor), for: .normal)
-
+       
     }
     
     @IBAction func viewRate(_ sender: Any) {
@@ -50,6 +46,15 @@ class ProductDetailCollectionViewCell: UICollectionViewCell {
         changeTabIndicatorPosition(value: tabIndicatorView.frame.width/2 + 60 + rateButton.frame.width/2 )
         quickReadButton.setTitleColor(UIColor.appColor(.textLightGrayColor), for: .normal)
         rateButton.setTitleColor(UIColor.appColor(.primaryColor), for: .normal)
+      
+    }
+    
+    func changeContainerViewHeightAccording(to viewController:  UIViewController) {
+        UIView.animate(withDuration: 0.6) {
+            self.containerViewHeight?.constant = (viewController.view.subviews.first?.frame.height ?? .zero)
+            self.containerView.backgroundColor = .blue
+            self.layoutIfNeeded()
+        }
     }
     
     func changeTabIndicatorPosition(value: CGFloat){

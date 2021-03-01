@@ -525,8 +525,8 @@
             filePath = "balbid/Controller/Product/Cell/CollectionView/ProductDetailCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "viewQuickLook(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -544,22 +544,6 @@
             startingLineNumber = "23"
             endingLineNumber = "23"
             landmarkName = "viewDidAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0B6E4015-C8C8-443D-8814-42E91CD9BAF4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "balbid/Controller/Product/Cell/CollectionView/ProductDetailCollectionViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "viewQuickLook(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -685,8 +669,8 @@
             filePath = "balbid/ViewModel/Product/ProductDetailRateViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "firstRateValue()"
             landmarkType = "7">
          </BreakpointContent>
@@ -945,6 +929,102 @@
             endingLineNumber = "66"
             landmarkName = "setProductData(product:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "33AF0912-2138-481F-9D26-E93B79A2514C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/Controller/Product/UI/ProductDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "addProductDetailRateViewController(to:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E215C0B-C5E5-4637-9B92-607EE15A4F15"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/Controller/Product/UI/ProductDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "addProductDetailQuickViewViewController(to:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8C36946B-151D-4F1A-AD93-B01FBACCF1E2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/Controller/Product/UI/ProductDetailRateViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "loadMore(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09B29B16-581D-458F-859A-296F277D9AD5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/Controller/Product/UI/ProductDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "addProductDetailQuickViewViewController(to:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "09B29B16-581D-458F-859A-296F277D9AD5 - dabffd0e095a81ef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "balbid.ProductDetailViewController.(addProductDetailQuickViewViewController in _9EF289F6F462F23A0A45C4790C4E9D76)(to: balbid.ProductDetailCollectionViewCell) -&gt; ()"
+                  moduleName = "balbid"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Downloads/Work/balod/balbid/Controller/Product/UI/ProductDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  uuid = "09B29B16-581D-458F-859A-296F277D9AD5 - ed35296a1725e651"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in balbid.ProductDetailViewController.(addProductDetailQuickViewViewController in _9EF289F6F462F23A0A45C4790C4E9D76)(to: balbid.ProductDetailCollectionViewCell) -&gt; ()"
+                  moduleName = "balbid"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Downloads/Work/balod/balbid/Controller/Product/UI/ProductDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
