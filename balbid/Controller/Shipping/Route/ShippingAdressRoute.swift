@@ -14,7 +14,10 @@ class ShippingAdressRoute: Route {
     }
     
     func create(_ router: AppRouter, _ params: [String : Any]?) -> UIViewController {
-        let viewController = UIStoryboard.shippingStoryboard.getViewController(with: .shippingAdressViewController)
+        let viewController = UIStoryboard.shippingStoryboard.getViewController(with: .shippingAdressViewController) as!  ShippingAddressViewController
+        let viewModel = ShippingAddressViewModel(dataSource: AppDataSource())
+        viewModel.delegate = viewController
+        viewController.getUserAddresses = viewModel.getUserAddresses
         return viewController
     }
     

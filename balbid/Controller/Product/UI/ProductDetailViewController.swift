@@ -141,7 +141,4 @@ extension ProductDetailViewController: ProductViewModelDelegate {
         productDetailCollectionViewDataSource.product = product
         collectionView.reloadData()
     }
-    
-    
-    
 }

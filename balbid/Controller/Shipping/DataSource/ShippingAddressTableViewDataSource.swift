@@ -7,9 +7,10 @@
 
 import UIKit
 
-class ShippingAdressTableViewDataSource: NSObject, UITableViewDataSource {
+class ShippingAddressTableViewDataSource: NSObject, UITableViewDataSource {
     
     var selectedIndex = -1
+    var address: Address?
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: .shippingAddressCellId, for: indexPath) as! ShippingAddressCell
@@ -18,7 +19,7 @@ class ShippingAdressTableViewDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        address?.addresses.count ?? 0
     }
 
 }

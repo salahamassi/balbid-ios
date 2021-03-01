@@ -17,7 +17,7 @@ class EvaluationCell: UITableViewCell {
     
     var comment: CommentItem?   {
         didSet {
-            
+            setupEvaluationData(comment: comment)
         }
     }
     
@@ -31,6 +31,5 @@ class EvaluationCell: UITableViewCell {
         
     }
         
-
 
 }

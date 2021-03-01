@@ -19,6 +19,8 @@ struct EvaluationItem: SwiftyModelData {
     let rating4: String
     let rating5: String
     let comments: [CommentItem]
+    let evaluateCount: String
+    let evaluateAvg: String
 
     init(json: JSON) {
         rating1 = json["rating_1"].stringValue
@@ -26,6 +28,8 @@ struct EvaluationItem: SwiftyModelData {
         rating3 = json["rating_3"].stringValue
         rating4 = json["rating_4"].stringValue
         rating5 = json["rating_5"].stringValue
+        evaluateCount = json["evaluate_count"].stringValue
+        evaluateAvg = json["evaluate_avg"].stringValue
         comments =  json["comments"].arrayValue.map { CommentItem(json: $0) }
     }
     

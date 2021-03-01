@@ -7,20 +7,24 @@
 
 import UIKit
 
-class ShippingAdressViewController: BaseViewController {
+class ShippingAddressViewController: BaseViewController {
     
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
-    private var shippingAdressTableViewDataSource = ShippingAdressTableViewDataSource()
+    private var shippingAdressTableViewDataSource = ShippingAddressTableViewDataSource()
     private var shippingAddressTableViewDelegate = ShippingAddressTableViewDelegate()
     private var selectedIndex = -1
+    
+    var  getUserAddresses: (() -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNav()
         setupTableView()
         setupView()
+        getUserAddresses?()
     }
     
     private func setupNav(){
@@ -49,4 +53,16 @@ class ShippingAdressViewController: BaseViewController {
         router?.navigate(to: .addNewShippingRoute)
     }
 
+}
+
+extension ShippingAddressViewController: ShippingAddressViewModelDelegate {
+    func apiError(error: String) {
+        displayAlert(message: error)
+    }
+    
+    func didLoadAddressSuccess(address: Address) {
+        shippingAdressTableViewDataSource.address = address
+        activityIndicator.stopAnimating()
+        tableView.reloadData()
+    }
 }
