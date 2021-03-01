@@ -855,8 +855,8 @@
                                     <constraint firstItem="pMd-is-4Ia" firstAttribute="width" secondItem="wkX-iF-53S" secondAttribute="width" multiplier="1/3" id="fTq-cL-huV"/>
                                 </constraints>
                             </stackView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="JnJ-gm-6mi">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="JnJ-gm-6mi">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
                                 <color key="color" name="primaryColor"/>
                             </activityIndicatorView>
                         </subviews>
@@ -1604,8 +1604,8 @@ Product</string>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="2BI-Xc-unn">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="2BI-Xc-unn">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
                                 <color key="color" name="primaryColor"/>
                             </activityIndicatorView>
                         </subviews>

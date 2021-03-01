@@ -29,7 +29,8 @@ class ProductDetailRateViewController: BaseViewController {
     @IBOutlet weak var fouthCountStar: UILabel!
     @IBOutlet weak var fifthCountStar: UILabel!
     
-
+    @IBOutlet weak var commentNumberLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -72,11 +73,13 @@ extension ProductDetailRateViewController: ProductDetailRateViewModelDelegate {
         fourthRating.progress = viewModel.fourthRateValue()
         fifthRating.progress = viewModel.fifthRateValue()
         
-        firstCountStar.text = evaluation.rating1
-        secondtCountStar.text = evaluation.rating2
-        thirdCountStar.text = evaluation.rating3
-        fouthCountStar.text = evaluation.rating4
-        fifthCountStar.text = evaluation.rating5
+        firstCountStar.text = "( " + evaluation.rating1 + " )"
+        secondtCountStar.text = "( " + evaluation.rating2 + " )"
+        thirdCountStar.text = "( " + evaluation.rating3 + " )"
+        fouthCountStar.text =  "( " + evaluation.rating4 + " )"
+        fifthCountStar.text = "( " + evaluation.rating5 + " )"
+        
+        commentNumberLabel.text = "\(evaluation.comments.count) Comments"
     }
     
     
