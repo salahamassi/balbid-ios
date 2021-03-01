@@ -612,6 +612,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="deleteButton" destination="TQg-ea-qeZ" id="9AO-ZG-Lua"/>
                                             <outlet property="productImageView" destination="f4l-v4-ToR" id="tEQ-rU-1l1"/>
                                             <outlet property="productNameLabel" destination="vEH-PH-fyC" id="Z3h-he-nMz"/>
                                             <outlet property="productPriceLabel" destination="t8h-LE-t1A" id="X8g-ld-Oix"/>

@@ -16,7 +16,7 @@ struct HomeProductItem: SwiftyModelData {
     let brandId: String
     let sortOrder: String
     let name: String
-    let prodcuts: [ProductItem]
+    var prodcuts: [ProductItem]
     
     init(json: JSON) {
         id = json["id"].intValue

@@ -644,7 +644,11 @@
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                         <connections>
+                                                            <outlet property="cityLabel" destination="NUS-HB-hpO" id="XOP-FO-zW5"/>
+                                                            <outlet property="countryLabel" destination="IIs-ys-Ogo" id="COg-iw-p3n"/>
+                                                            <outlet property="phoneLabel" destination="kB8-Q7-Iuk" id="KuV-YF-eM6"/>
                                                             <outlet property="radioButton" destination="62H-j6-Iq1" id="Nyx-qv-CzM"/>
+                                                            <outlet property="userNameLabel" destination="A4T-iH-j58" id="T5O-k0-V8E"/>
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>

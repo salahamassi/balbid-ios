@@ -9,18 +9,18 @@ import UIKit
 
 class FavoriteTableViewDataSource: NSObject, UITableViewDataSource {
     
-    var favorite: Favorite?
+    var favorite: Product?
     weak var delegate: FavoriteCellDelegate?
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: .favoriteCellId, for: indexPath) as! FavoriteCell
-        cell.favorite = favorite?.favoriteItems[indexPath.row]
+        cell.favorite = favorite?.productItems[indexPath.row]
         cell.delegate = delegate
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        favorite?.favoriteItems.count ?? 0
+        favorite?.productItems.count ?? 0
     }
 
 }

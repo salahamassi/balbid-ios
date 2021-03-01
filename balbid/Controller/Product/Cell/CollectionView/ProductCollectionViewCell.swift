@@ -77,4 +77,11 @@ class ProductCollectionViewCell: UICollectionViewCell {
         case addToCart, favorite
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        favoriteButton.setImage(product?.isFavorite == "0" ? #imageLiteral(resourceName: "unselected_favorite") : #imageLiteral(resourceName: "selected_favorite") , for: .normal)
+    }
+    
+    
+    
 }

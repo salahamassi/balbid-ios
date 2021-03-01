@@ -13,17 +13,18 @@ class FavoriteCell: UITableViewCell {
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productPriceLabel: UILabel!
     @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var deleteButton: UIButton!
 
     weak var delegate : FavoriteCellDelegate?
 
-    var favorite: FavoriteItem? {
+    var favorite: ProductItem? {
         didSet {
             setFavoriteData(favorite: favorite)
         }
     }
 
     
-    private func setFavoriteData(favorite: FavoriteItem?){
+    private func setFavoriteData(favorite: ProductItem?){
         guard let favorite = favorite else {
             return
         }
@@ -41,9 +42,14 @@ class FavoriteCell: UITableViewCell {
     }
     
     @IBAction func removeFromFavorite(_ sender: UIButton){
-        sender.loadingIndicator(true, centerPoint: CGPoint(x: sender.frame.midX, y: sender.frame.height/2), indicatorColor: UIColor.appColor(.redColor2) ?? .gray)
+        deleteButton.loadingIndicator(true, centerPoint: CGPoint(x: sender.frame.midX, y: sender.frame.height/2), indicatorColor: UIColor.appColor(.redColor2) ?? .gray)
         delegate?.favoriteCell(self, perform: .delete,  with: favorite)
     }
+    
+    func stopDeleteIndicator() {
+        deleteButton.loadingIndicator(false)
+    }
+
     
     enum ActionType {
         case addToCart, delete
@@ -53,5 +59,5 @@ class FavoriteCell: UITableViewCell {
 
 
 protocol FavoriteCellDelegate: class {
-    func favoriteCell(_ favoriteCell: FavoriteCell, perform action: FavoriteCell.ActionType,  with favoriteItem: FavoriteItem?)
+    func favoriteCell(_ favoriteCell: FavoriteCell, perform action: FavoriteCell.ActionType,  with favoriteItem: ProductItem?)
 }

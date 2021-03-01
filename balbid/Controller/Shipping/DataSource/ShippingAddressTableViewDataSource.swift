@@ -15,6 +15,7 @@ class ShippingAddressTableViewDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: .shippingAddressCellId, for: indexPath) as! ShippingAddressCell
         cell.isChecked = selectedIndex == indexPath.row
+        cell.address = address?.addresses[indexPath.row]
         return cell
     }
     

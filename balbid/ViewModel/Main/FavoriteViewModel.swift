@@ -19,7 +19,7 @@ class FavoriteViewModel: NSObject {
     
     
     func loadFavorite() {
-        dataSource.perform(service: .init(path: .favoritePath, domain: .domain, method: .get, params: [:]), Favorite.self) { (result) in
+        dataSource.perform(service: .init(path: .favoritePath, domain: .domain, method: .get, params: [:]), Product.self) { (result) in
             switch result {
               case .data(let data):
                 self.delegate?.loadFavoriteSuccess(favorite: data.data)
@@ -50,5 +50,5 @@ class FavoriteViewModel: NSObject {
 
 protocol FavoriteViewModelDelegate: class {
     func apiError(error: String)
-    func loadFavoriteSuccess(favorite: Favorite)
+    func loadFavoriteSuccess(favorite: Product)
 }

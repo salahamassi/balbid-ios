@@ -18,7 +18,7 @@ class FavoriteViewController: BaseViewController {
     private let darkLayer = CALayer()
 
     
-    var favorite: Favorite?
+    var favorite: Product?
     var loadFavorite: (() -> Void)?
     var deleteFavorite: ((_ id: Int,_ didRemoveFromFavorite: @escaping ()->Void) -> Void)?
     private var itemAddedToCartDelegate  = ItemAddedToCartDelegate()
@@ -28,9 +28,10 @@ class FavoriteViewController: BaseViewController {
         super.viewDidLoad()
         setupNavbar()
         setupFavoriteTableView()
-        loadFavorite?()
         setupAddToCartView()
         setupAddedToCartDelegate()
+        loadFavorite?()
+        setupObserver()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -87,6 +88,33 @@ class FavoriteViewController: BaseViewController {
         removeDarkView()
     }
     
+    private func setupObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(didAddItemToFavorite), name: .didAddToFavorite, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didRemoveItemFromFavorite), name: .didRemoveFromFavorite, object: nil)
+
+    }
+    
+    @objc func didAddItemToFavorite(notification: NSNotification) {
+        guard let product = notification.userInfo?["product"] as? ProductItem,
+              let favorite = favoriteTableViewDataSource.favorite else {
+            return
+        }
+        favoriteTableViewDataSource.favorite!.productItems.append(product)
+        tableView.insertRows(at: [IndexPath(row: favorite.productItems.count , section: 0)], with: .bottom)
+    }
+    
+    @objc func didRemoveItemFromFavorite(notification: NSNotification) {
+        guard let product = notification.userInfo?["product"] as? ProductItem,
+              let favorite = favoriteTableViewDataSource.favorite else {
+            return
+        }
+        guard let index = favorite.productItems.firstIndex(of: product) else {
+            return
+        }
+        
+        favoriteTableViewDataSource.favorite!.productItems.remove(at: index)
+        tableView.deleteRows(at: [IndexPath(row: index , section: 0)], with: .automatic)
+    }
 
 
 }
@@ -96,7 +124,7 @@ extension FavoriteViewController: FavoriteViewModelDelegate {
         displayAlert(message: error)
     }
     
-    func loadFavoriteSuccess(favorite: Favorite) {
+    func loadFavoriteSuccess(favorite: Product) {
         self.favorite = favorite
         activityIndicator.stopAnimating()
         favoriteTableViewDataSource.favorite = favorite
@@ -105,17 +133,18 @@ extension FavoriteViewController: FavoriteViewModelDelegate {
 }
 
 extension FavoriteViewController: FavoriteCellDelegate {
-    func favoriteCell(_ favoriteCell: FavoriteCell, perform action: FavoriteCell.ActionType, with favoriteItem: FavoriteItem?) {
+    func favoriteCell(_ favoriteCell: FavoriteCell, perform action: FavoriteCell.ActionType, with favoriteItem: ProductItem?) {
         switch action {
         case .addToCart:
               addToCartBottomSheet.show()
         case .delete:
-            guard let indexPath = self.tableView.indexPath(for: favoriteCell), let favorite = favorite?.favoriteItems[indexPath.row] else {
+            guard let indexPath = self.tableView.indexPath(for: favoriteCell), let favorite = favorite?.productItems[indexPath.row] else {
                 return
             }
             deleteFavorite?(favorite.id, {
-                self.favoriteTableViewDataSource.favorite?.favoriteItems.remove(at: indexPath.row)
+                self.favoriteTableViewDataSource.favorite?.productItems.remove(at: indexPath.row)
                 self.tableView.deleteRows(at: [indexPath], with: .none)
+                favoriteCell.stopDeleteIndicator()
             })
             break
         }

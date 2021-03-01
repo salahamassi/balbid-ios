@@ -29,11 +29,6 @@ class ProductDetailRateViewController: BaseViewController {
     @IBOutlet weak var fouthCountStar: UILabel!
     @IBOutlet weak var fifthCountStar: UILabel!
     
-    @IBOutlet weak var firstRtingAvg: UILabel!
-    @IBOutlet weak var secondRtingAvg: UILabel!
-    @IBOutlet weak var thirdRtingAvg: UILabel!
-    @IBOutlet weak var fouthRtingAvg: UILabel!
-    @IBOutlet weak var fifthRtingAvg: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,7 +71,12 @@ extension ProductDetailRateViewController: ProductDetailRateViewModelDelegate {
         thirdRating.progress = viewModel.thirdRateValue()
         fourthRating.progress = viewModel.fourthRateValue()
         fifthRating.progress = viewModel.fifthRateValue()
-//        firstCountStar.text = evaluation.rating1
+        
+        firstCountStar.text = evaluation.rating1
+        secondtCountStar.text = evaluation.rating2
+        thirdCountStar.text = evaluation.rating3
+        fouthCountStar.text = evaluation.rating4
+        fifthCountStar.text = evaluation.rating5
     }
     
     

@@ -44,6 +44,8 @@ public class ReachabilityManager: NSObject {
                     NotificationCenter.default.post(name: ReachabilityManager.networkNotificationName, object: nil, userInfo: ["status": false])
                 }
             }
+            print(path.isExpensive)
+
         }
         let queue = DispatchQueue(label: "Monitor")
         monitor.start(queue: queue)

@@ -32,6 +32,7 @@ class HomeViewController: BaseViewController {
         setupProductDelegate()
         setupAddToCartView()
         setupAddedToCartDelegate()
+        setupObserver()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,6 +52,30 @@ class HomeViewController: BaseViewController {
         collectionView.register(UINib(nibName: .productFooter, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: .productFooterCellId)
     }
     
+    private func setupObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(didAddItemToFavorite), name: .didAddToFavorite, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didRemoveItemFromFavorite), name: .didRemoveFromFavorite, object: nil)
+
+    }
+    
+    @objc func didAddItemToFavorite(notification: NSNotification) {
+        changeFavoriteStatus(notification: notification, to: "1")
+    }
+    
+    @objc func didRemoveItemFromFavorite(notification: NSNotification) {
+        changeFavoriteStatus(notification: notification, to: "0")
+
+    }
+    
+    func changeFavoriteStatus(notification: NSNotification,to value: String) {
+        guard let indexPath = notification.userInfo?["indexPath"] as? IndexPath
+        else {
+            return
+        }
+      
+        homeCollectionViewDataSource.home?.homeProductItems[indexPath.section - 2].prodcuts[indexPath.row].isFavorite = value
+    }
+    
     private func setupCollectionView(){
         homeCollectionViewDelegate = HomeCollectionViewDelegate(collectionView: collectionView)
         collectionView.dataSource = homeCollectionViewDataSource
@@ -66,6 +91,7 @@ class HomeViewController: BaseViewController {
     private func setupProductDelegate() {
         productDelegate.deleteFavorite = homeViewModel.removeProductFromFavorite
         productDelegate.addToFavorite = homeViewModel.addProductToFavorite
+        productDelegate.collectionView = collectionView
         productDelegate.showAddToCartView = { [weak self] cell in
             self?.showAddToCartView(cell: cell)
         }
@@ -151,7 +177,6 @@ extension HomeViewController: HomeViewModelDelegate {
         homeCollectionViewDataSource.numberOfSection = 2 + home.homeProductItems.count
         homeCollectionViewDataSource.home = home
         collectionView.reloadData()
-
         homeCollectionViewFlowLayout.sectionWithFooters = home.banners.map {
             (Int($0.sortOrder) ?? 0) + 1
         }

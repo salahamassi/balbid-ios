@@ -47,3 +47,9 @@ struct ProductItem: SwiftyModelData {
     
     
 }
+
+extension ProductItem : Equatable{
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
