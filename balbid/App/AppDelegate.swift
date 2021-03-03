@@ -4,6 +4,7 @@
 //
 //  Created by Salah Amassi on 13/12/2020.
 //
+
 import IQKeyboardManagerSwift
 import MOLH
 import AppRouter
@@ -59,6 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             startApp(using: window!)
             remoteNotificationUserInfo = launchOptions?[UIApplication.LaunchOptionsKey.remoteNotification] as? [String: Any]
         }
+        IQKeyboardManager.shared.enable = true
         ReachabilityManager.shared.observe()
     }
 
