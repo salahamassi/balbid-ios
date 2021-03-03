@@ -49,10 +49,11 @@ class ProductDetailCollectionViewCell: UICollectionViewCell {
       
     }
     
+   
+    
     func changeContainerViewHeightAccording(to viewController:  UIViewController) {
         UIView.animate(withDuration: 0.6) {
             self.containerViewHeight?.constant = (viewController.view.subviews.first?.frame.height ?? .zero)
-            self.containerView.backgroundColor = .blue
             self.layoutIfNeeded()
         }
     }
@@ -107,10 +108,12 @@ class ProductDetailCollectionViewCell: UICollectionViewCell {
     enum ActionType {
         case quickLook, rate
     }
+    
+    
 }
 
 protocol ProductDetailCollectionViewCellDelegate: class {
-    
     func productDetailCollectionViewCell(_ cell: ProductDetailCollectionViewCell, performAction action: ProductDetailCollectionViewCell.ActionType)
+
 }
 

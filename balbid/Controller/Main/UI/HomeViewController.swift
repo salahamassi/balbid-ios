@@ -157,7 +157,7 @@ class HomeViewController: BaseViewController {
 extension HomeViewController: HomeSelectionProtocol{
     func didSelectItem(at indexPath: IndexPath) {
         if indexPath.section != 0 && indexPath.section != 1 {
-            guard let product = homeViewModel.home?.homeProductItems[indexPath.section].prodcuts[indexPath.row] else {
+            guard let product = homeViewModel.home?.homeProductItems[indexPath.section - 2].prodcuts[indexPath.row] else {
                 return
             }
             router?.navigate(to: ProductRoutes.productDetailRoute(params: ["product": product]))

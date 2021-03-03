@@ -22,7 +22,6 @@ class ProductDetailRateViewController: BaseViewController {
     private let rateTableViewDelegate: RateTableViewDelegate = RateTableViewDelegate()
     private var viewModel: ProductDetailRateViewModel!
     var productId : Int!
-    
     @IBOutlet weak var firstCountStar: UILabel!
     @IBOutlet weak var secondtCountStar: UILabel!
     @IBOutlet weak var thirdCountStar: UILabel!
@@ -30,7 +29,10 @@ class ProductDetailRateViewController: BaseViewController {
     @IBOutlet weak var fifthCountStar: UILabel!
     
     @IBOutlet weak var commentNumberLabel: UILabel!
+    var evaluationFooterCell: EvaluationFooterCell?
     
+    
+    var didPaginateSuccess:  (() -> Void)?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -46,13 +48,29 @@ class ProductDetailRateViewController: BaseViewController {
     private func setupViewModel() {
         viewModel = ProductDetailRateViewModel(dataSource: AppDataSource())
         viewModel.delegate = self
-        viewModel.getProductEvaluation(id: 1963)
+        viewModel.getProductEvaluation(id: productId)
     }
 
 }
 
 
 extension ProductDetailRateViewController: ProductDetailRateViewModelDelegate {
+    func didLoadEvalutionSuccessPaging(evaluation: EvaluationItem) {
+        let preLastIndex = rateTableViewDataSource.evaluation?.comments.count ?? 0
+        rateTableViewDataSource.evaluation?.comments.append(contentsOf: evaluation.comments)
+        let count = rateTableViewDataSource.evaluation?.comments.count ?? 0
+        var indexPath: [IndexPath] = []
+        for i in preLastIndex..<count {
+            indexPath.append(IndexPath(row: i, section: 0))
+        }
+        tableView.insertRows(at:indexPath , with: .bottom)
+        evaluationFooterCell?.stopLoading()
+        didPaginateSuccess?()
+        rateTableViewDelegate.shouldShowFooter = viewModel.canPaginte
+        tableView.reloadSections(.init(integer: 0), with: .none)
+
+    }
+    
     func apiError(error: String) {
         displayAlert(message: error)
     }
@@ -89,7 +107,9 @@ extension ProductDetailRateViewController: ProductDetailRateViewModelDelegate {
 
 extension ProductDetailRateViewController: EvaluationFooterCellDelegate {
     func loadMore(_ evaluationFooterCell: EvaluationFooterCell) {
-        print("Hi Evaluation cellr" )
-        
+        if(viewModel.canPaginte) {
+            viewModel.getProductEvaluation(id: productId,isPaging: true)
+            self.evaluationFooterCell = evaluationFooterCell
+        }
     }
 }

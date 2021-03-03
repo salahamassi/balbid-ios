@@ -53,7 +53,8 @@ extension String {
     static let addedToCartView = "AddedToCartView"
     static let priceSeekBarView = "PriceSeekBarView"
     static let categoryFooterView = "CategoryFooter"
-
+    static let colorSelectionView = "ColorSelectionView"
+    static let colorSelectionCell = "ColorSelectionCell"
     
 
     
@@ -100,7 +101,6 @@ extension String {
     static let productFooterCellId = "product_footer_cell"
     static let categoryProductFooterCellId = "category_product_footer"
 
-    
 
     
     

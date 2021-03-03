@@ -14,17 +14,27 @@ class ProductDetailRateViewModel {
     weak var delegate:  ProductDetailRateViewModelDelegate?
     var evaluation: EvaluationItem!
     var pageNumber: Int = 1
+    var canPaginte: Bool = false
     
     init(dataSource: AppDataSource) {
         self.dataSource = dataSource
     }
     
-     func getProductEvaluation(id: Int){
+    func getProductEvaluation(id: Int, isPaging: Bool = false){
+        canPaginte  = false
+        if(isPaging) {
+            pageNumber += 1
+        }
         dataSource.perform(service: .init(path: .productEvaluationPath + "\(id)" + "&page=\(pageNumber)&paginate=10", domain: .domain, method: .get, params: [:], mustUseAuth: true), EvaluationItem.self) { (result) in
             switch result {
             case .data(let data):
                 self.evaluation = data.data
-                self.delegate?.didLoadEvalutionSuccess(evaluation: data.data)
+                self.canPaginte = (data.data.comments.count >= 5)
+                if(isPaging)  {
+                    self.delegate?.didLoadEvalutionSuccessPaging(evaluation: data.data)
+                }else {
+                    self.delegate?.didLoadEvalutionSuccess(evaluation: data.data)
+                }
             case .failure(let error):
                 self.delegate?.apiError(error: error)
             default:
@@ -77,5 +87,6 @@ class ProductDetailRateViewModel {
 protocol ProductDetailRateViewModelDelegate: class {
     func apiError(error: String)
     func didLoadEvalutionSuccess(evaluation: EvaluationItem)
-    
+    func didLoadEvalutionSuccessPaging(evaluation: EvaluationItem)
+
 }

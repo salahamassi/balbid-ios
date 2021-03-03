@@ -17,6 +17,11 @@ class EvaluationFooterCell: UITableViewCell {
         loadMoreButton.loadingIndicator(true,indicatorColor: UIColor.appColor(.primaryColor) ?? .clear)
         delegate?.loadMore(self)
     }
+    
+    
+    func stopLoading() {
+        loadMoreButton.loadingIndicator(false)
+    }
    
 
 }

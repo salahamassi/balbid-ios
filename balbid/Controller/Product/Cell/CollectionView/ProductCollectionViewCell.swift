@@ -45,7 +45,6 @@ class ProductCollectionViewCell: UICollectionViewCell {
     func addToFavorite(){
         favoriteButton.loadingIndicator(false)
         favoriteButton.animateImageChange(#imageLiteral(resourceName: "selected_favorite"))
-        product?.isFavorite = "1"
     }
     
     func removeFromFavorite(){

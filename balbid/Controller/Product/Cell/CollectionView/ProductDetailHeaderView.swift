@@ -19,6 +19,7 @@ class ProductDetailHeaderView: UICollectionReusableView {
             imageCollectionView.reloadData()
         }
     }
+    
     lazy var imageCollectionView: UICollectionView = {
         let itemSize = frame.size
         let collectionView = UICollectionView(scrollDirection: .horizontal,
@@ -91,7 +92,7 @@ class ProductDetailHeaderView: UICollectionReusableView {
                 ),
                 spacing: 41
             ), anchors:
-                .top(safeAreaLayoutGuide.topAnchor, constant: 24),
+                .top(topAnchor, constant: 35),
                 .leading(leadingAnchor, constant: 24),
                 .trailing(trailingAnchor, constant: 24))
     }
@@ -131,5 +132,4 @@ class ProductDetailHeaderView: UICollectionReusableView {
 protocol ProductDetailHeaderCollectionReusableViewDelegate: class {
     func ProductDetailHeaderCollectionReusableView(_ cell: ProductDetailHeaderView, performAction action: ProductDetailHeaderView.ActionType)
     func ProductDetailHeaderCollectionReusableView(_ cell: ProductDetailHeaderView, didSliderScroll index: Int)
-
 }

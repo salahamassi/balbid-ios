@@ -86,7 +86,7 @@ extension ProfileViewController: ProfileViewModelDelegate {
     func logoutSuccess() {
         logoutActivityIndicator.stopAnimating()
         logoutArrowImageView.isHidden = false
-        router?.navigate(to: .loginRoute)
+        router?.navigate(to: .accountOptionRoute)
         setupView()
     }
     

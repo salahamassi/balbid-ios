@@ -28,7 +28,6 @@ class ProductViewModel: NSObject {
             }
         }
     }
-
 }
 
 protocol ProductViewModelDelegate: class {

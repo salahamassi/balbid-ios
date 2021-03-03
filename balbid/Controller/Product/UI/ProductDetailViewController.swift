@@ -22,6 +22,7 @@ class ProductDetailViewController: BaseViewController {
 
     private var headerView: ProductDetailHeaderView!
     private let padding: CGFloat = 16
+    private let colorSelectionView = ColorSelectionView.initFromNib()
     
     
     var product:  ProductItem!
@@ -36,13 +37,16 @@ class ProductDetailViewController: BaseViewController {
     lazy var productDetailRateViewController : ProductDetailRateViewController = {
         let viewController = UIStoryboard.productStoryboard.getViewController(with: .productDetailRateViewController) as! ProductDetailRateViewController
         viewController.productId  = product.id
+        viewController.didPaginateSuccess = { [weak self] in
+            self?.updateCellAccordingToRateViewPaginate()
+        }
         return viewController
     }()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCollectionView()
+        setupView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -50,15 +54,14 @@ class ProductDetailViewController: BaseViewController {
         loadProduct?(product.id)
     }
     
+    private func setupView() {
+        setupCollectionView()
+        addToCartButton.withCornerRadius(12, corners: [.topLeft,.topRight])
+    }
+    
     private func setupCollectionView(){
-       collectionView.register(ProductDetailHeaderView.self,
-                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-                                withReuseIdentifier: .productDetailHeaderCellId)
-        productDetailCollectionViewDataSource.assignViewHeader = { (headerView) in
-            self.headerView = headerView
-        }
-        productDetailCollectionViewDelegate.headerView = headerView
-        
+   
+        setupCollectionHeaderView()
         collectionView.delegate = productDetailCollectionViewDelegate
         collectionView.dataSource = productDetailCollectionViewDataSource
         
@@ -67,10 +70,26 @@ class ProductDetailViewController: BaseViewController {
         productDetailCollectionViewDataSource.productDetailCellDelegate = self
         productDetailCollectionViewDataSource.productDetailHeaderCollectionReusableViewDelegate = self
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.minimumLineSpacing = 8 // spacing between 2 cell
-//            layout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding) // adding inset to the section
+            layout.minimumLineSpacing = 8
         }
-        addToCartButton.withCornerRadius(12, corners: [.topLeft,.topRight])
+    }
+    
+    private  func setupCollectionHeaderView() {
+        collectionView.register(ProductDetailHeaderView.self,
+                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                 withReuseIdentifier: .productDetailHeaderCellId)
+         productDetailCollectionViewDataSource.assignViewHeader = { (headerView) in
+             self.headerView = headerView
+         }
+         productDetailCollectionViewDelegate.headerView = headerView
+    }
+    
+    private func setupColorSelectionView() {
+       let colorOption = product.options.filter({ (group) -> Bool in
+            group.optionType == .color
+        }).first
+        colorSelectionView.optionGroupItem = colorOption
+        colorSelectionView.setupSheetView()
     }
 
     
@@ -78,8 +97,19 @@ class ProductDetailViewController: BaseViewController {
         
     }
     
+    @IBAction func showColorOption(_ sender: Any) {
+        colorSelectionView.show()
+    }
+    
     @IBAction func changePage(_ sender: UIPageControl) {
         headerView.imageCollectionView.scrollToItem(at: IndexPath(row: sender.currentPage, section: 0), at: .centeredHorizontally, animated: true)
+    }
+    
+    func updateCellAccordingToRateViewPaginate(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.productDetailCollectionViewDelegate.height = 250  + (self.productDetailRateViewController.view.subviews.first?.frame.height ?? .zero)
+            self.collectionView.collectionViewLayout.invalidateLayout()
+        }
     }
     
 }
@@ -121,6 +151,7 @@ extension ProductDetailViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             cell.changeContainerViewHeightAccording(to: self.productDetailQuickViewViewController)
             self.add(self.productDetailQuickViewViewController, to: cell.containerView, frame: cell.containerView.frame)
+            self.productDetailCollectionViewDelegate.height = 250  + (self.productDetailQuickViewViewController.view.subviews.first?.frame.height ?? .zero )
             self.collectionView.collectionViewLayout.invalidateLayout()
 
         }
@@ -128,9 +159,10 @@ extension ProductDetailViewController {
 
     private func addProductDetailRateViewController(to cell: ProductDetailCollectionViewCell) {
         productDetailQuickViewViewController.remove()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             cell.changeContainerViewHeightAccording(to: self.productDetailRateViewController)
             self.add(self.productDetailRateViewController, to: cell.containerView, frame: cell.containerView.frame)
+            self.productDetailCollectionViewDelegate.height = 250  + (self.productDetailRateViewController.view.subviews.first?.frame.height ?? .zero  + 40)
             self.collectionView.collectionViewLayout.invalidateLayout()
 
         }
@@ -148,5 +180,6 @@ extension ProductDetailViewController: ProductViewModelDelegate {
         headerView.images = product.images
         productDetailCollectionViewDataSource.product = product
         collectionView.reloadData()
+        setupColorSelectionView()
     }
 }

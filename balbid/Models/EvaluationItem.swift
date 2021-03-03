@@ -18,7 +18,7 @@ struct EvaluationItem: SwiftyModelData {
     let rating3: String
     let rating4: String
     let rating5: String
-    let comments: [CommentItem]
+    var comments: [CommentItem]
     let evaluateCount: String
     let evaluateAvg: String
 

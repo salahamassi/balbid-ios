@@ -44,7 +44,7 @@ class ProductDetailQuickViewViewController: BaseViewController {
               let label = detailLabel else {
             return
         }
-        label.attributedText = product.description.htmlToAttributedString 
+        label.text = product.description
         setupLabel()        
     }
     
