@@ -140,14 +140,17 @@ class AuthCompanyMainViewController: BaseViewController {
     }
     
     private func validateCurrentStep() -> Bool{
+        var validate:  Bool = false
         if(step == 1) {
-            let validate = companyHolderInforamtionViewController.validate()
-            if !validate  {
-                containerViewHeightConstraint?.constant += 15
-            }
-            return validate
+             validate = true
         }
-        return   false
+        if(step == 2) {
+             validate = companyInforamtionViewController.validate()
+        }
+        if !validate  {
+            containerViewHeightConstraint?.constant += 15
+        }
+        return validate
     }
     
 }

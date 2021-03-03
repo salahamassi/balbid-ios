@@ -38,7 +38,12 @@ class CompanyHolderInformationViewController: BaseViewController {
 
         releaseDateTextField.inputView = releaseDatePicker
         endDateTextField.inputView = endDatePicker
-
+        if #available(iOS 13.4, *) {
+            endDatePicker.preferredDatePickerStyle = .wheels
+            releaseDatePicker.preferredDatePickerStyle = .wheels
+        } else {
+            // Fallback on earlier versions
+        }
         releaseDatePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
         endDatePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
 
@@ -62,7 +67,8 @@ class CompanyHolderInformationViewController: BaseViewController {
 
     
     func validate() -> Bool {
-        viewModel.validate(holderName: companyHolderNameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, confirmPassword: confirmPasswordTextField.text!, civilNumber: civilRegistryNumberTextField.text!, source: sourceTextField.text!, releaseData: releaseDateTextField.text, endDate: endDateTextField.text, phoneNumber: phoneNumberTextField.text!)
+        errorLabel.isHidden = true
+        return viewModel.validate(holderName: companyHolderNameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, confirmPassword: confirmPasswordTextField.text!, civilNumber: civilRegistryNumberTextField.text!, source: sourceTextField.text!, releaseData: releaseDateTextField.text, endDate: endDateTextField.text, phoneNumber: phoneNumberTextField.text!)
     }
     
     
@@ -89,10 +95,8 @@ extension CompanyHolderInformationViewController: CompanyHolderInformationViewMo
             phoneNumberTextField.isError = true
         case .releaseDate:
             releaseDateTextField.isError = true
-            break
         case .endDate:
             endDateTextField.isError = true
-            break
         }
         errorLabel.isHidden = false
         errorLabel.text = errorMessage

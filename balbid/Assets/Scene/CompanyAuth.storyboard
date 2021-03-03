@@ -827,7 +827,7 @@
                                                             <constraint firstAttribute="width" constant="2" id="HMz-6X-Ddm"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IwK-5D-srs" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="telephone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IwK-5D-srs" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
                                                         <rect key="frame" x="52.5" y="0.0" width="306.5" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Cil-zr-AEd"/>
@@ -895,6 +895,12 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70E-25-cpO">
+                                        <rect key="frame" x="0.0" y="940" width="414" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                        <color key="textColor" name="redColor2"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -906,6 +912,25 @@
                             <constraint firstItem="VYa-aB-Pfs" firstAttribute="trailing" secondItem="9r5-Da-tF8" secondAttribute="trailing" id="oRe-Eo-KJN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buildingNumberTextField" destination="PP6-c1-hYV" id="lpu-WG-XrC"/>
+                        <outlet property="buisnessTypeTextField" destination="DwR-4j-oTj" id="2qN-Nj-ZBP"/>
+                        <outlet property="cityTextField" destination="Qxm-zH-zqT" id="HSl-j8-874"/>
+                        <outlet property="commercialRegistrationEndDateTextField" destination="vB2-Lf-xge" id="Hn3-Kq-NvR"/>
+                        <outlet property="commercialRegistrationNumberTextField" destination="cJU-V9-Nzw" id="10J-Jj-slo"/>
+                        <outlet property="commercialRegistrationSourceTextField" destination="SmD-Xn-jU0" id="x9Z-N7-9Pg"/>
+                        <outlet property="companyNameTextField" destination="sbe-G2-3pn" id="6UJ-fd-Xaf"/>
+                        <outlet property="emailTextField" destination="Uro-SB-VBs" id="S7z-PO-dfn"/>
+                        <outlet property="errorLabel" destination="70E-25-cpO" id="LxX-xT-0do"/>
+                        <outlet property="faxNumberTextField" destination="E7r-ac-blS" id="sml-Ay-4xx"/>
+                        <outlet property="mobileNumberTextField" destination="jYW-DN-NWk" id="uHT-YI-Hf7"/>
+                        <outlet property="municipalLicenseEndDateTextField" destination="FQh-OH-ImV" id="UVE-cm-cNv"/>
+                        <outlet property="municipalLicenseNumberTextField" destination="h9h-UY-pys" id="9h9-wD-FPH"/>
+                        <outlet property="municipalLicenseSourceTextField" destination="iHx-bP-60R" id="M3F-pO-mUi"/>
+                        <outlet property="postalCodeTextField" destination="uRW-5W-lu4" id="muc-uN-9ur"/>
+                        <outlet property="streetTextField" destination="Hge-du-CbA" id="DHP-X1-Cwk"/>
+                        <outlet property="telephoneNumberTextField" destination="IwK-5D-srs" id="Fqk-Pn-KcQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zli-Tt-gy8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -919,10 +944,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="ihd-zL-Ggu">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="ihd-zL-Ggu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="238"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="185" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="8ZF-cJ-UTV" customClass="ISIntrinsicTableView" customModule="balbid" customModuleProvider="target">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="185" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="8ZF-cJ-UTV" customClass="ISIntrinsicTableView" customModule="balbid" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
@@ -1066,7 +1091,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6j-Ks-ETu">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6j-Ks-ETu">
                                         <rect key="frame" x="0.0" y="216" width="414" height="22"/>
                                         <inset key="titleEdgeInsets" minX="13" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Add Other Person" image="circular_add">
@@ -1431,10 +1456,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="oxr-bs-XgW">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="oxr-bs-XgW">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="295"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="MJ7-nM-S0u" customClass="ISIntrinsicTableView" customModule="balbid" customModuleProvider="target">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="MJ7-nM-S0u" customClass="ISIntrinsicTableView" customModule="balbid" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="247"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
@@ -1565,7 +1590,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBS-VZ-tGf">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBS-VZ-tGf">
                                         <rect key="frame" x="0.0" y="273" width="414" height="22"/>
                                         <inset key="titleEdgeInsets" minX="13" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Add Other Account" image="circular_add">
@@ -1596,110 +1621,6 @@
             <point key="canvasLocation" x="1644.9275362318842" y="-108.48214285714285"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="8CP-Ah-Eq5">
-            <size key="intrinsicContentSize" width="82" height="18"/>
-        </designable>
-        <designable name="8ZF-cJ-UTV">
-            <size key="intrinsicContentSize" width="-1" height="190"/>
-        </designable>
-        <designable name="DwR-4j-oTj">
-            <size key="intrinsicContentSize" width="98" height="18"/>
-        </designable>
-        <designable name="E7r-ac-blS">
-            <size key="intrinsicContentSize" width="77.5" height="18"/>
-        </designable>
-        <designable name="FQh-OH-ImV">
-            <size key="intrinsicContentSize" width="58" height="18"/>
-        </designable>
-        <designable name="Gg2-Ez-jry">
-            <size key="intrinsicContentSize" width="34.5" height="18"/>
-        </designable>
-        <designable name="HeO-3s-Sep">
-            <size key="intrinsicContentSize" width="94" height="18.5"/>
-        </designable>
-        <designable name="Hge-du-CbA">
-            <size key="intrinsicContentSize" width="37.5" height="18"/>
-        </designable>
-        <designable name="HrC-Wm-CPo">
-            <size key="intrinsicContentSize" width="148" height="18"/>
-        </designable>
-        <designable name="IwK-5D-srs">
-            <size key="intrinsicContentSize" width="94" height="18.5"/>
-        </designable>
-        <designable name="MJ7-nM-S0u">
-            <size key="intrinsicContentSize" width="-1" height="247"/>
-        </designable>
-        <designable name="MQG-30-g3D">
-            <size key="intrinsicContentSize" width="67" height="18"/>
-        </designable>
-        <designable name="PP6-c1-hYV">
-            <size key="intrinsicContentSize" width="138.5" height="18"/>
-        </designable>
-        <designable name="QkI-vF-Qrb">
-            <size key="intrinsicContentSize" width="62" height="17"/>
-        </designable>
-        <designable name="Qxm-zH-zqT">
-            <size key="intrinsicContentSize" width="25" height="18"/>
-        </designable>
-        <designable name="SmD-Xn-jU0">
-            <size key="intrinsicContentSize" width="44.5" height="18"/>
-        </designable>
-        <designable name="Uro-SB-VBs">
-            <size key="intrinsicContentSize" width="34.5" height="18"/>
-        </designable>
-        <designable name="Y1Y-1r-uXC">
-            <size key="intrinsicContentSize" width="139" height="18"/>
-        </designable>
-        <designable name="ZGH-XU-rcB">
-            <size key="intrinsicContentSize" width="100" height="18"/>
-        </designable>
-        <designable name="cJU-V9-Nzw">
-            <size key="intrinsicContentSize" width="176.5" height="18"/>
-        </designable>
-        <designable name="fHY-1g-BvJ">
-            <size key="intrinsicContentSize" width="44.5" height="18"/>
-        </designable>
-        <designable name="h9h-UY-pys">
-            <size key="intrinsicContentSize" width="160" height="18"/>
-        </designable>
-        <designable name="hHy-K5-nbd">
-            <size key="intrinsicContentSize" width="147.5" height="18"/>
-        </designable>
-        <designable name="iHx-bP-60R">
-            <size key="intrinsicContentSize" width="44.5" height="18"/>
-        </designable>
-        <designable name="jYW-DN-NWk">
-            <size key="intrinsicContentSize" width="97" height="18.5"/>
-        </designable>
-        <designable name="mMh-hR-Hqz">
-            <size key="intrinsicContentSize" width="24" height="18"/>
-        </designable>
-        <designable name="mQO-7A-AvY">
-            <size key="intrinsicContentSize" width="116" height="17"/>
-        </designable>
-        <designable name="o7s-F0-yAl">
-            <size key="intrinsicContentSize" width="94" height="18.5"/>
-        </designable>
-        <designable name="pND-TS-uXm">
-            <size key="intrinsicContentSize" width="58" height="18"/>
-        </designable>
-        <designable name="rK3-g6-h33">
-            <size key="intrinsicContentSize" width="83" height="18"/>
-        </designable>
-        <designable name="sbe-G2-3pn">
-            <size key="intrinsicContentSize" width="102" height="18"/>
-        </designable>
-        <designable name="uRW-5W-lu4">
-            <size key="intrinsicContentSize" width="74.5" height="18"/>
-        </designable>
-        <designable name="vB2-Lf-xge">
-            <size key="intrinsicContentSize" width="58" height="18"/>
-        </designable>
-        <designable name="yTU-3k-FCV">
-            <size key="intrinsicContentSize" width="37.5" height="18"/>
-        </designable>
-    </designables>
     <resources>
         <image name="circular_add" width="20" height="20"/>
         <image name="done" width="243" height="243"/>
