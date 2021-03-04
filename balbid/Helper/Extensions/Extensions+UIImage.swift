@@ -24,5 +24,13 @@ extension UIImage {
     func jpeg(_ jpegQuality: JPEGQuality) -> Data? {
         return jpegData(compressionQuality: jpegQuality.rawValue)
     }
+    
+    func getBase64FromImage() -> String? {
+        guard  let imageData = pngData() else {
+            return nil
+        }
+        let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
+        return strBase64
+    }
 
 }

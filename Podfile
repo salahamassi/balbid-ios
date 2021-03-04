@@ -10,4 +10,6 @@ target 'balbid' do
   pod 'SwipeCellKit', :git => 'https://github.com/SwipeCellKit/SwipeCellKit.git', :branch => 'develop'
   pod 'RangeSeekSlider'
   pod 'CCBottomRefreshControl'
+  pod 'RxSwift', '6.1.0'
+  pod 'RxCocoa', '6.1.0'
 end

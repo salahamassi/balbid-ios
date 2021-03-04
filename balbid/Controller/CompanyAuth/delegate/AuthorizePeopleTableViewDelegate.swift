@@ -10,7 +10,7 @@ import UIKit
 class AuthorizePeopleTableViewDelegate: NSObject, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        190
+        350
     }
 
 }

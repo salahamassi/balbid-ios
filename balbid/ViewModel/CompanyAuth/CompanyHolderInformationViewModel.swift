@@ -34,13 +34,14 @@ class CompanyHolderInformationViewModel: NSObject {
             delegate?.validationError(errorMessage: "Civil Number Must be filled",withEntry: .civilNumber)
             isValid = false
         }
+       
+        if confirmPassword.isEmpty  {
+            delegate?.validationError(errorMessage: "",withEntry: .confirmPassword)
+            isValid = false
+        }
         if password != confirmPassword {
             delegate?.validationError(errorMessage: "Password Not Matched",withEntry: .password)
             delegate?.validationError(errorMessage: "Password Not Matched",withEntry: .confirmPassword)
-            isValid = false
-        }
-        if confirmPassword.isEmpty  {
-            delegate?.validationError(errorMessage: "",withEntry: .confirmPassword)
             isValid = false
         }
         if password.isEmpty{

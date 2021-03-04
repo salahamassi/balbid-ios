@@ -11,7 +11,7 @@ class AuthorizePeopleTableViewDataSource: NSObject, UITableViewDataSource {
 
     var rows = 1
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: .authorizePeopleCellId, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: .authorizePeopleCellId, for: indexPath) as!  AuthPeopleCell
         return cell
     }
 

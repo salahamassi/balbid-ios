@@ -15,7 +15,11 @@ class AuthCompanyMainRoute: Route {
     }
 
     func create(_ router: AppRouter, _ params: [String: Any]?) -> UIViewController {
-        let viewController = UIStoryboard.authComapnyStoryboard.getViewController(with: .authComapnyMainViewControllerId) as!  BaseViewController
+        let viewController = UIStoryboard.authComapnyStoryboard.getViewController(with: .authComapnyMainViewControllerId) as! AuthCompanyMainViewController
+        let viewModel = MainCompanyAuthViewModel()
+        viewModel.dataSource = AppDataSource()
+        viewModel.delegate = viewController
+        viewController.addNewCorporate = viewModel.addNewCorporate
         return viewController
     }
 }

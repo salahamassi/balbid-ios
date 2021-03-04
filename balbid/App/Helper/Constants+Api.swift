@@ -22,6 +22,7 @@ extension String {
     static let productDetailPath = "products/get?product_id="
     static let productEvaluationPath = "customers/products/evaluation?product_id="
     static let addressPath = "customers/addresses"
+    static let corporateStorePath = "corporates/store"
 
     
     //api Method

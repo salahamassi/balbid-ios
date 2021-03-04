@@ -92,6 +92,7 @@
                     <connections>
                         <outlet property="containerView" destination="A3T-qF-b1b" id="soZ-uT-owK"/>
                         <outlet property="containerViewHeightConstraint" destination="uNW-1V-RNC" id="HjU-hT-Y95"/>
+                        <outlet property="saveButton" destination="c2P-uC-uNV" id="uqE-AG-A3a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4CL-Nz-lEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -944,22 +945,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="ihd-zL-Ggu">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="238"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="ihd-zL-Ggu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="185" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="8ZF-cJ-UTV" customClass="ISIntrinsicTableView" customModule="balbid" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="337" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="8ZF-cJ-UTV" customClass="ISIntrinsicTableView" customModule="balbid" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="auth_people_cell" rowHeight="185" id="EPa-QF-z9u">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="185"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="auth_people_cell" rowHeight="500" id="EPa-QF-z9u" customClass="AuthPeopleCell" customModule="balbid" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="500"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EPa-QF-z9u" id="YeU-qA-17O">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="185"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Yty-da-67Y">
-                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yty-da-67Y">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="325"/>
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yTU-3k-FCV" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
@@ -986,8 +987,85 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </textField>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G7N-Ix-g1x" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="57" width="414" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="kIg-mM-nFo"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeftCustom">
+                                                                            <real key="value" value="30"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingRightCustom">
+                                                                            <real key="value" value="30"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="20"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                            <real key="value" value="1.5"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                            <color key="value" name="lightGrayColor"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </textField>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cBL-1C-7QQ" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="114" width="414" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="Z4Q-yy-YOV"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeftCustom">
+                                                                            <real key="value" value="30"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingRightCustom">
+                                                                            <real key="value" value="30"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="20"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                            <real key="value" value="1.5"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                            <color key="value" name="lightGrayColor"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="setPassowrdImage" value="YES"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </textField>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E0y-SU-qrs" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="171" width="414" height="40"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="9nQ-pZ-fqu"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeftCustom">
+                                                                            <real key="value" value="30"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingRightCustom">
+                                                                            <real key="value" value="30"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="20"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                            <real key="value" value="1.5"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                            <color key="value" name="lightGrayColor"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="setPassowrdImage" value="YES"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </textField>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Job" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mMh-hR-Hqz" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="60" width="414" height="40"/>
+                                                                    <rect key="frame" x="0.0" y="228" width="414" height="40"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="40" id="gnE-K0-rEv"/>
                                                                     </constraints>
@@ -1012,7 +1090,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </textField>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZPo-6J-u0m" userLabel="phone container label">
-                                                                    <rect key="frame" x="0.0" y="120" width="414" height="40"/>
+                                                                    <rect key="frame" x="0.0" y="285" width="414" height="40"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xrl-JS-WPg">
                                                                             <rect key="frame" x="25" y="0.0" width="359" height="40"/>
@@ -1083,16 +1161,30 @@
                                                         <constraint firstItem="Yty-da-67Y" firstAttribute="top" secondItem="YeU-qA-17O" secondAttribute="top" id="wX3-75-RU6"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="confirmPasswordTextField" destination="E0y-SU-qrs" id="kJM-fM-zti"/>
+                                                    <outlet property="emailTextField" destination="G7N-Ix-g1x" id="iMI-sM-80O"/>
+                                                    <outlet property="jobTextField" destination="mMh-hR-Hqz" id="Ljy-nO-6ei"/>
+                                                    <outlet property="nameTextField" destination="yTU-3k-FCV" id="aLf-XE-pwk"/>
+                                                    <outlet property="passwordTextField" destination="cBL-1C-7QQ" id="kz9-js-tAM"/>
+                                                    <outlet property="phoneNumberTextField" destination="o7s-F0-yAl" id="iyZ-qt-dRO"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="initHeight">
-                                                <real key="value" value="190"/>
+                                                <real key="value" value="400"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6j-Ks-ETu">
-                                        <rect key="frame" x="0.0" y="216" width="414" height="22"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcb-9Z-06M">
+                                        <rect key="frame" x="0.0" y="413" width="414" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                        <color key="textColor" name="redColor2"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6j-Ks-ETu">
+                                        <rect key="frame" x="0.0" y="426" width="414" height="22"/>
                                         <inset key="titleEdgeInsets" minX="13" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Add Other Person" image="circular_add">
                                             <color key="titleColor" name="textBlackColor"/>
@@ -1114,6 +1206,7 @@
                     </view>
                     <connections>
                         <outlet property="addPersonButton" destination="s6j-Ks-ETu" id="0cF-Do-h0v"/>
+                        <outlet property="errorLabel" destination="xcb-9Z-06M" id="TN2-HH-jU3"/>
                         <outlet property="tableView" destination="8ZF-cJ-UTV" id="JnY-mN-O3c"/>
                     </connections>
                 </viewController>
@@ -1132,7 +1225,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="exq-Au-eZI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1006"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="FBY-sN-67b">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="FBY-sN-67b" customClass="BorderedImageView" customModule="balbid" customModuleProvider="target">
                                         <rect key="frame" x="135" y="0.0" width="144" height="144"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="144" id="RKe-PX-wr1"/>
@@ -1190,7 +1283,7 @@
                                             <constraint firstAttribute="height" constant="20" id="LdY-eA-a0G"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="1P8-zK-IN2">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="1P8-zK-IN2" customClass="BorderedImageView" customModule="balbid" customModuleProvider="target">
                                         <rect key="frame" x="135" y="333" width="144" height="144"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="144" id="JOy-9Z-wqM"/>
@@ -1248,7 +1341,7 @@
                                             <constraint firstAttribute="height" constant="20" id="di8-Pg-3f0"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="MnT-3c-vgN">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="MnT-3c-vgN" customClass="BorderedImageView" customModule="balbid" customModuleProvider="target">
                                         <rect key="frame" x="135" y="666" width="144" height="144"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="144" id="Jic-7d-cbF"/>
@@ -1325,18 +1418,13 @@
                                                     <action selector="toggleAgree:" destination="Fw6-SA-mtZ" eventType="touchUpInside" id="5sP-2C-weN"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhN-RG-uMc">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="MhN-RG-uMc">
                                                 <rect key="frame" x="24" y="0.0" width="320" height="17"/>
                                                 <attributedString key="attributedText">
-                                                    <fragment content="I have read and agree to the ">
+                                                    <fragment content="I have read and agree to the terms and conditions">
                                                         <attributes>
+                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <font key="NSFont" metaFont="menu" size="14"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="terms and conditions">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.58823529411764708" green="0.18431372549019609" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <font key="NSFont" metaFont="system" size="14"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
@@ -1347,6 +1435,12 @@
                                             <constraint firstAttribute="height" constant="17" id="3od-S3-J6v"/>
                                         </constraints>
                                     </stackView>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="801-sZ-F7d">
+                                        <rect key="frame" x="190" y="1006" width="34.5" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                        <color key="textColor" name="redColor2"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -1359,6 +1453,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="801-sZ-F7d" id="eOS-ej-BQM"/>
                         <outletCollection property="pickedImages" destination="FBY-sN-67b" collectionClass="NSMutableArray" id="SyJ-wE-Ywt"/>
                         <outletCollection property="pickedImages" destination="1P8-zK-IN2" collectionClass="NSMutableArray" id="Fd9-Xu-406"/>
                         <outletCollection property="pickedImages" destination="MnT-3c-vgN" collectionClass="NSMutableArray" id="zeA-84-05M"/>
@@ -1456,14 +1551,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="oxr-bs-XgW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="295"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="oxr-bs-XgW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="291"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="MJ7-nM-S0u" customClass="ISIntrinsicTableView" customModule="balbid" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="247"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="MJ7-nM-S0u" customClass="ISIntrinsicTableView" customModule="balbid" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="243"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bank_info_cell" id="HxA-r4-pXr">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bank_info_cell" id="HxA-r4-pXr" customClass="BankInformationCell" customModule="balbid" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HxA-r4-pXr" id="CGa-BS-hHD">
@@ -1582,16 +1677,28 @@
                                                         <constraint firstAttribute="trailing" secondItem="KUW-W8-xyQ" secondAttribute="trailing" id="irx-Ch-TfU"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="bankNameTextField" destination="MQG-30-g3D" id="ttT-mg-yKR"/>
+                                                    <outlet property="cityTextField" destination="8CP-Ah-Eq5" id="U36-G3-BKJ"/>
+                                                    <outlet property="holderNameTextField" destination="Y1Y-1r-uXC" id="9a2-SV-fSe"/>
+                                                    <outlet property="ibanTextField" destination="HrC-Wm-CPo" id="uW5-ac-Ltl"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="initHeight">
-                                                <real key="value" value="247"/>
+                                                <real key="value" value="243"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBS-VZ-tGf">
-                                        <rect key="frame" x="0.0" y="273" width="414" height="22"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBR-fC-UWr">
+                                        <rect key="frame" x="0.0" y="256" width="414" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                        <color key="textColor" name="redColor2"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBS-VZ-tGf">
+                                        <rect key="frame" x="0.0" y="269" width="414" height="22"/>
                                         <inset key="titleEdgeInsets" minX="13" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Add Other Account" image="circular_add">
                                             <color key="titleColor" name="textBlackColor"/>
@@ -1613,6 +1720,7 @@
                     </view>
                     <connections>
                         <outlet property="addBankButton" destination="DBS-VZ-tGf" id="AwN-Jb-e9c"/>
+                        <outlet property="errorLabel" destination="YBR-fC-UWr" id="GoZ-Sd-pDt"/>
                         <outlet property="tableView" destination="MJ7-nM-S0u" id="fDz-LR-0oR"/>
                     </connections>
                 </viewController>
@@ -1621,6 +1729,119 @@
             <point key="canvasLocation" x="1644.9275362318842" y="-108.48214285714285"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="8CP-Ah-Eq5">
+            <size key="intrinsicContentSize" width="142" height="18"/>
+        </designable>
+        <designable name="8ZF-cJ-UTV">
+            <size key="intrinsicContentSize" width="-1" height="400"/>
+        </designable>
+        <designable name="DwR-4j-oTj">
+            <size key="intrinsicContentSize" width="158" height="18"/>
+        </designable>
+        <designable name="E0y-SU-qrs">
+            <size key="intrinsicContentSize" width="166" height="17"/>
+        </designable>
+        <designable name="E7r-ac-blS">
+            <size key="intrinsicContentSize" width="137.5" height="18"/>
+        </designable>
+        <designable name="FQh-OH-ImV">
+            <size key="intrinsicContentSize" width="118" height="18"/>
+        </designable>
+        <designable name="G7N-Ix-g1x">
+            <size key="intrinsicContentSize" width="94.5" height="18"/>
+        </designable>
+        <designable name="Gg2-Ez-jry">
+            <size key="intrinsicContentSize" width="94.5" height="18"/>
+        </designable>
+        <designable name="HeO-3s-Sep">
+            <size key="intrinsicContentSize" width="94" height="18.5"/>
+        </designable>
+        <designable name="Hge-du-CbA">
+            <size key="intrinsicContentSize" width="97.5" height="18"/>
+        </designable>
+        <designable name="HrC-Wm-CPo">
+            <size key="intrinsicContentSize" width="208" height="18"/>
+        </designable>
+        <designable name="IwK-5D-srs">
+            <size key="intrinsicContentSize" width="118" height="18.5"/>
+        </designable>
+        <designable name="MJ7-nM-S0u">
+            <size key="intrinsicContentSize" width="-1" height="243"/>
+        </designable>
+        <designable name="MQG-30-g3D">
+            <size key="intrinsicContentSize" width="127" height="18"/>
+        </designable>
+        <designable name="PP6-c1-hYV">
+            <size key="intrinsicContentSize" width="198.5" height="18"/>
+        </designable>
+        <designable name="QkI-vF-Qrb">
+            <size key="intrinsicContentSize" width="112" height="17"/>
+        </designable>
+        <designable name="Qxm-zH-zqT">
+            <size key="intrinsicContentSize" width="85" height="18"/>
+        </designable>
+        <designable name="SmD-Xn-jU0">
+            <size key="intrinsicContentSize" width="104.5" height="18"/>
+        </designable>
+        <designable name="Uro-SB-VBs">
+            <size key="intrinsicContentSize" width="94.5" height="18"/>
+        </designable>
+        <designable name="Y1Y-1r-uXC">
+            <size key="intrinsicContentSize" width="199" height="18"/>
+        </designable>
+        <designable name="ZGH-XU-rcB">
+            <size key="intrinsicContentSize" width="160" height="18"/>
+        </designable>
+        <designable name="cBL-1C-7QQ">
+            <size key="intrinsicContentSize" width="112" height="17"/>
+        </designable>
+        <designable name="cJU-V9-Nzw">
+            <size key="intrinsicContentSize" width="236.5" height="18"/>
+        </designable>
+        <designable name="fHY-1g-BvJ">
+            <size key="intrinsicContentSize" width="104.5" height="18"/>
+        </designable>
+        <designable name="h9h-UY-pys">
+            <size key="intrinsicContentSize" width="220" height="18"/>
+        </designable>
+        <designable name="hHy-K5-nbd">
+            <size key="intrinsicContentSize" width="207.5" height="18"/>
+        </designable>
+        <designable name="iHx-bP-60R">
+            <size key="intrinsicContentSize" width="104.5" height="18"/>
+        </designable>
+        <designable name="jYW-DN-NWk">
+            <size key="intrinsicContentSize" width="97" height="18.5"/>
+        </designable>
+        <designable name="mMh-hR-Hqz">
+            <size key="intrinsicContentSize" width="84" height="18"/>
+        </designable>
+        <designable name="mQO-7A-AvY">
+            <size key="intrinsicContentSize" width="166" height="17"/>
+        </designable>
+        <designable name="o7s-F0-yAl">
+            <size key="intrinsicContentSize" width="94" height="18.5"/>
+        </designable>
+        <designable name="pND-TS-uXm">
+            <size key="intrinsicContentSize" width="118" height="18"/>
+        </designable>
+        <designable name="rK3-g6-h33">
+            <size key="intrinsicContentSize" width="143" height="18"/>
+        </designable>
+        <designable name="sbe-G2-3pn">
+            <size key="intrinsicContentSize" width="162" height="18"/>
+        </designable>
+        <designable name="uRW-5W-lu4">
+            <size key="intrinsicContentSize" width="134.5" height="18"/>
+        </designable>
+        <designable name="vB2-Lf-xge">
+            <size key="intrinsicContentSize" width="118" height="18"/>
+        </designable>
+        <designable name="yTU-3k-FCV">
+            <size key="intrinsicContentSize" width="97.5" height="18"/>
+        </designable>
+    </designables>
     <resources>
         <image name="circular_add" width="20" height="20"/>
         <image name="done" width="243" height="243"/>

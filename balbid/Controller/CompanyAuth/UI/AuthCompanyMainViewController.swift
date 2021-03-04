@@ -16,12 +16,17 @@ class AuthCompanyMainViewController: BaseViewController {
     var step = 1
     
     @IBOutlet weak var containerViewHeightConstraint: NSLayoutConstraint?
-    
+    @IBOutlet weak var saveButton: UIButton!
+
     var progressView: ProgressView!
     
     @IBOutlet weak var containerView: UIView!
     
     var currentViewController: UIViewController!
+    
+    var shouldRevalid: Bool = false
+    
+    var addNewCorporate: (() -> Void)?
     
     lazy var companyHolderInforamtionViewController: CompanyHolderInformationViewController = {
         let viewController =  UIStoryboard.authComapnyStoryboard.getViewController(with: .companyHolderInformationViewControllerId)  as! CompanyHolderInformationViewController
@@ -90,11 +95,13 @@ class AuthCompanyMainViewController: BaseViewController {
             currentViewController = identityConfirmViewController
         default:
             currentViewController = companyHolderInforamtionViewController
-            
         }
+        
         containerViewHeightConstraint?.constant = currentViewController.view.subviews.first?.frame.height ?? .zero
         print(currentViewController.view.subviews.first?.frame.height ?? .zero)
         add(currentViewController, to: containerView, frame: containerView.frame)
+        
+    
     }
     
     @objc func goBack() {
@@ -129,25 +136,38 @@ class AuthCompanyMainViewController: BaseViewController {
     @IBAction func goToNextStep(_ sender: Any) {
         if  step < 5 {
             if(validateCurrentStep()){
-                        step += 1
-                        setContainerView()
-                        setNavTitle()
-                        progressView.move(fromStep: step-1, to: step)
+                    step += 1
+                    setContainerView()
+                    setNavTitle()
+                    progressView.move(fromStep: step-1, to: step)
             }
         } else if step == 5 {
-            router?.navigate(to: .authCompanyCreatedSuccessfullyRoute)
+            if(validateCurrentStep()){
+                saveButton.loadingIndicator(true)
+                addNewCorporate?()
+            }
         }
     }
     
     private func validateCurrentStep() -> Bool{
         var validate:  Bool = false
-        if(step == 1) {
-             validate = true
+        if(shouldRevalid)  {
+            containerViewHeightConstraint?.constant -= 15
+            shouldRevalid = false
         }
-        if(step == 2) {
-             validate = companyInforamtionViewController.validate()
+        if(step == 1) {
+            validate = companyHolderInforamtionViewController.validate()
+        }else  if(step == 2) {
+            validate = companyInforamtionViewController.validate()
+        }else if(step == 3) {
+            validate = authorizePeopleViewController.validate()
+        }else if(step == 4){
+           validate = bankInformationViewController.validate()
+        }else if (step == 5) {
+            validate = identityConfirmViewController.validate()
         }
         if !validate  {
+            shouldRevalid = true
             containerViewHeightConstraint?.constant += 15
         }
         return validate
@@ -162,5 +182,19 @@ extension  AuthCompanyMainViewController: SizeChangableDelegate {
             self.view.layoutIfNeeded()
         }
     }
+    
+}
+
+extension  AuthCompanyMainViewController: MainCompanyAuthViewModelDelegate {
+    func apiError(error: String) {
+        saveButton.loadingIndicator(false)
+        displayAlert(message: error)
+    }
+    
+    func didAddCorporateSuccess() {
+        saveButton.loadingIndicator(false)
+        router?.navigate(to: .authCompanyCreatedSuccessfullyRoute)
+    }
+    
     
 }
