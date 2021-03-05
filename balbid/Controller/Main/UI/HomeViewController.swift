@@ -172,17 +172,23 @@ extension HomeViewController: HomeSelectionProtocol{
 }
 
 extension HomeViewController: HomeViewModelDelegate {
+    func loadCategoriesSuccess(category: Category) {
+        if (category.categoryItems.count > 0) {
+            homeCollectionViewDataSource.numberOfSection += 1
+            homeCollectionViewDataSource.category = category
+
+        }
+        collectionView.reloadData()
+    }
+    
     func loadHomeSuccess(home: Home) {
         activityIndicator.stopAnimating()
-        homeCollectionViewDataSource.numberOfSection = 2 + home.homeProductItems.count
+        homeCollectionViewDataSource.numberOfSection += (2 + home.homeProductItems.count)
         homeCollectionViewDataSource.home = home
         homeCollectionViewFlowLayout.sectionWithFooters = home.banners.map {
             (Int($0.sortOrder) ?? 0) + 1
         }
-        
-        
-        collectionView.reloadData()
-
+        homeViewModel.getCategries()
     }
     
     func apiError(error: String) {

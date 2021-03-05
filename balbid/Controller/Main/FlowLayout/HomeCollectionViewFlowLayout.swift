@@ -17,8 +17,8 @@ class HomeCollectionViewFlowLayout  {
                 return self.sliderSection()
             case 1 :
                 return self.sliderIndicatorSection()
-            //            case 2 :
-            //                return self.categorySection()
+            case 2 :
+                return self.categorySection()
             //            case 3 :
             //                return self.featureSection()
             //            case 4 :

@@ -32,6 +32,19 @@ class HomeViewModel {
         }
     }
     
+    func getCategries() {
+        dataSource.perform(service: .init(path: .categoryPath, domain: .domain, method: .get, params: [:], mustUseAuth: true), Category.self) { (result) in
+            switch result {
+            case .data(let data):
+                self.delegate?.loadCategoriesSuccess(category: data.data)
+            case .failure(let error):
+                self.delegate?.apiError(error: error)
+            default:
+                break
+            }
+        }
+    }
+    
     func addProductToFavorite(productId: Int, didAddToFavorite:  @escaping () -> Void){
         dataSource.perform(service: .init(path: .addToFavoritePath, domain: .domain, method: .post, params: ["product_id" : productId], mustUseAuth: true), ProductItem.self) { (result) in
             switch result {
@@ -64,4 +77,5 @@ class HomeViewModel {
 protocol HomeViewModelDelegate: class {
     func loadHomeSuccess(home: Home)
     func apiError(error: String)
+    func loadCategoriesSuccess(category: Category)
 }

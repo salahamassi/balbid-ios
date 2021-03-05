@@ -11,6 +11,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
     var numberOfSection = 0
     var home: Home?
+    var category: Category?
     var currentPage: Int = 0
     weak var delegate: SliderIndicatorCollectionViewCellDelegate?
     weak var productCellDelegate: ProductCellDelegate?
@@ -26,6 +27,10 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
             cell.pageControl.numberOfPages = home?.imageSlider.count ?? 0
             cell.currentPage = currentPage
             cell.delegate = delegate
+            return cell
+        }else if  indexPath.section == 2 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .categoryCellId, for: indexPath) as!  CategoryContentCell
+            cell.categoryItem = category?.categoryItems[indexPath.row]
             return cell
         }
         //        else if indexPath.section == 2 {
@@ -67,6 +72,8 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
             return home?.imageSlider.count ?? 0
         }else if section == 1 {
             return 1
+        }else if section == 2 {
+            return category?.categoryItems.count   ?? 0
         }
         //        else if section == 3 {
         //            return 2
@@ -81,7 +88,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         //        }else if section == 10 {
         //            return 1
         //        }
-        return home?.homeProductItems[section - 2].prodcuts.count ?? 0
+        return home?.homeProductItems[section - 3].prodcuts.count ?? 0
     }
     
     
