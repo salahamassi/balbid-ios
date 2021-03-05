@@ -15,6 +15,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     var currentPage: Int = 0
     weak var delegate: SliderIndicatorCollectionViewCellDelegate?
     weak var productCellDelegate: ProductCellDelegate?
+    private var sectionsToProduct = 3
 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -57,7 +58,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         //        }
         else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .productCellId, for: indexPath) as! ProductCollectionViewCell
-            cell.product = home?.homeProductItems[indexPath.section - 2].prodcuts[indexPath.row]
+            cell.product = home?.homeProductItems[indexPath.section - sectionsToProduct].prodcuts[indexPath.row]
             cell.delegate = productCellDelegate
             return cell
         }
@@ -88,7 +89,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         //        }else if section == 10 {
         //            return 1
         //        }
-        return home?.homeProductItems[section - 3].prodcuts.count ?? 0
+        return home?.homeProductItems[section - sectionsToProduct].prodcuts.count ?? 0
     }
     
     
@@ -102,7 +103,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         }else if kind == UICollectionView.elementKindSectionFooter  {
             
             if let banner = home?.banners.first(where: { (banner) -> Bool in
-                banner.sortOrder == "\(indexPath.section - 1)"
+                banner.sortOrder == "\(indexPath.section - 2)"
             }) {
                 let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter , withReuseIdentifier: .productFooterCellId, for: indexPath) as! ProductFooterCell
                 footer.banner = banner
@@ -110,7 +111,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
             }
         }
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: .topKind, withReuseIdentifier: .productHeaderCellId, for: indexPath) as! ProductHeaderCell
-        header.homeProductItem = home?.homeProductItems[indexPath.section - 2]
+        header.homeProductItem = home?.homeProductItems[indexPath.section - sectionsToProduct]
         return header
         
     }

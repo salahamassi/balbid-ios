@@ -23,6 +23,7 @@ class HomeViewController: BaseViewController {
     private let addToCartBottomSheet = AddToCartBottomSheet.initFromNib()
     private let addedToCarView = balbid.AddedToCartView.initFromNib()
     private var itemAddedToCartDelegate  = ItemAddedToCartDelegate()
+    private var sectionsToProduct = 3
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +74,7 @@ class HomeViewController: BaseViewController {
             return
         }
       
-        homeCollectionViewDataSource.home?.homeProductItems[indexPath.section - 2].prodcuts[indexPath.row].isFavorite = value
+        homeCollectionViewDataSource.home?.homeProductItems[indexPath.section - sectionsToProduct].prodcuts[indexPath.row].isFavorite = value
     }
     
     private func setupCollectionView(){
@@ -156,11 +157,18 @@ class HomeViewController: BaseViewController {
 
 extension HomeViewController: HomeSelectionProtocol{
     func didSelectItem(at indexPath: IndexPath) {
-        if indexPath.section != 0 && indexPath.section != 1 {
-            guard let product = homeViewModel.home?.homeProductItems[indexPath.section - 2].prodcuts[indexPath.row] else {
+        if indexPath.section == 2 {
+            guard let category = homeCollectionViewDataSource.category?.categoryItems[indexPath.row] else {
+                return
+            }
+            router?.navigate(to: CategoriesRoutes.adCategoriesRoute(params: ["category": category]))
+        }else{
+            if indexPath.section != 0 && indexPath.section != 1 {
+            guard let product = homeViewModel.home?.homeProductItems[indexPath.section - sectionsToProduct].prodcuts[indexPath.row] else {
                 return
             }
             router?.navigate(to: ProductRoutes.productDetailRoute(params: ["product": product]))
+         }
         }
     }
     
@@ -186,7 +194,7 @@ extension HomeViewController: HomeViewModelDelegate {
         homeCollectionViewDataSource.numberOfSection += (2 + home.homeProductItems.count)
         homeCollectionViewDataSource.home = home
         homeCollectionViewFlowLayout.sectionWithFooters = home.banners.map {
-            (Int($0.sortOrder) ?? 0) + 1
+            (Int($0.sortOrder) ?? 0) + 2
         }
         homeViewModel.getCategries()
     }

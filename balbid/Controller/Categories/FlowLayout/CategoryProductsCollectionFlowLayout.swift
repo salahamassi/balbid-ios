@@ -15,7 +15,7 @@ class CategoryProductsCollectionFlowLayout: NSObject, UICollectionViewDelegate, 
     
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width/2 - 16, height: collectionView.frame.height)
+        return CGSize(width: collectionView.frame.width/2 - 16, height: 300)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

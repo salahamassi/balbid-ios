@@ -17,11 +17,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad_sample" translatesAutoresizingMaskIntoConstraints="NO" id="yev-ZO-fok">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad_sample" translatesAutoresizingMaskIntoConstraints="NO" id="yev-ZO-fok">
                         <rect key="frame" x="15" y="0.0" width="384" height="125"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="4"/>
+                                <real key="value" value="10"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
@@ -32,6 +32,11 @@
                     <constraint firstAttribute="trailing" secondItem="yev-ZO-fok" secondAttribute="trailing" constant="15" id="f1G-ce-9mr"/>
                     <constraint firstItem="yev-ZO-fok" firstAttribute="top" secondItem="yj7-z8-dDm" secondAttribute="top" id="ma5-Yb-kaY"/>
                 </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                        <real key="value" value="10"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
             </collectionViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <size key="customSize" width="414" height="125"/>
