@@ -156,9 +156,11 @@ class AuthCompanyMainViewController: BaseViewController {
             shouldRevalid = false
         }
         if(step == 1) {
-            validate = companyHolderInforamtionViewController.validate()
+//            validate = companyHolderInforamtionViewController.validate()
+            validate =  true
         }else  if(step == 2) {
-            validate = companyInforamtionViewController.validate()
+//            validate = companyInforamtionViewController.validate()
+            validate =  true
         }else if(step == 3) {
             validate = authorizePeopleViewController.validate()
         }else if(step == 4){

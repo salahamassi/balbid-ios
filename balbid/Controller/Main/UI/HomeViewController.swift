@@ -176,11 +176,13 @@ extension HomeViewController: HomeViewModelDelegate {
         activityIndicator.stopAnimating()
         homeCollectionViewDataSource.numberOfSection = 2 + home.homeProductItems.count
         homeCollectionViewDataSource.home = home
-        collectionView.reloadData()
         homeCollectionViewFlowLayout.sectionWithFooters = home.banners.map {
             (Int($0.sortOrder) ?? 0) + 1
         }
         
+        
+        collectionView.reloadData()
+
     }
     
     func apiError(error: String) {

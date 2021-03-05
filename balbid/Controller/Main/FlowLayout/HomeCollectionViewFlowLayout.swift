@@ -53,9 +53,6 @@ class HomeCollectionViewFlowLayout  {
                                                heightDimension: .estimated(155))
         let group =  NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
         let section = NSCollectionLayoutSection(group: group)
-          section.visibleItemsInvalidationHandler = ({ (visibleItems, point, env) in
-//            print("Hi")
-        })
         section.orthogonalScrollingBehavior = .paging
 
         return section
