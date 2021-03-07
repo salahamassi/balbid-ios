@@ -1053,8 +1053,8 @@
             filePath = "balbid/Controller/CompanyAuth/UI/IdentityConfirmViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "validate()"
             landmarkType = "7">
          </BreakpointContent>

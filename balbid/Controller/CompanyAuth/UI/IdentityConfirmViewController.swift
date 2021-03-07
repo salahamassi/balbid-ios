@@ -25,6 +25,7 @@ class IdentityConfirmViewController: BaseViewController {
         setupImagePicker()
         sortPickedImage()
 
+        
         // Do any additional setup after loading the view.
     }
 

@@ -34,7 +34,7 @@ class CompanyInformationViewController: BaseViewController {
         super.viewDidLoad()
         setupViewModel()
         setDatePicker()
-
+        setData()
         // Do any additional setup after loading the view.
     }
     
@@ -62,16 +62,37 @@ class CompanyInformationViewController: BaseViewController {
 
     }
     
+    private func setData() {
+        #if DEBUG
+            cityTextField.text = "Gaza"
+            companyNameTextField.text = "Salah Co"
+            streetTextField.text =  "street"
+            postalCodeTextField.text = "1234"
+            commercialRegistrationNumberTextField.text =  "1234"
+            commercialRegistrationSourceTextField.text = "yyy"
+            commercialRegistrationEndDateTextField.text = "1996-11-1"
+            municipalLicenseEndDateTextField.text = "1996-11-1"
+            municipalLicenseNumberTextField.text = "1212"
+            municipalLicenseSourceTextField.text = "1212"
+            emailTextField.text = "Qamar@gmail.com"
+            mobileNumberTextField.text = "1234"
+            faxNumberTextField.text = "12122"
+            telephoneNumberTextField.text = "212212"
+            buisnessTypeTextField.text = "21212"
+            buildingNumberTextField.text = "21212"
+        #endif
+    }
+    
     @objc
     func dateChanged(_ sender: UIDatePicker) {
         let components = Calendar.current.dateComponents([.year, .month, .day], from: sender.date)
            if let day = components.day, let month = components.month, let year = components.year {
             if sender == commercialRegistrationEndDatePicker {
-                commercialRegistrationEndDateTextField.text = "\(day)/\(month)/\(year)"
+                commercialRegistrationEndDateTextField.text = "\(year)-\(month)-\(day)"
             } else {
-                municipalLicenseEndDateTextField.text = "\(day)/\(month)/\(year)"
+                municipalLicenseEndDateTextField.text = "\(year)-\(month)-\(day)"
             }
-           }
+        }
     }
     
     func validate() -> Bool {
