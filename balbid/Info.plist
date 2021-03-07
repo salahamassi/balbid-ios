@@ -26,6 +26,8 @@
 	<string>BALBID need to Access your Location to know if your location is supported to use our services and get nearby vendors</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>BALBID need to Access your Location to know if your location is supported to use our services and get nearby vendors</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>BALBID need to Access your Location to know if your location is supported to use our services and get nearby vendors</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
