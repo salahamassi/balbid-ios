@@ -29,6 +29,7 @@ class CompanyHolderInformationViewController: BaseViewController {
         super.viewDidLoad()
         setDatePicker()
         setupViewModel()
+        setData()
         // Do any additional setup after loading the view.
     }
 
@@ -47,6 +48,19 @@ class CompanyHolderInformationViewController: BaseViewController {
         releaseDatePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
         endDatePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
 
+    }
+    
+    private func setData() {
+        #if DEBUG
+        emailTextField.text = "Qamar@gmail.com"
+        phoneNumberTextField.text = "1234"
+        releaseDateTextField.text = "1996-11-1"
+        endDateTextField.text = "2022-11-1"
+        companyHolderNameTextField.text = "Qamar Amassi"
+        passwordTextField.text = "12345"
+        confirmPasswordTextField.text = "12345"
+        civilRegistryNumberTextField.text = "121212"
+        #endif
     }
 
     @objc
