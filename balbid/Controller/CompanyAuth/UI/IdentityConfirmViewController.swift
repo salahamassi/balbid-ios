@@ -60,11 +60,11 @@ class IdentityConfirmViewController: BaseViewController {
                 self?.pickedImages[sender.tag].sd_setImage(with: urls[0], completed: {_,_,_,_ in
                     switch sender.tag {
                     case 0:
-                        self?.idenityImage = self?.pickedImages[sender.tag].image
+                        self?.idenityImage = self?.pickedImages[sender.tag].image?.imageWithSize(scaledToSize: CGSize(width: 144, height: 144))
                     case 1:
-                        self?.commerciaRegistrationImage = self?.pickedImages[sender.tag].image
+                        self?.commerciaRegistrationImage = self?.pickedImages[sender.tag].image?.imageWithSize(scaledToSize: CGSize(width: 144, height: 144))
                     case 2:
-                        self?.municipalityLicenseImage = self?.pickedImages[sender.tag].image
+                        self?.municipalityLicenseImage = self?.pickedImages[sender.tag].image?.imageWithSize(scaledToSize: CGSize(width: 144, height: 144))
                     default:
                         break
                     }

@@ -130,6 +130,8 @@
 		1880280825F071BA00B51F0A /* BankInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880280725F071BA00B51F0A /* BankInformationCell.swift */; };
 		1880280B25F1241F00B51F0A /* BorderedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880280A25F1241F00B51F0A /* BorderedImageView.swift */; };
 		1880280E25F12A7700B51F0A /* IdentityConfirmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880280D25F12A7700B51F0A /* IdentityConfirmViewModel.swift */; };
+		1885AD3B25F5610F0077F06F /* PriceSeekBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1885AD3A25F5610F0077F06F /* PriceSeekBarView.xib */; };
+		1885AD3E25F561160077F06F /* AddedToCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885AD3D25F561160077F06F /* AddedToCartView.swift */; };
 		188F941125DFDE26006E9783 /* ProductDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F941025DFDE26006E9783 /* ProductDelegate.swift */; };
 		188F941A25DFE98C006E9783 /* ItemAddedToCartDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F941925DFE98C006E9783 /* ItemAddedToCartDelegate.swift */; };
 		188F941E25DFEC77006E9783 /* PaginateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F941D25DFEC77006E9783 /* PaginateDelegate.swift */; };
@@ -155,9 +157,7 @@
 		18F3708525EBE1380005D19E /* CommentEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3708425EBE1380005D19E /* CommentEvaluation.swift */; };
 		18F3708825EBE27F0005D19E /* ProductDetailRateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3708725EBE27F0005D19E /* ProductDetailRateViewModel.swift */; };
 		18F3708C25EBE44D0005D19E /* EvaluationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3708B25EBE44D0005D19E /* EvaluationCell.swift */; };
-		18F5EE6125E0510700BA7FBE /* AddedToCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5EE4625E04FE300BA7FBE /* AddedToCartView.swift */; };
 		18F5EE6525E0517300BA7FBE /* AddedToCartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A1A36A25CDD96B00C1115C /* AddedToCartView.xib */; };
-		18F5EE6825E0517C00BA7FBE /* PriceSeekBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F5EE6725E0517C00BA7FBE /* PriceSeekBarView.xib */; };
 		18F5EE6B25E066E600BA7FBE /* CategoryFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F5EE6A25E066E600BA7FBE /* CategoryFooter.xib */; };
 		18F69CCF25EFC57600B31E52 /* ColorSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F69CCE25EFC57600B31E52 /* ColorSelectionView.swift */; };
 		18F69CD225EFC57C00B31E52 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F69CD125EFC57C00B31E52 /* ProductDetailView.swift */; };
@@ -468,6 +468,8 @@
 		1880280725F071BA00B51F0A /* BankInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankInformationCell.swift; sourceTree = "<group>"; };
 		1880280A25F1241F00B51F0A /* BorderedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedImageView.swift; sourceTree = "<group>"; };
 		1880280D25F12A7700B51F0A /* IdentityConfirmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityConfirmViewModel.swift; sourceTree = "<group>"; };
+		1885AD3A25F5610F0077F06F /* PriceSeekBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PriceSeekBarView.xib; path = ../../../../../../../../Desktop/PriceSeekBarView.xib; sourceTree = "<group>"; };
+		1885AD3D25F561160077F06F /* AddedToCartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddedToCartView.swift; path = ../../../../../../../Desktop/AddedToCartView.swift; sourceTree = "<group>"; };
 		188F941025DFDE26006E9783 /* ProductDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDelegate.swift; sourceTree = "<group>"; };
 		188F941925DFE98C006E9783 /* ItemAddedToCartDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAddedToCartDelegate.swift; sourceTree = "<group>"; };
 		188F941D25DFEC77006E9783 /* PaginateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginateDelegate.swift; sourceTree = "<group>"; };
@@ -493,8 +495,6 @@
 		18F3708425EBE1380005D19E /* CommentEvaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentEvaluation.swift; sourceTree = "<group>"; };
 		18F3708725EBE27F0005D19E /* ProductDetailRateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRateViewModel.swift; sourceTree = "<group>"; };
 		18F3708B25EBE44D0005D19E /* EvaluationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationCell.swift; sourceTree = "<group>"; };
-		18F5EE4625E04FE300BA7FBE /* AddedToCartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddedToCartView.swift; path = "../../../../../../balbid-ios-design_branch/balbid/Controller/Categories/View/AddedToCartView.swift"; sourceTree = "<group>"; };
-		18F5EE6725E0517C00BA7FBE /* PriceSeekBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PriceSeekBarView.xib; path = "../../../../../../../balbid-ios-design_branch/balbid/Controller/Categories/View/nib/PriceSeekBarView.xib"; sourceTree = "<group>"; };
 		18F5EE6A25E066E600BA7FBE /* CategoryFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryFooter.xib; sourceTree = "<group>"; };
 		18F69CCE25EFC57600B31E52 /* ColorSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSelectionView.swift; sourceTree = "<group>"; };
 		18F69CD125EFC57C00B31E52 /* ProductDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
@@ -1026,7 +1026,7 @@
 		0894853A25A1EC1F001934A9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				18F5EE4625E04FE300BA7FBE /* AddedToCartView.swift */,
+				1885AD3D25F561160077F06F /* AddedToCartView.swift */,
 				0894853B25A1EC26001934A9 /* nib */,
 				0894854825A1FC1B001934A9 /* AddToCartBottomSheet.swift */,
 				18DC81FD25D9C2B50007983C /* PriceSeekBarView.swift */,
@@ -1037,7 +1037,7 @@
 		0894853B25A1EC26001934A9 /* nib */ = {
 			isa = PBXGroup;
 			children = (
-				18F5EE6725E0517C00BA7FBE /* PriceSeekBarView.xib */,
+				1885AD3A25F5610F0077F06F /* PriceSeekBarView.xib */,
 				0894853C25A1EC48001934A9 /* AddToCartView.xib */,
 				20A1A36A25CDD96B00C1115C /* AddedToCartView.xib */,
 				18F5EE6A25E066E600BA7FBE /* CategoryFooter.xib */,
@@ -2208,6 +2208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1885AD3B25F5610F0077F06F /* PriceSeekBarView.xib in Resources */,
 				083E7597259C9CE700EDF708 /* ProductHeaderCell.xib in Resources */,
 				3DB1DBB2258695A900EF1E8F /* ConfirmAlertView.xib in Resources */,
 				3DB1DB5B25868FC000EF1E8F /* EmptyView.xib in Resources */,
@@ -2218,7 +2219,6 @@
 				3DB1DBB8258695B100EF1E8F /* ErrorAlertView.xib in Resources */,
 				1821F50425EFC3B000BB1664 /* ColorSelectionCell.xib in Resources */,
 				206E048F25BD9E6500BD8902 /* Order.storyboard in Resources */,
-				18F5EE6825E0517C00BA7FBE /* PriceSeekBarView.xib in Resources */,
 				18F69CD625EFC58B00B31E52 /* ColorSelectionView.xib in Resources */,
 				2092066D25C818B90072085E /* Shipping.storyboard in Resources */,
 				0894853D25A1EC48001934A9 /* AddToCartView.xib in Resources */,
@@ -2314,7 +2314,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18F5EE6125E0510700BA7FBE /* AddedToCartView.swift in Sources */,
 				08A9B8CB25A6582900AE5238 /* RateTableViewDelegate.swift in Sources */,
 				3DB1DB4E25868E6C00EF1E8F /* Animator.swift in Sources */,
 				08C567752593F58A00C80A75 /* AuthCompanyCreatedSuccessfullyRoute.swift in Sources */,
@@ -2325,6 +2324,7 @@
 				08809ED7259377A900AD41EE /* AuthorizePeopleViewController.swift in Sources */,
 				3D60C38E25975EC70092D594 /* UIKitInteroperability.swift in Sources */,
 				206E04AC25BDB20B00BD8902 /* OrderFilterCollectionViewCell.swift in Sources */,
+				1885AD3E25F561160077F06F /* AddedToCartView.swift in Sources */,
 				3DAC7BD42586FDCD00D57BB1 /* ImagePicker.swift in Sources */,
 				189C933E25DB18EF000258EA /* CategoryItem.swift in Sources */,
 				3DB1DB3125868A1000EF1E8F /* Extensions+UIView.swift in Sources */,

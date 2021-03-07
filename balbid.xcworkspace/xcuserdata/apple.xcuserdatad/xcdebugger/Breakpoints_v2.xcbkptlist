@@ -1095,7 +1095,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6E0705CE-E1BD-4AB1-BC86-10ECC726D824"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "balbid/ViewModel/CompanyAuth/MainCompanyAuthViewModel.swift"

@@ -16,6 +16,6 @@ class AuthCompanyCreatedSuccessfullyViewController: BaseViewController {
     }
 
     @IBAction func goToHome(_ sender : Any){
-        router?.navigate(to: .mainTabBarRoute)
+        router?.navigate(to: .loginOptionRoute)
     }
 }
