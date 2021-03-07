@@ -1731,37 +1731,37 @@
     </scenes>
     <designables>
         <designable name="8CP-Ah-Eq5">
-            <size key="intrinsicContentSize" width="82" height="18"/>
+            <size key="intrinsicContentSize" width="142" height="18"/>
         </designable>
         <designable name="8ZF-cJ-UTV">
             <size key="intrinsicContentSize" width="-1" height="400"/>
         </designable>
         <designable name="DwR-4j-oTj">
-            <size key="intrinsicContentSize" width="98" height="18"/>
+            <size key="intrinsicContentSize" width="158" height="18"/>
         </designable>
         <designable name="E0y-SU-qrs">
-            <size key="intrinsicContentSize" width="116" height="17"/>
+            <size key="intrinsicContentSize" width="166" height="17"/>
         </designable>
         <designable name="E7r-ac-blS">
-            <size key="intrinsicContentSize" width="77.5" height="18"/>
+            <size key="intrinsicContentSize" width="137.5" height="18"/>
         </designable>
         <designable name="FQh-OH-ImV">
-            <size key="intrinsicContentSize" width="58" height="18"/>
+            <size key="intrinsicContentSize" width="118" height="18"/>
         </designable>
         <designable name="G7N-Ix-g1x">
-            <size key="intrinsicContentSize" width="34.5" height="18"/>
+            <size key="intrinsicContentSize" width="94.5" height="18"/>
         </designable>
         <designable name="Gg2-Ez-jry">
-            <size key="intrinsicContentSize" width="34.5" height="18"/>
+            <size key="intrinsicContentSize" width="94.5" height="18"/>
         </designable>
         <designable name="HeO-3s-Sep">
             <size key="intrinsicContentSize" width="94" height="18.5"/>
         </designable>
         <designable name="Hge-du-CbA">
-            <size key="intrinsicContentSize" width="37.5" height="18"/>
+            <size key="intrinsicContentSize" width="97.5" height="18"/>
         </designable>
         <designable name="HrC-Wm-CPo">
-            <size key="intrinsicContentSize" width="148" height="18"/>
+            <size key="intrinsicContentSize" width="208" height="18"/>
         </designable>
         <designable name="IwK-5D-srs">
             <size key="intrinsicContentSize" width="118" height="18.5"/>
@@ -1770,76 +1770,76 @@
             <size key="intrinsicContentSize" width="-1" height="243"/>
         </designable>
         <designable name="MQG-30-g3D">
-            <size key="intrinsicContentSize" width="67" height="18"/>
+            <size key="intrinsicContentSize" width="127" height="18"/>
         </designable>
         <designable name="PP6-c1-hYV">
-            <size key="intrinsicContentSize" width="138.5" height="18"/>
+            <size key="intrinsicContentSize" width="198.5" height="18"/>
         </designable>
         <designable name="QkI-vF-Qrb">
-            <size key="intrinsicContentSize" width="62" height="17"/>
+            <size key="intrinsicContentSize" width="112" height="17"/>
         </designable>
         <designable name="Qxm-zH-zqT">
-            <size key="intrinsicContentSize" width="25" height="18"/>
+            <size key="intrinsicContentSize" width="85" height="18"/>
         </designable>
         <designable name="SmD-Xn-jU0">
-            <size key="intrinsicContentSize" width="44.5" height="18"/>
+            <size key="intrinsicContentSize" width="104.5" height="18"/>
         </designable>
         <designable name="Uro-SB-VBs">
-            <size key="intrinsicContentSize" width="34.5" height="18"/>
+            <size key="intrinsicContentSize" width="94.5" height="18"/>
         </designable>
         <designable name="Y1Y-1r-uXC">
-            <size key="intrinsicContentSize" width="139" height="18"/>
+            <size key="intrinsicContentSize" width="199" height="18"/>
         </designable>
         <designable name="ZGH-XU-rcB">
-            <size key="intrinsicContentSize" width="100" height="18"/>
-        </designable>
-        <designable name="cBL-1C-7QQ">
-            <size key="intrinsicContentSize" width="62" height="17"/>
-        </designable>
-        <designable name="cJU-V9-Nzw">
-            <size key="intrinsicContentSize" width="176.5" height="18"/>
-        </designable>
-        <designable name="fHY-1g-BvJ">
-            <size key="intrinsicContentSize" width="44.5" height="18"/>
-        </designable>
-        <designable name="h9h-UY-pys">
             <size key="intrinsicContentSize" width="160" height="18"/>
         </designable>
+        <designable name="cBL-1C-7QQ">
+            <size key="intrinsicContentSize" width="112" height="17"/>
+        </designable>
+        <designable name="cJU-V9-Nzw">
+            <size key="intrinsicContentSize" width="236.5" height="18"/>
+        </designable>
+        <designable name="fHY-1g-BvJ">
+            <size key="intrinsicContentSize" width="104.5" height="18"/>
+        </designable>
+        <designable name="h9h-UY-pys">
+            <size key="intrinsicContentSize" width="220" height="18"/>
+        </designable>
         <designable name="hHy-K5-nbd">
-            <size key="intrinsicContentSize" width="147.5" height="18"/>
+            <size key="intrinsicContentSize" width="207.5" height="18"/>
         </designable>
         <designable name="iHx-bP-60R">
-            <size key="intrinsicContentSize" width="44.5" height="18"/>
+            <size key="intrinsicContentSize" width="104.5" height="18"/>
         </designable>
         <designable name="jYW-DN-NWk">
             <size key="intrinsicContentSize" width="97" height="18.5"/>
         </designable>
         <designable name="mMh-hR-Hqz">
-            <size key="intrinsicContentSize" width="24" height="18"/>
+            <size key="intrinsicContentSize" width="84" height="18"/>
         </designable>
         <designable name="mQO-7A-AvY">
-            <size key="intrinsicContentSize" width="116" height="17"/>
+            <size key="intrinsicContentSize" width="166" height="17"/>
         </designable>
         <designable name="o7s-F0-yAl">
             <size key="intrinsicContentSize" width="94" height="18.5"/>
         </designable>
         <designable name="pND-TS-uXm">
-            <size key="intrinsicContentSize" width="58" height="18"/>
+            <size key="intrinsicContentSize" width="118" height="18"/>
         </designable>
         <designable name="rK3-g6-h33">
-            <size key="intrinsicContentSize" width="83" height="18"/>
+            <size key="intrinsicContentSize" width="143" height="18"/>
         </designable>
         <designable name="sbe-G2-3pn">
-            <size key="intrinsicContentSize" width="102" height="18"/>
+            <size key="intrinsicContentSize" width="162" height="18"/>
         </designable>
         <designable name="uRW-5W-lu4">
-            <size key="intrinsicContentSize" width="74.5" height="18"/>
+            <size key="intrinsicContentSize" width="134.5" height="18"/>
         </designable>
         <designable name="vB2-Lf-xge">
-            <size key="intrinsicContentSize" width="58" height="18"/>
+            <size key="intrinsicContentSize" width="118" height="18"/>
         </designable>
         <designable name="yTU-3k-FCV">
-            <size key="intrinsicContentSize" width="37.5" height="18"/>
+            <size key="intrinsicContentSize" width="97.5" height="18"/>
         </designable>
     </designables>
     <resources>

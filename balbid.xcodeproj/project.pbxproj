@@ -130,8 +130,6 @@
 		1880280825F071BA00B51F0A /* BankInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880280725F071BA00B51F0A /* BankInformationCell.swift */; };
 		1880280B25F1241F00B51F0A /* BorderedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880280A25F1241F00B51F0A /* BorderedImageView.swift */; };
 		1880280E25F12A7700B51F0A /* IdentityConfirmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880280D25F12A7700B51F0A /* IdentityConfirmViewModel.swift */; };
-		1885AD3B25F5610F0077F06F /* PriceSeekBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1885AD3A25F5610F0077F06F /* PriceSeekBarView.xib */; };
-		1885AD3E25F561160077F06F /* AddedToCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885AD3D25F561160077F06F /* AddedToCartView.swift */; };
 		188F941125DFDE26006E9783 /* ProductDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F941025DFDE26006E9783 /* ProductDelegate.swift */; };
 		188F941A25DFE98C006E9783 /* ItemAddedToCartDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F941925DFE98C006E9783 /* ItemAddedToCartDelegate.swift */; };
 		188F941E25DFEC77006E9783 /* PaginateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F941D25DFEC77006E9783 /* PaginateDelegate.swift */; };
@@ -284,6 +282,8 @@
 		3D60C38925975E7F0092D594 /* IBPCollectionViewCompositionalLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 3D60C38825975E7F0092D594 /* IBPCollectionViewCompositionalLayout */; };
 		3D60C38E25975EC70092D594 /* UIKitInteroperability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D60C38D25975EC70092D594 /* UIKitInteroperability.swift */; };
 		3D60C39225975EDF0092D594 /* DiffableDataSourceInteroperability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D60C39125975EDF0092D594 /* DiffableDataSourceInteroperability.swift */; };
+		3D83A73B25F564220002E759 /* AddedToCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D83A73A25F564220002E759 /* AddedToCartView.swift */; };
+		3D83A74825F564940002E759 /* PriceSeekBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D83A74725F564940002E759 /* PriceSeekBarView.xib */; };
 		3DAC7BD02586986C00D57BB1 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC7BCF2586986B00D57BB1 /* BottomSheetView.swift */; };
 		3DAC7BD42586FDCD00D57BB1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC7BD32586FDCD00D57BB1 /* ImagePicker.swift */; };
 		3DAC7BD92586FF1B00D57BB1 /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 3DAC7BD82586FF1B00D57BB1 /* CropViewController */; };
@@ -468,8 +468,6 @@
 		1880280725F071BA00B51F0A /* BankInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankInformationCell.swift; sourceTree = "<group>"; };
 		1880280A25F1241F00B51F0A /* BorderedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedImageView.swift; sourceTree = "<group>"; };
 		1880280D25F12A7700B51F0A /* IdentityConfirmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityConfirmViewModel.swift; sourceTree = "<group>"; };
-		1885AD3A25F5610F0077F06F /* PriceSeekBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PriceSeekBarView.xib; path = ../../../../../../../../Desktop/PriceSeekBarView.xib; sourceTree = "<group>"; };
-		1885AD3D25F561160077F06F /* AddedToCartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddedToCartView.swift; path = ../../../../../../../Desktop/AddedToCartView.swift; sourceTree = "<group>"; };
 		188F941025DFDE26006E9783 /* ProductDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDelegate.swift; sourceTree = "<group>"; };
 		188F941925DFE98C006E9783 /* ItemAddedToCartDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAddedToCartDelegate.swift; sourceTree = "<group>"; };
 		188F941D25DFEC77006E9783 /* PaginateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginateDelegate.swift; sourceTree = "<group>"; };
@@ -621,6 +619,8 @@
 		3D4EEA3525CDFF18001DD389 /* AppRealTimeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRealTimeDataSource.swift; sourceTree = "<group>"; };
 		3D60C38D25975EC70092D594 /* UIKitInteroperability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitInteroperability.swift; sourceTree = "<group>"; };
 		3D60C39125975EDF0092D594 /* DiffableDataSourceInteroperability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDataSourceInteroperability.swift; sourceTree = "<group>"; };
+		3D83A73A25F564220002E759 /* AddedToCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedToCartView.swift; sourceTree = "<group>"; };
+		3D83A74725F564940002E759 /* PriceSeekBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PriceSeekBarView.xib; sourceTree = "<group>"; };
 		3DAC7BCF2586986B00D57BB1 /* BottomSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		3DAC7BD32586FDCD00D57BB1 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3DB1DACF2586737D00EF1E8F /* balbid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = balbid.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1026,10 +1026,10 @@
 		0894853A25A1EC1F001934A9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1885AD3D25F561160077F06F /* AddedToCartView.swift */,
 				0894853B25A1EC26001934A9 /* nib */,
 				0894854825A1FC1B001934A9 /* AddToCartBottomSheet.swift */,
 				18DC81FD25D9C2B50007983C /* PriceSeekBarView.swift */,
+				3D83A73A25F564220002E759 /* AddedToCartView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1037,7 +1037,7 @@
 		0894853B25A1EC26001934A9 /* nib */ = {
 			isa = PBXGroup;
 			children = (
-				1885AD3A25F5610F0077F06F /* PriceSeekBarView.xib */,
+				3D83A74725F564940002E759 /* PriceSeekBarView.xib */,
 				0894853C25A1EC48001934A9 /* AddToCartView.xib */,
 				20A1A36A25CDD96B00C1115C /* AddedToCartView.xib */,
 				18F5EE6A25E066E600BA7FBE /* CategoryFooter.xib */,
@@ -2208,7 +2208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1885AD3B25F5610F0077F06F /* PriceSeekBarView.xib in Resources */,
+				3D83A74825F564940002E759 /* PriceSeekBarView.xib in Resources */,
 				083E7597259C9CE700EDF708 /* ProductHeaderCell.xib in Resources */,
 				3DB1DBB2258695A900EF1E8F /* ConfirmAlertView.xib in Resources */,
 				3DB1DB5B25868FC000EF1E8F /* EmptyView.xib in Resources */,
@@ -2324,7 +2324,6 @@
 				08809ED7259377A900AD41EE /* AuthorizePeopleViewController.swift in Sources */,
 				3D60C38E25975EC70092D594 /* UIKitInteroperability.swift in Sources */,
 				206E04AC25BDB20B00BD8902 /* OrderFilterCollectionViewCell.swift in Sources */,
-				1885AD3E25F561160077F06F /* AddedToCartView.swift in Sources */,
 				3DAC7BD42586FDCD00D57BB1 /* ImagePicker.swift in Sources */,
 				189C933E25DB18EF000258EA /* CategoryItem.swift in Sources */,
 				3DB1DB3125868A1000EF1E8F /* Extensions+UIView.swift in Sources */,
@@ -2438,6 +2437,7 @@
 				3DB1DB2C25868A1000EF1E8F /* Extensions+UILabel.swift in Sources */,
 				20FBE4AD25C823A200210190 /* TextViewWithHint.swift in Sources */,
 				2099ABC825C96DA300FAB410 /* OrderDetailRoute.swift in Sources */,
+				3D83A73B25F564220002E759 /* AddedToCartView.swift in Sources */,
 				202569E125BDFFB400FD61AD /* OrderTableViewCell.swift in Sources */,
 				08438E6D25A2696F00796373 /* ProductDetailRoute.swift in Sources */,
 				08F3B50B2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift in Sources */,
