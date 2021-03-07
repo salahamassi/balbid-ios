@@ -8,7 +8,7 @@
 import UIKit
 
 class CompanyHolderInformationViewController: BaseViewController {
-
+    
     let releaseDatePicker: UIDatePicker = UIDatePicker()
     let endDatePicker: UIDatePicker = UIDatePicker()
     
@@ -22,21 +22,21 @@ class CompanyHolderInformationViewController: BaseViewController {
     @IBOutlet weak var civilRegistryNumberTextField: BorderedTextField!
     @IBOutlet weak var confirmPasswordTextField: BorderedTextField!
     @IBOutlet weak var errorLabel: UILabel!
-
+    
     private var viewModel = CompanyHolderInformationViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setDatePicker()
         setupViewModel()
-        setData()
+//        setData()
         // Do any additional setup after loading the view.
     }
-
+    
     func setDatePicker() {
         releaseDatePicker.datePickerMode = .date
         endDatePicker.datePickerMode = .date
-
+        
         releaseDateTextField.inputView = releaseDatePicker
         endDateTextField.inputView = endDatePicker
         if #available(iOS 13.4, *) {
@@ -47,7 +47,17 @@ class CompanyHolderInformationViewController: BaseViewController {
         }
         releaseDatePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
         endDatePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
-
+        setDateWhenCurrentDateSelected(editText: releaseDateTextField)
+        setDateWhenCurrentDateSelected(editText: endDateTextField)
+        
+    }
+    
+    private func setDateWhenCurrentDateSelected(editText: BorderedTextField) {
+        editText.didEnd = {  textField in
+            if editText.text?.isEmpty ?? true {
+                editText.text = Date().toString()
+            }
+        }
     }
     
     private func setData() {
@@ -62,23 +72,20 @@ class CompanyHolderInformationViewController: BaseViewController {
         civilRegistryNumberTextField.text = "121212"
         #endif
     }
-
+    
     @objc
     func dateChanged(_ sender: UIDatePicker) {
-        let components = Calendar.current.dateComponents([.year, .month, .day], from: sender.date)
-           if let day = components.day, let month = components.month, let year = components.year {
-            if sender == endDatePicker {
-                endDateTextField.text = "\(day)/\(month)/\(year)"
-            } else {
-                releaseDateTextField.text = "\(day)/\(month)/\(year)"
-            }
-           }
+        if sender == endDatePicker {
+            endDateTextField.text = sender.date.toString()
+        } else {
+            releaseDateTextField.text = sender.date.toString()
+        }
     }
     
     private func setupViewModel() {
         viewModel.delegate = self
     }
-
+    
     
     func validate() -> Bool {
         errorLabel.isHidden = true

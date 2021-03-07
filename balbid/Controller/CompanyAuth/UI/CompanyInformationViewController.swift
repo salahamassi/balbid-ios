@@ -59,7 +59,24 @@ class CompanyInformationViewController: BaseViewController {
 
         commercialRegistrationEndDatePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
         municipalLicenseEndDatePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
+        
+        commercialRegistrationEndDateTextField.didEnd = { [weak self] textField in
+            if self?.commercialRegistrationEndDateTextField.text?.isEmpty ?? true {
+                self?.commercialRegistrationEndDateTextField.text = Date().toString()
+            }
+        }
+        
 
+        setDateWhenCurrentDateSelected(editText: commercialRegistrationEndDateTextField)
+        setDateWhenCurrentDateSelected(editText: municipalLicenseEndDateTextField)
+    }
+    
+    private func setDateWhenCurrentDateSelected(editText: BorderedTextField) {
+        editText.didEnd = {  textField in
+            if editText.text?.isEmpty ?? true {
+                editText.text = Date().toString()
+            }
+        }
     }
     
     private func setData() {
@@ -70,7 +87,7 @@ class CompanyInformationViewController: BaseViewController {
             postalCodeTextField.text = "1234"
             commercialRegistrationNumberTextField.text =  "1234"
             commercialRegistrationSourceTextField.text = "yyy"
-            commercialRegistrationEndDateTextField.text = "1996-11-1"
+//            commercialRegistrationEndDateTextField.text = "1996-11-1"
             municipalLicenseEndDateTextField.text = "1996-11-1"
             municipalLicenseNumberTextField.text = "1212"
             municipalLicenseSourceTextField.text = "1212"
@@ -85,14 +102,11 @@ class CompanyInformationViewController: BaseViewController {
     
     @objc
     func dateChanged(_ sender: UIDatePicker) {
-        let components = Calendar.current.dateComponents([.year, .month, .day], from: sender.date)
-           if let day = components.day, let month = components.month, let year = components.year {
             if sender == commercialRegistrationEndDatePicker {
-                commercialRegistrationEndDateTextField.text = "\(year)-\(month)-\(day)"
+                commercialRegistrationEndDateTextField.text = sender.date.toString()
             } else {
-                municipalLicenseEndDateTextField.text = "\(year)-\(month)-\(day)"
+                municipalLicenseEndDateTextField.text = sender.date.toString()
             }
-        }
     }
     
     func validate() -> Bool {

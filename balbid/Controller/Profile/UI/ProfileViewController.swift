@@ -19,8 +19,6 @@ class ProfileViewController: BaseViewController {
         super.viewDidLoad()
         setupviewModel()
         setupView()
-
-        // Do any additional setup after loading the view.
     }
     
     private func setupviewModel(){

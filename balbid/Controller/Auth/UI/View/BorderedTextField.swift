@@ -12,6 +12,7 @@ class BorderedTextField: UITextField, UITextFieldDelegate {
     @IBOutlet weak var containerView: UIView!
 
     @IBInspectable var isInsideContainer: Bool = false
+    var  didEnd: ((_ textField: BorderedTextField) -> Void)?
     
     var isError: Bool = false {
         didSet{
@@ -51,6 +52,7 @@ class BorderedTextField: UITextField, UITextFieldDelegate {
 
     func textFieldDidEndEditing(_ textField: UITextField) {
         isActive = false
+        didEnd?(self)
     }
 
 }

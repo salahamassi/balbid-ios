@@ -31,7 +31,8 @@ class BankInformationViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        setData()
+//        setData()
+        
     }
     private func setupTableView() {
         tableView.delegate = bankInfrormationTableViewDelegate

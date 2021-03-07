@@ -32,7 +32,7 @@ class AuthorizePeopleViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        setData()
+//        setData()
     }
     @IBAction func addOtherPerson(_ sender: Any) {
         let row = authorizePeopleTableViewDataSource.rows - 1
