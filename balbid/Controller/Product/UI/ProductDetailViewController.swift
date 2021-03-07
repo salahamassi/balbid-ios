@@ -64,22 +64,25 @@ class ProductDetailViewController: BaseViewController {
         setupCollectionHeaderView()
         collectionView.delegate = productDetailCollectionViewDelegate
         collectionView.dataSource = productDetailCollectionViewDataSource
-        
-        
         collectionView.contentInsetAdjustmentBehavior = .always
         productDetailCollectionViewDataSource.productDetailCellDelegate = self
         productDetailCollectionViewDataSource.productDetailHeaderCollectionReusableViewDelegate = self
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.minimumLineSpacing = 8
         }
+        productDetailCollectionViewDataSource.product = product
     }
     
     private  func setupCollectionHeaderView() {
         collectionView.register(ProductDetailHeaderView.self,
                                  forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                  withReuseIdentifier: .productDetailHeaderCellId)
-         productDetailCollectionViewDataSource.assignViewHeader = { (headerView) in
-             self.headerView = headerView
+         productDetailCollectionViewDataSource.assignViewHeader = {[weak self] (headerView) in
+            guard let self = self else {
+                return
+            }
+            self.headerView = headerView
+            self.headerView.images = self.product.images.count == 0 ? [self.product.imageFullPath ?? ""] : self.product.images
          }
          productDetailCollectionViewDelegate.headerView = headerView
     }
@@ -177,7 +180,7 @@ extension ProductDetailViewController: ProductViewModelDelegate {
     
     func didLoadProductSuccess(product: ProductItem) {
         self.product =  product
-        headerView.images = product.images
+        headerView.images = product.images.count == 0 ? [product.imageFullPath ?? ""] : product.images
         productDetailCollectionViewDataSource.product = product
         collectionView.reloadData()
         setupColorSelectionView()

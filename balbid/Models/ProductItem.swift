@@ -11,7 +11,7 @@ import SwiftyJSON
 struct ProductItem: SwiftyModelData {
     
     let id: Int
-    let imageFullPath: String
+    var imageFullPath: String?
     let image: String
     let enterpriseId: String
     let brandId: String
@@ -44,6 +44,10 @@ struct ProductItem: SwiftyModelData {
         isFavorite = json["is_favorite"].stringValue
         images = json["images"].arrayValue.map { $0["imagefullpath"].stringValue }
         options = json["option_groups"].arrayValue.map { OptionGroupItem(json: $0) }
+        if(imageFullPath  == nil) {
+            imageFullPath = image
+        }
+        
     }
     
     

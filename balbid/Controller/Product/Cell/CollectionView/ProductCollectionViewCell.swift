@@ -66,7 +66,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         favoriteButton.setImage(product?.isFavorite == "0" ? #imageLiteral(resourceName: "unselected_favorite") : #imageLiteral(resourceName: "selected_favorite") , for: .normal)
         productNameLabel.text = product?.name
         productPriceLabel.text = (product?.price ?? "0") + " SR"
-        guard let imageUrl = URL(string: isComeFromHome ? (product?.image.encodedText ?? "") : (product?.imageFullPath.encodedText ?? "")) else {
+        guard let imageUrl = URL(string: isComeFromHome ? (product?.image.encodedText ?? "") : (product?.imageFullPath?.encodedText ?? "")) else {
             return
         }
         productImageView.sd_setImage(with: imageUrl)

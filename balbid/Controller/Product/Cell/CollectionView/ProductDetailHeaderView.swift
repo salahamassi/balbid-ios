@@ -92,7 +92,7 @@ class ProductDetailHeaderView: UICollectionReusableView {
                 ),
                 spacing: 41
             ), anchors:
-                .top(topAnchor, constant: 35),
+                .top(topAnchor, constant: 40),
                 .leading(leadingAnchor, constant: 24),
                 .trailing(trailingAnchor, constant: 24))
     }
