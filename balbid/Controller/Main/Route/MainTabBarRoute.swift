@@ -10,16 +10,12 @@ import AppRouter
 
 class MainTabBarRoute: Route {
 
-    var modalPresentationStyle: UIModalPresentationStyle {
-        return  .fullScreen
+    var transition: CATransition? {
+        .fadeTransition
     }
-
-    var animatedTransitioningDelegate: UIViewControllerTransitioningDelegate? {
-        return nil
-    }
-
+    
     var navigateType: NavigateType {
-        return .windowRoot
+        .windowRoot
     }
 
     func create(_ router: AppRouter, _ params: [String: Any]?) -> UIViewController {

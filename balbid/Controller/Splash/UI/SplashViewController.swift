@@ -17,14 +17,9 @@ class SplashViewController: BaseViewController {
         if #available(iOS 13.0, *) {
             overrideUserInterfaceStyle = .light
         }
-            
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
 //            UserDefaultsManager.token = nil
-            print(UserDefaultsManager.token)
+            print(UserDefaultsManager.token ?? "1")
             if UserDefaultsManager.token != nil {
                 self.router?.navigate(to: .mainTabBarRoute)
             }else{
@@ -33,6 +28,4 @@ class SplashViewController: BaseViewController {
                 
         }
     }
-    
-    
 }
