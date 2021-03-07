@@ -11,6 +11,7 @@ import SwiftyJSON
 struct ProductItem: SwiftyModelData {
     
     let id: Int
+    let imageFullPath: String
     let image: String
     let enterpriseId: String
     let brandId: String
@@ -28,7 +29,8 @@ struct ProductItem: SwiftyModelData {
 
     init(json: JSON) {
         id = json["id"].intValue
-        image = json["imagefullpath"].stringValue
+        imageFullPath = json["imagefullpath"].stringValue
+        image = json["image"].stringValue
         enterpriseId = json["enterprise_id"].stringValue
         brandId = json["brand_id"].stringValue
         sortOrder = json["sort_order"].stringValue

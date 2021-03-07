@@ -30,7 +30,7 @@ class FavoriteCell: UITableViewCell {
         }
         productNameLabel.text = favorite.name
         productPriceLabel.text = favorite.price + " RS"
-        guard let imageUrl = URL(string: favorite.image.encodedText ?? "") else {
+        guard let imageUrl = URL(string: favorite.imageFullPath.encodedText ?? "") else {
             return
         }
         productImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray

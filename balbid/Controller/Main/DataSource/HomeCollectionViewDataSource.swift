@@ -58,6 +58,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         //        }
         else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .productCellId, for: indexPath) as! ProductCollectionViewCell
+            cell.isComeFromHome = true
             cell.product = home?.homeProductItems[indexPath.section - sectionsToProduct].prodcuts[indexPath.row]
             cell.delegate = productCellDelegate
             return cell
