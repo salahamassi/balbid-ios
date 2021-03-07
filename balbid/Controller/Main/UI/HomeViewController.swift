@@ -24,7 +24,8 @@ class HomeViewController: BaseViewController {
     private let addedToCarView = balbid.AddedToCartView.initFromNib()
     private var itemAddedToCartDelegate  = ItemAddedToCartDelegate()
     private var sectionsToProduct = 3
-
+    var timer: Timer? = nil
+    var currentSlider = -1
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
@@ -51,6 +52,23 @@ class HomeViewController: BaseViewController {
         collectionView.register(UINib(nibName: .productCell, bundle: nil), forCellWithReuseIdentifier: .productCellId)
         
         collectionView.register(UINib(nibName: .productFooter, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: .productFooterCellId)
+    }
+    
+    
+    private func setupSliderTimer(){
+        timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true, block: {  [weak self] (timer)
+            in
+             guard let self = self else {return}
+            if self.currentSlider < self.homeViewModel.home.imageSlider.count {
+                self.currentSlider += 1
+                self.collectionView.scrollToItem(at: IndexPath(row:self.currentSlider,section:0), at: .centeredHorizontally, animated: true)
+            }else{
+                self.currentSlider = 0
+                self.collectionView.scrollToItem(at: IndexPath(row:self.currentSlider,section:0), at: .right, animated: false)
+            }
+
+        })
+        timer?.fire()
     }
     
     private func setupObserver() {
@@ -151,6 +169,7 @@ class HomeViewController: BaseViewController {
         super.viewWillDisappear(animated)
         addedToCarView.removeFromSuperview()
         removeDarkView()
+        timer?.invalidate()
     }
     
 }
@@ -187,6 +206,9 @@ extension HomeViewController: HomeViewModelDelegate {
 
         }
         collectionView.reloadData()
+        if(!homeViewModel.home.imageSlider.isEmpty)  {
+            setupSliderTimer()
+        }
     }
     
     func loadHomeSuccess(home: Home) {
@@ -197,6 +219,8 @@ extension HomeViewController: HomeViewModelDelegate {
             (Int($0.sortOrder) ?? 0) + 2
         }
         homeViewModel.getCategries()
+    
+
     }
     
     func apiError(error: String) {
