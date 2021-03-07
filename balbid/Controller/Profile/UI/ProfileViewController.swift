@@ -69,7 +69,7 @@ class ProfileViewController: BaseViewController {
             logoutArrowImageView.isHidden = true
             profileViewModel.logout()
         }else{
-            router?.navigate(to: .loginRoute)
+            router?.navigate(to: AuthRoutes.loginOptionRoute(transitioningDelegate: nil))
         }
     }
 
@@ -86,7 +86,7 @@ extension ProfileViewController: ProfileViewModelDelegate {
     func logoutSuccess() {
         logoutActivityIndicator.stopAnimating()
         logoutArrowImageView.isHidden = false
-        router?.navigate(to: .accountOptionRoute)
+        router?.navigate(to: AuthRoutes.loginOptionRoute(transitioningDelegate: nil))
         setupView()
     }
     

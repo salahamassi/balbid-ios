@@ -8,7 +8,7 @@
 import AppRouter
 
 enum AuthRoutes {
-    case loginOptionRoute
+    case loginOptionRoute(transitioningDelegate: LoginTransitioningDelegate?)
     case accountOptionRoute
     case registerRoute
     case loginRoute
@@ -23,8 +23,8 @@ extension AppRouter {
         let mRoute: Route
         let mParams: [String: Any]?
         switch route {
-            case .loginOptionRoute:
-                mRoute = LoginOptionRoute()
+            case .loginOptionRoute(let delegate):
+                mRoute = LoginOptionRoute(transitioningDelegate: delegate)
                 mParams = nil
             case .accountOptionRoute:
                 mRoute = AccountOptionRoute()

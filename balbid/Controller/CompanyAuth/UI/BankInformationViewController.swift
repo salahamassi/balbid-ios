@@ -28,6 +28,11 @@ class BankInformationViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
 
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setData()
+    }
     private func setupTableView() {
         tableView.delegate = bankInfrormationTableViewDelegate
         tableView.dataSource = bankInformationTableViewDataSource
@@ -54,6 +59,19 @@ class BankInformationViewController: BaseViewController {
         }
     }
 
+    
+    private func setData() {
+        #if DEBUG
+        guard let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? BankInformationCell else {
+            return
+        }
+        cell.bankNameTextField.text = "Salah Amassi"
+        cell.holderNameTextField.text = "12345"
+        cell.ibanTextField.text = "12345"
+        cell.cityTextField.text = "21212"
+        #endif
+    }
+    
     func validate() -> Bool{
         var isAllVaidate = true
         for i in 0..<bankInformationTableViewDataSource.rows {

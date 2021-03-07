@@ -10,7 +10,10 @@ import AppRouter
 
 class LoginOptionRoute: Route {
     
-    let transitioningDelegate = LoginTransitioningDelegate()
+    let transitioningDelegate: LoginTransitioningDelegate?
+    init(transitioningDelegate: LoginTransitioningDelegate?) {
+        self.transitioningDelegate = transitioningDelegate
+    }
 
     var modalPresentationStyle: UIModalPresentationStyle {
         .fullScreen

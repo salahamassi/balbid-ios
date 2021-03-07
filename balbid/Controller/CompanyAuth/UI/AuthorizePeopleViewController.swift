@@ -29,6 +29,11 @@ class AuthorizePeopleViewController: BaseViewController {
         viewModel.delegate = self
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setData()
+    }
     @IBAction func addOtherPerson(_ sender: Any) {
         let row = authorizePeopleTableViewDataSource.rows - 1
         guard let cell = tableView.cellForRow(at: IndexPath(row: row, section: 0)) as? AuthPeopleCell else {
@@ -45,6 +50,21 @@ class AuthorizePeopleViewController: BaseViewController {
         }
     }
 
+    
+    private func setData() {
+        #if DEBUG
+        guard let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? AuthPeopleCell else {
+            return
+        }
+        cell.nameTextField.text = "Salah Amassi"
+        cell.confirmPasswordTextField.text = "12345"
+        cell.passwordTextField.text = "12345"
+        cell.jobTextField.text = "21212"
+        cell.emailTextField.text = "weasm@gmail.com"
+        cell.phoneNumberTextField.text = "12121"
+        #endif
+    }
+    
     
     func validate() -> Bool{
         var isAllVaidate = true

@@ -64,6 +64,9 @@
                                                 <state key="normal" title="Cancel">
                                                     <color key="titleColor" red="0.69411764710000001" green="0.69411764710000001" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="cancel:" destination="SFg-03-XDB" eventType="touchUpInside" id="9tg-4Y-MUn"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>

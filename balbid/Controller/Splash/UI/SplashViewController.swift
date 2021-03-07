@@ -23,7 +23,7 @@ class SplashViewController: BaseViewController {
             if UserDefaultsManager.token != nil {
                 self.router?.navigate(to: .mainTabBarRoute)
             }else{
-                self.router?.navigate(to: .loginOptionRoute)
+                self.router?.navigate(to: AuthRoutes.loginOptionRoute(transitioningDelegate: LoginTransitioningDelegate()))
             }
                 
         }

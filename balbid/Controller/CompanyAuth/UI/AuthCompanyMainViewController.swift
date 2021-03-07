@@ -156,11 +156,9 @@ class AuthCompanyMainViewController: BaseViewController {
             shouldRevalid = false
         }
         if(step == 1) {
-//            validate = companyHolderInforamtionViewController.validate()
-            validate =  true
+            validate = companyHolderInforamtionViewController.validate()
         }else  if(step == 2) {
-//            validate = companyInforamtionViewController.validate()
-            validate =  true
+            validate = companyInforamtionViewController.validate()
         }else if(step == 3) {
             validate = authorizePeopleViewController.validate()
         }else if(step == 4){
@@ -174,6 +172,12 @@ class AuthCompanyMainViewController: BaseViewController {
         }
         return validate
     }
+    
+    @IBAction func cancel(_ sender: Any) {
+        MainCompanyAuthViewModel.sharedManger.params = [:]
+        router?.popToRootViewController()
+    }
+    
     
 }
 
