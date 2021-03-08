@@ -130,6 +130,9 @@
 		1880280825F071BA00B51F0A /* BankInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880280725F071BA00B51F0A /* BankInformationCell.swift */; };
 		1880280B25F1241F00B51F0A /* BorderedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880280A25F1241F00B51F0A /* BorderedImageView.swift */; };
 		1880280E25F12A7700B51F0A /* IdentityConfirmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880280D25F12A7700B51F0A /* IdentityConfirmViewModel.swift */; };
+		1885AD4225F597F30077F06F /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885AD4125F597F30077F06F /* Cart.swift */; };
+		1885AD4525F598B90077F06F /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885AD4425F598B90077F06F /* CartViewModel.swift */; };
+		1885AD4825F6A5110077F06F /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885AD4725F6A5110077F06F /* CartItem.swift */; };
 		188F941125DFDE26006E9783 /* ProductDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F941025DFDE26006E9783 /* ProductDelegate.swift */; };
 		188F941A25DFE98C006E9783 /* ItemAddedToCartDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F941925DFE98C006E9783 /* ItemAddedToCartDelegate.swift */; };
 		188F941E25DFEC77006E9783 /* PaginateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F941D25DFEC77006E9783 /* PaginateDelegate.swift */; };
@@ -468,6 +471,9 @@
 		1880280725F071BA00B51F0A /* BankInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankInformationCell.swift; sourceTree = "<group>"; };
 		1880280A25F1241F00B51F0A /* BorderedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedImageView.swift; sourceTree = "<group>"; };
 		1880280D25F12A7700B51F0A /* IdentityConfirmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityConfirmViewModel.swift; sourceTree = "<group>"; };
+		1885AD4125F597F30077F06F /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		1885AD4425F598B90077F06F /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		1885AD4725F6A5110077F06F /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
 		188F941025DFDE26006E9783 /* ProductDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDelegate.swift; sourceTree = "<group>"; };
 		188F941925DFE98C006E9783 /* ItemAddedToCartDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAddedToCartDelegate.swift; sourceTree = "<group>"; };
 		188F941D25DFEC77006E9783 /* PaginateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginateDelegate.swift; sourceTree = "<group>"; };
@@ -1595,6 +1601,7 @@
 			children = (
 				20B2EE0F25D157A7004B1DA2 /* HomeViewModel.swift */,
 				18AD3F6F25D8847A007CBC15 /* FavoriteViewModel.swift */,
+				1885AD4425F598B90077F06F /* CartViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1767,6 +1774,8 @@
 				18F3708425EBE1380005D19E /* CommentEvaluation.swift */,
 				18D6DF4F25ED2DC4009FAC5D /* Address.swift */,
 				18D6DF5225ED3018009FAC5D /* AddressItem.swift */,
+				1885AD4125F597F30077F06F /* Cart.swift */,
+				1885AD4725F6A5110077F06F /* CartItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2342,8 +2351,10 @@
 				081ADF822591023100B5AE47 /* AuthCompanyMainRoute.swift in Sources */,
 				1851E18325F02A990049C7B5 /* CompanyInformationViewModel.swift in Sources */,
 				20FBE4B325C8375600210190 /* AddNewShippingRoute.swift in Sources */,
+				1885AD4825F6A5110077F06F /* CartItem.swift in Sources */,
 				08809EE525937E4B00AD41EE /* AuthorizePeopleProtocol.swift in Sources */,
 				20B2EE0C25D15716004B1DA2 /* Home.swift in Sources */,
+				1885AD4525F598B90077F06F /* CartViewModel.swift in Sources */,
 				081ADF85259102F600B5AE47 /* AuthCompanyRoutes.swift in Sources */,
 				18E124B125DC5BAE00D561C5 /* Product.swift in Sources */,
 				206E048725BD92D700BD8902 /* PointRoute.swift in Sources */,
@@ -2404,6 +2415,7 @@
 				3DB1DB3925868A1000EF1E8F /* Extension+UIImageView.swift in Sources */,
 				3DB1DB3725868A1000EF1E8F /* Extensions+UICollectionView.swift in Sources */,
 				083E75B1259DEB9700EDF708 /* CategoriesContentCollectionViewDataSource.swift in Sources */,
+				1885AD4225F597F30077F06F /* Cart.swift in Sources */,
 				3DB1DBA82586941700EF1E8F /* AppNavigationController.swift in Sources */,
 				3DC76B6225975C2100EE2428 /* AlbumModel.swift in Sources */,
 				3DB1DB5625868F3E00EF1E8F /* BaseDialog.swift in Sources */,

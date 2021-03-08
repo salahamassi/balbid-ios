@@ -11,14 +11,15 @@ import SwipeCellKit
 class CartCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
     var delegate: SwipeActionDelegate?
-    var count = 10
+    var cart: Cart?
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        count
+        cart?.cartItem.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .cartCellId, for: indexPath) as! SwipeCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .cartCellId, for: indexPath) as! CartCollectionViewCell
+        cell.cart = cart?.cartItem[indexPath.row]
         cell.delegate  = self
         return cell
     }
