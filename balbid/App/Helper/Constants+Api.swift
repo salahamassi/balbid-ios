@@ -8,7 +8,8 @@
 import Foundation
 
 extension String {
-
+    
+    static let mainPath = "https://tradex.tahwolapps.com/"
     static let domain = "https://tradex.tahwolapps.com/api/"
     static let customerRegisterPath = "customers/store"
     static let loginPath = "customers/login"

@@ -48,7 +48,7 @@ class CartCollectionViewCell: SwipeCollectionViewCell {
         productPriceLabel.text = cart.itemPrice + " RS"
         productNameLabel.text = cart.products.name
         productImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
-        guard let url = URL(string: cart.products.imageFullPath ?? "") else {
+        guard let url = URL(string: (.mainPath + (cart.products.image)).encodedText ?? "") else {
             return
         }
         productImageView.sd_setImage(with: url)
