@@ -59,12 +59,19 @@ extension CartViewController: SwipeActionDelegate {
     }
     
     func deleteItem(at indexPath: IndexPath) {
-//        cartCollectionViewDataSource.count -= 1
-//        collectionView.deleteItems(at: [indexPath])
+        guard let id = cartCollectionViewDataSource.cart?.cartItem[indexPath.row].id,
+              let cart = cartCollectionViewDataSource.cart,
+              let total = Double(cart.total),
+              let deletedPrice = Double(cart.cartItem[indexPath.row].totalPrice) else {
+            return
+        }
+        viewModel.deleteFromCart(id: id, index: indexPath.row)
+//        numberOfProductLabel.text = "\(cart.cartItem.count - 1) Product"
+//        let newTotalPrice = total - deletedPrice
+//        totalPriceLabel.text = "\(newTotalPrice)" + " SAR"
+//        cartCollectionViewDataSource.cart?.total = "\(newTotalPrice)"
     }
-    
-   
-    
+
 }
 
 
@@ -73,7 +80,7 @@ extension CartViewController: CartViewModelDelegate {
         activityIndicatore.stopAnimating()
         cartCollectionViewDataSource.cart = cart
         numberOfProductLabel.text = "\(cart.cartItem.count) Product"
-        totalPriceLabel.text = cart.total + " RS"
+        totalPriceLabel.text = cart.total + " SAR"
         collectionView.reloadData()
     }
     
@@ -81,5 +88,11 @@ extension CartViewController: CartViewModelDelegate {
         displayAlert(message: error)
     }
     
+    
+    func didDeleteSuccessfully(index: Int) {
+        cartCollectionViewDataSource.cart?.cartItem.remove(at: index)
+        collectionView.deleteItems(at: [IndexPath(row: index, section: 0)])
+        viewModel.getCartData()
+    }
     
 }

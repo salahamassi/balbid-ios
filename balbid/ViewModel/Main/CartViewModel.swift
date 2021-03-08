@@ -29,10 +29,24 @@ class CartViewModel: NSObject {
         }
     }
     
+    
+    func deleteFromCart(id: Int,index: Int) {
+        appDataSource.perform(service: .init(path: .deleteFromCartPath + "\(id)", domain: .domain, method: .delete, params: [:], mustUseAuth: true), Cart.self) { (result) in
+            switch result {
+            case .data(_):
+                self.delegate?.didDeleteSuccessfully(index: index)
+            case .failure(let error):
+                self.delegate?.apiError(error: error)
+            default:
+                break
+            }
+        }
+    }
 }
 
 
 protocol CartViewModelDelegate: class {
     func loadCartSuccess(cart: Cart)
+    func didDeleteSuccessfully(index: Int)
     func apiError(error: String)
 }

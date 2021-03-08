@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SwipeActionDelegate {
+protocol SwipeActionDelegate: class {
     func deleteItem(at indexPath : IndexPath)
     func addItemToFavorite(at indexPath : IndexPath)
 

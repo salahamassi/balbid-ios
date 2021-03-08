@@ -50,7 +50,8 @@ class FavoriteViewController: BaseViewController {
     }
     
     private func setupAddToCartView(){
-        addToCartBottomSheet.addProductsToCart = { [weak self] in
+        addToCartBottomSheet.addProductsToCart = { [weak self] total in
+            self?.addedToCarView.total = total
             self?.addToCartBottomSheet.hide()
             self?.addedToCarView.showOrHideView(isOpen: true)
             self?.addDarkView(below: self?.addedToCarView)

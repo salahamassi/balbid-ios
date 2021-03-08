@@ -13,11 +13,11 @@ class AddToCartBottomSheet: BottomSheetView {
     @IBOutlet weak var addToCartButton: UIButton!
     @IBOutlet weak var quantityLabel: UILabel!
 
-    var addProductsToCart: (() -> Void)?
+    var addProductsToCart: ((_  total: String) -> Void)?
     var failedToAdd: ((_ message: String) -> Void)?
     var product: ProductItem? {
         didSet {
-            priceLabel.text = product!.price + " RS"
+            priceLabel.text = product!.price + " SAR"
         }
     }
     private var quantity: Int = 1
@@ -44,7 +44,7 @@ class AddToCartBottomSheet: BottomSheetView {
             return
         }
         addToCartButton.loadingIndicator(true)
-        viewModel.addToCart(productId: product.id, qunatity: quantity)
+        viewModel.addToCart(productId: product.id, qunatity: quantity, total: priceLabel.text!)
 //        addProductsToCart?()
     }
     
@@ -60,17 +60,18 @@ class AddToCartBottomSheet: BottomSheetView {
         guard let productPrice = Double(product?.price ?? "0.0") else {
             return
         }
-        priceLabel.text = "\(productPrice * Double(quantity)) RS"
+        priceLabel.text = "\(productPrice * Double(quantity)) SAR"
     }
 
 }
 
 
 extension AddToCartBottomSheet: AddToCartViewModelDelegate {
-    func didAddSuccess() {
+    func didAddSuccess(total: String) {
+        quantity = 1
         quantityLabel.text = "1"
         addToCartButton.loadingIndicator(false)
-        addProductsToCart?()
+        addProductsToCart?(total)
     }
     
     func apiError(error: String) {

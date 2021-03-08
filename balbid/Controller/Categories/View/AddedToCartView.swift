@@ -9,6 +9,14 @@ import UIKit
 class AddedToCartView: UIView {
     
     var topConstraint : NSLayoutConstraint!
+    @IBOutlet weak var totalLabel: UILabel!
+    
+    var total: String = "0.0 SAR"{
+        didSet {
+            totalLabel.text = total
+        }
+    }
+    
     var isOpen : Bool = false {
         didSet {
             showOrHideView(isOpen: isOpen)

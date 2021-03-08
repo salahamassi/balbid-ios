@@ -10,8 +10,8 @@ import SwiftyJSON
 
 struct Cart: SwiftyModelData {
     let id: Int
-    let total: String
-    let cartItem: [CartItem]
+    var total: String
+    var cartItem: [CartItem]
 
     init(json: JSON) {
         id = json["id"].intValue

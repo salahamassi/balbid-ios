@@ -10,7 +10,7 @@ import SwipeCellKit
 
 class CartCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
-    var delegate: SwipeActionDelegate?
+    weak var delegate: SwipeActionDelegate?
     var cart: Cart?
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -41,8 +41,9 @@ extension CartCollectionViewDataSource: SwipeCollectionViewCellDelegate{
         }else{
             let deleteAction = SwipeAction(style: .destructive, title: "") { action, indexPath in
                 // handle action by updating model with deletion
+                
                 self.delegate?.deleteItem(at: indexPath)
-
+                action.fulfill(with: .delete)
             }
             deleteAction.backgroundColor = UIColor.appColor(.redColor2)
 

@@ -17,11 +17,11 @@ class AddToCartViewModel: NSObject {
         self.dataSource = dataSource
     }
     
-    func addToCart(productId: Int, qunatity: Int){
+    func addToCart(productId: Int, qunatity: Int, total: String){
         dataSource.perform(service: .init(path: .addToCartPath , domain: .domain, method: .post, params: ["product_id" : productId , "quantity" : qunatity], mustUseAuth: true), ProductItem.self) { (result) in
             switch result {
             case .data(_):
-                self.delegate?.didAddSuccess()
+                self.delegate?.didAddSuccess(total: total)
             case .failure(let error):
                 self.delegate?.apiError(error: error)
             default:
@@ -34,6 +34,6 @@ class AddToCartViewModel: NSObject {
 
 
 protocol AddToCartViewModelDelegate: class {
-    func didAddSuccess()
+    func didAddSuccess(total: String)
     func apiError(error: String)
 }
