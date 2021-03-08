@@ -112,6 +112,10 @@ class CategoryProductsViewController: BaseViewController {
             self?.addedToCarView.showOrHideView(isOpen: true)
             self?.addDarkView(below: self?.addedToCarView)
         }
+        
+        addToCartBottomSheet.failedToAdd = {  [weak self] message in
+            self?.displayAlert(message: message)
+        }
     }
     
     private func setupAddedToCartView(){
@@ -134,9 +138,11 @@ class CategoryProductsViewController: BaseViewController {
     }
     
     func showAddToCartView(cell: ProductCollectionViewCell){
-        guard let indexPath = self.collectionView.indexPath(for: cell) else {
+        guard let indexPath = self.collectionView.indexPath(for: cell),
+              let product = categoryProductsCollectionDataSource.product?.productItems[indexPath.row]  else {
             return
         }
+        addToCartBottomSheet.product = product
         self.addToCartBottomSheet.show()
     }
     

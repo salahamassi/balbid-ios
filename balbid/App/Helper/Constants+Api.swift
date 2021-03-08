@@ -25,6 +25,9 @@ extension String {
     static let addressPath = "customers/addresses"
     static let corporateStorePath = "corporates/store"
     static let cartPath = "ShoppingCart"
+    static let addToCartPath = "ShoppingCart/product"
+
+    
 
     //api Method
     static let post = "post"

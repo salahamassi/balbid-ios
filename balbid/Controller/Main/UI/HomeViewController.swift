@@ -132,6 +132,7 @@ class HomeViewController: BaseViewController {
         guard let indexPath = self.collectionView.indexPath(for: cell) else {
             return
         }
+        addToCartBottomSheet.product = homeViewModel.home.homeProductItems[indexPath.section - 3].prodcuts[indexPath.row]
         self.addToCartBottomSheet.show()
     }
     
@@ -141,6 +142,11 @@ class HomeViewController: BaseViewController {
             self?.addedToCarView.showOrHideView(isOpen: true)
             self?.addDarkView(below: self?.addedToCarView)
         }
+        
+        addToCartBottomSheet.failedToAdd = { [weak self] message in
+            self?.displayAlert(message: message)
+        }
+        
     }
     
     private func setupAddedToCartView(){

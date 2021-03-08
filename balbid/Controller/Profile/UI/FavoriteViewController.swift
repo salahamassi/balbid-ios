@@ -55,6 +55,9 @@ class FavoriteViewController: BaseViewController {
             self?.addedToCarView.showOrHideView(isOpen: true)
             self?.addDarkView(below: self?.addedToCarView)
         }
+        addToCartBottomSheet.failedToAdd = { [weak self] message in
+            self?.displayAlert(message: message)
+        }
     }
     
     private func setupAddedToCartView(){
@@ -134,13 +137,14 @@ extension FavoriteViewController: FavoriteViewModelDelegate {
 
 extension FavoriteViewController: FavoriteCellDelegate {
     func favoriteCell(_ favoriteCell: FavoriteCell, perform action: FavoriteCell.ActionType, with favoriteItem: ProductItem?) {
+        guard let indexPath = self.tableView.indexPath(for: favoriteCell), let favorite = favorite?.productItems[indexPath.row] else {
+            return
+        }
         switch action {
         case .addToCart:
+              addToCartBottomSheet.product = favoriteItem
               addToCartBottomSheet.show()
         case .delete:
-            guard let indexPath = self.tableView.indexPath(for: favoriteCell), let favorite = favorite?.productItems[indexPath.row] else {
-                return
-            }
             deleteFavorite?(favorite.id, {
                 self.favoriteTableViewDataSource.favorite?.productItems.remove(at: indexPath.row)
                 self.tableView.deleteRows(at: [indexPath], with: .none)

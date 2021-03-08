@@ -143,6 +143,7 @@
 		189C933B25DB188F000258EA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C933A25DB188F000258EA /* Category.swift */; };
 		189C933E25DB18EF000258EA /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C933D25DB18EF000258EA /* CategoryItem.swift */; };
 		18AD3F7025D8847A007CBC15 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AD3F6F25D8847A007CBC15 /* FavoriteViewModel.swift */; };
+		18CAB09725F6B6E1001E4C6C /* AddToCartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CAB09625F6B6E1001E4C6C /* AddToCartViewModel.swift */; };
 		18D6DF4C25ED2D8F009FAC5D /* ShippingAddressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6DF4B25ED2D8F009FAC5D /* ShippingAddressViewModel.swift */; };
 		18D6DF5025ED2DC4009FAC5D /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6DF4F25ED2DC4009FAC5D /* Address.swift */; };
 		18D6DF5325ED3018009FAC5D /* AddressItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6DF5225ED3018009FAC5D /* AddressItem.swift */; };
@@ -484,6 +485,7 @@
 		189C933A25DB188F000258EA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		189C933D25DB18EF000258EA /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		18AD3F6F25D8847A007CBC15 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		18CAB09625F6B6E1001E4C6C /* AddToCartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartViewModel.swift; sourceTree = "<group>"; };
 		18D6DF4B25ED2D8F009FAC5D /* ShippingAddressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingAddressViewModel.swift; sourceTree = "<group>"; };
 		18D6DF4F25ED2DC4009FAC5D /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		18D6DF5225ED3018009FAC5D /* AddressItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressItem.swift; sourceTree = "<group>"; };
@@ -1602,6 +1604,7 @@
 				20B2EE0F25D157A7004B1DA2 /* HomeViewModel.swift */,
 				18AD3F6F25D8847A007CBC15 /* FavoriteViewModel.swift */,
 				1885AD4425F598B90077F06F /* CartViewModel.swift */,
+				18CAB09625F6B6E1001E4C6C /* AddToCartViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -2408,6 +2411,7 @@
 				2019AC3C25C9DC6D00455166 /* OrderTraceMapViewController.swift in Sources */,
 				083F4A05259F36A3005DEF75 /* CategoryContentHeaderCollectionViewCell.swift in Sources */,
 				18F3708525EBE1380005D19E /* CommentEvaluation.swift in Sources */,
+				18CAB09725F6B6E1001E4C6C /* AddToCartViewModel.swift in Sources */,
 				08F2B8CA258BD60B00CAEC9A /* ForgetPasswordCodeViewController.swift in Sources */,
 				1880280E25F12A7700B51F0A /* IdentityConfirmViewModel.swift in Sources */,
 				2085140025CADDED0025885B /* ReorderCollectionViewDelegate.swift in Sources */,

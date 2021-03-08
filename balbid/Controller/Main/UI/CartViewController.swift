@@ -24,6 +24,10 @@ class CartViewController: BaseViewController {
         super.viewDidLoad()
         setupNavbar()
         setupCollectionView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         setupViewModel()
     }
     
