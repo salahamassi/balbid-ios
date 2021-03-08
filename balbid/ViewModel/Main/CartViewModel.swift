@@ -42,11 +42,25 @@ class CartViewModel: NSObject {
             }
         }
     }
+    
+    func updateProductQuantity(id: Int,quantity: Int, index: Int, didUpdateQuantity: @escaping () -> Void) {
+        appDataSource.perform(service: .init(path: .updateShoppingCart , domain: .domain, method: .post, params: ["product_cart_id": id, "quantity": quantity], mustUseAuth: true), Cart.self) { (result) in
+            switch result {
+            case .data(_):
+                didUpdateQuantity()
+            case .failure(let error):
+                self.delegate?.apiError(error: error)
+            default:
+                break
+            }
+        }
+    }
 }
 
 
 protocol CartViewModelDelegate: class {
     func loadCartSuccess(cart: Cart)
     func didDeleteSuccessfully(index: Int)
+    func didUpdateQuantity(quantity: Int,  index: Int)
     func apiError(error: String)
 }

@@ -12,7 +12,8 @@ class CartCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
     weak var delegate: SwipeActionDelegate?
     var cart: Cart?
-
+    weak var cartDelegate: CartCollectionViewCellDelegate?
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         cart?.cartItem.count ?? 0
     }
@@ -21,6 +22,7 @@ class CartCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .cartCellId, for: indexPath) as! CartCollectionViewCell
         cell.cart = cart?.cartItem[indexPath.row]
         cell.delegate  = self
+        cell.cartDelegate = cartDelegate
         return cell
     }
 }

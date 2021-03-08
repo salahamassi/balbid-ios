@@ -49,6 +49,7 @@ class CartViewController: BaseViewController {
         collectionView.dataSource = cartCollectionViewDataSource
         collectionView.delegate = cartCollectionViewDelegate
         cartCollectionViewDataSource.delegate = self
+        cartCollectionViewDataSource.cartDelegate = self
     }
     
 }
@@ -60,9 +61,7 @@ extension CartViewController: SwipeActionDelegate {
     
     func deleteItem(at indexPath: IndexPath) {
         guard let id = cartCollectionViewDataSource.cart?.cartItem[indexPath.row].id,
-              let cart = cartCollectionViewDataSource.cart,
-              let total = Double(cart.total),
-              let deletedPrice = Double(cart.cartItem[indexPath.row].totalPrice) else {
+              let cart = cartCollectionViewDataSource.cart else {
             return
         }
         viewModel.deleteFromCart(id: id, index: indexPath.row)
@@ -76,6 +75,11 @@ extension CartViewController: SwipeActionDelegate {
 
 
 extension CartViewController: CartViewModelDelegate {
+    func didUpdateQuantity(quantity: Int,index: Int) {
+        cartCollectionViewDataSource.cart!.cartItem[index].quantity = "\(quantity)"
+        collectionView.reloadItems(at: [IndexPath(row: index, section: 0)])
+    }
+    
     func loadCartSuccess(cart: Cart) {
         activityIndicatore.stopAnimating()
         cartCollectionViewDataSource.cart = cart
@@ -95,4 +99,17 @@ extension CartViewController: CartViewModelDelegate {
         viewModel.getCartData()
     }
     
+}
+
+
+extension CartViewController: CartCollectionViewCellDelegate {
+    func changeQuantity(_ cell: CartCollectionViewCell, to newQuantity: Int, didComplete: @escaping () -> Void) {
+        guard let indexPath = collectionView.indexPath(for: cell),
+              let id = cartCollectionViewDataSource.cart?.cartItem[indexPath.row].id else {
+            return
+        }
+        viewModel.updateProductQuantity(id: id, quantity: newQuantity, index: indexPath.row, didUpdateQuantity: {
+            didComplete()
+        })
+    }
 }

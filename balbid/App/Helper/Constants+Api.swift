@@ -27,6 +27,7 @@ extension String {
     static let cartPath = "ShoppingCart"
     static let addToCartPath = "ShoppingCart/product"
     static let deleteFromCartPath = "ShoppingCart/product?product_cart_id="
+    static let updateShoppingCart = "ShoppingCart/product/increase"
 
     
 
