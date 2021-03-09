@@ -58,13 +58,14 @@ class HomeViewController: BaseViewController {
     private func setupSliderTimer(){
         timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true, block: {  [weak self] (timer)
             in
-             guard let self = self else {return}
+             guard let self = self,
+                   let cell = self.collectionView.cellForItem(at: IndexPath(row: 0,section: 0)) as? SliderContainerCell else {return}
             if self.currentSlider < self.homeViewModel.home.imageSlider.count {
                 self.currentSlider += 1
-                self.collectionView.scrollToItem(at: IndexPath(row:self.currentSlider,section:0), at: .centeredHorizontally, animated: true)
+                cell.collectionView.scrollToItem(at: IndexPath(row:self.currentSlider,section:0), at: .centeredHorizontally, animated: true)
             }else{
                 self.currentSlider = 0
-                self.collectionView.scrollToItem(at: IndexPath(row:self.currentSlider,section:0), at: .right, animated: false)
+                cell.collectionView.scrollToItem(at: IndexPath(row:self.currentSlider,section:0), at: .right, animated: false)
             }
 
         })
