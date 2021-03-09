@@ -15,13 +15,16 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     var currentPage: Int = 0
     weak var delegate: SliderIndicatorCollectionViewCellDelegate?
     weak var productCellDelegate: ProductCellDelegate?
+    weak var homeSelectionDelegate: HomeSelectionProtocol?
+
     private var sectionsToProduct = 3
 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .sliderCellId, for: indexPath) as! ImageSliderCell
-            cell.sliderImage = home?.imageSlider[indexPath.row].image
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .sliderCellId, for: indexPath) as! SliderContainerCell
+            cell.images = home?.imageSlider ??  []
+            cell.delegate = homeSelectionDelegate
             return cell
         }else if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .sliderIndicatorCellId, for: indexPath) as! SliderIndicatorCollectionViewCell
@@ -71,7 +74,7 @@ class HomeCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0{
-            return home?.imageSlider.count ?? 0
+            return 1
         }else if section == 1 {
             return 1
         }else if section == 2 {

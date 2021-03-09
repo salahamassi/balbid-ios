@@ -104,6 +104,7 @@ class HomeViewController: BaseViewController {
         registerCell()
         homeCollectionViewDataSource.delegate = self
         homeCollectionViewDataSource.productCellDelegate = productDelegate
+        homeCollectionViewDataSource.homeSelectionDelegate = self
 
     }
     
@@ -201,6 +202,7 @@ extension HomeViewController: HomeSelectionProtocol{
     func didMoveHomeSlider(to page: Int) {
         homeCollectionViewDataSource.currentPage = page
         collectionView.reloadItems(at: [IndexPath(row: 0, section: 1)])
+        currentSlider = page
     }
   
 }

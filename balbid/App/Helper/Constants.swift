@@ -55,7 +55,6 @@ extension String {
     static let categoryFooterView = "CategoryFooter"
     static let colorSelectionView = "ColorSelectionView"
     static let colorSelectionCell = "ColorSelectionCell"
-    
 
     
     
@@ -100,6 +99,7 @@ extension String {
     static let paymentCardCellId = "payment_card_cell"
     static let productFooterCellId = "product_footer_cell"
     static let categoryProductFooterCellId = "category_product_footer"
+    static let imageSliderCellId = "image_slider_cell"
 
 
     
