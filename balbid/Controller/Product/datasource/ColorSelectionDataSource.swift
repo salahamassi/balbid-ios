@@ -10,6 +10,7 @@ import UIKit
 class ColorSelectionDataSource: NSObject, UICollectionViewDataSource {
     
     var optionItems: [OptionItem] = []
+    var selectedIndex = 0
 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -19,6 +20,7 @@ class ColorSelectionDataSource: NSObject, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .colorCellId, for: indexPath) as! ColorSelectionCell
         cell.color = optionItems[indexPath.row].name
+        cell.isSelect = selectedIndex == indexPath.row
         return  cell
     }
     

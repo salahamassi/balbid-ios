@@ -9,6 +9,7 @@ import UIKit
 
 class ColorSelectionDelegate: NSObject, UICollectionViewDelegate,  UICollectionViewDelegateFlowLayout {
     
+    var didSelectRow: ((_ row: Int) -> Void)?
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: 60, height: 60)
@@ -20,5 +21,9 @@ class ColorSelectionDelegate: NSObject, UICollectionViewDelegate,  UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+         didSelectRow?(indexPath.row)
     }
 }

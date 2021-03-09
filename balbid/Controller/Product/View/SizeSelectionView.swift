@@ -13,7 +13,9 @@ class SizeSelectionView: BottomSheetView {
     
     private var sizeSelectionDataSource = SizeSelectionDataSource()
     private var sizeSelectionDelegate = SizeSelectionDelegate()
-    
+    var didSelectOption: ((_ id: Int) -> Void)?
+
+
     var optionGroupItem:  OptionGroupItem?
     
     override class func initFromNib() -> SizeSelectionView {
@@ -21,7 +23,7 @@ class SizeSelectionView: BottomSheetView {
     }
     
     override func awakeFromNib() {
-        viewHeight = 128
+        viewHeight = 180
         super.awakeFromNib()
     }
     
@@ -31,13 +33,20 @@ class SizeSelectionView: BottomSheetView {
 
     }
     
+    @IBAction func selectSize(_ sender: Any) {
+        didSelectOption?(sizeSelectionDataSource.selectedIndex)
+        hide()
+    }
+    
     private func setupCollection() {
         registerCell()
         sizeSelectionDataSource.optionItems = optionGroupItem?.options ?? []
         collectionView.dataSource = sizeSelectionDataSource
-        sizeSelectionDelegate.optionItems = optionGroupItem?.options ?? []
-        
         collectionView.delegate = sizeSelectionDelegate
+        sizeSelectionDelegate.didSelectRow = { [weak self] index in
+            self?.sizeSelectionDataSource.selectedIndex = index
+            self?.collectionView.reloadData()
+        }
     }
     
     private func registerCell() {

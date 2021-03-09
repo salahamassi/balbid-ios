@@ -29,6 +29,8 @@ class ProductDetailViewController: BaseViewController {
     private var itemAddedToCartDelegate  = ItemAddedToCartDelegate()
     private var colorOptionGroupItem:  OptionGroupItem?
     private var sizeOptionGroupItem:  OptionGroupItem?
+    private var selectedSizeId:  Int?
+    private var selectedColorId:  Int?
 
 
     var product:  ProductItem!
@@ -138,7 +140,20 @@ class ProductDetailViewController: BaseViewController {
        colorOptionGroupItem = product.options.filter({ (group) -> Bool in
             group.optionType == .color
         }).first
+        if colorOptionGroupItem?.options.first != nil {
+            selectedColorId =  colorOptionGroupItem!.options.first!.id
+        }
         colorSelectionView.optionGroupItem = colorOptionGroupItem
+       
+        colorSelectionView.didSelectOption = { [weak self] position in
+            guard let self = self else {
+                return
+            }
+            guard let colorId = self.colorOptionGroupItem?.options[position].id else {
+                return
+            }
+            self.selectedColorId = colorId
+        }
         colorSelectionView.setupSheetView()
     }
     
@@ -147,6 +162,18 @@ class ProductDetailViewController: BaseViewController {
             group.optionType == .size
         }).first
         sizeSelectionView.optionGroupItem = sizeOptionGroupItem
+        if sizeOptionGroupItem?.options.first != nil {
+            selectedSizeId =  sizeOptionGroupItem!.options.first!.id
+        }
+        sizeSelectionView.didSelectOption = { [weak self] position in
+            guard let self = self else {
+                return
+            }
+            guard let sizeId = self.sizeOptionGroupItem?.options[position].id else {
+                return
+            }
+            self.selectedSizeId = sizeId
+        }
         sizeSelectionView.setupSheetView()
     }
 
@@ -154,11 +181,11 @@ class ProductDetailViewController: BaseViewController {
     @IBAction func addToCart(_ sender: Any){
         addToCartBottomSheet.product = product
         var options: [Int] = []
-        if let colorOptionId = colorOptionGroupItem?.options.first?.id {
-            options.append(colorOptionId)
+        if selectedSizeId != nil {
+            options.append(selectedSizeId!)
         }
-        if let sizeOptionId = sizeOptionGroupItem?.options.first?.id {
-            options.append(sizeOptionId)
+        if selectedColorId != nil {
+            options.append(selectedColorId!)
         }
         addToCartBottomSheet.options = options
         addToCartBottomSheet.show()

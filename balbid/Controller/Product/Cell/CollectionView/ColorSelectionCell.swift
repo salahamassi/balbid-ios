@@ -11,6 +11,18 @@ class ColorSelectionCell: UICollectionViewCell {
     
     @IBOutlet weak var colorView: UIView!
     
+    var isSelect: Bool = false {
+        didSet {
+            if isSelect {
+                colorView.borderWidth = 2
+                colorView.borderColor = UIColor.appColor(.primaryColor)
+            }else {
+                colorView.borderWidth = 1
+                colorView.borderColor = UIColor.appColor(.lightGrayColor)
+            }
+        }
+    }
+    
     var color: String? {
         didSet {
             if(color != nil) {

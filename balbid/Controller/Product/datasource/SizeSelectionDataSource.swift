@@ -10,7 +10,8 @@ import UIKit
 class SizeSelectionDataSource: NSObject, UICollectionViewDataSource {
     
     var optionItems: [OptionItem] = []
-    
+    var selectedIndex = 0
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         optionItems.count
     }
@@ -18,6 +19,7 @@ class SizeSelectionDataSource: NSObject, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .sizeCellId, for: indexPath) as! SizeSelectionCell
         cell.size = optionItems[indexPath.row].name
+        cell.isSelect = selectedIndex == indexPath.row
         return cell
     }
 }
