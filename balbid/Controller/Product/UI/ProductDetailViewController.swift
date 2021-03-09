@@ -144,7 +144,11 @@ class ProductDetailViewController: BaseViewController {
             selectedColorId =  colorOptionGroupItem!.options.first!.id
         }
         colorSelectionView.optionGroupItem = colorOptionGroupItem
-       
+        changeColorOption()
+        colorSelectionView.setupSheetView()
+    }
+    
+    private func  changeColorOption() {
         colorSelectionView.didSelectOption = { [weak self] position in
             guard let self = self else {
                 return
@@ -154,7 +158,6 @@ class ProductDetailViewController: BaseViewController {
             }
             self.selectedColorId = colorId
         }
-        colorSelectionView.setupSheetView()
     }
     
     private func setupSizeSelectionView() {
@@ -165,18 +168,25 @@ class ProductDetailViewController: BaseViewController {
         if sizeOptionGroupItem?.options.first != nil {
             selectedSizeId =  sizeOptionGroupItem!.options.first!.id
         }
-        sizeSelectionView.didSelectOption = { [weak self] position in
-            guard let self = self else {
-                return
-            }
-            guard let sizeId = self.sizeOptionGroupItem?.options[position].id else {
-                return
-            }
-            self.selectedSizeId = sizeId
-        }
+        changeSizeOption()
         sizeSelectionView.setupSheetView()
     }
 
+    private func changeSizeOption() {
+        sizeSelectionView.didSelectOption = { [weak self] position in
+            guard let self = self,
+                  let sizeId = self.sizeOptionGroupItem?.options[position].id,
+                  let cell = self.collectionView.cellForItem(at: IndexPath(row: 0, section: 0)) as? ProductDetailCollectionViewCell,
+                  let sizeName = self.sizeOptionGroupItem?.options[position].name
+            else {
+                return
+            }
+            
+            cell.productSizeLabel.text = sizeName
+            self.selectedSizeId = sizeId
+
+        }
+    }
     
     @IBAction func addToCart(_ sender: Any){
         addToCartBottomSheet.product = product
