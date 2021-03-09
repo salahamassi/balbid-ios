@@ -150,12 +150,15 @@ class ProductDetailViewController: BaseViewController {
     
     private func  changeColorOption() {
         colorSelectionView.didSelectOption = { [weak self] position in
-            guard let self = self else {
+            guard let self = self,
+                  let colorId = self.colorOptionGroupItem?.options[position].id,
+                  let cell = self.collectionView.cellForItem(at: IndexPath(row: 0, section: 0)) as? ProductDetailCollectionViewCell,
+                  let colorCode = self.colorOptionGroupItem?.options[position].name
+            else {
                 return
             }
-            guard let colorId = self.colorOptionGroupItem?.options[position].id else {
-                return
-            }
+            
+            cell.productColorView.backgroundColor = UIColor(hexString: colorCode)
             self.selectedColorId = colorId
         }
     }
@@ -184,7 +187,6 @@ class ProductDetailViewController: BaseViewController {
             
             cell.productSizeLabel.text = sizeName
             self.selectedSizeId = sizeId
-
         }
     }
     
