@@ -12,7 +12,7 @@ import SwiftyJSON
 
 struct CartItem: SwiftyModelData {
     let id: Int
-    let totalPrice: String
+    var totalPrice: String
     let itemPrice: String
     let products: ProductItem
     var quantity: String

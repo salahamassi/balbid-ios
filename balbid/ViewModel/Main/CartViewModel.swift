@@ -48,6 +48,7 @@ class CartViewModel: NSObject {
             switch result {
             case .data(_):
                 didUpdateQuantity()
+                self.delegate?.didUpdateQuantity(quantity: quantity, index: index)
             case .failure(let error):
                 self.delegate?.apiError(error: error)
             default:

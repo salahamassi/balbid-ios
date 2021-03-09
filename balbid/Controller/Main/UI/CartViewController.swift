@@ -76,8 +76,9 @@ extension CartViewController: SwipeActionDelegate {
 
 extension CartViewController: CartViewModelDelegate {
     func didUpdateQuantity(quantity: Int,index: Int) {
-        cartCollectionViewDataSource.cart!.cartItem[index].quantity = "\(quantity)"
-        collectionView.reloadItems(at: [IndexPath(row: index, section: 0)])
+//        let newQunatity = (Int(cartCollectionViewDataSource.cart!.cartItem[index].quantity) ?? 0) + quantity
+//        cartCollectionViewDataSource.cart!.cartItem[index].quantity = "\(newQunatity)"
+//        collectionView.reloadItems(at: [IndexPath(row: index, section: 0)])
     }
     
     func loadCartSuccess(cart: Cart) {
