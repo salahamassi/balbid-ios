@@ -153,6 +153,7 @@
                                                                                 </stackView>
                                                                             </subviews>
                                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <gestureRecognizers/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="trailing" secondItem="kHg-fY-i8s" secondAttribute="trailing" constant="20" id="M2T-Cg-01x"/>
                                                                                 <constraint firstAttribute="height" constant="40" id="MxQ-L0-HCh"/>
@@ -170,6 +171,9 @@
                                                                                     <color key="value" name="accentColor"/>
                                                                                 </userDefinedRuntimeAttribute>
                                                                             </userDefinedRuntimeAttributes>
+                                                                            <connections>
+                                                                                <outletCollection property="gestureRecognizers" destination="MAp-eZ-Ygg" appends="YES" id="loA-m3-IMb"/>
+                                                                            </connections>
                                                                         </view>
                                                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1Y-ML-JWA">
                                                                             <rect key="frame" x="372" y="0.0" width="0.0" height="40"/>
@@ -283,7 +287,7 @@
                                     <color key="titleColor" name="whiteColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="addToCart:" destination="z1O-Mi-dAl" eventType="touchDragOutside" id="oaq-8y-5C4"/>
+                                    <action selector="addToCart:" destination="z1O-Mi-dAl" eventType="touchUpInside" id="rJz-mN-bwA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -308,6 +312,11 @@
                 <tapGestureRecognizer id="K22-3B-KZo">
                     <connections>
                         <action selector="showColorOption:" destination="z1O-Mi-dAl" id="8hv-Tv-osH"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="MAp-eZ-Ygg">
+                    <connections>
+                        <action selector="showSizeOption:" destination="z1O-Mi-dAl" id="3E3-mB-Hs5"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -394,10 +403,10 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                                                 <rect key="frame" x="12" y="52.666666666666664" width="390" height="78.666666666666686"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mEL-dd-kpa" userLabel="totalRateStackView">
-                                                        <rect key="frame" x="0.0" y="11" width="112.33333333333333" height="57"/>
+                                                        <rect key="frame" x="0.0" y="11" width="109.66666666666667" height="57"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9K-8X-XzH">
-                                                                <rect key="frame" x="35.666666666666664" y="0.0" width="40.999999999999993" height="41"/>
+                                                                <rect key="frame" x="34.333333333333336" y="0.0" width="41.000000000000007" height="41"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nM4-Sy-Cqr">
                                                                         <rect key="frame" x="7.9999999999999982" y="10" width="25.333333333333329" height="21"/>
@@ -426,7 +435,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V5q-hX-q1d" customClass="CosmosView" customModule="Cosmos">
-                                                                <rect key="frame" x="21.333333333333336" y="45.999999999999986" width="70" height="11"/>
+                                                                <rect key="frame" x="20" y="45.999999999999986" width="70" height="11"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="11" id="GB1-8o-PSZ"/>
@@ -461,10 +470,10 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                                                         </userDefinedRuntimeAttributes>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HPz-KW-VCm" userLabel="RateSeekStackView">
-                                                        <rect key="frame" x="156.33333333333337" y="0.0" width="233.66666666666663" height="78.666666666666671"/>
+                                                        <rect key="frame" x="153.66666666666663" y="0.0" width="236.33333333333337" height="78.666666666666671"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Zw4-KB-mcd" userLabel="oneSeekValueStackView">
-                                                                <rect key="frame" x="0.0" y="0.0" width="233.66666666666666" height="9.3333333333333339"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="236.33333333333334" height="9.3333333333333339"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Starts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyF-IQ-8ie">
                                                                         <rect key="frame" x="0.0" y="0.0" width="28" height="9.3333333333333339"/>
@@ -473,11 +482,11 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" horizontalCompressionResistancePriority="748" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="caU-Vu-74O">
-                                                                        <rect key="frame" x="35" y="0.0" width="174" height="9.3333333333333339"/>
+                                                                        <rect key="frame" x="35" y="0.0" width="176.66666666666666" height="9.3333333333333339"/>
                                                                         <color key="progressTintColor" name="ratingYellowColor"/>
                                                                     </progressView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(100)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsI-i2-dpq">
-                                                                        <rect key="frame" x="215.99999999999997" y="0.0" width="17.666666666666657" height="9.3333333333333339"/>
+                                                                        <rect key="frame" x="218.66666666666666" y="0.0" width="17.666666666666657" height="9.3333333333333339"/>
                                                                         <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="8"/>
                                                                         <color key="textColor" name="textLightGrayColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -485,7 +494,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="B27-ZN-F6I" userLabel="oneSeekValueStackView">
-                                                                <rect key="frame" x="0.0" y="17.333333333333329" width="233.66666666666666" height="9.3333333333333357"/>
+                                                                <rect key="frame" x="0.0" y="17.333333333333329" width="236.33333333333334" height="9.3333333333333357"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Starts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfX-FQ-M5i">
                                                                         <rect key="frame" x="0.0" y="0.0" width="28" height="9.3333333333333339"/>
@@ -494,11 +503,11 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" horizontalCompressionResistancePriority="748" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tUB-wB-gsG">
-                                                                        <rect key="frame" x="35" y="0.0" width="174" height="9.3333333333333339"/>
+                                                                        <rect key="frame" x="35" y="0.0" width="176.66666666666666" height="9.3333333333333339"/>
                                                                         <color key="progressTintColor" name="ratingYellowColor"/>
                                                                     </progressView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(100)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLL-hZ-Ted">
-                                                                        <rect key="frame" x="215.99999999999997" y="0.0" width="17.666666666666657" height="9.3333333333333339"/>
+                                                                        <rect key="frame" x="218.66666666666666" y="0.0" width="17.666666666666657" height="9.3333333333333339"/>
                                                                         <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="8"/>
                                                                         <color key="textColor" name="textLightGrayColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -506,7 +515,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="roN-WG-SnK" userLabel="oneSeekValueStackView">
-                                                                <rect key="frame" x="0.0" y="34.666666666666657" width="233.66666666666666" height="9.3333333333333357"/>
+                                                                <rect key="frame" x="0.0" y="34.666666666666657" width="236.33333333333334" height="9.3333333333333357"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Starts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qul-h1-R4F">
                                                                         <rect key="frame" x="0.0" y="0.0" width="28" height="9.3333333333333339"/>
@@ -515,11 +524,11 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" horizontalCompressionResistancePriority="748" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bIu-8A-oYX">
-                                                                        <rect key="frame" x="35" y="0.0" width="174" height="9.3333333333333339"/>
+                                                                        <rect key="frame" x="35" y="0.0" width="176.66666666666666" height="9.3333333333333339"/>
                                                                         <color key="progressTintColor" name="ratingYellowColor"/>
                                                                     </progressView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(100)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1e-B7-aT6">
-                                                                        <rect key="frame" x="215.99999999999997" y="0.0" width="17.666666666666657" height="9.3333333333333339"/>
+                                                                        <rect key="frame" x="218.66666666666666" y="0.0" width="17.666666666666657" height="9.3333333333333339"/>
                                                                         <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="8"/>
                                                                         <color key="textColor" name="textLightGrayColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -527,7 +536,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="luZ-hV-glp" userLabel="oneSeekValueStackView">
-                                                                <rect key="frame" x="0.0" y="51.999999999999986" width="233.66666666666666" height="9.3333333333333357"/>
+                                                                <rect key="frame" x="0.0" y="51.999999999999986" width="236.33333333333334" height="9.3333333333333357"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Starts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKN-ea-DCa">
                                                                         <rect key="frame" x="0.0" y="0.0" width="28" height="9.3333333333333339"/>
@@ -536,11 +545,11 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" horizontalCompressionResistancePriority="748" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2fd-yg-SMz">
-                                                                        <rect key="frame" x="35" y="0.0" width="174" height="9.3333333333333339"/>
+                                                                        <rect key="frame" x="35" y="0.0" width="176.66666666666666" height="9.3333333333333339"/>
                                                                         <color key="progressTintColor" name="ratingYellowColor"/>
                                                                     </progressView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(100)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xou-Z8-lPx">
-                                                                        <rect key="frame" x="215.99999999999997" y="0.0" width="17.666666666666657" height="9.3333333333333339"/>
+                                                                        <rect key="frame" x="218.66666666666666" y="0.0" width="17.666666666666657" height="9.3333333333333339"/>
                                                                         <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="8"/>
                                                                         <color key="textColor" name="textLightGrayColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -548,7 +557,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="IaM-zC-6VC" userLabel="oneSeekValueStackView">
-                                                                <rect key="frame" x="0.0" y="69.333333333333329" width="233.66666666666666" height="9.3333333333333286"/>
+                                                                <rect key="frame" x="0.0" y="69.333333333333329" width="236.33333333333334" height="9.3333333333333286"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Starts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mda-rz-Yhh">
                                                                         <rect key="frame" x="0.0" y="0.0" width="28" height="9.3333333333333339"/>
@@ -557,11 +566,11 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" horizontalCompressionResistancePriority="748" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tTf-au-r2T">
-                                                                        <rect key="frame" x="35" y="0.0" width="174" height="9.3333333333333339"/>
+                                                                        <rect key="frame" x="35" y="0.0" width="176.66666666666666" height="9.3333333333333339"/>
                                                                         <color key="progressTintColor" name="ratingYellowColor"/>
                                                                     </progressView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(100)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgH-9o-pXE">
-                                                                        <rect key="frame" x="215.99999999999997" y="0.0" width="17.666666666666657" height="9.3333333333333339"/>
+                                                                        <rect key="frame" x="218.66666666666666" y="0.0" width="17.666666666666657" height="9.3333333333333339"/>
                                                                         <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="8"/>
                                                                         <color key="textColor" name="textLightGrayColor"/>
                                                                         <nil key="highlightedColor"/>

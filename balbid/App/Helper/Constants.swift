@@ -55,7 +55,10 @@ extension String {
     static let categoryFooterView = "CategoryFooter"
     static let colorSelectionView = "ColorSelectionView"
     static let colorSelectionCell = "ColorSelectionCell"
+    static let sizeSelectionView = "SizeSelectionView"
+    static let sizeSelectionCell = "SizeSelectionCell"
 
+    
     
     
     //  cell's header's, Annotation's id's
@@ -100,6 +103,7 @@ extension String {
     static let productFooterCellId = "product_footer_cell"
     static let categoryProductFooterCellId = "category_product_footer"
     static let imageSliderCellId = "image_slider_cell"
+    static let sizeCellId = "size_cell"
 
 
     

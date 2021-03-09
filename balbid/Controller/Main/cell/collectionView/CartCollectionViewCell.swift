@@ -27,7 +27,6 @@ class CartCollectionViewCell: SwipeCollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        containerView.withShadow(color: .black, alpha: 0.1, x: 0, y: 3, blur: 14, spread: 0)
     }
     
     @IBAction func changeQuantity(_ sender: UIButton){
@@ -84,6 +83,7 @@ class CartCollectionViewCell: SwipeCollectionViewCell {
         productNameLabel.text = cart.products.name
         productImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         changableQuantityLabel.text = cart.quantity
+        containerView.withShadow(color: .black, alpha: 0.1, x: 0, y: 3, blur: 14, spread: 10)
         guard let url = URL(string: cart.products.imageFullPath ?? "") else {
             return
         }

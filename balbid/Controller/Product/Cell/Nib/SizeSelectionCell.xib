@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Tajawal-Medium 500.ttf">
+            <string>Tajawal-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="size_cell" id="nud-hj-61Z" customClass="SizeSelectionCell" customModule="balbid" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="40" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="x9a-1k-FL0">
+                <rect key="frame" x="0.0" y="0.0" width="40" height="35"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXb-40-ecz">
+                        <rect key="frame" x="0.0" y="0.0" width="40" height="35"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwn-g7-L4f">
+                                <rect key="frame" x="0.5" y="8" width="39.5" height="19"/>
+                                <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="16"/>
+                                <color key="textColor" name="primaryColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="accentColor"/>
+                        <constraints>
+                            <constraint firstItem="uwn-g7-L4f" firstAttribute="centerY" secondItem="tXb-40-ecz" secondAttribute="centerY" id="2WX-r1-9uD"/>
+                            <constraint firstItem="uwn-g7-L4f" firstAttribute="centerX" secondItem="tXb-40-ecz" secondAttribute="centerX" id="ccC-pS-TKX"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="primaryColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tXb-40-ecz" firstAttribute="leading" secondItem="x9a-1k-FL0" secondAttribute="leading" id="CHt-3N-yBI"/>
+                    <constraint firstAttribute="trailing" secondItem="tXb-40-ecz" secondAttribute="trailing" id="EHt-v7-yiL"/>
+                    <constraint firstAttribute="bottom" secondItem="tXb-40-ecz" secondAttribute="bottom" id="XIj-go-FCS"/>
+                    <constraint firstItem="tXb-40-ecz" firstAttribute="top" secondItem="x9a-1k-FL0" secondAttribute="top" id="Y2a-Ct-h1Y"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="79" height="35"/>
+            <connections>
+                <outlet property="sizeLabel" destination="uwn-g7-L4f" id="CPK-Sw-NUZ"/>
+            </connections>
+            <point key="canvasLocation" x="-241.30434782608697" y="55.245535714285715"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="accentColor">
+            <color red="0.9100000262260437" green="0.9100000262260437" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryColor">
+            <color red="0.11800000071525574" green="0.13699999451637268" blue="0.32199999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

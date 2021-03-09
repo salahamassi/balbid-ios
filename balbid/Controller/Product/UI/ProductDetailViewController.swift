@@ -23,9 +23,16 @@ class ProductDetailViewController: BaseViewController {
     private var headerView: ProductDetailHeaderView!
     private let padding: CGFloat = 16
     private let colorSelectionView = ColorSelectionView.initFromNib()
-    
-    
+    private let sizeSelectionView = SizeSelectionView.initFromNib()
+    private let addToCartBottomSheet = AddToCartBottomSheet.initFromNib()
+    private let addedToCarView = balbid.AddedToCartView.initFromNib()
+    private var itemAddedToCartDelegate  = ItemAddedToCartDelegate()
+    private var colorOptionGroupItem:  OptionGroupItem?
+    private var sizeOptionGroupItem:  OptionGroupItem?
+
+
     var product:  ProductItem!
+
     var loadProduct: ((Int)-> Void)?
     
     
@@ -57,10 +64,50 @@ class ProductDetailViewController: BaseViewController {
     private func setupView() {
         setupCollectionView()
         addToCartButton.withCornerRadius(12, corners: [.topLeft,.topRight])
+        setupAddToCartView()
+        setupAddedToCartView()
+        setupAddedToCartDelegate()
     }
     
+    private func setupAddToCartView(){
+        addToCartBottomSheet.addProductsToCart = { [weak self] total in
+            self?.addedToCarView.total = total
+            self?.addToCartBottomSheet.hide()
+            self?.addedToCarView.showOrHideView(isOpen: true)
+            self?.addDarkView(below: self?.addedToCarView)
+        }
+        addToCartBottomSheet.failedToAdd = { [weak self] message in
+            self?.displayAlert(message: message)
+        }
+    }
+    
+    private func setupAddedToCartView(){
+        addedToCarView.delegate = itemAddedToCartDelegate
+        UIApplication.shared.keyWindow?.addSubview(addedToCarView)
+        addedToCarView.setupView()
+    }
+    
+    private func setupAddedToCartDelegate() {
+        itemAddedToCartDelegate.continueShopping = { [weak self] in
+            self?.backToHome(selectedIndex: 0)
+        }
+        itemAddedToCartDelegate.popController = { [weak self] in
+            self?.router?.popToRootViewController()
+        }
+    }
+    
+    func backToHome(selectedIndex: Int) {
+        router?.popToRootViewController()
+        guard  let tabBarController = ((UIApplication.shared.delegate as! AppDelegate).window?.rootViewController as? UITabBarController) else {
+            return
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            tabBarController.selectedIndex = selectedIndex
+        }
+    }
+    
+    
     private func setupCollectionView(){
-   
         setupCollectionHeaderView()
         collectionView.delegate = productDetailCollectionViewDelegate
         collectionView.dataSource = productDetailCollectionViewDataSource
@@ -88,20 +135,41 @@ class ProductDetailViewController: BaseViewController {
     }
     
     private func setupColorSelectionView() {
-       let colorOption = product.options.filter({ (group) -> Bool in
+       colorOptionGroupItem = product.options.filter({ (group) -> Bool in
             group.optionType == .color
         }).first
-        colorSelectionView.optionGroupItem = colorOption
+        colorSelectionView.optionGroupItem = colorOptionGroupItem
         colorSelectionView.setupSheetView()
+    }
+    
+    private func setupSizeSelectionView() {
+        sizeOptionGroupItem = product.options.filter({ (group) -> Bool in
+            group.optionType == .size
+        }).first
+        sizeSelectionView.optionGroupItem = sizeOptionGroupItem
+        sizeSelectionView.setupSheetView()
     }
 
     
     @IBAction func addToCart(_ sender: Any){
-        
+        addToCartBottomSheet.product = product
+        var options: [Int] = []
+        if let colorOptionId = colorOptionGroupItem?.options.first?.id {
+            options.append(colorOptionId)
+        }
+        if let sizeOptionId = sizeOptionGroupItem?.options.first?.id {
+            options.append(sizeOptionId)
+        }
+        addToCartBottomSheet.options = options
+        addToCartBottomSheet.show()
     }
     
     @IBAction func showColorOption(_ sender: Any) {
         colorSelectionView.show()
+    }
+    
+    @IBAction func showSizeOption(_ sender: Any) {
+        sizeSelectionView.show()
     }
     
     @IBAction func changePage(_ sender: UIPageControl) {
@@ -114,6 +182,13 @@ class ProductDetailViewController: BaseViewController {
             self.collectionView.collectionViewLayout.invalidateLayout()
         }
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        addedToCarView.removeFromSuperview()
+        removeDarkView()
+    }
+    
     
 }
 
@@ -184,5 +259,6 @@ extension ProductDetailViewController: ProductViewModelDelegate {
         productDetailCollectionViewDataSource.product = product
         collectionView.reloadData()
         setupColorSelectionView()
+        setupSizeSelectionView()
     }
 }

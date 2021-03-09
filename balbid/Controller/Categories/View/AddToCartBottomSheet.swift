@@ -15,11 +15,15 @@ class AddToCartBottomSheet: BottomSheetView {
 
     var addProductsToCart: ((_  total: String) -> Void)?
     var failedToAdd: ((_ message: String) -> Void)?
+    
     var product: ProductItem? {
         didSet {
             priceLabel.text = product!.price + " SAR"
         }
     }
+    var options:  [Int] = []
+
+    
     private var quantity: Int = 1
     private var viewModel: AddToCartViewModel!
 
@@ -44,7 +48,7 @@ class AddToCartBottomSheet: BottomSheetView {
             return
         }
         addToCartButton.loadingIndicator(true)
-        viewModel.addToCart(productId: product.id, qunatity: quantity, total: priceLabel.text!)
+        viewModel.addToCart(productId: product.id, qunatity: quantity, total: priceLabel.text!,options: options)
 //        addProductsToCart?()
     }
     

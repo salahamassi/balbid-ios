@@ -17,7 +17,7 @@ class AddToCartViewModel: NSObject {
         self.dataSource = dataSource
     }
     
-    func addToCart(productId: Int, qunatity: Int, total: String){
+    func addToCart(productId: Int, qunatity: Int, total: String,options: [Int]){
         dataSource.perform(service: .init(path: .addToCartPath , domain: .domain, method: .post, params: ["product_id" : productId , "quantity" : qunatity], mustUseAuth: true), ProductItem.self) { (result) in
             switch result {
             case .data(_):

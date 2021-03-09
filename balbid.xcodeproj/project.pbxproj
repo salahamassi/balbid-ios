@@ -123,6 +123,12 @@
 		1851E18925F0552F0049C7B5 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851E18825F0552F0049C7B5 /* Observable.swift */; };
 		1851E18E25F056B30049C7B5 /* AuthPeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851E18D25F056B30049C7B5 /* AuthPeopleCell.swift */; };
 		1851E19125F058410049C7B5 /* AuthorizedPeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851E19025F058410049C7B5 /* AuthorizedPeopleViewModel.swift */; };
+		185273F825F7C4CE00108BA8 /* SizeSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185273F725F7C4CE00108BA8 /* SizeSelectionView.xib */; };
+		185273FB25F7C4F100108BA8 /* SizeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185273FA25F7C4F100108BA8 /* SizeSelectionView.swift */; };
+		185273FE25F7C53500108BA8 /* SizeSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185273FD25F7C53500108BA8 /* SizeSelectionCell.xib */; };
+		1852740125F7C5EB00108BA8 /* SizeSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852740025F7C5EB00108BA8 /* SizeSelectionCell.swift */; };
+		1852740425F7C66D00108BA8 /* SizeSelectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852740325F7C66D00108BA8 /* SizeSelectionDataSource.swift */; };
+		1852740725F7C6D000108BA8 /* SizeSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852740625F7C6D000108BA8 /* SizeSelectionDelegate.swift */; };
 		1863F18225D85F480052CA27 /* AdCategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863F18125D85F480052CA27 /* AdCategoriesViewModel.swift */; };
 		188027FF25F06C3800B51F0A /* AuthorizePeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188027FE25F06C3800B51F0A /* AuthorizePeople.swift */; };
 		1880280225F06FCD00B51F0A /* BankInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880280125F06FCD00B51F0A /* BankInformationViewModel.swift */; };
@@ -468,6 +474,12 @@
 		1851E18825F0552F0049C7B5 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		1851E18D25F056B30049C7B5 /* AuthPeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPeopleCell.swift; sourceTree = "<group>"; };
 		1851E19025F058410049C7B5 /* AuthorizedPeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizedPeopleViewModel.swift; sourceTree = "<group>"; };
+		185273F725F7C4CE00108BA8 /* SizeSelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SizeSelectionView.xib; sourceTree = "<group>"; };
+		185273FA25F7C4F100108BA8 /* SizeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeSelectionView.swift; sourceTree = "<group>"; };
+		185273FD25F7C53500108BA8 /* SizeSelectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SizeSelectionCell.xib; sourceTree = "<group>"; };
+		1852740025F7C5EB00108BA8 /* SizeSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeSelectionCell.swift; sourceTree = "<group>"; };
+		1852740325F7C66D00108BA8 /* SizeSelectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeSelectionDataSource.swift; sourceTree = "<group>"; };
+		1852740625F7C6D000108BA8 /* SizeSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeSelectionDelegate.swift; sourceTree = "<group>"; };
 		1863F18125D85F480052CA27 /* AdCategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCategoriesViewModel.swift; sourceTree = "<group>"; };
 		188027FE25F06C3800B51F0A /* AuthorizePeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizePeople.swift; sourceTree = "<group>"; };
 		1880280125F06FCD00B51F0A /* BankInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankInformationViewModel.swift; sourceTree = "<group>"; };
@@ -889,6 +901,7 @@
 				083F4A10259F7747005DEF75 /* ProductCell.xib */,
 				2092065025C719BE0072085E /* ProductImageCell.xib */,
 				1821F50325EFC3B000BB1664 /* ColorSelectionCell.xib */,
+				185273FD25F7C53500108BA8 /* SizeSelectionCell.xib */,
 			);
 			path = Nib;
 			sourceTree = "<group>";
@@ -910,6 +923,7 @@
 				20AAF11825C2E68100CC31D4 /* ProductDetailHeaderView.swift */,
 				20AD836E25C34FF300070C78 /* ProductDetailCollectionViewCell.swift */,
 				1821F50625EFC41600BB1664 /* ColorSelectionCell.swift */,
+				1852740025F7C5EB00108BA8 /* SizeSelectionCell.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -1075,6 +1089,7 @@
 				2092064A25C7198B0072085E /* ProductImageCollectionViewDataSource.swift */,
 				20AAF11E25C2E86B00CC31D4 /* ProductDetailCollectionViewDataSource.swift */,
 				18F69CD825EFC61400B31E52 /* ColorSelectionDataSource.swift */,
+				1852740325F7C66D00108BA8 /* SizeSelectionDataSource.swift */,
 			);
 			path = datasource;
 			sourceTree = "<group>";
@@ -1088,6 +1103,7 @@
 				188F941025DFDE26006E9783 /* ProductDelegate.swift */,
 				18920EC425E30E2600D5FD48 /* ProductImageCollectionViewDelegate.swift */,
 				1851E17825EFD4450049C7B5 /* ColorSelectionDelegate.swift */,
+				1852740625F7C6D000108BA8 /* SizeSelectionDelegate.swift */,
 			);
 			path = delegate;
 			sourceTree = "<group>";
@@ -1341,6 +1357,7 @@
 				18F69CD325EFC57F00B31E52 /* Nib */,
 				18F69CD125EFC57C00B31E52 /* ProductDetailView.swift */,
 				18F69CCE25EFC57600B31E52 /* ColorSelectionView.swift */,
+				185273FA25F7C4F100108BA8 /* SizeSelectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1349,6 +1366,7 @@
 			isa = PBXGroup;
 			children = (
 				18F69CD525EFC58B00B31E52 /* ColorSelectionView.xib */,
+				185273F725F7C4CE00108BA8 /* SizeSelectionView.xib */,
 			);
 			path = Nib;
 			sourceTree = "<group>";
@@ -2230,6 +2248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D83A74825F564940002E759 /* PriceSeekBarView.xib in Resources */,
+				185273FE25F7C53500108BA8 /* SizeSelectionCell.xib in Resources */,
 				083E7597259C9CE700EDF708 /* ProductHeaderCell.xib in Resources */,
 				3DB1DBB2258695A900EF1E8F /* ConfirmAlertView.xib in Resources */,
 				3DB1DB5B25868FC000EF1E8F /* EmptyView.xib in Resources */,
@@ -2259,6 +2278,7 @@
 				20A1A36525CDA34300C1115C /* AddNewCardView.xib in Resources */,
 				087D90B9258BF9FA002BAE95 /* Poppins-Medium.ttf in Resources */,
 				087D90AF258BF86C002BAE95 /* CompanyAuth.storyboard in Resources */,
+				185273F825F7C4CE00108BA8 /* SizeSelectionView.xib in Resources */,
 				18F5EE6B25E066E600BA7FBE /* CategoryFooter.xib in Resources */,
 				083E75C0259DF18600EDF708 /* CategoryContentHeaderCell.xib in Resources */,
 				3DB1DB122586898D00EF1E8F /* Localizable.strings in Resources */,
@@ -2432,7 +2452,9 @@
 				3DB1DBA82586941700EF1E8F /* AppNavigationController.swift in Sources */,
 				3DC76B6225975C2100EE2428 /* AlbumModel.swift in Sources */,
 				3DB1DB5625868F3E00EF1E8F /* BaseDialog.swift in Sources */,
+				1852740725F7C6D000108BA8 /* SizeSelectionDelegate.swift in Sources */,
 				3D4EEA0D25CDF920001DD389 /* LLError.swift in Sources */,
+				1852740125F7C5EB00108BA8 /* SizeSelectionCell.swift in Sources */,
 				202569ED25BE0E3000FD61AD /* FavoriteRoute.swift in Sources */,
 				3DB1DB3425868A1000EF1E8F /* Extensions+Data.swift in Sources */,
 				3DB1DBA5258693F000EF1E8F /* NibViewController.swift in Sources */,
@@ -2549,6 +2571,7 @@
 				20B2EE1725D16CF8004B1DA2 /* HomeProductItem.swift in Sources */,
 				0894855225A1FD38001934A9 /* AddProductToCartDelegate.swift in Sources */,
 				087D90BC258BFAAA002BAE95 /* ProgressView.swift in Sources */,
+				185273FB25F7C4F100108BA8 /* SizeSelectionView.swift in Sources */,
 				18E1249D25DC3E8B00D561C5 /* Constants+Api.swift in Sources */,
 				3D4EEA0925CDF920001DD389 /* AlamofireFileDownload.swift in Sources */,
 				1851E17D25F0159A0049C7B5 /* MainCompanyAuthViewModel.swift in Sources */,
@@ -2569,6 +2592,7 @@
 				209110BE25CF1D6F00B33B9F /* AppDataSource.swift in Sources */,
 				206E047E25BC9F9000BD8902 /* ProfileRoutes.swift in Sources */,
 				3D4EEA0E25CDF920001DD389 /* ReachabilityManager.swift in Sources */,
+				1852740425F7C66D00108BA8 /* SizeSelectionDataSource.swift in Sources */,
 				3D4EEA0025CDF920001DD389 /* CacheDataSourceService.swift in Sources */,
 				08C567832596583600C80A75 /* MainTabBarRoute.swift in Sources */,
 				1880280525F0705000B51F0A /* BankInformation.swift in Sources */,
