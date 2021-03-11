@@ -14,7 +14,10 @@ class AddNewShippingRoute: Route {
     }
     
     func create(_ router: AppRouter, _ params: [String : Any]?) -> UIViewController {
-        let viewController = UIStoryboard.shippingStoryboard.getViewController(with: .addNewShippingViewController)
+        let viewController = UIStoryboard.shippingStoryboard.getViewController(with: .addNewShippingViewController) as! AddNewShippingViewController
+        let viewModel = AddNewAddressViewModel(dataSource: AppDataSource())
+        viewModel.delegate = viewController
+        viewController.addNewShipping = viewModel.addNewAddress
         return viewController
     }
     

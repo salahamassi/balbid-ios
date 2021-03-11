@@ -24,6 +24,10 @@ class ShippingAddressViewController: BaseViewController {
         setupNav()
         setupTableView()
         setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         getUserAddresses?()
     }
     

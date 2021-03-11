@@ -156,7 +156,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Opn-bZ-y0v">
-                                        <rect key="frame" x="16" y="30" width="382" height="609"/>
+                                        <rect key="frame" x="16" y="30" width="382" height="729"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NFe-vm-OrW" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
@@ -321,8 +321,58 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhb-FM-uCV" userLabel="locationView">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Region" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y2g-sT-kNX" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="300" width="382" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="hFQ-KI-MtP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeftCustom">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingRightCustom">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="lightGrayColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Street Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZHp-QT-yBV" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="360" width="382" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="49u-cx-bEE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeftCustom">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingRightCustom">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="lightGrayColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhb-FM-uCV" userLabel="locationView">
+                                                <rect key="frame" x="0.0" y="420" width="382" height="40"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xOY-Od-dJ0">
                                                         <rect key="frame" x="25" y="11" width="327" height="18"/>
@@ -369,7 +419,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zW-CB-lfF" userLabel="phone container label">
-                                                <rect key="frame" x="0.0" y="360" width="382" height="40"/>
+                                                <rect key="frame" x="0.0" y="480" width="382" height="40"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FM4-a0-HgR">
                                                         <rect key="frame" x="25" y="0.0" width="327" height="40"/>
@@ -432,7 +482,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Notes" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PuB-B2-9g9" customClass="TextViewWithHint" customModule="balbid" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="420" width="382" height="129"/>
+                                                <rect key="frame" x="0.0" y="540" width="382" height="129"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="129" id="pHp-cP-0sG"/>
@@ -461,7 +511,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySf-k9-Ide">
-                                                <rect key="frame" x="0.0" y="569" width="382" height="40"/>
+                                                <rect key="frame" x="0.0" y="689" width="382" height="40"/>
                                                 <color key="backgroundColor" red="0.066666666669999999" green="0.86274509799999999" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="CPG-MQ-zZR"/>
@@ -510,7 +560,9 @@
                         <outlet property="neighborhoodTextField" destination="vvc-I8-VWl" id="ykU-Yu-VTU"/>
                         <outlet property="noteTextView" destination="PuB-B2-9g9" id="Eac-3H-qsY"/>
                         <outlet property="phoneNumberTextField" destination="RTb-EW-uWt" id="JhN-kR-uQB"/>
+                        <outlet property="regionTextField" destination="y2g-sT-kNX" id="Y4q-wR-Ckg"/>
                         <outlet property="saveButton" destination="ySf-k9-Ide" id="S8k-aI-AUn"/>
+                        <outlet property="streetTextField" destination="ZHp-QT-yBV" id="v4S-u2-zhR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPs-nV-h4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -722,11 +774,17 @@
         <designable name="RTb-EW-uWt">
             <size key="intrinsicContentSize" width="94" height="18.5"/>
         </designable>
+        <designable name="ZHp-QT-yBV">
+            <size key="intrinsicContentSize" width="152" height="18"/>
+        </designable>
         <designable name="kI5-jf-bqr">
             <size key="intrinsicContentSize" width="52" height="18.5"/>
         </designable>
         <designable name="vvc-I8-VWl">
             <size key="intrinsicContentSize" width="150" height="18"/>
+        </designable>
+        <designable name="y2g-sT-kNX">
+            <size key="intrinsicContentSize" width="104.5" height="18"/>
         </designable>
     </designables>
     <resources>
