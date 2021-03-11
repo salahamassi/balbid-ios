@@ -7,16 +7,22 @@
 
 import UIKit
 
-
 class ProductDetailHeaderView: UICollectionReusableView {
     
     public var animator: UIViewPropertyAnimator?
     weak var delegate: ProductDetailHeaderCollectionReusableViewDelegate?
+    private var viewModel = ProductDetailHeaderViewModel(dataSource: AppDataSource())
     
     var images: [String] = [] {
         didSet  {
             productImageCollectionViewDataSource.images  =  images
             imageCollectionView.reloadData()
+        }
+    }
+    
+    var product: ProductItem? {
+        didSet {
+            arrangeView()
         }
     }
     
@@ -40,17 +46,22 @@ class ProductDetailHeaderView: UICollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         viewSetUp()
+        setupViewModel()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         viewSetUp()
+        setupViewModel()
+    }
+    
+    private func setupViewModel() {
+        viewModel.delegate = self
     }
     
     private func viewSetUp() {
         addView(imageCollectionView, anchors: .fillSuperview(.zero))
         setupCollectionView()
-        arrangeView()
         addBlurVisulaEffectView()
     }
     
@@ -70,14 +81,15 @@ class ProductDetailHeaderView: UICollectionReusableView {
         addView(
             stack(
                 hstack(
-                    button(image:  #imageLiteral(resourceName: "round_arrow_back_ios_black_24pt").withRenderingMode(.alwaysOriginal),
+                    button(image: #imageLiteral(resourceName: "round_arrow_back_ios_black_24pt").withRenderingMode(.alwaysOriginal),
                             target: self,
                             action: #selector(back)),
                     button(image: #imageLiteral(resourceName: "search"), tintColor: .black),
                     distribution: .equalSpacing
                 ),
                 stack(
-                    button(image: #imageLiteral(resourceName: "empty-star").withRenderingMode(.alwaysOriginal))
+                    button(image: ((product?.isFavorite ?? "0" == "0" ) ? #imageLiteral(resourceName: "empty-star").withRenderingMode(.alwaysOriginal) : #imageLiteral(resourceName: "full-rating-star").withRenderingMode(.alwaysOriginal).sd_resizedImage(with: .init(width: 20, height: 20), scaleMode: .aspectFit)), target: self,
+                           action: #selector(addToFavorite))
                         .withBackgroundColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).withAlphaComponent(0.39))
                         .withWidth(27)
                         .withHeight(27)
@@ -100,6 +112,29 @@ class ProductDetailHeaderView: UICollectionReusableView {
     @objc func back(){
         delegate?.ProductDetailHeaderCollectionReusableView(self, performAction: .back)
     }
+    
+    @objc func addToFavorite(_ sender: UIButton){
+        guard let product = product else {
+            return
+        }
+        sender.loadingIndicator(true,indicatorColor: UIColor.appColor(.primaryColor) ?? .white)
+        if ((product.isFavorite ?? "0") == "1") {
+            viewModel.removeProductFromFavorite(productId: product.id) {
+                sender.loadingIndicator(false)
+                self.product!.isFavorite = "0"
+                sender.setImage(#imageLiteral(resourceName: "empty-star").withRenderingMode(.alwaysOriginal), for: .normal)
+            }
+            
+        }else{
+            viewModel.addProductToFavorite(productId: product.id) {
+                sender.loadingIndicator(false)
+                self.product!.isFavorite = "1"
+                sender.setImage(#imageLiteral(resourceName: "full-rating-star").withRenderingMode(.alwaysOriginal).sd_resizedImage(with: .init(width: 25, height: 25), scaleMode: .aspectFit), for: .normal)
+            }
+        }
+        
+    }
+    
     
     @objc func seach(){
         delegate?.ProductDetailHeaderCollectionReusableView(self, performAction: .search)
@@ -132,4 +167,15 @@ class ProductDetailHeaderView: UICollectionReusableView {
 protocol ProductDetailHeaderCollectionReusableViewDelegate: class {
     func ProductDetailHeaderCollectionReusableView(_ cell: ProductDetailHeaderView, performAction action: ProductDetailHeaderView.ActionType)
     func ProductDetailHeaderCollectionReusableView(_ cell: ProductDetailHeaderView, didSliderScroll index: Int)
+    func diplayErrorMessage(_ cell: ProductDetailHeaderView,  errorMessage: String)
+
+}
+
+
+extension ProductDetailHeaderView: ProductDetailHeaderViewModelDelegate {
+    func apiError(error: String) {
+        delegate?.diplayErrorMessage(self, errorMessage: error)
+    }
+    
+    
 }

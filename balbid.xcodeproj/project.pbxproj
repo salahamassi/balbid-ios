@@ -129,6 +129,7 @@
 		1852740125F7C5EB00108BA8 /* SizeSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852740025F7C5EB00108BA8 /* SizeSelectionCell.swift */; };
 		1852740425F7C66D00108BA8 /* SizeSelectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852740325F7C66D00108BA8 /* SizeSelectionDataSource.swift */; };
 		1852740725F7C6D000108BA8 /* SizeSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852740625F7C6D000108BA8 /* SizeSelectionDelegate.swift */; };
+		185CF0AE25F97DD4009E9982 /* ProductDetailHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CF0AD25F97DD4009E9982 /* ProductDetailHeaderViewModel.swift */; };
 		1863F18225D85F480052CA27 /* AdCategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863F18125D85F480052CA27 /* AdCategoriesViewModel.swift */; };
 		188027FF25F06C3800B51F0A /* AuthorizePeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188027FE25F06C3800B51F0A /* AuthorizePeople.swift */; };
 		1880280225F06FCD00B51F0A /* BankInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880280125F06FCD00B51F0A /* BankInformationViewModel.swift */; };
@@ -480,6 +481,7 @@
 		1852740025F7C5EB00108BA8 /* SizeSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeSelectionCell.swift; sourceTree = "<group>"; };
 		1852740325F7C66D00108BA8 /* SizeSelectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeSelectionDataSource.swift; sourceTree = "<group>"; };
 		1852740625F7C6D000108BA8 /* SizeSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeSelectionDelegate.swift; sourceTree = "<group>"; };
+		185CF0AD25F97DD4009E9982 /* ProductDetailHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailHeaderViewModel.swift; sourceTree = "<group>"; };
 		1863F18125D85F480052CA27 /* AdCategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCategoriesViewModel.swift; sourceTree = "<group>"; };
 		188027FE25F06C3800B51F0A /* AuthorizePeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizePeople.swift; sourceTree = "<group>"; };
 		1880280125F06FCD00B51F0A /* BankInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankInformationViewModel.swift; sourceTree = "<group>"; };
@@ -1297,6 +1299,7 @@
 			children = (
 				188F942125DFF7EB006E9783 /* ProductViewModel.swift */,
 				18F3708725EBE27F0005D19E /* ProductDetailRateViewModel.swift */,
+				185CF0AD25F97DD4009E9982 /* ProductDetailHeaderViewModel.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -2481,6 +2484,7 @@
 				3DB1DB4225868DE000EF1E8F /* BaseCollectionViewCell.swift in Sources */,
 				08A9B8C725A657D100AE5238 /* RateTableViewDataSource.swift in Sources */,
 				18F69CD925EFC61400B31E52 /* ColorSelectionDataSource.swift in Sources */,
+				185CF0AE25F97DD4009E9982 /* ProductDetailHeaderViewModel.swift in Sources */,
 				3DB1DB2C25868A1000EF1E8F /* Extensions+UILabel.swift in Sources */,
 				20FBE4AD25C823A200210190 /* TextViewWithHint.swift in Sources */,
 				2099ABC825C96DA300FAB410 /* OrderDetailRoute.swift in Sources */,

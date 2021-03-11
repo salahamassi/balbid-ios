@@ -131,6 +131,7 @@ class ProductDetailViewController: BaseViewController {
                 return
             }
             self.headerView = headerView
+            self.headerView.product = self.product
             self.headerView.images = self.product.images.count == 0 ? [self.product.imageFullPath ?? ""] : self.product.images
          }
          productDetailCollectionViewDelegate.headerView = headerView
@@ -238,6 +239,10 @@ extension ProductDetailViewController: ProductDetailCollectionViewCellDelegate {
 }
 
 extension ProductDetailViewController: ProductDetailHeaderCollectionReusableViewDelegate {
+    func diplayErrorMessage(_ cell: ProductDetailHeaderView, errorMessage: String) {
+        displayAlert(message: errorMessage)
+    }
+    
     func ProductDetailHeaderCollectionReusableView(_ cell: ProductDetailHeaderView, didSliderScroll index: Int) {
         guard let cell = collectionView.cellForItem(at: IndexPath(row: 0, section: 0)) as? ProductDetailCollectionViewCell else {
             return

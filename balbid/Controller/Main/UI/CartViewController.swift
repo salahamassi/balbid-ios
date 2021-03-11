@@ -60,8 +60,7 @@ extension CartViewController: SwipeActionDelegate {
     }
     
     func deleteItem(at indexPath: IndexPath) {
-        guard let id = cartCollectionViewDataSource.cart?.cartItem[indexPath.row].id,
-              let cart = cartCollectionViewDataSource.cart else {
+        guard let id = cartCollectionViewDataSource.cart?.cartItem[indexPath.row].id else {
             return
         }
         viewModel.deleteFromCart(id: id, index: indexPath.row)
@@ -76,8 +75,8 @@ extension CartViewController: SwipeActionDelegate {
 
 extension CartViewController: CartViewModelDelegate {
     func didUpdateQuantity(quantity: Int,index: Int) {
-//        let newQunatity = (Int(cartCollectionViewDataSource.cart!.cartItem[index].quantity) ?? 0) + quantity
-//        cartCollectionViewDataSource.cart!.cartItem[index].quantity = "\(newQunatity)"
+        let newQunatity = (Int(cartCollectionViewDataSource.cart!.cartItem[index].quantity) ?? 0) + quantity
+        cartCollectionViewDataSource.cart!.cartItem[index].quantity = "\(newQunatity)"
 //        collectionView.reloadItems(at: [IndexPath(row: index, section: 0)])
     }
     
