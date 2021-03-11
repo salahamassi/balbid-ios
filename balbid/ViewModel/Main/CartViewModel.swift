@@ -56,6 +56,32 @@ class CartViewModel: NSObject {
             }
         }
     }
+    
+    func addProductToFavorite(productId: Int){
+        appDataSource.perform(service: .init(path: .addToFavoritePath, domain: .domain, method: .post, params: ["product_id" : productId], mustUseAuth: true), ProductItem.self) { (result) in
+            switch result {
+            case .data(_):
+                self.delegate?.didAddToFavoriteSuccess()
+            case .failure(let error):
+                self.delegate?.apiError(error: error)
+            default:
+                break
+            }
+        }
+    }
+    
+    func removeProductFromFavorite(productId: Int){
+        appDataSource.perform(service: .init(path: .removeFromFavoritePath + "\(productId)", domain: .domain, method: .delete, params: [:], mustUseAuth: true), ProductItem.self) { (result) in
+            switch result {
+            case .data(_):
+                self.delegate?.didRemoveFromFavoriteSuccess()
+            case .failure(let error):
+                self.delegate?.apiError(error: error)
+            default:
+                break
+            }
+        }
+    }
 }
 
 
@@ -64,4 +90,7 @@ protocol CartViewModelDelegate: class {
     func didDeleteSuccessfully(index: Int)
     func didUpdateQuantity(quantity: Int,  index: Int)
     func apiError(error: String)
+    func didAddToFavoriteSuccess()
+    func didRemoveFromFavoriteSuccess()
+
 }

@@ -39,6 +39,28 @@ extension UIViewController {
             toastLabel.removeFromSuperview()
         })
     }
+    
+    func showToastWithAction(message: String, font: UIFont,actionTitle: String, action: (() -> Void)?) {
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 125, y: self.view.frame.size.height-220, width: 250, height: 35))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.font = font
+        toastLabel.textAlignment = .center
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        let actionButton = UIButton(frame: CGRect(x: self.view.frame.size.width - 60, y: self.view.frame.size.height-220, width: 50, height: 35))
+        actionButton.setTitle(actionTitle, for: .normal)
+        toastLabel.textColor = UIColor.yellow
+        toastLabel.addSubview(actionButton)
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+            toastLabel.alpha = 0.0
+        }, completion: {(_) in
+            toastLabel.removeFromSuperview()
+        })
+    }
 
     func displayAlert(title: String, message: String, defaultButtonTitle: String, destructiveButtonTitle: String?, completion:  @escaping() -> Void) {
         let confirmAlert = ConfirmAlert.initFromNib()

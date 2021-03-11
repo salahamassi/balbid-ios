@@ -56,6 +56,16 @@ class CartViewController: BaseViewController {
 
 extension CartViewController: SwipeActionDelegate {
     func addItemToFavorite(at indexPath: IndexPath) {
+        guard let product = cartCollectionViewDataSource.cart?.cartItem[indexPath.row].products else {
+            return
+        }
+        if product.isFavorite ?? "0" == "1" {
+            viewModel.removeProductFromFavorite(productId: product.id)
+            cartCollectionViewDataSource.cart?.cartItem[indexPath.row].products.isFavorite = "0"
+        }else {
+            viewModel.addProductToFavorite(productId: product.id)
+            cartCollectionViewDataSource.cart?.cartItem[indexPath.row].products.isFavorite = "1"
+        }
         
     }
     
@@ -74,10 +84,17 @@ extension CartViewController: SwipeActionDelegate {
 
 
 extension CartViewController: CartViewModelDelegate {
+    func didAddToFavoriteSuccess() {
+        showToast(message: "Added To Favorite success", font: .medium)
+    }
+    
+    func didRemoveFromFavoriteSuccess() {
+        showToast(message: "Item Removed From Favorite", font: .medium)
+    }
+    
     func didUpdateQuantity(quantity: Int,index: Int) {
         let newQunatity = (Int(cartCollectionViewDataSource.cart!.cartItem[index].quantity) ?? 0) + quantity
         cartCollectionViewDataSource.cart!.cartItem[index].quantity = "\(newQunatity)"
-//        collectionView.reloadItems(at: [IndexPath(row: index, section: 0)])
     }
     
     func loadCartSuccess(cart: Cart) {
