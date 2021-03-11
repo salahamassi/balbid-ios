@@ -131,6 +131,7 @@
 		1852740725F7C6D000108BA8 /* SizeSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852740625F7C6D000108BA8 /* SizeSelectionDelegate.swift */; };
 		185CF0AE25F97DD4009E9982 /* ProductDetailHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CF0AD25F97DD4009E9982 /* ProductDetailHeaderViewModel.swift */; };
 		185CF0B125FA473F009E9982 /* AddNewAddressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CF0B025FA473F009E9982 /* AddNewAddressViewModel.swift */; };
+		185CF0B425FA6C52009E9982 /* Extension+CCLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CF0B325FA6C52009E9982 /* Extension+CCLocation.swift */; };
 		1863F18225D85F480052CA27 /* AdCategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863F18125D85F480052CA27 /* AdCategoriesViewModel.swift */; };
 		188027FF25F06C3800B51F0A /* AuthorizePeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188027FE25F06C3800B51F0A /* AuthorizePeople.swift */; };
 		1880280225F06FCD00B51F0A /* BankInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880280125F06FCD00B51F0A /* BankInformationViewModel.swift */; };
@@ -484,6 +485,7 @@
 		1852740625F7C6D000108BA8 /* SizeSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeSelectionDelegate.swift; sourceTree = "<group>"; };
 		185CF0AD25F97DD4009E9982 /* ProductDetailHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailHeaderViewModel.swift; sourceTree = "<group>"; };
 		185CF0B025FA473F009E9982 /* AddNewAddressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAddressViewModel.swift; sourceTree = "<group>"; };
+		185CF0B325FA6C52009E9982 /* Extension+CCLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CCLocation.swift"; sourceTree = "<group>"; };
 		1863F18125D85F480052CA27 /* AdCategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCategoriesViewModel.swift; sourceTree = "<group>"; };
 		188027FE25F06C3800B51F0A /* AuthorizePeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizePeople.swift; sourceTree = "<group>"; };
 		1880280125F06FCD00B51F0A /* BankInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankInformationViewModel.swift; sourceTree = "<group>"; };
@@ -1975,6 +1977,7 @@
 				2083641B25D306EE003F0D9B /* Extension+CATransition.swift */,
 				20D9828425D325A500C421E6 /* Extension+String+Validation.swift */,
 				181172D125ED696500C4A168 /* Extension+NSNotification.swift */,
+				185CF0B325FA6C52009E9982 /* Extension+CCLocation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2521,6 +2524,7 @@
 				3DB1DB2E25868A1000EF1E8F /* Extensions+UIFont.swift in Sources */,
 				08B1A7472587A33D003D49EF /* SplashViewController.swift in Sources */,
 				18920EC825E313CD00D5FD48 /* OptionGroupItem.swift in Sources */,
+				185CF0B425FA6C52009E9982 /* Extension+CCLocation.swift in Sources */,
 				2099ABCE25C979FB00FAB410 /* OrderProductTableViewDataSource.swift in Sources */,
 				3D4EEA0325CDF920001DD389 /* CacheOpreationType.swift in Sources */,
 				20CE078325D32B5F0012BAC4 /* Banner.swift in Sources */,

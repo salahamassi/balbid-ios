@@ -10,6 +10,8 @@ import MapKit
 
 class ShippingMapViewController: BaseViewController {
     
+    @IBOutlet weak var locationDetailLabel: UILabel!
+    @IBOutlet weak var countryAndCityLabel: UILabel!
     @IBOutlet weak var locationInfoContainer: UIView!
     @IBOutlet weak var mapView: MKMapView!
     
@@ -48,14 +50,28 @@ class ShippingMapViewController: BaseViewController {
     
     private func setupMapView(){
         selectedLocation = userLocation
+        getPositionDetail()
         let center = CLLocationCoordinate2D(latitude: selectedLocation?.latitude ?? 0.0, longitude: selectedLocation?.longitude ?? 0.0)
         mapView.setRegion(MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)), animated: true)
         annotation.coordinate = center
-        annotation.title = "hh"
         mapView.addAnnotation(annotation)
         mapView.delegate = self
     }
     
+    private func getPositionDetail() {
+        let location = CLLocation(latitude: selectedLocation?.latitude ?? 0.0, longitude: selectedLocation?.longitude ?? 0.0)
+        location.geocode { [weak self] (placeMarks, error) in
+            if error == nil {
+                guard let placeMark = placeMarks?.first else {
+                    return
+                }
+                
+                self?.countryAndCityLabel.text = (placeMark.country ?? "UnKnown") + ", " + (placeMark.locality ?? "UnKnownn")
+                self?.locationDetailLabel.text = (placeMark.subLocality ?? "UnKnown") + ", " +  (placeMark.thoroughfare ??  "UnKnown")  + ", " 
+                self?.locationDetailLabel.text! += (placeMark.subThoroughfare ?? "UnKnown")
+            }
+        }
+    }
     
     private func setLocationInfo(){
         userLocation = LocationManager.shared.currentLocation?.coordinate
@@ -92,15 +108,20 @@ extension ShippingMapViewController: MKMapViewDelegate  {
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, didChange newState: MKAnnotationView.DragState, fromOldState oldState: MKAnnotationView.DragState) {
+        print(newState.rawValue)
         switch newState {
         case .starting:
             view.dragState = .dragging
         case .ending, .canceling:
-            selectedLocation = view.annotation?.coordinate
             view.dragState = .none
+        case .none:
+            getPositionDetail()
+            selectedLocation = view.annotation?.coordinate
+        
         default: break
         }
     }
+    
 
 }
 
