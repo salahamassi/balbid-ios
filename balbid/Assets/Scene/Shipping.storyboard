@@ -33,22 +33,22 @@
                                 <rect key="frame" x="25" y="63" width="364" height="44"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="g4o-f0-D0f">
-                                        <rect key="frame" x="9" y="11" width="203.5" height="22"/>
+                                        <rect key="frame" x="9" y="9" width="224.5" height="26"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="2Mo-LE-Faf">
-                                                <rect key="frame" x="0.0" y="2" width="13" height="18"/>
+                                                <rect key="frame" x="0.0" y="4" width="13" height="18"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="UyK-Xq-Vkx">
-                                                <rect key="frame" x="25" y="0.0" width="178.5" height="22"/>
+                                                <rect key="frame" x="25" y="0.0" width="199.5" height="26"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reyad, Saudia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uss-9r-bGp">
-                                                        <rect key="frame" x="0.0" y="0.0" width="178.5" height="10"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="199.5" height="12"/>
                                                         <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="10"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Four Roses, Eastern Ring Road, Mugraz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsD-4b-xaE">
-                                                        <rect key="frame" x="0.0" y="12" width="178.5" height="10"/>
+                                                        <rect key="frame" x="0.0" y="14" width="199.5" height="12"/>
                                                         <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="10"/>
                                                         <color key="textColor" name="B2B2B2"/>
                                                         <nil key="highlightedColor"/>
@@ -381,7 +381,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="13" height="18"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detailed address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKm-v7-r7n">
-                                                                <rect key="frame" x="230" y="0.0" width="97" height="18"/>
+                                                                <rect key="frame" x="221.5" y="0.0" width="105.5" height="18"/>
                                                                 <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
                                                                 <color key="textColor" name="B2B2B2"/>
                                                                 <nil key="highlightedColor"/>
@@ -607,29 +607,29 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="708"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="obc-d7-nWh">
-                                        <rect key="frame" x="16" y="16" width="382" height="356"/>
+                                        <rect key="frame" x="16" y="16" width="382" height="361"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shipping Addresses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzy-GA-EEy">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="16"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="19"/>
                                                 <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add and use your own addresses for fast delivery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fej-gY-FCr">
-                                                <rect key="frame" x="0.0" y="20" width="382" height="12"/>
+                                                <rect key="frame" x="0.0" y="23" width="382" height="14"/>
                                                 <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="12"/>
                                                 <color key="textColor" name="textGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4F-Of-2eY" userLabel="spaceView">
-                                                <rect key="frame" x="0.0" y="36" width="382" height="16"/>
+                                                <rect key="frame" x="0.0" y="41" width="382" height="16"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="ze2-lf-Yh6"/>
                                                 </constraints>
                                             </view>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7rA-8d-vnS" customClass="ISIntrinsicTableView" customModule="balbid" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="56" width="382" height="300"/>
+                                                <rect key="frame" x="0.0" y="61" width="382" height="300"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="shipping_address_cell" rowHeight="159" id="niM-Gr-6Us" customClass="ShippingAddressCell" customModule="balbid" customModuleProvider="target">
@@ -651,28 +651,28 @@
                                                                             <state key="normal" image="radio-on"/>
                                                                         </button>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="YbS-Og-GNd">
-                                                                            <rect key="frame" x="26" y="0.0" width="269" height="49"/>
+                                                                            <rect key="frame" x="26" y="0.0" width="269" height="57"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Qamar Amassi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4T-iH-j58">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="269" height="10"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="269" height="12"/>
                                                                                     <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="10"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="gh gh gg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUS-HB-hpO">
-                                                                                    <rect key="frame" x="0.0" y="13" width="269" height="10"/>
+                                                                                    <rect key="frame" x="0.0" y="15" width="269" height="12"/>
                                                                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="10"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Saudia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIs-ys-Ogo">
-                                                                                    <rect key="frame" x="0.0" y="26" width="269" height="10"/>
+                                                                                    <rect key="frame" x="0.0" y="30" width="269" height="12"/>
                                                                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="10"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="553377771" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kB8-Q7-Iuk">
-                                                                                    <rect key="frame" x="0.0" y="39" width="269" height="10"/>
+                                                                                    <rect key="frame" x="0.0" y="45" width="269" height="12"/>
                                                                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="10"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
@@ -767,31 +767,31 @@
     </scenes>
     <designables>
         <designable name="7Ns-Eu-yM0">
-            <size key="intrinsicContentSize" width="38" height="15.5"/>
+            <size key="intrinsicContentSize" width="41" height="18"/>
         </designable>
         <designable name="7rA-8d-vnS">
             <size key="intrinsicContentSize" width="-1" height="300"/>
         </designable>
         <designable name="FAX-BK-qka">
-            <size key="intrinsicContentSize" width="23" height="15.5"/>
+            <size key="intrinsicContentSize" width="25" height="18"/>
         </designable>
         <designable name="NFe-vm-OrW">
-            <size key="intrinsicContentSize" width="34.5" height="15.5"/>
+            <size key="intrinsicContentSize" width="37.5" height="18"/>
         </designable>
         <designable name="RTb-EW-uWt">
             <size key="intrinsicContentSize" width="94" height="18.5"/>
         </designable>
         <designable name="ZHp-QT-yBV">
-            <size key="intrinsicContentSize" width="87.5" height="15.5"/>
+            <size key="intrinsicContentSize" width="92" height="18"/>
         </designable>
         <designable name="kI5-jf-bqr">
             <size key="intrinsicContentSize" width="52" height="18.5"/>
         </designable>
         <designable name="vvc-I8-VWl">
-            <size key="intrinsicContentSize" width="84.5" height="15.5"/>
+            <size key="intrinsicContentSize" width="90" height="18"/>
         </designable>
         <designable name="y2g-sT-kNX">
-            <size key="intrinsicContentSize" width="40" height="15.5"/>
+            <size key="intrinsicContentSize" width="44.5" height="18"/>
         </designable>
     </designables>
     <resources>

@@ -16,7 +16,10 @@ class ShippingMapViewController: BaseViewController {
     @IBOutlet weak var locateMyLocationButton: UIButton!
     @IBOutlet weak var confirmLocation: UIButton!
     var userLocation: CLLocationCoordinate2D!
+    var selectedLocation: CLLocationCoordinate2D?
+
     let annotation = MKPointAnnotation()
+    weak var delegate: ShippingMapViewControllerDelegate?
     
     override var mustClearNavigationBar: Bool {
         true
@@ -25,10 +28,10 @@ class ShippingMapViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setLocationInfo()
         setupNav()
         setupView()
         setupMapView()
-        setLocationInfo()
     }
     
     private func setupNav(){
@@ -44,10 +47,13 @@ class ShippingMapViewController: BaseViewController {
     }
     
     private func setupMapView(){
-        let center = CLLocationCoordinate2D(latitude: 21.4359571, longitude: 39.9866319)
+        selectedLocation = userLocation
+        let center = CLLocationCoordinate2D(latitude: selectedLocation?.latitude ?? 0.0, longitude: selectedLocation?.longitude ?? 0.0)
         mapView.setRegion(MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)), animated: true)
         annotation.coordinate = center
+        annotation.title = "hh"
         mapView.addAnnotation(annotation)
+        mapView.delegate = self
     }
     
     
@@ -61,9 +67,44 @@ class ShippingMapViewController: BaseViewController {
     }
     
     @IBAction func confirmLocation(_ sender: Any) {
+        delegate?.didSelectLocation(latitude: selectedLocation?.latitude ?? 0.0, longitude: selectedLocation?.longitude ?? 0.0)
         router?.popViewController()
     }
-    
-    
 
+}
+
+
+extension ShippingMapViewController: MKMapViewDelegate  {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard  annotation is MKPointAnnotation else { return nil}
+        
+        let identifier = "Annotation"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+
+        if annotationView == nil {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView!.isDraggable = true
+
+        }else {
+            annotationView!.annotation = annotation
+        }
+        return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, didChange newState: MKAnnotationView.DragState, fromOldState oldState: MKAnnotationView.DragState) {
+        switch newState {
+        case .starting:
+            view.dragState = .dragging
+        case .ending, .canceling:
+            selectedLocation = view.annotation?.coordinate
+            view.dragState = .none
+        default: break
+        }
+    }
+
+}
+
+
+protocol ShippingMapViewControllerDelegate: class {
+    func  didSelectLocation(latitude: Double, longitude: Double)
 }

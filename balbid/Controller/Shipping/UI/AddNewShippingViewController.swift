@@ -21,6 +21,8 @@ class AddNewShippingViewController: BaseViewController {
     @IBOutlet weak var regionTextField: BorderedTextField!
     @IBOutlet weak var streetTextField: BorderedTextField!
     var err: String? = nil
+    private var latitude = 0.0
+    private var longitude = 0.0
 
     var addNewShipping: ((_ address: AddressItem) -> Void)?
     
@@ -42,7 +44,7 @@ class AddNewShippingViewController: BaseViewController {
     }
     
     @IBAction func showMapController(_ sender: Any) {
-        router?.navigate(to: .shippingMapRoute)
+        router?.navigate(to: ShippingRoutes.shippingMapRoute(delegate: self))
     }
     
     private func setData() {
@@ -81,7 +83,7 @@ class AddNewShippingViewController: BaseViewController {
     private func sendRequest() {
         errorLabel.isHidden = true
         saveButton.loadingIndicator(true)
-        let address = AddressItem(id: -1, name: nameTextField.text!, familyName: familyTextField.text!, country: countryTextField.text!, neighborhood: neighborhoodTextField.text!, city: cityTextField.text!, mobileNumber: phoneNumberTextField.text!, region: regionTextField.text!, note: noteTextView.text!, longitude: "0,.0", latitude: "0.0", street: streetTextField.text!)
+        let address = AddressItem(id: -1, name: nameTextField.text!, familyName: familyTextField.text!, country: countryTextField.text!, neighborhood: neighborhoodTextField.text!, city: cityTextField.text!, mobileNumber: phoneNumberTextField.text!, region: regionTextField.text!, note: noteTextView.text!, longitude: "\(longitude)", latitude: "\(latitude)", street: streetTextField.text!)
         addNewShipping?(address)
     }
     
@@ -105,6 +107,15 @@ extension AddNewShippingViewController: AddNewAddressViewModelDelegate {
     func didAddNewAddressSuccess() {
         saveButton.loadingIndicator(false)
         router?.popViewController()
+    }
+    
+    
+}
+
+extension AddNewShippingViewController: ShippingMapViewControllerDelegate {
+    func didSelectLocation(latitude: Double, longitude: Double) {
+        self.latitude = latitude
+        self.longitude = longitude
     }
     
     
