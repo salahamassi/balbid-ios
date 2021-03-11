@@ -41,8 +41,6 @@ extension CartCollectionViewDataSource: SwipeCollectionViewCellDelegate{
             addToFavoriteAction.backgroundColor = UIColor.appColor(.yellowColor2)
            
             // customize the action appearance
-            
-//            addToFavoriteAction.image =  (product.isFavorite ?? "0" == "0") ?  #imageLiteral(resourceName: "empty-rating-star") : #imageLiteral(resourceName: "star")
             if #available(iOS 13.0, *) {
                 addToFavoriteAction.image = (product.isFavorite ?? "0" == "0") ? #imageLiteral(resourceName: "empty-star").sd_resizedImage(with: .init(width: 25, height: 25), scaleMode: .aspectFit)?.withTintColor(.white) : #imageLiteral(resourceName: "star")
             } else {

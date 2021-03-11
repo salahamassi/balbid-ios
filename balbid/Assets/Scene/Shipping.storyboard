@@ -475,6 +475,9 @@
                                                         <real key="value" value="21"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="save:" destination="MIH-I4-KT6" eventType="touchUpInside" id="r3X-rv-ihd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -500,7 +503,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="noteTextView" destination="PuB-B2-9g9" id="djY-Dq-cbj"/>
+                        <outlet property="cityTextField" destination="FAX-BK-qka" id="HLs-Gy-jHl"/>
+                        <outlet property="countryTextField" destination="kI5-jf-bqr" id="F8S-ny-Swe"/>
+                        <outlet property="familyTextField" destination="7Ns-Eu-yM0" id="ygg-hZ-DFv"/>
+                        <outlet property="nameTextField" destination="NFe-vm-OrW" id="Ek8-ZA-hrr"/>
+                        <outlet property="neighborhoodTextField" destination="vvc-I8-VWl" id="ykU-Yu-VTU"/>
+                        <outlet property="noteTextView" destination="PuB-B2-9g9" id="Eac-3H-qsY"/>
+                        <outlet property="phoneNumberTextField" destination="RTb-EW-uWt" id="JhN-kR-uQB"/>
+                        <outlet property="saveButton" destination="ySf-k9-Ide" id="S8k-aI-AUn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPs-nV-h4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -697,8 +707,26 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="7Ns-Eu-yM0">
+            <size key="intrinsicContentSize" width="101" height="18"/>
+        </designable>
         <designable name="7rA-8d-vnS">
             <size key="intrinsicContentSize" width="-1" height="300"/>
+        </designable>
+        <designable name="FAX-BK-qka">
+            <size key="intrinsicContentSize" width="85" height="18"/>
+        </designable>
+        <designable name="NFe-vm-OrW">
+            <size key="intrinsicContentSize" width="97.5" height="18"/>
+        </designable>
+        <designable name="RTb-EW-uWt">
+            <size key="intrinsicContentSize" width="94" height="18.5"/>
+        </designable>
+        <designable name="kI5-jf-bqr">
+            <size key="intrinsicContentSize" width="52" height="18.5"/>
+        </designable>
+        <designable name="vvc-I8-VWl">
+            <size key="intrinsicContentSize" width="150" height="18"/>
         </designable>
     </designables>
     <resources>

@@ -28,8 +28,8 @@ extension String {
     static let addToCartPath = "ShoppingCart/product"
     static let deleteFromCartPath = "ShoppingCart/product?product_cart_id="
     static let updateShoppingCart = "ShoppingCart/product/increase"
+    static let addNewAddressPath = "customers/address"
 
-    
 
     //api Method
     static let post = "post"

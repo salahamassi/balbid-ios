@@ -10,8 +10,15 @@ import UIKit
 class
 AddNewShippingViewController: BaseViewController {
 
-    @IBOutlet weak var noteTextView: UITextView!
-
+    @IBOutlet weak var cityTextField: BorderedTextField!
+    @IBOutlet weak var nameTextField: BorderedTextField!
+    @IBOutlet weak var noteTextView: TextViewWithHint!
+    @IBOutlet weak var countryTextField: BorderedTextField!
+    @IBOutlet weak var phoneNumberTextField: BorderedTextField!
+    @IBOutlet weak var saveButton: UIButton!
+    
+    @IBOutlet weak var neighborhoodTextField: BorderedTextField!
+    @IBOutlet weak var familyTextField: BorderedTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNav()
@@ -32,4 +39,6 @@ AddNewShippingViewController: BaseViewController {
         router?.navigate(to: .shippingMapRoute)
     }
     
+    @IBAction func save(_ sender: Any) {
+    }
 }
