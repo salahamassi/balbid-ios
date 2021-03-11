@@ -48,7 +48,6 @@ class ShippingAddressViewController: BaseViewController {
     private func setupView(){
         addButton.setImage(#imageLiteral(resourceName: "plus").withRenderingMode(.alwaysTemplate), for: .normal)
         addButton.setImage(#imageLiteral(resourceName: "plus").withRenderingMode(.alwaysTemplate), for: .highlighted)
-
         addButton.tintColor = .white
     }
   

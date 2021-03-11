@@ -9,6 +9,7 @@ import UIKit
 
 class AddNewShippingViewController: BaseViewController {
 
+    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var cityTextField: BorderedTextField!
     @IBOutlet weak var nameTextField: BorderedTextField!
     @IBOutlet weak var noteTextView: TextViewWithHint!
@@ -19,7 +20,8 @@ class AddNewShippingViewController: BaseViewController {
     @IBOutlet weak var familyTextField: BorderedTextField!
     @IBOutlet weak var regionTextField: BorderedTextField!
     @IBOutlet weak var streetTextField: BorderedTextField!
-    
+    var err: String? = nil
+
     var addNewShipping: ((_ address: AddressItem) -> Void)?
     
     override func viewDidLoad() {
@@ -56,10 +58,41 @@ class AddNewShippingViewController: BaseViewController {
         #endif
     }
     
-    @IBAction func save(_ sender: Any) {
+    private func validate() {
+        err = nil
+        validateNotEmptyTextField(textField: nameTextField, message: "Name must be filled")
+        validateNotEmptyTextField(textField: familyTextField, message: "Family Name must be filled")
+        validateNotEmptyTextField(textField: countryTextField, message: "Country must be filled")
+        validateNotEmptyTextField(textField: neighborhoodTextField, message: "Neighborhood must be filled")
+        validateNotEmptyTextField(textField: cityTextField, message: "City must be filled")
+        validateNotEmptyTextField(textField: phoneNumberTextField, message: "Invalid Phone Number")
+        validateNotEmptyTextField(textField: regionTextField, message: "Region must be filled")
+        validateNotEmptyTextField(textField: streetTextField, message: "Street must be filled")
+
+    }
+    
+    private func validateNotEmptyTextField(textField: BorderedTextField, message: String) {
+        if(textField.text?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ?? true) {
+            textField.isError = true
+            err = message
+        }
+    }
+    
+    private func sendRequest() {
+        errorLabel.isHidden = true
         saveButton.loadingIndicator(true)
         let address = AddressItem(id: -1, name: nameTextField.text!, familyName: familyTextField.text!, country: countryTextField.text!, neighborhood: neighborhoodTextField.text!, city: cityTextField.text!, mobileNumber: phoneNumberTextField.text!, region: regionTextField.text!, note: noteTextView.text!, longitude: "0,.0", latitude: "0.0", street: streetTextField.text!)
         addNewShipping?(address)
+    }
+    
+    @IBAction func save(_ sender: Any) {
+        validate()
+        if (err == nil)  {
+            sendRequest()
+        }else {
+            errorLabel.isHidden = false
+            errorLabel.text = err
+        }
     }
 }
 
