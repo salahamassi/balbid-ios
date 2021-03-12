@@ -104,7 +104,7 @@ extension String {
     static let categoryProductFooterCellId = "category_product_footer"
     static let imageSliderCellId = "image_slider_cell"
     static let sizeCellId = "size_cell"
-
+    static let paymentCellId = "payment_cell"
 
     
     
@@ -159,11 +159,12 @@ extension String {
     
     
     static let shippingAdressViewController = "ShippingAdressViewController"
-    static let OrderShippingAdressViewController = "OrderShippingAdressViewController"
+    static let orderShippingAddressViewController = "OrderShippingAddressViewController"
     static let addNewShippingViewController = "AddNewShippingViewController"
     static let shippingMapViewController = "ShippingMapViewController"
     static let creditBalanceViewController = "CreditBalanceViewController"
 
+    
     
     static let userOrderViewController = "UserOrderViewController"
     static let orderDetailViewController = "OrderDetailViewController"
@@ -176,6 +177,8 @@ extension String {
     
     
     static let createOrderViewController = "CreateOrderViewController"
+    static let orderPaymentViewController = "OrderPaymentViewController"
+
     
     
     // image name

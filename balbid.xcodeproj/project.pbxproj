@@ -151,6 +151,14 @@
 		18920ECC25E3149000D5FD48 /* OptionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18920ECB25E3149000D5FD48 /* OptionItem.swift */; };
 		189C933B25DB188F000258EA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C933A25DB188F000258EA /* Category.swift */; };
 		189C933E25DB18EF000258EA /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C933D25DB18EF000258EA /* CategoryItem.swift */; };
+		18A4345025FBA168000D54F2 /* CreateOrder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A4344F25FBA168000D54F2 /* CreateOrder.storyboard */; };
+		18A4346025FBA2ED000D54F2 /* CreateOrderRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4345F25FBA2ED000D54F2 /* CreateOrderRoute.swift */; };
+		18A4346325FBA2F9000D54F2 /* CreateOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4346225FBA2F9000D54F2 /* CreateOrderViewController.swift */; };
+		18A4346625FBA7EF000D54F2 /* CreateOrderRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4346525FBA7EF000D54F2 /* CreateOrderRoutes.swift */; };
+		18A4346925FBB452000D54F2 /* OrderPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4346825FBB451000D54F2 /* OrderPaymentViewController.swift */; };
+		18A4346D25FC0378000D54F2 /* OrderPaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4346C25FC0378000D54F2 /* OrderPaymentViewModel.swift */; };
+		18A4347025FC053C000D54F2 /* SystemConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4346F25FC053C000D54F2 /* SystemConstant.swift */; };
+		18A4347325FC0558000D54F2 /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4347225FC0558000D54F2 /* PaymentMethod.swift */; };
 		18AD3F7025D8847A007CBC15 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AD3F6F25D8847A007CBC15 /* FavoriteViewModel.swift */; };
 		18CAB09725F6B6E1001E4C6C /* AddToCartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CAB09625F6B6E1001E4C6C /* AddToCartViewModel.swift */; };
 		18CAB09E25F6EA81001E4C6C /* SliderContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CAB09D25F6EA81001E4C6C /* SliderContainerCell.swift */; };
@@ -505,6 +513,14 @@
 		18920ECB25E3149000D5FD48 /* OptionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionItem.swift; sourceTree = "<group>"; };
 		189C933A25DB188F000258EA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		189C933D25DB18EF000258EA /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
+		18A4344F25FBA168000D54F2 /* CreateOrder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateOrder.storyboard; sourceTree = "<group>"; };
+		18A4345F25FBA2ED000D54F2 /* CreateOrderRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateOrderRoute.swift; sourceTree = "<group>"; };
+		18A4346225FBA2F9000D54F2 /* CreateOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateOrderViewController.swift; sourceTree = "<group>"; };
+		18A4346525FBA7EF000D54F2 /* CreateOrderRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderRoutes.swift; sourceTree = "<group>"; };
+		18A4346825FBB451000D54F2 /* OrderPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPaymentViewController.swift; sourceTree = "<group>"; };
+		18A4346C25FC0378000D54F2 /* OrderPaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPaymentViewModel.swift; sourceTree = "<group>"; };
+		18A4346F25FC053C000D54F2 /* SystemConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemConstant.swift; sourceTree = "<group>"; };
+		18A4347225FC0558000D54F2 /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
 		18AD3F6F25D8847A007CBC15 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		18CAB09625F6B6E1001E4C6C /* AddToCartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartViewModel.swift; sourceTree = "<group>"; };
 		18CAB09D25F6EA81001E4C6C /* SliderContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderContainerCell.swift; sourceTree = "<group>"; };
@@ -1128,6 +1144,7 @@
 				206E048E25BD9E6400BD8902 /* Order.storyboard */,
 				2092066C25C818B90072085E /* Shipping.storyboard */,
 				20C7F8F625CD7601001D0715 /* Payment.storyboard */,
+				18A4344F25FBA168000D54F2 /* CreateOrder.storyboard */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -1146,6 +1163,7 @@
 		08B1A7442587A2EF003D49EF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				18A4345C25FBA2C6000D54F2 /* CreateOrder */,
 				20C7F8FC25CD76A2001D0715 /* Payment */,
 				2092066F25C818E20072085E /* Shipping */,
 				206E049125BDA2AC00BD8902 /* Order */,
@@ -1308,6 +1326,40 @@
 			path = Product;
 			sourceTree = "<group>";
 		};
+		18A4345C25FBA2C6000D54F2 /* CreateOrder */ = {
+			isa = PBXGroup;
+			children = (
+				18A4345E25FBA2D6000D54F2 /* Route */,
+				18A4345D25FBA2CF000D54F2 /* UI */,
+			);
+			path = CreateOrder;
+			sourceTree = "<group>";
+		};
+		18A4345D25FBA2CF000D54F2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				18A4346225FBA2F9000D54F2 /* CreateOrderViewController.swift */,
+				18A4346825FBB451000D54F2 /* OrderPaymentViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		18A4345E25FBA2D6000D54F2 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				18A4345F25FBA2ED000D54F2 /* CreateOrderRoute.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		18A4346B25FC0364000D54F2 /* createOrder */ = {
+			isa = PBXGroup;
+			children = (
+				18A4346C25FC0378000D54F2 /* OrderPaymentViewModel.swift */,
+			);
+			path = createOrder;
+			sourceTree = "<group>";
+		};
 		18D6DF4A25ED2D6E009FAC5D /* Shipping */ = {
 			isa = PBXGroup;
 			children = (
@@ -1382,6 +1434,7 @@
 		2006B91325CECAC300DB3EE0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				18A4346B25FC0364000D54F2 /* createOrder */,
 				1851E17B25F015700049C7B5 /* CompanyAuth */,
 				18D6DF4A25ED2D6E009FAC5D /* Shipping */,
 				188F942025DFF7DD006E9783 /* Product */,
@@ -1814,6 +1867,8 @@
 				18D6DF5225ED3018009FAC5D /* AddressItem.swift */,
 				1885AD4125F597F30077F06F /* Cart.swift */,
 				1885AD4725F6A5110077F06F /* CartItem.swift */,
+				18A4346F25FC053C000D54F2 /* SystemConstant.swift */,
+				18A4347225FC0558000D54F2 /* PaymentMethod.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1916,6 +1971,7 @@
 				206E04A425BDA9F500BD8902 /* OrderRoutes.swift */,
 				2092067725C819920072085E /* ShippingRoutes.swift */,
 				20C7F8F925CD763B001D0715 /* PaymentRoutes.swift */,
+				18A4346525FBA7EF000D54F2 /* CreateOrderRoutes.swift */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -2284,6 +2340,7 @@
 				20CE078925D339920012BAC4 /* ProductFooterCell.xib in Resources */,
 				08B1A73E25879024003D49EF /* Tajawal-Medium 500.ttf in Resources */,
 				2092065125C719BE0072085E /* ProductImageCell.xib in Resources */,
+				18A4345025FBA168000D54F2 /* CreateOrder.storyboard in Resources */,
 				20A1A36525CDA34300C1115C /* AddNewCardView.xib in Resources */,
 				087D90B9258BF9FA002BAE95 /* Poppins-Medium.ttf in Resources */,
 				087D90AF258BF86C002BAE95 /* CompanyAuth.storyboard in Resources */,
@@ -2513,6 +2570,7 @@
 				202569E725BE06BC00FD61AD /* OrderTableViewDelegate.swift in Sources */,
 				08809EF12593BF1600AD41EE /* BankInfromationTableViewDataSource.swift in Sources */,
 				3D4EE9FF25CDF920001DD389 /* AppCacheDataSource.swift in Sources */,
+				18A4346325FBA2F9000D54F2 /* CreateOrderViewController.swift in Sources */,
 				083F4A15259F7B6F005DEF75 /* CategoryProductsCollectionDataSource.swift in Sources */,
 				083E75A7259DE3B900EDF708 /* CategoriesViewController.swift in Sources */,
 				206E04A125BDA8DC00BD8902 /* UserOrderRoute.swift in Sources */,
@@ -2549,6 +2607,7 @@
 				206E049725BDA31100BD8902 /* FilterCollectionViewDataSource.swift in Sources */,
 				0835487C2587C18B00665DE0 /* LoginOptionViewController.swift in Sources */,
 				3DC76B5D25975C2100EE2428 /* PhotoCell.swift in Sources */,
+				18A4346625FBA7EF000D54F2 /* CreateOrderRoutes.swift in Sources */,
 				08F0CC3E258BD3A200FA2261 /* ForgetPasswordViewController.swift in Sources */,
 				20B2EE1325D15E31004B1DA2 /* ImageSliderCell.swift in Sources */,
 				083F4A0E259F69E1005DEF75 /* CategoryProductsViewController.swift in Sources */,
@@ -2573,6 +2632,8 @@
 				20AD836725C31C0B00070C78 /* CustomPDPLayout.swift in Sources */,
 				205F23BF25C993DE00BB52FD /* ProductTraceRoute.swift in Sources */,
 				208513F725CACEE10025885B /* ReorderCollectionViewDataSource.swift in Sources */,
+				18A4347325FC0558000D54F2 /* PaymentMethod.swift in Sources */,
+				18A4346025FBA2ED000D54F2 /* CreateOrderRoute.swift in Sources */,
 				08F0CC41258BD3D800FA2261 /* ForgetPasswordRoute.swift in Sources */,
 				1880280225F06FCD00B51F0A /* BankInformationViewModel.swift in Sources */,
 				0807031825A24AE5002B1776 /* ColorCollectionViewDelegate.swift in Sources */,
@@ -2583,6 +2644,7 @@
 				0894855225A1FD38001934A9 /* AddProductToCartDelegate.swift in Sources */,
 				087D90BC258BFAAA002BAE95 /* ProgressView.swift in Sources */,
 				185273FB25F7C4F100108BA8 /* SizeSelectionView.swift in Sources */,
+				18A4347025FC053C000D54F2 /* SystemConstant.swift in Sources */,
 				18E1249D25DC3E8B00D561C5 /* Constants+Api.swift in Sources */,
 				3D4EEA0925CDF920001DD389 /* AlamofireFileDownload.swift in Sources */,
 				1851E17D25F0159A0049C7B5 /* MainCompanyAuthViewModel.swift in Sources */,
@@ -2605,7 +2667,9 @@
 				3D4EEA0E25CDF920001DD389 /* ReachabilityManager.swift in Sources */,
 				1852740425F7C66D00108BA8 /* SizeSelectionDataSource.swift in Sources */,
 				3D4EEA0025CDF920001DD389 /* CacheDataSourceService.swift in Sources */,
+				18A4346925FBB452000D54F2 /* OrderPaymentViewController.swift in Sources */,
 				08C567832596583600C80A75 /* MainTabBarRoute.swift in Sources */,
+				18A4346D25FC0378000D54F2 /* OrderPaymentViewModel.swift in Sources */,
 				1880280525F0705000B51F0A /* BankInformation.swift in Sources */,
 				1851E17925EFD4450049C7B5 /* ColorSelectionDelegate.swift in Sources */,
 				08438E6925A2694000796373 /* ProductRoutes.swift in Sources */,

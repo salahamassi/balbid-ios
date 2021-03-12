@@ -1217,7 +1217,7 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t74-mT-vdX">
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t74-mT-vdX">
                                                 <rect key="frame" x="0.0" y="65" width="382" height="40"/>
                                                 <color key="backgroundColor" name="primaryColor"/>
                                                 <constraints>
@@ -1232,6 +1232,9 @@
                                                         <real key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="pay:" destination="6Uc-jZ-ORd" eventType="touchUpInside" id="N1d-wC-WYt"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -1273,6 +1276,7 @@
                         <outlet property="activityIndicatore" destination="gF8-Pp-dvh" id="vaa-Ox-58r"/>
                         <outlet property="collectionView" destination="Re6-e3-HyN" id="zz7-1n-9fe"/>
                         <outlet property="numberOfProductLabel" destination="umk-c9-Txv" id="FCy-ag-zb3"/>
+                        <outlet property="payButton" destination="t74-mT-vdX" id="qwZ-IB-FWK"/>
                         <outlet property="totalPriceLabel" destination="Ylh-Z7-cYd" id="oFd-4G-9QR"/>
                     </connections>
                 </viewController>

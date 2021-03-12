@@ -17,6 +17,8 @@ class ShippingAddressViewController: BaseViewController {
     private var shippingAddressTableViewDelegate = ShippingAddressTableViewDelegate()
     private var selectedIndex = -1
     
+    weak var delegate: SizeChangableDelegate?
+
     var  getUserAddresses: (() -> Void)?
 
     override func viewDidLoad() {
@@ -33,7 +35,7 @@ class ShippingAddressViewController: BaseViewController {
     
     private func setupNav(){
         title = "Shipping addresses"
-        (navigationController as! AppNavigationController).restyleBackButton()
+        (navigationController as? AppNavigationController)?.restyleBackButton()
     }
     
     private func setupTableView(){
@@ -67,5 +69,8 @@ extension ShippingAddressViewController: ShippingAddressViewModelDelegate {
         shippingAdressTableViewDataSource.address = address
         activityIndicator.stopAnimating()
         tableView.reloadData()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            self.delegate?.didUpdateContentSize(newHeight: (self.view.subviews.first?.frame.height ?? .zero) + 20)
+        }
     }
 }

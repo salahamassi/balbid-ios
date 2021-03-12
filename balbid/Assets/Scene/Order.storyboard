@@ -255,10 +255,10 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7W-es-gle">
-                                                                    <rect key="frame" x="-56" y="0.0" width="240" height="128"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plN-rR-kQJ">
-                                                                            <rect key="frame" x="99" y="53" width="42" height="21"/>
+                                                                            <rect key="frame" x="58.5" y="58" width="11" height="12"/>
                                                                             <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="10"/>
                                                                             <color key="textColor" name="primaryColor"/>
                                                                             <nil key="highlightedColor"/>

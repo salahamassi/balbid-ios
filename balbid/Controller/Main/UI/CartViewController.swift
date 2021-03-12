@@ -9,6 +9,7 @@ import UIKit
 
 class CartViewController: BaseViewController {
     
+    @IBOutlet weak var payButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicatore: UIActivityIndicatorView!
     @IBOutlet weak var numberOfProductLabel: UILabel!
@@ -52,6 +53,10 @@ class CartViewController: BaseViewController {
         cartCollectionViewDataSource.cartDelegate = self
     }
     
+    
+    @IBAction func pay(_ sender: Any) {
+        router?.navigate(to: .createOrderRoute)
+    }
 }
 
 extension CartViewController: SwipeActionDelegate {
@@ -66,7 +71,6 @@ extension CartViewController: SwipeActionDelegate {
             viewModel.addProductToFavorite(productId: product.id)
             cartCollectionViewDataSource.cart?.cartItem[indexPath.row].products.isFavorite = "1"
         }
-        
     }
     
     func deleteItem(at indexPath: IndexPath) {
@@ -98,6 +102,7 @@ extension CartViewController: CartViewModelDelegate {
     }
     
     func loadCartSuccess(cart: Cart) {
+        payButton.isUserInteractionEnabled = true
         activityIndicatore.stopAnimating()
         cartCollectionViewDataSource.cart = cart
         numberOfProductLabel.text = "\(cart.cartItem.count) Product"
