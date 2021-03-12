@@ -9,7 +9,7 @@ import UIKit
 
 class OrderPaymentViewModel: NSObject {
     
-    weak var delegate: OrderPaymentDelegate?
+    weak var delegate: OrderPaymentViewModelDelegate?
     let dataSource: AppDataSource
     
      init(dataSource: AppDataSource) {
@@ -32,7 +32,7 @@ class OrderPaymentViewModel: NSObject {
 
 }
 
-protocol OrderPaymentDelegate: class {
+protocol OrderPaymentViewModelDelegate: class {
     func apiError(error: String)
     func didLoadPaymentMethodSuccess(paymentMethods: [PaymentMethod])
 }

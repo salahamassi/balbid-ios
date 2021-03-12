@@ -12,7 +12,7 @@ struct SystemConstant: SwiftyModelData {
     let paymentMethods: [PaymentMethod]
     
     init(json: JSON) {
-        paymentMethods = json["paymentMethods"].arrayValue.map {PaymentMethod(json:$0)}
+        paymentMethods = json["payment_methods"].arrayValue.map {PaymentMethod(json:$0)}
     }
     
 }

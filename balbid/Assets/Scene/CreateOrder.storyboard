@@ -285,10 +285,10 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="OJ2-Tx-G3m">
                                                                             <rect key="frame" x="33" y="3" width="62" height="50.5"/>
                                                                             <subviews>
-                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="depitCard" translatesAutoresizingMaskIntoConstraints="NO" id="IWm-R2-HA3">
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="depitCard" translatesAutoresizingMaskIntoConstraints="NO" id="IWm-R2-HA3">
                                                                                     <rect key="frame" x="14" y="0.0" width="34" height="24.5"/>
                                                                                 </imageView>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="98p-Wz-Jee">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Credit Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="98p-Wz-Jee">
                                                                                     <rect key="frame" x="0.0" y="36.5" width="62" height="14"/>
                                                                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="12"/>
                                                                                     <nil key="textColor"/>
@@ -522,6 +522,10 @@
                                     </tableView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="H7G-u3-foC">
+                                <rect key="frame" x="197" y="67" width="20" height="20"/>
+                                <color key="color" name="primaryColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dko-WC-0gM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -529,10 +533,13 @@
                             <constraint firstItem="CXA-LM-4Cr" firstAttribute="top" secondItem="Dko-WC-0gM" secondAttribute="top" id="AKz-QF-Uv0"/>
                             <constraint firstItem="CXA-LM-4Cr" firstAttribute="leading" secondItem="Dko-WC-0gM" secondAttribute="leading" id="Fkw-GM-X0r"/>
                             <constraint firstItem="Dko-WC-0gM" firstAttribute="trailing" secondItem="CXA-LM-4Cr" secondAttribute="trailing" id="KIc-Yx-EiC"/>
+                            <constraint firstItem="H7G-u3-foC" firstAttribute="centerX" secondItem="xz2-Sr-Zf8" secondAttribute="centerX" id="Qpj-t7-yn6"/>
+                            <constraint firstItem="H7G-u3-foC" firstAttribute="centerY" secondItem="xz2-Sr-Zf8" secondAttribute="centerY" id="pWe-Jx-H7Y"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="paymentCollectionView" destination="xz2-Sr-Zf8" id="G3n-ol-cCz"/>
+                        <outlet property="paymentMethodActivityIndicator" destination="H7G-u3-foC" id="ZA2-cb-nll"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIk-RM-Gr1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
