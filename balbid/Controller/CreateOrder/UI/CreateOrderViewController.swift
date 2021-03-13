@@ -89,7 +89,6 @@ class CreateOrderViewController: BaseViewController {
         shippingSeperatorView.withBackgroundColor(UIColor.appColor(.primaryColor) ?? .white)
         paymentStepView.withBackgroundColor(UIColor.appColor(.whiteColor) ?? .white)
         paymentStepImageView.tintColor = UIColor.appColor(.primaryColor)
-
     }
     
     private func setupPaymentView() {
@@ -129,11 +128,22 @@ class CreateOrderViewController: BaseViewController {
     
     @IBAction func goToNextStep(_ sender: Any) {
         if  step < 3 {
-            step += 1
-            setNavTitle()
-            setContainerView()
+            validate()
         } else if step == 3 {
             
+        }
+    }
+    
+    func validate() {
+        switch step  {
+        case 1:
+            if shippingAddressViewController.validate() {
+                step += 1
+                setNavTitle()
+                setContainerView()
+            }
+        default:
+            break
         }
     }
     

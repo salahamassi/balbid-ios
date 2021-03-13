@@ -14,6 +14,7 @@ class UserDefaultsManager {
     private static let tokenKey = "token"
     private static let fcmTokenKey = "fcmToken"
     private static let isDarkModeKey = "isDarkMode"
+    private static let selectedAddressIdKey = "selectedAddressId"
 
     static var appLanguage: String? {
         get {
@@ -48,6 +49,16 @@ class UserDefaultsManager {
         }
         set {
             UserDefaults.standard.set(newValue, forKey: isDarkModeKey)
+        }
+    }
+    
+    
+    static var selectedAddressId: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: selectedAddressIdKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: selectedAddressIdKey)
         }
     }
 

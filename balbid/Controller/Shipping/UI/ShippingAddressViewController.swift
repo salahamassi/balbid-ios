@@ -44,6 +44,10 @@ class ShippingAddressViewController: BaseViewController {
         shippingAddressTableViewDelegate.didSelect = { indexPath in
             self.shippingAdressTableViewDataSource.selectedIndex = indexPath.row
             self.tableView.reloadData()
+            guard let id =  self.shippingAdressTableViewDataSource.address?.addresses[indexPath.row].id else {
+                return
+            }
+            UserDefaultsManager.selectedAddressId = id
         }
     }
     
@@ -57,6 +61,14 @@ class ShippingAddressViewController: BaseViewController {
     @IBAction func showAddNewAddressView(){
         router?.navigate(to: .addNewShippingRoute)
     }
+    
+    func validate() -> Bool {
+        if shippingAdressTableViewDataSource.selectedIndex == -1 {
+            displayAlert(message: "Please select shipping Address")
+            return false
+        }
+        return true
+    }
 
 }
 
@@ -69,6 +81,10 @@ extension ShippingAddressViewController: ShippingAddressViewModelDelegate {
         shippingAdressTableViewDataSource.address = address
         activityIndicator.stopAnimating()
         tableView.reloadData()
+        let id = UserDefaultsManager.selectedAddressId
+        shippingAdressTableViewDataSource.selectedIndex = address.addresses.firstIndex(where: { (address) -> Bool in
+            address.id ==  id
+        }) ?? -1
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.delegate?.didUpdateContentSize(newHeight: (self.view.subviews.first?.frame.height ?? .zero) + 20)
         }
