@@ -93,6 +93,7 @@ class ProductDetailHeaderView: UICollectionReusableView {
                         .withBackgroundColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).withAlphaComponent(0.39))
                         .withWidth(27)
                         .withHeight(27)
+                        .withTintColor(UIColor.appColor(.yellowColor2) ?? .clear)
                         .withCornerRadius(27/2),
                     button(image: #imageLiteral(resourceName: "share").withRenderingMode(.alwaysOriginal))
                         .withBackgroundColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).withAlphaComponent(0.39))

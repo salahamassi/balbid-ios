@@ -79,7 +79,10 @@ class OrderPaymentViewController: BaseViewController {
         viewModel.getPaymentMethod()
     }
     
-    func validate() -> PaymentMethod {
+    func validate() -> PaymentMethod? {
+        if( paymentMethodDataSource.paymentMethods == nil) {
+            return nil
+        }
         return paymentMethodDataSource.paymentMethods[paymentMethodDataSource.selectedIndex]
     }
     

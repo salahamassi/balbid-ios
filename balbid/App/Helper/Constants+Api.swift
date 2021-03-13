@@ -30,6 +30,7 @@ extension String {
     static let updateShoppingCart = "ShoppingCart/product/increase"
     static let addNewAddressPath = "customers/address"
     static let systemConstantPath = "system"
+    static let addOrderPath = "orders/store"
 
     //api Method
     static let post = "post"

@@ -31,7 +31,7 @@ extension UIView {
 
     @IBInspectable
     var borderColor: UIColor? {
-        get {
+        @objc     get {
             guard let val = layer.borderColor else {
                 return nil
             }
@@ -51,7 +51,12 @@ extension UIView {
         backgroundColor = color
         return self
     }
-
+    
+    @discardableResult
+    func withTintColor(_ color: UIColor) -> UIView {
+        tintColor = color
+        return self
+    }
     @discardableResult
     func withFrame(_ frame: CGRect) -> UIView {
         self.frame = frame

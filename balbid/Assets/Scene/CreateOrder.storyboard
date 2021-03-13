@@ -295,11 +295,11 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="OJ2-Tx-G3m">
                                                                             <rect key="frame" x="33" y="3" width="62" height="50.333333333333336"/>
                                                                             <subviews>
-                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="depitCard" translatesAutoresizingMaskIntoConstraints="NO" id="IWm-R2-HA3">
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="depitCard" translatesAutoresizingMaskIntoConstraints="NO" id="IWm-R2-HA3">
                                                                                     <rect key="frame" x="14" y="0.0" width="34" height="24.333333333333332"/>
                                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 </imageView>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="98p-Wz-Jee">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Credit Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="98p-Wz-Jee">
                                                                                     <rect key="frame" x="0.0" y="36.333333333333336" width="62" height="14"/>
                                                                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="12"/>
                                                                                     <nil key="textColor"/>
@@ -970,12 +970,21 @@ The postpaid service will be discontinued</string>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="kk4-qt-SIP" userLabel="margenedStackView">
                                         <rect key="frame" x="0.0" y="603" width="414" height="34.666666666666629"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBc-FT-tM6">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="5eD-3Q-yjS">
                                                 <rect key="frame" x="16" y="8.0000000000000018" width="382" height="18.666666666666671"/>
-                                                <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checked" translatesAutoresizingMaskIntoConstraints="NO" id="jxu-a4-TpA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="13" height="18.666666666666668"/>
+                                                        <color key="tintColor" name="greenColor"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Order summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBc-FT-tM6">
+                                                        <rect key="frame" x="37" y="0.0" width="345" height="18.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="16" bottom="8" trailing="16"/>
                                     </stackView>
@@ -1075,16 +1084,123 @@ The postpaid service will be discontinued</string>
                     <connections>
                         <outlet property="cardNumberLabel" destination="WhF-AJ-Wnh" id="c2h-MH-KeW"/>
                         <outlet property="paymentMethodNameLabel" destination="LP5-S0-qHh" id="pty-Fu-v3U"/>
+                        <outlet property="productTotalLabel" destination="GWV-SR-Jmn" id="0Vt-HU-gz6"/>
                         <outlet property="productsTableView" destination="fbJ-K8-DaB" id="E56-JZ-DtO"/>
                         <outlet property="shippingCityLabel" destination="mRZ-4U-ebw" id="jOa-5c-PS3"/>
                         <outlet property="shippingCountryLabel" destination="1Tw-j4-PC0" id="WV4-ME-n3W"/>
+                        <outlet property="shippingFeeLabel" destination="pTx-9W-BbD" id="rqW-8y-WjD"/>
                         <outlet property="shippingPhoneLabel" destination="Yvf-hx-LkC" id="jsh-h5-WzA"/>
                         <outlet property="shippingUserNameLabel" destination="Jdp-nX-vQ3" id="gUh-y4-5Tj"/>
+                        <outlet property="totalLabel" destination="mbG-KS-bGF" id="Lzo-2o-dlW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VKu-k6-0qb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2511.594202898551" y="-273.09782608695656"/>
+        </scene>
+        <!--Order Created Successfully View Controller-->
+        <scene sceneID="2my-vF-0Fi">
+            <objects>
+                <viewController storyboardIdentifier="OrderCreatedSuccessfullyViewController" id="fz1-TG-yLc" customClass="OrderCreatedSuccessfullyViewController" customModule="balbid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EiM-w9-C3J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="fyh-Ce-nUC">
+                                <rect key="frame" x="16" y="151.33333333333334" width="382" height="433.33333333333326"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="done" translatesAutoresizingMaskIntoConstraints="NO" id="AOe-hF-1xJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="243"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hL-UR-Tdz" userLabel="space view">
+                                        <rect key="frame" x="0.0" y="254" width="382" height="26"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="V3F-G8-lsz"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Sent Successfully" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILE-GG-Dgb">
+                                        <rect key="frame" x="0.0" y="291" width="382" height="23.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPW-VA-Wot" userLabel="space view">
+                                        <rect key="frame" x="0.0" y="325.33333333333337" width="382" height="47"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="GQf-cA-OGh"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="lz2-Cf-Lkf" userLabel="actionStackView">
+                                        <rect key="frame" x="0.0" y="383.33333333333326" width="382" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dr7-gJ-iBb">
+                                                <rect key="frame" x="0.0" y="0.0" width="184" height="50"/>
+                                                <color key="backgroundColor" name="primaryColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="5b7-hP-OMX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="16"/>
+                                                <state key="normal" title="View initial bill">
+                                                    <color key="titleColor" name="whiteColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="borderGrayColor2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="viewInitialBill:" destination="fz1-TG-yLc" eventType="touchUpInside" id="ElX-cM-sDO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHm-mA-XKB">
+                                                <rect key="frame" x="198" y="0.0" width="184" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="zrM-gX-MDX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="16"/>
+                                                <state key="normal" title="Back To Shopping">
+                                                    <color key="titleColor" name="primaryColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="borderGrayColor2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="backToShopping:" destination="fz1-TG-yLc" eventType="touchUpInside" id="SYC-9s-dRe"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="u2Y-PU-FBr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fyh-Ce-nUC" firstAttribute="centerX" secondItem="EiM-w9-C3J" secondAttribute="centerX" id="9ia-py-eNi"/>
+                            <constraint firstItem="u2Y-PU-FBr" firstAttribute="trailing" secondItem="fyh-Ce-nUC" secondAttribute="trailing" constant="16" id="dEg-xr-6a5"/>
+                            <constraint firstItem="fyh-Ce-nUC" firstAttribute="centerY" secondItem="EiM-w9-C3J" secondAttribute="centerY" id="jOc-fr-2HR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f1K-D8-EDJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3970" y="-189"/>
         </scene>
     </scenes>
     <designables>
@@ -1097,6 +1213,7 @@ The postpaid service will be discontinued</string>
         <image name="checked" width="13" height="13"/>
         <image name="confirm_order" width="19.666666030883789" height="11.333333015441895"/>
         <image name="depitCard" width="34" height="24.333333969116211"/>
+        <image name="done" width="243" height="243"/>
         <image name="edit" width="24" height="24"/>
         <image name="image_placeholder" width="144" height="144"/>
         <image name="payment-sample" width="48.333332061767578" height="34.666667938232422"/>

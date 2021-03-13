@@ -15,6 +15,7 @@ class CartViewController: BaseViewController {
     @IBOutlet weak var numberOfProductLabel: UILabel!
     @IBOutlet weak var totalPriceLabel: UILabel!
 
+    @IBOutlet weak var emptyCartView: UIView!
     let cartCollectionViewDataSource: CartCollectionViewDataSource = CartCollectionViewDataSource()
     let cartCollectionViewDelegate: CartCollectionViewDelegate = CartCollectionViewDelegate()
     
@@ -29,6 +30,7 @@ class CartViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        activityIndicatore.startAnimating()
         setupViewModel()
     }
     
@@ -91,6 +93,12 @@ extension CartViewController: SwipeActionDelegate {
 
 
 extension CartViewController: CartViewModelDelegate {
+    func emptyCart() {
+        activityIndicatore.stopAnimating()
+
+        emptyCartView.isHidden = false
+    }
+    
     func didAddToFavoriteSuccess() {
         showToast(message: "Added To Favorite success", font: .medium)
     }
@@ -105,6 +113,7 @@ extension CartViewController: CartViewModelDelegate {
     }
     
     func loadCartSuccess(cart: Cart) {
+        emptyCartView.isHidden = true
         payButton.isUserInteractionEnabled = true
         activityIndicatore.stopAnimating()
         cartCollectionViewDataSource.cart = cart

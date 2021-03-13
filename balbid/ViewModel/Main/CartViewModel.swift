@@ -22,7 +22,7 @@ class CartViewModel: NSObject {
             case .data(let data):
                 self.delegate?.loadCartSuccess(cart: data.data)
             case .failure(let error):
-                self.delegate?.apiError(error: error)
+                self.delegate?.emptyCart()
             default:
                 break
             }
@@ -92,5 +92,6 @@ protocol CartViewModelDelegate: class {
     func apiError(error: String)
     func didAddToFavoriteSuccess()
     func didRemoveFromFavoriteSuccess()
+    func emptyCart()
 
 }

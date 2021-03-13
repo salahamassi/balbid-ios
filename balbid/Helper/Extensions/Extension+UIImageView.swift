@@ -24,11 +24,7 @@ extension UIImageView {
        self.clipsToBounds = clipsToBounds
    }
 
-   @discardableResult
-   func withTintColor(_ color: UIColor) -> UIImageView {
-       tintColor = color
-       return self
-   }
+ 
 
     @discardableResult
     func withAnimatedTintColor(_ color: UIColor) -> UIImageView {

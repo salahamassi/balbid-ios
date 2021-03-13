@@ -16,6 +16,9 @@ class CreateOrderRoute: Route {
     func create(_ router: AppRouter, _ params: [String : Any]?) -> UIViewController {
         let viewController = UIStoryboard.createOrderStoryboard.getViewController(with: .createOrderViewController) as! CreateOrderViewController
         viewController.cart = params?["cart"] as? Cart
+        let viewModel = CreateOrderViewModel(dataSource: AppDataSource())
+        viewModel.delegate = viewController
+        viewController.addNewOrder = viewModel.addNewOrder
         return viewController
     }
     

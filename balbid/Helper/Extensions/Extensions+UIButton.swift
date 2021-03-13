@@ -79,6 +79,9 @@ extension UIButton {
                           animations: { self.setImage(image, for: .normal) },
                           completion: nil)
     }
+    
+
+
 
     func loadingIndicator(_ show: Bool, centerPoint: CGPoint? = nil, indicatorColor:  UIColor = .white) {
         let tag = 808404

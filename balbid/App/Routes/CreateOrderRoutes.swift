@@ -11,7 +11,8 @@ import AppRouter
 
 enum CreateOrderRoutes {
     case createOrderRoute(params: [String: Any])
-    
+    case orderCreatedSuccessfullyRoute
+
 }
 
 extension AppRouter {
@@ -22,6 +23,9 @@ extension AppRouter {
             case .createOrderRoute(let params):
                   mRoute = CreateOrderRoute()
                   mParams = params
+        case .orderCreatedSuccessfullyRoute:
+                mRoute = OrderCreatedSuccessfullyRoute()
+                mParams = nil
         }
         navigate(to: mRoute, with: mParams, completion: completion)
     }

@@ -1184,10 +1184,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="gF8-Pp-dvh">
-                                <rect key="frame" x="197" y="438" width="20" height="20"/>
-                                <color key="color" name="primaryColor"/>
-                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V1x-LJ-nki">
                                 <rect key="frame" x="0.0" y="713" width="414" height="100"/>
                                 <subviews>
@@ -1255,14 +1251,50 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gN-WK-YJa">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bsU-X4-w2l">
+                                        <rect key="frame" x="87" y="273.5" width="240" height="178"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cart" translatesAutoresizingMaskIntoConstraints="NO" id="G8z-xB-W84">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="M3e-bs-m66"/>
+                                                    <constraint firstAttribute="width" constant="240" id="eSi-rb-FOX"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No item added to cart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skk-0y-ibQ">
+                                                <rect key="frame" x="0.0" y="158" width="240" height="20"/>
+                                                <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="17"/>
+                                                <color key="textColor" name="greenColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="bsU-X4-w2l" firstAttribute="centerX" secondItem="5gN-WK-YJa" secondAttribute="centerX" id="SIR-zk-PNp"/>
+                                    <constraint firstItem="bsU-X4-w2l" firstAttribute="centerY" secondItem="5gN-WK-YJa" secondAttribute="centerY" id="XhX-3A-cDf"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="gF8-Pp-dvh">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <color key="color" name="primaryColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Iwh-BV-uPU"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="primaryColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="5gN-WK-YJa" secondAttribute="bottom" id="5NQ-u3-mbS"/>
                             <constraint firstItem="V1x-LJ-nki" firstAttribute="trailing" secondItem="Iwh-BV-uPU" secondAttribute="trailing" id="84O-L6-EFy"/>
                             <constraint firstItem="Re6-e3-HyN" firstAttribute="leading" secondItem="Iwh-BV-uPU" secondAttribute="leading" id="DHM-5D-PYc"/>
+                            <constraint firstItem="5gN-WK-YJa" firstAttribute="leading" secondItem="Iwh-BV-uPU" secondAttribute="leading" id="FM8-9S-TGv"/>
                             <constraint firstItem="gF8-Pp-dvh" firstAttribute="centerX" secondItem="V41-j0-mcI" secondAttribute="centerX" id="Pqp-AW-ZmB"/>
+                            <constraint firstItem="5gN-WK-YJa" firstAttribute="top" secondItem="Iwh-BV-uPU" secondAttribute="top" id="SBH-U9-4kV"/>
+                            <constraint firstItem="Iwh-BV-uPU" firstAttribute="trailing" secondItem="5gN-WK-YJa" secondAttribute="trailing" id="cSP-Ln-AEa"/>
                             <constraint firstItem="Re6-e3-HyN" firstAttribute="top" secondItem="Iwh-BV-uPU" secondAttribute="top" constant="4" id="hux-pJ-3Ii"/>
                             <constraint firstItem="V1x-LJ-nki" firstAttribute="top" secondItem="Re6-e3-HyN" secondAttribute="bottom" id="kz6-xa-fu7"/>
                             <constraint firstItem="V1x-LJ-nki" firstAttribute="bottom" secondItem="Iwh-BV-uPU" secondAttribute="bottom" id="lhl-oR-i8e"/>
@@ -1275,6 +1307,7 @@
                     <connections>
                         <outlet property="activityIndicatore" destination="gF8-Pp-dvh" id="vaa-Ox-58r"/>
                         <outlet property="collectionView" destination="Re6-e3-HyN" id="zz7-1n-9fe"/>
+                        <outlet property="emptyCartView" destination="5gN-WK-YJa" id="KKb-iN-Cs8"/>
                         <outlet property="numberOfProductLabel" destination="umk-c9-Txv" id="FCy-ag-zb3"/>
                         <outlet property="payButton" destination="t74-mT-vdX" id="qwZ-IB-FWK"/>
                         <outlet property="totalPriceLabel" destination="Ylh-Z7-cYd" id="oFd-4G-9QR"/>
@@ -1791,6 +1824,7 @@ Product</string>
         </designable>
     </designables>
     <resources>
+        <image name="Cart" width="169" height="169"/>
         <image name="action_arrow" width="7" height="11.5"/>
         <image name="ad_sample" width="344" height="125"/>
         <image name="balance" width="14.5" height="10"/>
@@ -1837,6 +1871,9 @@ Product</string>
         </namedColor>
         <namedColor name="grayBlue">
             <color red="0.0" green="0.56099998950958252" blue="0.77300000190734863" alpha="0.039999999105930328" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="greenColor">
+            <color red="0.067000001668930054" green="0.86299997568130493" blue="0.45899999141693115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="lightGrayColor">
             <color red="0.94900000095367432" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

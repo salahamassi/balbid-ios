@@ -19,11 +19,13 @@ class CreateOrderViewController: BaseViewController {
     @IBOutlet weak var paymentStepView: UIView!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var continueButton: UIButton!
+  
 
     var step = 1
     var selectedShippingAddress: AddressItem?
     var selectedPaymentMethod: PaymentMethod?
     var cart: Cart?
+    var addNewOrder: ((_ addressId: Int,_  paymentMethodId: Int) -> Void)?
 
     var currentViewController: UIViewController!
     private var shippingAddressViewModel = ShippingAddressViewModel(dataSource: AppDataSource())
@@ -91,7 +93,6 @@ class CreateOrderViewController: BaseViewController {
         
         self.containerViewHeightConstant?.constant = (self.currentViewController.view.subviews.first?.frame.height ?? .zero) + 20
         self.add(self.currentViewController, to: self.containerView, frame: self.containerView.frame)
-        
       
         
     }
@@ -151,7 +152,12 @@ class CreateOrderViewController: BaseViewController {
         if  step < 3 {
             validate()
         } else if step == 3 {
-            
+            guard let shippingId = selectedShippingAddress?.id,
+                  let paymentMethodId = selectedPaymentMethod?.id else {
+                return
+            }
+            continueButton.loadingIndicator(true)
+            addNewOrder?(shippingId, paymentMethodId)
         }
     }
     
@@ -165,8 +171,10 @@ class CreateOrderViewController: BaseViewController {
             }
         case 2:
             let paymentMethod = orderPaymentViewController.validate()
-            selectedPaymentMethod = paymentMethod
-            moveToNext()
+            if paymentMethod != nil {
+                selectedPaymentMethod = paymentMethod
+                moveToNext()
+            }
         default:
             break
         }
@@ -184,6 +192,21 @@ class CreateOrderViewController: BaseViewController {
 extension CreateOrderViewController: SizeChangableDelegate {
     func didUpdateContentSize(newHeight: CGFloat) {
         containerViewHeightConstant.constant = newHeight 
+    }
+    
+    
+}
+
+extension CreateOrderViewController: CreateOrderViewModelDelegate {
+    func apiError(error: String) {
+        continueButton.loadingIndicator(false)
+        displayAlert(message: error)
+    }
+    
+    func didAddOrderSuccess() {
+        continueButton.loadingIndicator(false)
+        router?.navigate(to: .orderCreatedSuccessfullyRoute)
+
     }
     
     

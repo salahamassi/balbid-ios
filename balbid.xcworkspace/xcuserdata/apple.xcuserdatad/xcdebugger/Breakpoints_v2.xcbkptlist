@@ -1437,8 +1437,8 @@
             filePath = "balbid/Controller/Main/UI/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "loadCartSuccess(cart:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1453,8 +1453,8 @@
             filePath = "balbid/Controller/Main/UI/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "apiError(error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1473,69 +1473,6 @@
             endingLineNumber = "23"
             landmarkName = "getCartData()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "79328A81-5A57-4170-A27C-75FE14F460DF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "balbid/ViewModel/Main/CartViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "getCartData()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "79328A81-5A57-4170-A27C-75FE14F460DF - 785c265bc8c36ade"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (balbid.DataSourceResult&lt;balbid.Cart&gt;) -&gt; () in balbid.CartViewModel.getCartData() -&gt; ()"
-                  moduleName = "balbid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Downloads/Work/balod/balbid/ViewModel/Main/CartViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "70">
-               </Location>
-               <Location
-                  uuid = "79328A81-5A57-4170-A27C-75FE14F460DF - 785c265bc8c36ade"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (balbid.DataSourceResult&lt;balbid.Cart&gt;) -&gt; () in balbid.CartViewModel.getCartData() -&gt; ()"
-                  moduleName = "balbid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Downloads/Work/balod/balbid/ViewModel/Main/CartViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "115">
-               </Location>
-               <Location
-                  uuid = "79328A81-5A57-4170-A27C-75FE14F460DF - 785c265bc8c36ade"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (balbid.DataSourceResult&lt;balbid.Cart&gt;) -&gt; () in balbid.CartViewModel.getCartData() -&gt; ()"
-                  moduleName = "balbid"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Downloads/Work/balod/balbid/ViewModel/Main/CartViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "516">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1708,8 +1645,8 @@
             filePath = "balbid/Controller/Main/UI/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "didDeleteSuccessfully(index:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1983,8 +1920,8 @@
             filePath = "balbid/Controller/Product/Cell/CollectionView/ProductDetailHeaderView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "addToFavorite(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1999,8 +1936,8 @@
             filePath = "balbid/Controller/Product/Cell/CollectionView/ProductDetailHeaderView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "addToFavorite(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2015,8 +1952,8 @@
             filePath = "balbid/Controller/Product/Cell/CollectionView/ProductDetailHeaderView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "addToFavorite(_:)"
             landmarkType = "7">
             <Locations>
@@ -2239,8 +2176,8 @@
             filePath = "balbid/Controller/CreateOrder/UI/OrderPaymentViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "didLoadPaymentMethodSuccess(paymentMethods:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2318,9 +2255,41 @@
             filePath = "balbid/Controller/CreateOrder/UI/CreateOrderViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "validate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4263D06-E409-4E38-821B-1BE6DBA748F9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/App/Data Source/Network Api/AlamofireNetworkApi.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "request(url:method:params:files:headers:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F2AE75ED-458B-4F38-B3F5-6CE17267370F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "balbid/Controller/Main/UI/CartViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "loadCartSuccess(cart:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
