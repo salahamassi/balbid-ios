@@ -10,7 +10,7 @@ import Foundation
 import AppRouter
 
 enum CreateOrderRoutes {
-    case createOrderRoute
+    case createOrderRoute(params: [String: Any])
     
 }
 
@@ -19,9 +19,9 @@ extension AppRouter {
         let mRoute: Route
         let mParams: [String: Any]?
         switch route {
-            case .createOrderRoute:
+            case .createOrderRoute(let params):
                   mRoute = CreateOrderRoute()
-                  mParams = nil
+                  mParams = params
         }
         navigate(to: mRoute, with: mParams, completion: completion)
     }

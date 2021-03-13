@@ -55,7 +55,10 @@ class CartViewController: BaseViewController {
     
     
     @IBAction func pay(_ sender: Any) {
-        router?.navigate(to: .createOrderRoute)
+        guard let cart = cartCollectionViewDataSource.cart else {
+            return
+        }
+        router?.navigate(to: CreateOrderRoutes.createOrderRoute(params:["cart" : cart]))
     }
 }
 

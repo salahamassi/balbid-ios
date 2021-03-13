@@ -17,9 +17,13 @@ class CreateOrderViewController: BaseViewController {
     @IBOutlet weak var containerViewHeightConstant: NSLayoutConstraint!
     @IBOutlet weak var paymentStepImageView: UIImageView!
     @IBOutlet weak var paymentStepView: UIView!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var continueButton: UIButton!
+
     var step = 1
     var selectedShippingAddress: AddressItem?
     var selectedPaymentMethod: PaymentMethod?
+    var cart: Cart?
 
     var currentViewController: UIViewController!
     private var shippingAddressViewModel = ShippingAddressViewModel(dataSource: AppDataSource())
@@ -72,18 +76,22 @@ class CreateOrderViewController: BaseViewController {
         case 3:
             setupPaymentView()
             guard let shippingAdress = selectedShippingAddress,
-                  let paymentMethod = selectedPaymentMethod else {
+                  let paymentMethod = selectedPaymentMethod,
+                  let cart = cart else {
                 break
             }
             createOrderSummaryViewController.shippingAdress = shippingAdress
             createOrderSummaryViewController.paymentMethod = paymentMethod
+            createOrderSummaryViewController.cart = cart
             currentViewController = createOrderSummaryViewController
         default:
             break
         }
+        
         self.containerViewHeightConstant?.constant = (self.currentViewController.view.subviews.first?.frame.height ?? .zero) + 20
-        print(self.currentViewController.view.subviews.first?.frame.height ?? .zero)
         self.add(self.currentViewController, to: self.containerView, frame: self.containerView.frame)
+        
+      
         
     }
     
@@ -97,11 +105,15 @@ class CreateOrderViewController: BaseViewController {
         shippingSeperatorView.withBackgroundColor(UIColor.appColor(.primaryColor) ?? .white)
         paymentStepView.withBackgroundColor(UIColor.appColor(.whiteColor) ?? .white)
         paymentStepImageView.tintColor = UIColor.appColor(.primaryColor)
+        backButton.isHidden = false
+        continueButton.setTitle("Continue", for: .normal)
     }
     
     private func setupPaymentView() {
         paymentStepView.withBackgroundColor(UIColor.appColor(.primaryColor) ?? .white)
         paymentStepImageView.tintColor = UIColor.appColor(.whiteColor)
+        backButton.isHidden = true
+        continueButton.setTitle("Confirm Order", for: .normal)
     }
     
     

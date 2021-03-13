@@ -110,6 +110,7 @@
 		08F2B8D6258BE8E000CAEC9A /* Tajawal-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08F2B8D5258BE8E000CAEC9A /* Tajawal-Bold.ttf */; };
 		08F3B5052596A0380099AC2B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F3B5042596A0380099AC2B /* HomeViewController.swift */; };
 		08F3B50B2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F3B50A2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift */; };
+		1808155E25FCF3E20073BB1F /* CreateOrderSummaryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1808155D25FCF3E20073BB1F /* CreateOrderSummaryDataSource.swift */; };
 		181172D225ED696500C4A168 /* Extension+NSNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181172D125ED696500C4A168 /* Extension+NSNotification.swift */; };
 		181172D725ED99A700C4A168 /* EvaluationFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181172D625ED99A700C4A168 /* EvaluationFooterCell.swift */; };
 		1821F50425EFC3B000BB1664 /* ColorSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1821F50325EFC3B000BB1664 /* ColorSelectionCell.xib */; };
@@ -478,6 +479,7 @@
 		08F2B8D5258BE8E000CAEC9A /* Tajawal-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Bold.ttf"; sourceTree = "<group>"; };
 		08F3B5042596A0380099AC2B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		08F3B50A2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		1808155D25FCF3E20073BB1F /* CreateOrderSummaryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderSummaryDataSource.swift; sourceTree = "<group>"; };
 		181172D125ED696500C4A168 /* Extension+NSNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NSNotification.swift"; sourceTree = "<group>"; };
 		181172D625ED99A700C4A168 /* EvaluationFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationFooterCell.swift; sourceTree = "<group>"; };
 		1821F50325EFC3B000BB1664 /* ColorSelectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorSelectionCell.xib; sourceTree = "<group>"; };
@@ -1382,6 +1384,7 @@
 			isa = PBXGroup;
 			children = (
 				18A4347625FC07E2000D54F2 /* PaymentMethodDataSource.swift */,
+				1808155D25FCF3E20073BB1F /* CreateOrderSummaryDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -2533,6 +2536,7 @@
 				20B2EE1025D157A7004B1DA2 /* HomeViewModel.swift in Sources */,
 				3DB1DB3225868A1000EF1E8F /* Extensions+Date.swift in Sources */,
 				083E759A259C9EDD00EDF708 /* ProductCollectionViewCell.swift in Sources */,
+				1808155E25FCF3E20073BB1F /* CreateOrderSummaryDataSource.swift in Sources */,
 				3D4EEA1025CDF920001DD389 /* BalbildParser.swift in Sources */,
 				1880280825F071BA00B51F0A /* BankInformationCell.swift in Sources */,
 				20C7F8FF25CD76C2001D0715 /* PaymentCardViewController.swift in Sources */,

@@ -15,17 +15,21 @@ class CreateOrderSummaryViewController: BaseViewController {
     @IBOutlet weak var shippingCountryLabel: UILabel!
     @IBOutlet weak var shippingCityLabel: UILabel!
     @IBOutlet weak var shippingPhoneLabel: UILabel!
-    
+    @IBOutlet weak var paymentMethodNameLabel: UILabel!
+
 
     var shippingAdress: AddressItem!
     var paymentMethod: PaymentMethod!
+    var cart: Cart?
+    private var createOrderSummaryDataSource = CreateOrderSummaryDataSource()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setShippingData()
+        setupPaymentMethodData()
+        setupView()
     }
-    
 
     private func setShippingData() {
         shippingUserNameLabel.text = shippingAdress.name + shippingAdress.familyName
@@ -33,5 +37,17 @@ class CreateOrderSummaryViewController: BaseViewController {
         shippingCityLabel.text = shippingAdress.city + ", " + shippingAdress.neighborhood
         shippingPhoneLabel.text = shippingAdress.mobileNumber
     }
+    
+    private func setupPaymentMethodData() {
+        paymentMethodNameLabel.text = paymentMethod.name
+    }
 
+    private func setupView() {
+        setupTableView()
+    }
+    
+    private func setupTableView() {
+        createOrderSummaryDataSource.cart = cart
+        productsTableView.dataSource = createOrderSummaryDataSource
+    }
 }

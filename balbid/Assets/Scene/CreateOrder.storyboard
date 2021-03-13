@@ -239,9 +239,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="0fm-aq-ecZ" id="wXx-In-XON"/>
                         <outlet property="cartImageView" destination="lvg-ch-ICz" id="Sek-12-sv9"/>
                         <outlet property="containerView" destination="zTg-dB-KYh" id="2dE-P7-N77"/>
                         <outlet property="containerViewHeightConstant" destination="q66-2S-pjo" id="yuz-Pd-pN1"/>
+                        <outlet property="continueButton" destination="Wab-sq-qws" id="Zkv-cv-DI2"/>
                         <outlet property="paymentStepImageView" destination="yzW-VR-2X0" id="QQr-Ao-jTo"/>
                         <outlet property="paymentStepView" destination="tQ7-QY-WMG" id="ifP-1o-jkZ"/>
                         <outlet property="shippingSeperatorView" destination="JA4-Up-XcR" id="1du-i2-ZL8"/>
@@ -293,11 +295,11 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="OJ2-Tx-G3m">
                                                                             <rect key="frame" x="33" y="3" width="62" height="50.333333333333336"/>
                                                                             <subviews>
-                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="depitCard" translatesAutoresizingMaskIntoConstraints="NO" id="IWm-R2-HA3">
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="depitCard" translatesAutoresizingMaskIntoConstraints="NO" id="IWm-R2-HA3">
                                                                                     <rect key="frame" x="14" y="0.0" width="34" height="24.333333333333332"/>
                                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 </imageView>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Credit Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="98p-Wz-Jee">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="98p-Wz-Jee">
                                                                                     <rect key="frame" x="0.0" y="36.333333333333336" width="62" height="14"/>
                                                                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="12"/>
                                                                                     <nil key="textColor"/>
@@ -700,11 +702,12 @@ The postpaid service will be discontinued</string>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="qJ3-MQ-j0G">
                                                 <rect key="frame" x="16" y="8.0000000000000018" width="382" height="18.666666666666671"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="AjB-nj-xmJ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="18" height="18.666666666666668"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checked" translatesAutoresizingMaskIntoConstraints="NO" id="AjB-nj-xmJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="13" height="18.666666666666668"/>
+                                                        <color key="tintColor" name="greenColor"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Shipping Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nL-B5-X8G">
-                                                        <rect key="frame" x="42" y="0.0" width="340" height="18.666666666666668"/>
+                                                        <rect key="frame" x="37" y="0.0" width="345" height="18.666666666666668"/>
                                                         <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -771,11 +774,12 @@ The postpaid service will be discontinued</string>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="WYu-pr-u6h">
                                                 <rect key="frame" x="16" y="8.0000000000000018" width="382" height="18.666666666666671"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="0AV-oY-NCE">
-                                                        <rect key="frame" x="0.0" y="0.0" width="18" height="18.666666666666668"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checked" translatesAutoresizingMaskIntoConstraints="NO" id="0AV-oY-NCE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="13" height="18.666666666666668"/>
+                                                        <color key="tintColor" name="greenColor"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Payment Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pd0-bZ-405">
-                                                        <rect key="frame" x="42" y="0.0" width="340" height="18.666666666666668"/>
+                                                        <rect key="frame" x="37" y="0.0" width="345" height="18.666666666666668"/>
                                                         <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -828,11 +832,12 @@ The postpaid service will be discontinued</string>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="2Pu-ur-yk2">
                                                 <rect key="frame" x="16" y="8.0000000000000018" width="382" height="18.666666666666671"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="NfL-Bj-3jY">
-                                                        <rect key="frame" x="0.0" y="0.0" width="18" height="18.666666666666668"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checked" translatesAutoresizingMaskIntoConstraints="NO" id="NfL-Bj-3jY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="13" height="18.666666666666668"/>
+                                                        <color key="tintColor" name="greenColor"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Review Order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJ1-xY-WdM">
-                                                        <rect key="frame" x="42" y="0.0" width="340" height="18.666666666666668"/>
+                                                        <rect key="frame" x="37" y="0.0" width="345" height="18.666666666666668"/>
                                                         <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1061,6 +1066,7 @@ The postpaid service will be discontinued</string>
                     </view>
                     <connections>
                         <outlet property="cardNumberLabel" destination="WhF-AJ-Wnh" id="c2h-MH-KeW"/>
+                        <outlet property="paymentMethodNameLabel" destination="LP5-S0-qHh" id="pty-Fu-v3U"/>
                         <outlet property="productsTableView" destination="fbJ-K8-DaB" id="E56-JZ-DtO"/>
                         <outlet property="shippingCityLabel" destination="mRZ-4U-ebw" id="jOa-5c-PS3"/>
                         <outlet property="shippingCountryLabel" destination="1Tw-j4-PC0" id="WV4-ME-n3W"/>
@@ -1080,6 +1086,7 @@ The postpaid service will be discontinued</string>
     </designables>
     <resources>
         <image name="check" width="18" height="18"/>
+        <image name="checked" width="13" height="13"/>
         <image name="confirm_order" width="19.666666030883789" height="11.333333015441895"/>
         <image name="depitCard" width="34" height="24.333333969116211"/>
         <image name="edit" width="24" height="24"/>
@@ -1101,6 +1108,9 @@ The postpaid service will be discontinued</string>
         </namedColor>
         <namedColor name="borderGrayColor2">
             <color red="0.58399999141693115" green="0.58399999141693115" blue="0.58399999141693115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="greenColor">
+            <color red="0.067000001668930054" green="0.86299997568130493" blue="0.45899999141693115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="lightGrayColor">
             <color red="0.94900000095367432" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
