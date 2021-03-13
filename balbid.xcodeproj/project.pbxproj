@@ -111,6 +111,7 @@
 		08F3B5052596A0380099AC2B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F3B5042596A0380099AC2B /* HomeViewController.swift */; };
 		08F3B50B2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F3B50A2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift */; };
 		1808155E25FCF3E20073BB1F /* CreateOrderSummaryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1808155D25FCF3E20073BB1F /* CreateOrderSummaryDataSource.swift */; };
+		1808156225FCF7FE0073BB1F /* OrderProductSummeryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1808156125FCF7FE0073BB1F /* OrderProductSummeryCell.swift */; };
 		181172D225ED696500C4A168 /* Extension+NSNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181172D125ED696500C4A168 /* Extension+NSNotification.swift */; };
 		181172D725ED99A700C4A168 /* EvaluationFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181172D625ED99A700C4A168 /* EvaluationFooterCell.swift */; };
 		1821F50425EFC3B000BB1664 /* ColorSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1821F50325EFC3B000BB1664 /* ColorSelectionCell.xib */; };
@@ -480,6 +481,7 @@
 		08F3B5042596A0380099AC2B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		08F3B50A2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		1808155D25FCF3E20073BB1F /* CreateOrderSummaryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderSummaryDataSource.swift; sourceTree = "<group>"; };
+		1808156125FCF7FE0073BB1F /* OrderProductSummeryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderProductSummeryCell.swift; sourceTree = "<group>"; };
 		181172D125ED696500C4A168 /* Extension+NSNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NSNotification.swift"; sourceTree = "<group>"; };
 		181172D625ED99A700C4A168 /* EvaluationFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationFooterCell.swift; sourceTree = "<group>"; };
 		1821F50325EFC3B000BB1664 /* ColorSelectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorSelectionCell.xib; sourceTree = "<group>"; };
@@ -1266,6 +1268,14 @@
 			path = FlowLayout;
 			sourceTree = "<group>";
 		};
+		1808156025FCF7E30073BB1F /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				1808156125FCF7FE0073BB1F /* OrderProductSummeryCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		1845BB9125D88B7900D08993 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1392,6 +1402,7 @@
 		18A4347A25FC0A50000D54F2 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				1808156025FCF7E30073BB1F /* TableView */,
 				18A4347B25FC0A58000D54F2 /* CollectionView */,
 			);
 			path = Cell;
@@ -2492,6 +2503,7 @@
 				2019AC3F25CA093500455166 /* OrderTraceMapRoute.swift in Sources */,
 				0807030F25A2274F002B1776 /* CategoriesFilterViewController.swift in Sources */,
 				081ADF7F2591020200B5AE47 /* AuthCompanyMainViewController.swift in Sources */,
+				1808156225FCF7FE0073BB1F /* OrderProductSummeryCell.swift in Sources */,
 				18E1249A25DC3DF200D561C5 /* CategoriesViewModel.swift in Sources */,
 				08B1A7412587A27E003D49EF /* BaseViewController.swift in Sources */,
 				3DB1DBB7258695B100EF1E8F /* ErrorAlert.swift in Sources */,

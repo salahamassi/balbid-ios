@@ -22,6 +22,7 @@ class CreateOrderSummaryViewController: BaseViewController {
     var paymentMethod: PaymentMethod!
     var cart: Cart?
     private var createOrderSummaryDataSource = CreateOrderSummaryDataSource()
+    weak var delegate: SizeChangableDelegate?
 
     
     override func viewDidLoad() {
@@ -49,5 +50,11 @@ class CreateOrderSummaryViewController: BaseViewController {
     private func setupTableView() {
         createOrderSummaryDataSource.cart = cart
         productsTableView.dataSource = createOrderSummaryDataSource
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.delegate?.didUpdateContentSize(newHeight: (self.view.subviews.first?.frame.height ?? .zero) + 20)
     }
 }

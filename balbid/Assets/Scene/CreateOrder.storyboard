@@ -852,7 +852,7 @@ The postpaid service will be discontinued</string>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="order_product_cell" rowHeight="190" id="1tH-i7-6fd" customClass="OrderProductCell" customModule="balbid" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="order_product_cell" rowHeight="190" id="1tH-i7-6fd" customClass="OrderProductSummeryCell" customModule="balbid" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="190"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1tH-i7-6fd" id="NOn-zs-C7U">
@@ -869,10 +869,10 @@ The postpaid service will be discontinued</string>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="cOg-pc-3RM" userLabel="productDetailStackView">
-                                                                    <rect key="frame" x="0.0" y="22.999999999999993" width="272.33333333333331" height="126.33333333333331"/>
+                                                                    <rect key="frame" x="0.0" y="23" width="272.33333333333331" height="74"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product_sample" translatesAutoresizingMaskIntoConstraints="NO" id="zSy-k0-enJ">
-                                                                            <rect key="frame" x="0.0" y="26.333333333333336" width="74" height="74"/>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zSy-k0-enJ">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="74" id="7vO-Kr-brM"/>
                                                                                 <constraint firstAttribute="width" constant="74" id="xKJ-Bb-5yN"/>
@@ -890,22 +890,22 @@ The postpaid service will be discontinued</string>
                                                                             </userDefinedRuntimeAttributes>
                                                                         </imageView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="kAA-qH-y2Y">
-                                                                            <rect key="frame" x="102.00000000000001" y="26.333333333333336" width="170.33333333333337" height="74"/>
+                                                                            <rect key="frame" x="102.00000000000001" y="0.0" width="170.33333333333337" height="74"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="the shipment 1 of 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXI-nN-8re">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="the shipment 1 of 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="TXI-nN-8re">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="170.33333333333334" height="14"/>
                                                                                     <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="12"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SR1999.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8e-00-Z3T">
-                                                                                    <rect key="frame" x="0.0" y="19.999999999999993" width="170.33333333333334" height="14"/>
+                                                                                    <rect key="frame" x="0.0" y="20" width="170.33333333333334" height="14"/>
                                                                                     <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="12"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Siller: Ksa Foods" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC4-5d-ySF">
-                                                                                    <rect key="frame" x="0.0" y="39.999999999999993" width="170.33333333333334" height="14"/>
+                                                                                    <rect key="frame" x="0.0" y="40" width="170.33333333333334" height="14"/>
                                                                                     <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="12"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
@@ -921,10 +921,10 @@ The postpaid service will be discontinued</string>
                                                                     </subviews>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ktP-dC-q3y" userLabel="additionlInfoStackView">
-                                                                    <rect key="frame" x="0.0" y="158.33333333333334" width="382" height="11.666666666666657"/>
+                                                                    <rect key="frame" x="0.0" y="106" width="382" height="64"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deliver Through: 18-11-2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m37-Uz-rHt">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="11.666666666666666"/>
+                                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deliver Through: 18-11-2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m37-Uz-rHt">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="11.666666666666666"/>
                                                                             <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="10"/>
                                                                             <color key="textColor" name="primaryColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -944,6 +944,14 @@ The postpaid service will be discontinued</string>
                                                         <constraint firstItem="U0Z-Be-Qp6" firstAttribute="top" secondItem="NOn-zs-C7U" secondAttribute="top" constant="10" id="wWl-YP-HRa"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="brandNameLabel" destination="bC4-5d-ySF" id="ZHm-x2-2Y5"/>
+                                                    <outlet property="priceLabel" destination="Z8e-00-Z3T" id="hpN-vJ-Qih"/>
+                                                    <outlet property="productImageView" destination="zSy-k0-enJ" id="GUF-U1-FXk"/>
+                                                    <outlet property="productNameLabel" destination="TXI-nN-8re" id="tMe-LB-tEB"/>
+                                                    <outlet property="quantityLabel" destination="2Dx-oY-rlI" id="J3f-Rl-9sW"/>
+                                                    <outlet property="titleLabel" destination="WCo-wT-IIr" id="2sl-Cd-YGb"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -1092,7 +1100,6 @@ The postpaid service will be discontinued</string>
         <image name="edit" width="24" height="24"/>
         <image name="image_placeholder" width="144" height="144"/>
         <image name="payment-sample" width="48.333332061767578" height="34.666667938232422"/>
-        <image name="product_sample" width="143" height="113"/>
         <image name="truck" width="18" height="15"/>
         <image name="unselected_cart" width="24" height="24"/>
         <image name="up" width="14" height="17"/>

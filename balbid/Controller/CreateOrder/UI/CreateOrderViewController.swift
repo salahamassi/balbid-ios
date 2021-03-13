@@ -45,6 +45,7 @@ class CreateOrderViewController: BaseViewController {
     
     lazy var createOrderSummaryViewController: CreateOrderSummaryViewController = {
         let viewController = UIStoryboard.createOrderStoryboard.getViewController(with: .createOrderSummaryViewController)as! CreateOrderSummaryViewController
+        viewController.delegate = self
         return viewController
     }()
     

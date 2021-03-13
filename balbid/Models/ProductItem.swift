@@ -15,6 +15,7 @@ struct ProductItem: SwiftyModelData {
     let image: String
     let enterpriseId: String
     let brandId: String
+    let brand: String
     let sortOrder: String
     let name: String
     let description: String
@@ -42,6 +43,7 @@ struct ProductItem: SwiftyModelData {
         maxQuantity = json["price_upper_max_quantity"].stringValue
         discount = json["discount"].stringValue
         isFavorite = json["is_favorite"].stringValue
+        brand = json["brand"].stringValue
         images = json["images"].arrayValue.map { $0["imagefullpath"].stringValue }
         options = json["option_groups"].arrayValue.map { OptionGroupItem(json: $0) }
         if(imageFullPath  == nil) {
