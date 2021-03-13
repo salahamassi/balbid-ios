@@ -10,13 +10,15 @@ import SwiftyJSON
 
 struct PaymentMethod: SwiftyModelData {
     let id: Int
-    var name: String
+    let name: String
     let image: String
-  
+    let toCorporate: String
+
     init(json: JSON) {
         id = json["id"].intValue
         name = json["name"].stringValue
         image = json["imagefullpath"].stringValue
+        toCorporate = json["to_corporate"].stringValue
     }
     
 }

@@ -1916,11 +1916,9 @@
             symbolName = "*0x109aeab8f">
             <Locations>
                <Location
-                  uuid = "D91389C8-4F1A-4DB1-8FFF-78891F44E4BE - 1fa5f64c215e64"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  moduleName = "balbid"
                   usesParentBreakpointCondition = "Yes"
                   offsetFromSymbolStart = "0">
                </Location>
@@ -2225,8 +2223,8 @@
             filePath = "balbid/Controller/Shipping/UI/ShippingAddressViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "showAddNewAddressView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2241,8 +2239,8 @@
             filePath = "balbid/Controller/CreateOrder/UI/OrderPaymentViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "didLoadPaymentMethodSuccess(paymentMethods:)"
             landmarkType = "7">
          </BreakpointContent>

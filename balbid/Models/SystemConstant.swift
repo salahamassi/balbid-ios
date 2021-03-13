@@ -9,10 +9,13 @@ import Foundation
 import SwiftyJSON
 
 struct SystemConstant: SwiftyModelData {
-    let paymentMethods: [PaymentMethod]
+    var paymentMethods: [PaymentMethod]
     
     init(json: JSON) {
         paymentMethods = json["payment_methods"].arrayValue.map {PaymentMethod(json:$0)}
+        paymentMethods = paymentMethods.filter({ (paymentMethod) -> Bool in
+            paymentMethod.toCorporate == "0"
+        })
     }
     
 }

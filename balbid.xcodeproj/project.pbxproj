@@ -165,6 +165,7 @@
 		18A4348625FC4014000D54F2 /* CreditEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4348525FC4014000D54F2 /* CreditEventViewController.swift */; };
 		18A4348925FCDE51000D54F2 /* CreateOrderSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4348825FCDE51000D54F2 /* CreateOrderSummaryViewController.swift */; };
 		18AD3F7025D8847A007CBC15 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AD3F6F25D8847A007CBC15 /* FavoriteViewModel.swift */; };
+		18B061D425FCEBC200F5E18A /* CreateOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B061D325FCEBC200F5E18A /* CreateOrderViewModel.swift */; };
 		18CAB09725F6B6E1001E4C6C /* AddToCartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CAB09625F6B6E1001E4C6C /* AddToCartViewModel.swift */; };
 		18CAB09E25F6EA81001E4C6C /* SliderContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CAB09D25F6EA81001E4C6C /* SliderContainerCell.swift */; };
 		18CAB0A125F6EAC1001E4C6C /* SliderImageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CAB0A025F6EAC1001E4C6C /* SliderImageDataSource.swift */; };
@@ -532,6 +533,7 @@
 		18A4348525FC4014000D54F2 /* CreditEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditEventViewController.swift; sourceTree = "<group>"; };
 		18A4348825FCDE51000D54F2 /* CreateOrderSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderSummaryViewController.swift; sourceTree = "<group>"; };
 		18AD3F6F25D8847A007CBC15 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		18B061D325FCEBC200F5E18A /* CreateOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderViewModel.swift; sourceTree = "<group>"; };
 		18CAB09625F6B6E1001E4C6C /* AddToCartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartViewModel.swift; sourceTree = "<group>"; };
 		18CAB09D25F6EA81001E4C6C /* SliderContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderContainerCell.swift; sourceTree = "<group>"; };
 		18CAB0A025F6EAC1001E4C6C /* SliderImageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderImageDataSource.swift; sourceTree = "<group>"; };
@@ -1351,6 +1353,7 @@
 		18A4345D25FBA2CF000D54F2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				18A4348825FCDE51000D54F2 /* CreateOrderSummaryViewController.swift */,
 				18A4346225FBA2F9000D54F2 /* CreateOrderViewController.swift */,
 				18A4346825FBB451000D54F2 /* OrderPaymentViewController.swift */,
 				18A4348525FC4014000D54F2 /* CreditEventViewController.swift */,
@@ -1370,6 +1373,7 @@
 			isa = PBXGroup;
 			children = (
 				18A4346C25FC0378000D54F2 /* OrderPaymentViewModel.swift */,
+				18B061D325FCEBC200F5E18A /* CreateOrderViewModel.swift */,
 			);
 			path = createOrder;
 			sourceTree = "<group>";
@@ -1677,7 +1681,6 @@
 				2092065925C73A9F0072085E /* ShippingAddressViewController.swift */,
 				20FBE4AF25C8370800210190 /* AddNewShippingViewController.swift */,
 				20FBE4B725C87D5700210190 /* ShippingMapViewController.swift */,
-				18A4348825FCDE51000D54F2 /* CreateOrderSummaryViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -2602,6 +2605,7 @@
 				2099ABC825C96DA300FAB410 /* OrderDetailRoute.swift in Sources */,
 				3D83A73B25F564220002E759 /* AddedToCartView.swift in Sources */,
 				202569E125BDFFB400FD61AD /* OrderTableViewCell.swift in Sources */,
+				18B061D425FCEBC200F5E18A /* CreateOrderViewModel.swift in Sources */,
 				08438E6D25A2696F00796373 /* ProductDetailRoute.swift in Sources */,
 				08F3B50B2596A1470099AC2B /* HomeCollectionViewFlowLayout.swift in Sources */,
 				3DB1DB3025868A1000EF1E8F /* Extensions+UIScrollView.swift in Sources */,

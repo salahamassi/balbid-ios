@@ -79,6 +79,10 @@ class OrderPaymentViewController: BaseViewController {
         viewModel.getPaymentMethod()
     }
     
+    func validate() -> PaymentMethod {
+        return paymentMethodDataSource.paymentMethods[paymentMethodDataSource.selectedIndex]
+    }
+    
     
 
 }

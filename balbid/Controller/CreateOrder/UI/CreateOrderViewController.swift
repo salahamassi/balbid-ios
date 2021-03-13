@@ -18,7 +18,9 @@ class CreateOrderViewController: BaseViewController {
     @IBOutlet weak var paymentStepImageView: UIImageView!
     @IBOutlet weak var paymentStepView: UIView!
     var step = 1
-    
+    var selectedShippingAddress: AddressItem?
+    var selectedPaymentMethod: PaymentMethod?
+
     var currentViewController: UIViewController!
     private var shippingAddressViewModel = ShippingAddressViewModel(dataSource: AppDataSource())
     
@@ -69,6 +71,12 @@ class CreateOrderViewController: BaseViewController {
             currentViewController = orderPaymentViewController
         case 3:
             setupPaymentView()
+            guard let shippingAdress = selectedShippingAddress,
+                  let paymentMethod = selectedPaymentMethod else {
+                break
+            }
+            createOrderSummaryViewController.shippingAdress = shippingAdress
+            createOrderSummaryViewController.paymentMethod = paymentMethod
             currentViewController = createOrderSummaryViewController
         default:
             break
@@ -134,17 +142,27 @@ class CreateOrderViewController: BaseViewController {
         }
     }
     
-    func validate() {
+    private func validate() {
         switch step  {
         case 1:
-            if shippingAddressViewController.validate() {
-                step += 1
-                setNavTitle()
-                setContainerView()
+            let shippingAddress = shippingAddressViewController.validate()
+            if shippingAddress != nil {
+                selectedShippingAddress = shippingAddress
+                moveToNext()
             }
+        case 2:
+            let paymentMethod = orderPaymentViewController.validate()
+            selectedPaymentMethod = paymentMethod
+            moveToNext()
         default:
             break
         }
+    }
+    
+    private func moveToNext(){
+        step += 1
+        setNavTitle()
+        setContainerView()
     }
     
 }

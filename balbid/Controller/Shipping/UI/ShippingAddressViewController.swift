@@ -15,7 +15,6 @@ class ShippingAddressViewController: BaseViewController {
 
     private var shippingAdressTableViewDataSource = ShippingAddressTableViewDataSource()
     private var shippingAddressTableViewDelegate = ShippingAddressTableViewDelegate()
-    private var selectedIndex = -1
     
     weak var delegate: SizeChangableDelegate?
 
@@ -62,12 +61,12 @@ class ShippingAddressViewController: BaseViewController {
         router?.navigate(to: .addNewShippingRoute)
     }
     
-    func validate() -> Bool {
+    func validate() -> AddressItem? {
         if shippingAdressTableViewDataSource.selectedIndex == -1 {
             displayAlert(message: "Please select shipping Address")
-            return false
+            return nil
         }
-        return true
+        return shippingAdressTableViewDataSource.address?.addresses[shippingAdressTableViewDataSource.selectedIndex]
     }
 
 }
