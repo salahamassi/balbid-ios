@@ -10,10 +10,13 @@ import UIKit
 class PaymentMethodDataSource: NSObject, UICollectionViewDataSource {
     
     var paymentMethods: [PaymentMethod] = []
+    var selectedIndex = 0
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .paymentCellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .paymentCellId, for: indexPath) as! PaymentMethodCell
+        cell.paymentMethod = paymentMethods[indexPath.row]
+        cell.isChecked = selectedIndex == indexPath.row
         return cell
     }
     

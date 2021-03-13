@@ -9,10 +9,14 @@ import UIKit
 
 class CreateOrderViewController: BaseViewController {
     
+    @IBOutlet weak var shippingStepImageView: UIImageView!
+    @IBOutlet weak var shippingSeperatorView: UIView!
+    @IBOutlet weak var shippingStepView: UIView!
     @IBOutlet weak var cartImageView: UIImageView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var containerViewHeightConstant: NSLayoutConstraint!
-    
+    @IBOutlet weak var paymentStepImageView: UIImageView!
+    @IBOutlet weak var paymentStepView: UIView!
     var step = 1
     
     var currentViewController: UIViewController!
@@ -28,9 +32,15 @@ class CreateOrderViewController: BaseViewController {
     
     lazy var orderPaymentViewController: OrderPaymentViewController = {
         let viewController = UIStoryboard.createOrderStoryboard.getViewController(with: .orderPaymentViewController)as! OrderPaymentViewController
+        viewController.delegate = self
         return viewController
     }()
     
+    
+    lazy var createOrderSummaryViewController: CreateOrderSummaryViewController = {
+        let viewController = UIStoryboard.createOrderStoryboard.getViewController(with: .createOrderSummaryViewController)as! CreateOrderSummaryViewController
+        return viewController
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,9 +62,14 @@ class CreateOrderViewController: BaseViewController {
         currentViewController?.remove()
         switch step {
         case 1:
+            setupFirstView()
             currentViewController = shippingAddressViewController
         case 2:
+            setupShippingViewStep()
             currentViewController = orderPaymentViewController
+        case 3:
+            setupPaymentView()
+            currentViewController = createOrderSummaryViewController
         default:
             break
         }
@@ -68,6 +83,26 @@ class CreateOrderViewController: BaseViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: .backImage), style: .plain, target: self, action: #selector(self.goBack))
     }
     
+    private func setupShippingViewStep() {
+        shippingStepImageView.tintColor = UIColor.appColor(.whiteColor)
+        shippingStepView.withBackgroundColor(UIColor.appColor(.primaryColor) ?? .white)
+        shippingSeperatorView.withBackgroundColor(UIColor.appColor(.primaryColor) ?? .white)
+        paymentStepView.withBackgroundColor(UIColor.appColor(.whiteColor) ?? .white)
+        paymentStepImageView.tintColor = UIColor.appColor(.primaryColor)
+
+    }
+    
+    private func setupPaymentView() {
+        paymentStepView.withBackgroundColor(UIColor.appColor(.primaryColor) ?? .white)
+        paymentStepImageView.tintColor = UIColor.appColor(.whiteColor)
+    }
+    
+    
+    private func setupFirstView() {
+        shippingStepImageView.tintColor = UIColor.appColor(.primaryColor)
+        shippingStepView.withBackgroundColor(UIColor.appColor(.whiteColor) ?? .white)
+        shippingSeperatorView.withBackgroundColor(UIColor.appColor(.whiteColor) ?? .white)
+    }
     
     @objc func goBack() {
         if  step > 1 {

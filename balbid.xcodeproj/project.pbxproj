@@ -160,6 +160,10 @@
 		18A4347025FC053C000D54F2 /* SystemConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4346F25FC053C000D54F2 /* SystemConstant.swift */; };
 		18A4347325FC0558000D54F2 /* PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4347225FC0558000D54F2 /* PaymentMethod.swift */; };
 		18A4347725FC07E2000D54F2 /* PaymentMethodDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4347625FC07E2000D54F2 /* PaymentMethodDataSource.swift */; };
+		18A4347D25FC0A7C000D54F2 /* PaymentMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4347C25FC0A7C000D54F2 /* PaymentMethodCell.swift */; };
+		18A4348225FC0DA8000D54F2 /* PaymentMethodDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4348125FC0DA8000D54F2 /* PaymentMethodDelegate.swift */; };
+		18A4348625FC4014000D54F2 /* CreditEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4348525FC4014000D54F2 /* CreditEventViewController.swift */; };
+		18A4348925FCDE51000D54F2 /* CreateOrderSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4348825FCDE51000D54F2 /* CreateOrderSummaryViewController.swift */; };
 		18AD3F7025D8847A007CBC15 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AD3F6F25D8847A007CBC15 /* FavoriteViewModel.swift */; };
 		18CAB09725F6B6E1001E4C6C /* AddToCartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CAB09625F6B6E1001E4C6C /* AddToCartViewModel.swift */; };
 		18CAB09E25F6EA81001E4C6C /* SliderContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CAB09D25F6EA81001E4C6C /* SliderContainerCell.swift */; };
@@ -523,6 +527,10 @@
 		18A4346F25FC053C000D54F2 /* SystemConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemConstant.swift; sourceTree = "<group>"; };
 		18A4347225FC0558000D54F2 /* PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethod.swift; sourceTree = "<group>"; };
 		18A4347625FC07E2000D54F2 /* PaymentMethodDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodDataSource.swift; sourceTree = "<group>"; };
+		18A4347C25FC0A7C000D54F2 /* PaymentMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodCell.swift; sourceTree = "<group>"; };
+		18A4348125FC0DA8000D54F2 /* PaymentMethodDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodDelegate.swift; sourceTree = "<group>"; };
+		18A4348525FC4014000D54F2 /* CreditEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditEventViewController.swift; sourceTree = "<group>"; };
+		18A4348825FCDE51000D54F2 /* CreateOrderSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderSummaryViewController.swift; sourceTree = "<group>"; };
 		18AD3F6F25D8847A007CBC15 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		18CAB09625F6B6E1001E4C6C /* AddToCartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartViewModel.swift; sourceTree = "<group>"; };
 		18CAB09D25F6EA81001E4C6C /* SliderContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderContainerCell.swift; sourceTree = "<group>"; };
@@ -1331,6 +1339,8 @@
 		18A4345C25FBA2C6000D54F2 /* CreateOrder */ = {
 			isa = PBXGroup;
 			children = (
+				18A4348025FC0D84000D54F2 /* Delegate */,
+				18A4347A25FC0A50000D54F2 /* Cell */,
 				18A4347525FC07CB000D54F2 /* DataSource */,
 				18A4345E25FBA2D6000D54F2 /* Route */,
 				18A4345D25FBA2CF000D54F2 /* UI */,
@@ -1343,6 +1353,7 @@
 			children = (
 				18A4346225FBA2F9000D54F2 /* CreateOrderViewController.swift */,
 				18A4346825FBB451000D54F2 /* OrderPaymentViewController.swift */,
+				18A4348525FC4014000D54F2 /* CreditEventViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1369,6 +1380,30 @@
 				18A4347625FC07E2000D54F2 /* PaymentMethodDataSource.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		18A4347A25FC0A50000D54F2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				18A4347B25FC0A58000D54F2 /* CollectionView */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		18A4347B25FC0A58000D54F2 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				18A4347C25FC0A7C000D54F2 /* PaymentMethodCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		18A4348025FC0D84000D54F2 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				18A4348125FC0DA8000D54F2 /* PaymentMethodDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		18D6DF4A25ED2D6E009FAC5D /* Shipping */ = {
@@ -1642,6 +1677,7 @@
 				2092065925C73A9F0072085E /* ShippingAddressViewController.swift */,
 				20FBE4AF25C8370800210190 /* AddNewShippingViewController.swift */,
 				20FBE4B725C87D5700210190 /* ShippingMapViewController.swift */,
+				18A4348825FCDE51000D54F2 /* CreateOrderSummaryViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -2444,6 +2480,7 @@
 				3D60C38E25975EC70092D594 /* UIKitInteroperability.swift in Sources */,
 				206E04AC25BDB20B00BD8902 /* OrderFilterCollectionViewCell.swift in Sources */,
 				3DAC7BD42586FDCD00D57BB1 /* ImagePicker.swift in Sources */,
+				18A4348925FCDE51000D54F2 /* CreateOrderSummaryViewController.swift in Sources */,
 				189C933E25DB18EF000258EA /* CategoryItem.swift in Sources */,
 				3DB1DB3125868A1000EF1E8F /* Extensions+UIView.swift in Sources */,
 				2019AC3F25CA093500455166 /* OrderTraceMapRoute.swift in Sources */,
@@ -2580,6 +2617,7 @@
 				08F0CC1D258BAA8C00FA2261 /* RegisterRoute.swift in Sources */,
 				18D6DF5025ED2DC4009FAC5D /* Address.swift in Sources */,
 				202569E725BE06BC00FD61AD /* OrderTableViewDelegate.swift in Sources */,
+				18A4348225FC0DA8000D54F2 /* PaymentMethodDelegate.swift in Sources */,
 				08809EF12593BF1600AD41EE /* BankInfromationTableViewDataSource.swift in Sources */,
 				3D4EE9FF25CDF920001DD389 /* AppCacheDataSource.swift in Sources */,
 				18A4346325FBA2F9000D54F2 /* CreateOrderViewController.swift in Sources */,
@@ -2603,6 +2641,7 @@
 				20FBE4B025C8370800210190 /* AddNewShippingViewController.swift in Sources */,
 				3DB1DBB3258695A900EF1E8F /* ConfirmAlert.swift in Sources */,
 				3D4EEA2425CDFE1D001DD389 /* StorageDataSourceService.swift in Sources */,
+				18A4347D25FC0A7C000D54F2 /* PaymentMethodCell.swift in Sources */,
 				0866BA0925A1DC0F00F15B79 /* CartCollectionViewDelegate.swift in Sources */,
 				2083641F25D307FB003F0D9B /* CategriesContentCollectionViewDelegate.swift in Sources */,
 				3DB1DB5525868F3E00EF1E8F /* CustomAlertViewTransitioner.swift in Sources */,
@@ -2698,6 +2737,7 @@
 				18F69CCF25EFC57600B31E52 /* ColorSelectionView.swift in Sources */,
 				20C7F90925CD8685001D0715 /* PaymentCardTableViewDataSource.swift in Sources */,
 				3DB1DB3C25868A1000EF1E8F /* Extensions+Data+UIImage.swift in Sources */,
+				18A4348625FC4014000D54F2 /* CreditEventViewController.swift in Sources */,
 				083E75AA259DE4EC00EDF708 /* CategoriesTableViewDataSource.swift in Sources */,
 				08F0CC36258BC19500FA2261 /* LoginViewController.swift in Sources */,
 				1851E18E25F056B30049C7B5 /* AuthPeopleCell.swift in Sources */,

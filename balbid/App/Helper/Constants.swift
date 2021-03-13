@@ -178,8 +178,9 @@ extension String {
     
     static let createOrderViewController = "CreateOrderViewController"
     static let orderPaymentViewController = "OrderPaymentViewController"
+    static let creditEventViewController = "CreditEventViewController"
+    static let createOrderSummaryViewController = "CreateOrderSummaryViewController"
 
-    
     
     // image name
     static let lockedPasswordImage = "locked_password"
