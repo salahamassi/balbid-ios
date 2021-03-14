@@ -56,6 +56,9 @@
                                                         <color key="value" name="borderGrayColor2"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="back:" destination="O2r-IW-3Ok" eventType="touchUpInside" id="tTT-wi-9Ny"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wab-sq-qws">
                                                 <rect key="frame" x="204" y="0.0" width="190" height="50"/>
@@ -295,11 +298,11 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="OJ2-Tx-G3m">
                                                                             <rect key="frame" x="33" y="3" width="62" height="50.333333333333336"/>
                                                                             <subviews>
-                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="depitCard" translatesAutoresizingMaskIntoConstraints="NO" id="IWm-R2-HA3">
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="depitCard" translatesAutoresizingMaskIntoConstraints="NO" id="IWm-R2-HA3">
                                                                                     <rect key="frame" x="14" y="0.0" width="34" height="24.333333333333332"/>
                                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 </imageView>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Credit Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="98p-Wz-Jee">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="98p-Wz-Jee">
                                                                                     <rect key="frame" x="0.0" y="36.333333333333336" width="62" height="14"/>
                                                                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="12"/>
                                                                                     <nil key="textColor"/>
@@ -375,10 +378,10 @@
                                         </constraints>
                                     </view>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMc-Oc-nup" userLabel="BankTransferView">
-                                        <rect key="frame" x="0.0" y="206" width="414" height="292"/>
+                                        <rect key="frame" x="0.0" y="206" width="414" height="308"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fHY-J9-prd">
-                                                <rect key="frame" x="16" y="0.0" width="382" height="292"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fHY-J9-prd">
+                                                <rect key="frame" x="16" y="0.0" width="382" height="308"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Transaction No" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hyJ-4j-5Rh" customClass="BorderedTextField" customModule="balbid" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
@@ -406,7 +409,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="0KP-1D-f6n" customClass="BorderedImageView" customModule="balbid" customModuleProvider="target">
-                                                        <rect key="frame" x="119" y="52" width="144" height="144"/>
+                                                        <rect key="frame" x="119" y="56" width="144" height="144"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="144" id="QIn-H7-sPu"/>
                                                             <constraint firstAttribute="width" constant="144" id="uVr-P6-Xxw"/>
@@ -418,7 +421,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nuq-2A-EF0">
-                                                        <rect key="frame" x="119" y="208" width="144" height="40"/>
+                                                        <rect key="frame" x="119" y="216" width="144" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="144" id="ES9-D4-mzp"/>
                                                             <constraint firstAttribute="height" constant="40" id="Hhh-8o-rOf"/>
@@ -439,20 +442,29 @@
                                                                 <real key="value" value="20"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="uploadImage:" destination="PxA-0q-qBU" eventType="touchUpInside" id="Y0h-WM-ZWf"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A copy of the Transaction Process" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrV-U8-M4k">
-                                                        <rect key="frame" x="68.666666666666671" y="260" width="244.66666666666663" height="0.0"/>
+                                                        <rect key="frame" x="68.666666666666671" y="272" width="244.66666666666663" height="0.0"/>
                                                         <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5DH-sg-V9O" userLabel="space view">
-                                                        <rect key="frame" x="119" y="272" width="144" height="20"/>
+                                                        <rect key="frame" x="119" y="288" width="144" height="20"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="4Bu-5k-3aJ"/>
                                                         </constraints>
                                                     </view>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svy-xh-Xmh">
+                                                        <rect key="frame" x="174" y="308" width="34.333333333333343" height="0.0"/>
+                                                        <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                                        <color key="textColor" name="redColor2"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="hyJ-4j-5Rh" firstAttribute="width" secondItem="fHY-J9-prd" secondAttribute="width" id="EWU-6S-3DC"/>
@@ -497,8 +509,11 @@
                         <outlet property="cashView" destination="0OD-rM-nXY" id="tfk-TO-P8N"/>
                         <outlet property="creditCardHeightEventConstraint" destination="n9L-Mj-zPq" id="BQS-Ra-Dox"/>
                         <outlet property="creditEventView" destination="Vay-5I-lGa" id="8ds-ay-TmN"/>
+                        <outlet property="errorLabel" destination="Svy-xh-Xmh" id="K1K-jd-bEw"/>
                         <outlet property="paymentCollectionView" destination="xz2-Sr-Zf8" id="G3n-ol-cCz"/>
                         <outlet property="paymentMethodActivityIndicator" destination="H7G-u3-foC" id="ZA2-cb-nll"/>
+                        <outlet property="transactionImageView" destination="0KP-1D-f6n" id="hIw-HJ-nz8"/>
+                        <outlet property="transactionNumberTextField" destination="hyJ-4j-5Rh" id="Hc9-aT-qOp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIk-RM-Gr1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

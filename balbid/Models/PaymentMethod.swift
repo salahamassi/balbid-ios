@@ -22,3 +22,10 @@ struct PaymentMethod: SwiftyModelData {
     }
     
 }
+
+enum PaymentMethodType: Int {
+    case cashMethod = 1
+    case creditEvent = 2
+    case bankTransfer = 3
+
+}

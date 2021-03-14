@@ -52,12 +52,10 @@ class IdentityConfirmViewController: BaseViewController {
     }
 
     @IBAction func pickImage(_ sender: UIButton) {
-        imagePickerHelper?.displayImagePickerAlertActionSheet(with: sender, mustAddChooseFromDocumentAction: true, mustCropImage: true)
+        imagePickerHelper?.displayImagePickerAlertActionSheet(with: sender, mustCropImage: true)
     
         imagePickerHelper?.completion = .some({[weak self] (urls) in
-            let icon = urls[0].lastPathComponent.getFileIconFromName()
             self?.pickedImages[sender.tag].isError = false
-            if icon == nil {
                 self?.pickedImages[sender.tag].sd_setImage(with: urls[0], completed: {_,_,_,_ in
                     switch sender.tag {
                     case 0:
@@ -70,9 +68,6 @@ class IdentityConfirmViewController: BaseViewController {
                         break
                     }
                 })
-            } else {
-                self?.pickedImages[sender.tag].image = UIImage(named: "icon")
-            }
          
         })
     

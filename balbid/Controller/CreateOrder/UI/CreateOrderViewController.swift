@@ -25,7 +25,9 @@ class CreateOrderViewController: BaseViewController {
     var selectedShippingAddress: AddressItem?
     var selectedPaymentMethod: PaymentMethod?
     var cart: Cart?
-    var addNewOrder: ((_ addressId: Int,_  paymentMethodId: Int) -> Void)?
+    var addNewOrder: ((_ addressId: Int,_  paymentMethodId: Int,_ transactionNumber: String?, _ transactionImage: URL?) -> Void)?
+    private var transactionNumber: String?
+    private var transactionImage: URL?
 
     var currentViewController: UIViewController!
     private var shippingAddressViewModel = ShippingAddressViewModel(dataSource: AppDataSource())
@@ -64,7 +66,7 @@ class CreateOrderViewController: BaseViewController {
     
     private func setupView(){
         cartImageView.image = cartImageView.image?.withRenderingMode(.alwaysTemplate)
-        addNavleftView()
+        addNavView()
     }
     
     func setContainerView() {
@@ -97,8 +99,9 @@ class CreateOrderViewController: BaseViewController {
         
     }
     
-    func addNavleftView() {
+    func addNavView() {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: .backImage), style: .plain, target: self, action: #selector(self.goBack))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "close"), style: .plain, target: self, action: #selector(self.close))
     }
     
     private func setupShippingViewStep() {
@@ -135,6 +138,10 @@ class CreateOrderViewController: BaseViewController {
         }
     }
     
+    @objc func close() {
+        router?.popViewController()
+    }
+    
     private func setNavTitle() {
         switch step {
         case 1:
@@ -157,8 +164,12 @@ class CreateOrderViewController: BaseViewController {
                 return
             }
             continueButton.loadingIndicator(true)
-            addNewOrder?(shippingId, paymentMethodId)
+            addNewOrder?(shippingId, paymentMethodId,transactionNumber, transactionImage)
         }
+    }
+    
+    @IBAction func back(_ sender:  Any) {
+        goBack()
     }
     
     private func validate() {
@@ -170,9 +181,11 @@ class CreateOrderViewController: BaseViewController {
                 moveToNext()
             }
         case 2:
-            let paymentMethod = orderPaymentViewController.validate()
-            if paymentMethod != nil {
-                selectedPaymentMethod = paymentMethod
+            let paymentMethodData = orderPaymentViewController.validate()
+            if paymentMethodData.0 != nil {
+                selectedPaymentMethod = paymentMethodData.0
+                transactionNumber = paymentMethodData.1
+                transactionImage = paymentMethodData.2
                 moveToNext()
             }
         default:
@@ -209,5 +222,5 @@ extension CreateOrderViewController: CreateOrderViewModelDelegate {
 
     }
     
-    
+
 }

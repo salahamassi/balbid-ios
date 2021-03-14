@@ -8,18 +8,23 @@
 import UIKit
 
 class OrderPaymentViewController: BaseViewController {
-
+    
+    @IBOutlet weak var transactionImageView: BorderedImageView!
     @IBOutlet weak var creditEventView: UIView!
     @IBOutlet weak var bankTransferView: UIView!
     @IBOutlet weak var cashView: UIView!
     @IBOutlet weak var paymentCollectionView: UICollectionView!
     @IBOutlet weak var paymentMethodActivityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var transactionNumberTextField: BorderedTextField!
     @IBOutlet weak var creditCardHeightEventConstraint: NSLayoutConstraint!
     private let paymentMethodDataSource = PaymentMethodDataSource()
     private let paymentMethodDelegate = PaymentMethodDelegate()
     private let viewModel = OrderPaymentViewModel(dataSource: AppDataSource())
     weak var delegate: SizeChangableDelegate?
+    private var imagePickerHelper: ImagePickerHelper?
+    private var pickedImage:  Data?
     
     lazy var  creditEventViewController: CreditEventViewController = {
         let viewController = UIStoryboard.createOrderStoryboard.getViewController(with: .creditEventViewController)as! CreditEventViewController
@@ -37,8 +42,14 @@ class OrderPaymentViewController: BaseViewController {
         setupPaymentMethodCollectionView()
         self.add(self.creditEventViewController, to: self.creditEventView, frame: self.creditEventView.frame)
         creditCardHeightEventConstraint.constant = (self.creditEventViewController.view.subviews.first?.frame.height ?? .zero) + 20
+        setupImagePicker()
 
     }
+    
+    private func setupImagePicker() {
+        imagePickerHelper = ImagePickerHelper.init(viewController: self, router: router)
+    }
+
     
     private func setupPaymentMethodCollectionView() {
         paymentCollectionView.dataSource = paymentMethodDataSource
@@ -61,7 +72,7 @@ class OrderPaymentViewController: BaseViewController {
         switch paymentMethodType {
             case .cashMethod:
                 cashView.isHidden = false
-            case .bankTrannsfer:
+            case .bankTransfer:
                 bankTransferView.isHidden = false
             case .creditEvent:
                 creditEventView.isHidden = false
@@ -79,13 +90,51 @@ class OrderPaymentViewController: BaseViewController {
         viewModel.getPaymentMethod()
     }
     
-    func validate() -> PaymentMethod? {
-        if( paymentMethodDataSource.paymentMethods == nil) {
-            return nil
-        }
-        return paymentMethodDataSource.paymentMethods[paymentMethodDataSource.selectedIndex]
+    @IBAction func uploadImage(_ sender: UIButton) {
+        imagePickerHelper?.displayImagePickerAlertActionSheet(with: sender, mustCropImage: true)
+        imagePickerHelper?.completion = .some({[weak self] (urls) in
+            self?.transactionImageView.isError = false
+                self?.transactionImageView.sd_setImage(with: urls[0], completed: {_,_,_,_ in
+                    self?.pickedImage = self?.transactionImageView.image?.jpeg(.medium)
+
+                })
+        })
     }
     
+    func validate() -> (PaymentMethod?, String?, URL?) {
+        errorLabel.isHidden = true
+        if( paymentMethodDataSource.paymentMethods.isEmpty) {
+            return (nil,nil,nil)
+        }
+        
+        let paymentType = PaymentMethodType(rawValue: paymentMethodDataSource.paymentMethods[paymentMethodDataSource.selectedIndex].id)
+        if paymentType == .bankTransfer {
+            return validateBankTransferPaymentMethod()
+        }
+        return (paymentMethodDataSource.paymentMethods[paymentMethodDataSource.selectedIndex], nil, nil)
+    }
+    
+    
+    func validateBankTransferPaymentMethod() -> (PaymentMethod?, String?, URL?) {
+        var isValid = true
+        if pickedImage == nil {
+            transactionImageView.isError = true
+            isValid = false
+            errorLabel.text = "Please attach a copy of transaction process"
+
+        }
+        if transactionNumberTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty  ?? true{
+            transactionNumberTextField.isError = true
+            errorLabel.text = "Please fill transaction No."
+            isValid = false
+        }
+      
+        if(!isValid) {
+            errorLabel.isHidden = false
+            return (nil,nil,nil)
+        }
+        return (paymentMethodDataSource.paymentMethods[paymentMethodDataSource.selectedIndex], transactionNumberTextField.text!, pickedImage?.saveImage())
+    }
     
 
 }
@@ -105,9 +154,3 @@ extension  OrderPaymentViewController: OrderPaymentViewModelDelegate{
 }
 
 
-enum PaymentMethodType: Int {
-    case cashMethod = 1
-    case creditEvent = 2
-    case bankTrannsfer = 3
-
-}
