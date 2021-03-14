@@ -137,6 +137,8 @@
 		185CF0B125FA473F009E9982 /* AddNewAddressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CF0B025FA473F009E9982 /* AddNewAddressViewModel.swift */; };
 		185CF0B425FA6C52009E9982 /* Extension+CCLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CF0B325FA6C52009E9982 /* Extension+CCLocation.swift */; };
 		1863F18225D85F480052CA27 /* AdCategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863F18125D85F480052CA27 /* AdCategoriesViewModel.swift */; };
+		18693E1225FE2F3100761EB4 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18693E1125FE2F3100761EB4 /* Order.swift */; };
+		18693E1525FE2F3D00761EB4 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18693E1425FE2F3D00761EB4 /* OrderItem.swift */; };
 		188027FF25F06C3800B51F0A /* AuthorizePeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188027FE25F06C3800B51F0A /* AuthorizePeople.swift */; };
 		1880280225F06FCD00B51F0A /* BankInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880280125F06FCD00B51F0A /* BankInformationViewModel.swift */; };
 		1880280525F0705000B51F0A /* BankInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1880280425F0705000B51F0A /* BankInformation.swift */; };
@@ -509,6 +511,8 @@
 		185CF0B025FA473F009E9982 /* AddNewAddressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAddressViewModel.swift; sourceTree = "<group>"; };
 		185CF0B325FA6C52009E9982 /* Extension+CCLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CCLocation.swift"; sourceTree = "<group>"; };
 		1863F18125D85F480052CA27 /* AdCategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCategoriesViewModel.swift; sourceTree = "<group>"; };
+		18693E1125FE2F3100761EB4 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		18693E1425FE2F3D00761EB4 /* OrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
 		188027FE25F06C3800B51F0A /* AuthorizePeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizePeople.swift; sourceTree = "<group>"; };
 		1880280125F06FCD00B51F0A /* BankInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankInformationViewModel.swift; sourceTree = "<group>"; };
 		1880280425F0705000B51F0A /* BankInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankInformation.swift; sourceTree = "<group>"; };
@@ -1939,6 +1943,8 @@
 				1885AD4725F6A5110077F06F /* CartItem.swift */,
 				18A4346F25FC053C000D54F2 /* SystemConstant.swift */,
 				18A4347225FC0558000D54F2 /* PaymentMethod.swift */,
+				18693E1125FE2F3100761EB4 /* Order.swift */,
+				18693E1425FE2F3D00761EB4 /* OrderItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2508,6 +2514,7 @@
 				189C933E25DB18EF000258EA /* CategoryItem.swift in Sources */,
 				3DB1DB3125868A1000EF1E8F /* Extensions+UIView.swift in Sources */,
 				2019AC3F25CA093500455166 /* OrderTraceMapRoute.swift in Sources */,
+				18693E1525FE2F3D00761EB4 /* OrderItem.swift in Sources */,
 				0807030F25A2274F002B1776 /* CategoriesFilterViewController.swift in Sources */,
 				081ADF7F2591020200B5AE47 /* AuthCompanyMainViewController.swift in Sources */,
 				1808156225FCF7FE0073BB1F /* OrderProductSummeryCell.swift in Sources */,
@@ -2665,6 +2672,7 @@
 				20CE078325D32B5F0012BAC4 /* Banner.swift in Sources */,
 				2092066925C744F60072085E /* ShippingAddressTableViewDelegate.swift in Sources */,
 				08809EDB25937B5400AD41EE /* AuthorizePeopleTableViewDelegate.swift in Sources */,
+				18693E1225FE2F3100761EB4 /* Order.swift in Sources */,
 				20FBE4B025C8370800210190 /* AddNewShippingViewController.swift in Sources */,
 				3DB1DBB3258695A900EF1E8F /* ConfirmAlert.swift in Sources */,
 				3D4EEA2425CDFE1D001DD389 /* StorageDataSourceService.swift in Sources */,

@@ -192,6 +192,10 @@ class ProductDetailViewController: BaseViewController {
     }
     
     @IBAction func addToCart(_ sender: Any){
+        guard UserDefaultsManager.token != nil else {
+            loginAlert()
+            return
+        }
         addToCartBottomSheet.product = product
         var options: [Int] = []
         if selectedSizeId != nil {
@@ -239,6 +243,10 @@ extension ProductDetailViewController: ProductDetailCollectionViewCellDelegate {
 }
 
 extension ProductDetailViewController: ProductDetailHeaderCollectionReusableViewDelegate {
+    func displayLoginAlert() {
+        loginAlert()
+    }
+    
     func diplayErrorMessage(_ cell: ProductDetailHeaderView, errorMessage: String) {
         displayAlert(message: errorMessage)
     }

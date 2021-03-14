@@ -701,7 +701,11 @@
                         <action selector="gotoEditProfileController:" destination="wbV-fz-N94" id="CnG-6c-2Q9"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="r0f-Gu-lCV"/>
+                <tapGestureRecognizer id="r0f-Gu-lCV">
+                    <connections>
+                        <action selector="gotoShippingAddressesController:" destination="wbV-fz-N94" id="fz1-t8-l2j"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <tapGestureRecognizer id="Nsz-Yb-kev">
                     <connections>
                         <action selector="gotoPointController:" destination="wbV-fz-N94" id="lRa-8D-iy5"/>

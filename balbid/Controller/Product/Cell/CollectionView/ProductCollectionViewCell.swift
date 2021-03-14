@@ -54,6 +54,10 @@ class ProductCollectionViewCell: UICollectionViewCell {
         product?.isFavorite = "0"
     }
     
+    func stopIndicator () {
+        favoriteButton.loadingIndicator(false)
+    }
+    
     private func setProductData(product: ProductItem?){
 //        if let discount = product?.discount {
 //            productDiscountPriceLabel.text = discount + "% OFF"

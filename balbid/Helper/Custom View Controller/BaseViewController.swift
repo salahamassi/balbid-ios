@@ -28,4 +28,14 @@ class BaseViewController: UIViewController {
             self.darkLayer.removeFromSuperlayer()
         }
     }
+    
+    func loginAlert(){
+        let title = "You Need login to access this feature"
+        let alertView = UIAlertController(title: title, message:"go to login? ", preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "yes", style: .default, handler: {(action:UIAlertAction!) in
+            self.router?.navigate(to: .loginRoute)
+        }))
+        alertView.addAction(UIAlertAction(title: "cancel", style: .default, handler: nil))
+        present(alertView, animated: true, completion: nil)
+    }
 }

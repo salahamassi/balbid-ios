@@ -91,6 +91,9 @@ class CategoryProductsViewController: BaseViewController {
         productDelegate.showAddToCartView = { [weak self] cell in
             self?.showAddToCartView(cell: cell)
         }
+        productDelegate.showLoginAlert = { [weak self]  in
+            self?.loginAlert()
+        }
     }
     
     private func setupAddedToCartDelegate() {

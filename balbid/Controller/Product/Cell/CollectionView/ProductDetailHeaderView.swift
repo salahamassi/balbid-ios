@@ -118,6 +118,10 @@ class ProductDetailHeaderView: UICollectionReusableView {
         guard let product = product else {
             return
         }
+        guard UserDefaultsManager.token != nil else {
+            self.delegate?.displayLoginAlert()
+            return
+        }
         sender.loadingIndicator(true,indicatorColor: UIColor.appColor(.primaryColor) ?? .white)
         if ((product.isFavorite ?? "0") == "1") {
             viewModel.removeProductFromFavorite(productId: product.id) {
@@ -169,6 +173,7 @@ protocol ProductDetailHeaderCollectionReusableViewDelegate: class {
     func ProductDetailHeaderCollectionReusableView(_ cell: ProductDetailHeaderView, performAction action: ProductDetailHeaderView.ActionType)
     func ProductDetailHeaderCollectionReusableView(_ cell: ProductDetailHeaderView, didSliderScroll index: Int)
     func diplayErrorMessage(_ cell: ProductDetailHeaderView,  errorMessage: String)
+    func displayLoginAlert()
 
 }
 

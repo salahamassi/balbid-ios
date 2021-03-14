@@ -8,13 +8,13 @@
 import UIKit
 
 class ProfileViewController: BaseViewController {
-
+    
     @IBOutlet weak var logoutArrowImageView: UIImageView!
     @IBOutlet weak var logoutActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var logLabel: UILabel!
-    
+    var isLoggedIn: Bool!
     var profileViewModel: ProfileViewModel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupviewModel()
@@ -25,15 +25,20 @@ class ProfileViewController: BaseViewController {
         let dataSource = AppDataSource()
         profileViewModel = ProfileViewModel(dataSource: dataSource)
         profileViewModel.delegate = self
+        isLoggedIn = UserDefaultsManager.token != nil
     }
     
     private func setupView(){
         logLabel.text = UserDefaultsManager.token == nil ? "Login" : "Logout"
     }
-
+    
     
     @IBAction func gotoEditProfileController(_ sender: Any){
-        router?.navigate(to: .editProfileRoute)
+        if isLoggedIn {
+            router?.navigate(to: .editProfileRoute)
+        }else {
+            loginAlert()
+        }
     }
     
     @IBAction func gotoPointController(_ sender: Any){
@@ -45,11 +50,19 @@ class ProfileViewController: BaseViewController {
     }
     
     @IBAction func gotoFavoriteController(_ sender: Any){
-        router?.navigate(to: .favoriteRoute)
+        if isLoggedIn {
+            router?.navigate(to: .favoriteRoute)
+        }  else{
+            loginAlert()
+        }
     }
     
     @IBAction func gotoShippingAddressesController(_ sender: Any){
-        router?.navigate(to: .shippingAddressRoute)
+        if isLoggedIn {
+            router?.navigate(to: .shippingAddressRoute)
+        }  else{
+            loginAlert()
+        }
     }
     
     @IBAction func gotoCreditBalanceController(_ sender: Any){
@@ -59,7 +72,7 @@ class ProfileViewController: BaseViewController {
     @IBAction func gotoPaymentCardController(_ sender: Any){
         router?.navigate(to: .paymentCardRoute)
     }
-
+    
     
     @IBAction func logout(_ sender: Any){
         if(UserDefaultsManager.token != nil){
@@ -70,8 +83,8 @@ class ProfileViewController: BaseViewController {
             router?.navigate(to: AuthRoutes.loginOptionRoute(transitioningDelegate: nil))
         }
     }
-
-
+    
+    
 }
 
 extension ProfileViewController: ProfileViewModelDelegate {

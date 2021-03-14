@@ -116,6 +116,10 @@ class HomeViewController: BaseViewController {
         productDelegate.showAddToCartView = { [weak self] cell in
             self?.showAddToCartView(cell: cell)
         }
+        
+        productDelegate.showLoginAlert = { [weak self]  in
+            self?.loginAlert()
+        }
     }
     
     
@@ -229,8 +233,6 @@ extension HomeViewController: HomeViewModelDelegate {
             (Int($0.sortOrder) ?? 0) + 2
         }
         homeViewModel.getCategries()
-    
-
     }
     
     func apiError(error: String) {
