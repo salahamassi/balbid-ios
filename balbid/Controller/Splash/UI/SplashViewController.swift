@@ -19,7 +19,6 @@ class SplashViewController: BaseViewController {
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
 //            UserDefaultsManager.token = nil
-            print(UserDefaultsManager.token ?? "1")
             if UserDefaultsManager.token != nil {
                 self.router?.navigate(to: .mainTabBarRoute)
             }else{

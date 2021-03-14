@@ -222,7 +222,7 @@ class ProductDetailViewController: BaseViewController {
     
     func updateCellAccordingToRateViewPaginate(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.productDetailCollectionViewDelegate.height = 250  + (self.productDetailRateViewController.view.subviews.first?.frame.height ?? .zero)
+            self.productDetailCollectionViewDelegate.height = 250  + (self.productDetailRateViewController.view.subviews.first?.frame.height ?? .zero + 50)
             self.collectionView.collectionViewLayout.invalidateLayout()
         }
     }
@@ -280,8 +280,8 @@ extension ProductDetailViewController {
         productDetailQuickViewViewController.product = product
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             cell.changeContainerViewHeightAccording(to: self.productDetailQuickViewViewController)
+            self.productDetailCollectionViewDelegate.height = 250  + (self.productDetailQuickViewViewController.view.subviews.first?.frame.height ?? .zero + 50)
             self.add(self.productDetailQuickViewViewController, to: cell.containerView, frame: cell.containerView.frame)
-            self.productDetailCollectionViewDelegate.height = 250  + (self.productDetailQuickViewViewController.view.subviews.first?.frame.height ?? .zero )
             self.collectionView.collectionViewLayout.invalidateLayout()
 
         }
@@ -291,8 +291,8 @@ extension ProductDetailViewController {
         productDetailQuickViewViewController.remove()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             cell.changeContainerViewHeightAccording(to: self.productDetailRateViewController)
+            self.productDetailCollectionViewDelegate.height = 250  + (self.productDetailRateViewController.view.subviews.first?.frame.height ?? .zero  + 50)
             self.add(self.productDetailRateViewController, to: cell.containerView, frame: cell.containerView.frame)
-            self.productDetailCollectionViewDelegate.height = 250  + (self.productDetailRateViewController.view.subviews.first?.frame.height ?? .zero  + 40)
             self.collectionView.collectionViewLayout.invalidateLayout()
 
         }

@@ -176,6 +176,7 @@ class HomeViewController: BaseViewController {
         homeViewModel = HomeViewModel(dataSource: AppDataSource())
         homeViewModel.delegate = self
         homeViewModel.getHomeData()
+        homeViewModel.getCartCount()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -213,6 +214,13 @@ extension HomeViewController: HomeSelectionProtocol{
 }
 
 extension HomeViewController: HomeViewModelDelegate {
+    func cartCount(count: Int) {
+        guard let tabBarItem = tabBarController?.tabBar.items?[3] else {
+            return
+        }
+        tabBarItem.badgeValue = "\(count)"
+    }
+    
     func loadCategoriesSuccess(category: Category) {
         if (category.categoryItems.count > 0) {
             homeCollectionViewDataSource.numberOfSection += 1

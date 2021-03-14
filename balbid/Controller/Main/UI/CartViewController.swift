@@ -9,6 +9,7 @@ import UIKit
 
 class CartViewController: BaseViewController {
     
+    @IBOutlet weak var loginView: UIView!
     @IBOutlet weak var payButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicatore: UIActivityIndicatorView!
@@ -19,6 +20,7 @@ class CartViewController: BaseViewController {
     let cartCollectionViewDataSource: CartCollectionViewDataSource = CartCollectionViewDataSource()
     let cartCollectionViewDelegate: CartCollectionViewDelegate = CartCollectionViewDelegate()
     
+    @IBOutlet weak var loginCartImageView: UIImageView!
     let searchBar = UISearchBar(frame: .zero)
     private var viewModel: CartViewModel!
 
@@ -26,6 +28,7 @@ class CartViewController: BaseViewController {
         super.viewDidLoad()
         setupNavbar()
         setupCollectionView()
+        loginCartImageView.image = loginCartImageView.image?.withRenderingMode(.alwaysTemplate)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,6 +39,11 @@ class CartViewController: BaseViewController {
     
   
     private func  setupViewModel() {
+        guard UserDefaultsManager.token != nil else {
+            loginView.isHidden = false
+            activityIndicatore.stopAnimating()
+            return
+        }
         viewModel = CartViewModel(appDataSource: AppDataSource())
         viewModel.delegate = self
         viewModel.getCartData()
@@ -55,6 +63,9 @@ class CartViewController: BaseViewController {
         cartCollectionViewDataSource.cartDelegate = self
     }
     
+    @IBAction func goToLogin(_ sender: Any) {
+        router?.navigate(to: .loginRoute)
+    }
     
     @IBAction func pay(_ sender: Any) {
         guard let cart = cartCollectionViewDataSource.cart else {

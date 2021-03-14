@@ -21,7 +21,7 @@ class CartViewModel: NSObject {
             switch result {
             case .data(let data):
                 self.delegate?.loadCartSuccess(cart: data.data)
-            case .failure(let error):
+            case .failure(_):
                 self.delegate?.emptyCart()
             default:
                 break

@@ -71,6 +71,21 @@ class HomeViewModel {
         }
     }
     
+    func getCartCount() {
+        guard UserDefaultsManager.token != nil else {
+            return
+        }
+        dataSource.perform(service: .init(path: .cartPath, domain: .domain, method: .get, params: [:], mustUseAuth: true), Cart.self) { (result) in
+            switch result {
+            case .data(let data):
+                self.delegate?.cartCount(count: data.data.cartItem.count)
+            default:
+                break
+            }
+        }
+    }
+    
+    
 }
 
 
@@ -78,4 +93,6 @@ protocol HomeViewModelDelegate: class {
     func loadHomeSuccess(home: Home)
     func apiError(error: String)
     func loadCategoriesSuccess(category: Category)
+    func cartCount(count: Int)
+
 }
